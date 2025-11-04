@@ -115,7 +115,7 @@
                     </a>
                 </div>
                 <div class="md:w-1/3 relative group">
-                    <!-- UPDATED: Replaced placeholder with your image -->
+                    <!-- This path is correct. You need to rename your file to match -->
                     <img src="assets/images/hero-corgi-splash.jpg"
                          alt="Sample Coloring Page Illustration of a Corgi running on a beach"
                          class="rounded-xl shadow-2xl w-full max-w-sm md:max-w-md mx-auto h-auto object-cover z-10 relative">
@@ -195,10 +195,10 @@
                         Watch the Sneak Peek!
                     </h4>
                     
-                    <!-- UPDATED: Replaced placeholder icon with your video -->
+                    <!-- FIX: Updated path to match uploaded file name: teaser_video.mp4.mp4 -->
                     <div class="w-full rounded-xl shadow-2xl border-4 border-pets-primary mb-8 bg-black aspect-video overflow-hidden">
                         <video class="w-full h-full object-cover" controls autoplay loop muted playsinline>
-                            <source src="assets/videos/teaser-video.mp4" type="video/mp4">
+                            <source src="assets/videos/teaser_video.mp4.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -236,7 +236,7 @@
 
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
 
-                    <!-- UPDATED: Card 1 -->
+                    <!-- This path is correct. You need to rename your file to match -->
                     <div class="card bg-white p-4 rounded-xl text-center">
                         <img src="assets/images/merch-dog-car.jpg"
                              alt="Coloring page illustration of a dog with its head out a car window"
@@ -245,7 +245,7 @@
                         <p class="text-sm text-gray-500">Coloring Page</p>
                     </div>
 
-                    <!-- UPDATED: Card 2 -->
+                    <!-- This path is correct. You need to rename your file to match -->
                     <div class="card bg-white p-4 rounded-xl text-center">
                         <img src="assets/images/merch-pomeranian.jpg"
                              alt="Coloring page illustration of a pomeranian walking in a forest"
@@ -254,7 +254,7 @@
                         <p class="text-sm text-gray-500">Coloring Page</p>
                     </div>
 
-                    <!-- UPDATED: Card 3 -->
+                    <!-- This path is correct. You need to rename your file to match -->
                     <div class="card bg-white p-4 rounded-xl text-center">
                         <img src="assets/images/merch-sleeping-pup.jpg"
                              alt="Coloring page illustration of a puppy sleeping with a teddy bear"
@@ -263,13 +263,13 @@
                         <p class="text-sm text-gray-500">Coloring Page</p>
                     </div>
 
-                    <!-- UPDATED: Card 4 -->
+                    <!-- This path is correct. You need to rename your file to match -->
                     <div class="card bg-white p-4 rounded-xl text-center">
                         <img src="assets/images/merch-yorkie.jpg"
                              alt="Coloring page illustration of a yorkie on a bed"
                              class="rounded-lg w-full mb-3 shadow-md aspect-square object-cover">
                         <h4 class="text-base sm:text-lg font-semibold text-pets-dark">"Bed Head" Print</h4>
-                        <p class="text-sm text-gray-500">Coloring Page</g>
+                        <p class="text-sm text-gray-500">Coloring Page</p>
                     </div>
                 </div>
 
@@ -337,13 +337,13 @@
             </div>
         </section>
 
-        <!-- Contact Section - COMPLETED -->
+        <!-- Contact Section - FIXED TYPO -->
         <section id="contact" class="bg-white py-20 px-4 sm:px-6 lg:px-8 border-t-4 border-pets-primary">
             <div class="max-w-3xl mx-auto text-center">
                 <h3 class="text-3xl sm:text-4xl section-heading mb-4">Join the Fun & Get Notified!</h3>
                 <p class="text-lg sm:text-xl text-gray-700 mb-8">
                     Be the first to know about new coloring books, merchandise, and exclusive discounts. Sign up for the Pets Unplugged newsletter below!
-                </s
+                </p> <!-- <-- This was previously </s, causing the error -->
                 <form id="email-signup-form" class="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-inner max-w-lg mx-auto">
                     <div class="flex flex-col sm:flex-row gap-4">
                         <input type="email" 
@@ -464,4 +464,3 @@
 
 </body>
 </html>
-
