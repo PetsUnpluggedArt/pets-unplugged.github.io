@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Custom styles for a playful, artistic look */
+        html {
+            scroll-behavior: smooth; /* Added for smooth scrolling */
+        }
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f7f3f9; /* Light, soft background */
@@ -61,11 +64,12 @@
 </head>
 <body class="text-gray-800">
 
+    <!-- Header and Navigation -->
     <header class="bg-white sticky top-0 z-10 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <h1 class="text-3xl font-extrabold text-pets-dark flex items-center logo-font">
+            <a href="#hero" class="text-3xl font-extrabold text-pets-dark flex items-center logo-font">
                 <i class="fas fa-paw mr-2 text-pets-primary"></i>Pets Unplugged
-            </h1>
+            </a>
             
             <div class="hidden sm:flex space-x-4 items-center" id="desktop-menu">
                 <a href="#benefits" class="text-gray-600 hover:text-pets-dark font-medium">Benefits</a>
@@ -77,11 +81,13 @@
                 <a href="#digital" class="bg-pets-primary text-pets-dark font-bold py-2 px-4 rounded-full shadow-md hover:bg-red-300 cta-button">Get Digital</a>
             </div>
 
+            <!-- Mobile Menu Button -->
             <button id="menu-button" class="sm:hidden text-pets-dark text-2xl p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-pets-secondary">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
 
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden sm:hidden bg-white pb-4 px-4 shadow-inner">
             <a href="#benefits" class="block py-2 px-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium">Benefits</a>
             <a href="#books" class="block py-2 px-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium">Books</a>
@@ -94,6 +100,7 @@
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="hero" class="bg-pets-secondary bg-opacity-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
                 <div class="md:w-1/2 mb-10 md:mb-0">
@@ -108,6 +115,7 @@
                     </a>
                 </div>
                 <div class="md:w-1/3 relative group">
+                    <!-- Placeholder Image -->
                     <img src="https://placehold.co/400x500/fca5a5/4c1d95?text=Sample+Pet+Coloring+Page"
                          alt="Sample Coloring Page Illustration with QR Code"
                          class="rounded-xl shadow-2xl w-full max-w-sm md:max-w-md mx-auto h-auto object-cover z-10 relative">
@@ -122,6 +130,7 @@
             </div>
         </section>
 
+        <!-- Animation Feature Section -->
         <section id="animation-feature" class="bg-pets-dark py-12 px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto text-center text-white">
                 <h3 class="text-3xl sm:text-4xl font-extrabold mb-4">Scan and See the Magic!</h3>
@@ -148,6 +157,7 @@
             </div>
         </section>
 
+        <!-- Benefits Section -->
         <section id="benefits" class="bg-gray-100 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto">
                 <h2 class="text-3xl sm:text-4xl section-heading text-center mb-12">
@@ -175,6 +185,7 @@
             </div>
         </section>
 
+        <!-- Books Section -->
         <section id="books" class="py-16 px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto">
                 <h3 class="text-3xl sm:text-4xl section-heading text-center mb-12">Get Ready for the New World!</h3>
@@ -183,6 +194,7 @@
                     <h4 class="text-2xl sm:text-3xl font-black text-pets-dark mb-6">
                         Watch the Sneak Peek!
                     </h4>
+                    <!-- Placeholder for Video -->
                     <div class="w-full rounded-xl shadow-2xl border-4 border-pets-primary mb-8 bg-gray-200 aspect-video flex items-center justify-center">
                         <i class="fas fa-video text-6xl text-pets-secondary opacity-70"></i>
                     </div>
@@ -197,6 +209,7 @@
             </div>
         </section>
 
+        <!-- Digital Download Section -->
         <section id="digital" class="bg-pets-primary py-16 px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto text-center">
                 <h3 class="text-3xl sm:text-4xl font-extrabold text-pets-dark mb-4">Want Digital? We'll Have It!</h3>
@@ -212,12 +225,13 @@
             </div>
         </section>
 
+        <!-- Merchandise Section -->
         <section id="merchandise" class="py-16 px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto">
                 <h3 class="text-3xl sm:text-4xl section-heading text-center mb-12">Match Your Art: Our Exclusive Merchandise</h3>
 
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-
+                    <!-- Placeholder Images -->
                     <div class="card bg-white p-4 rounded-xl text-center">
                         <img src="https://placehold.co/300x300/fca5a5/4c1d95?text=Pets+Mug"
                              alt="Pet Design Mug"
@@ -259,6 +273,7 @@
             </div>
         </section>
 
+        <!-- About Us Section -->
         <section id="about" class="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto text-center">
                 <h3 class="text-3xl sm:text-4xl section-heading mb-4">About Pets Unplugged</h3>
@@ -271,6 +286,7 @@
             </div>
         </section>
 
+        <!-- FAQ Section -->
         <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-t-4 border-pets-secondary">
             <div class="max-w-3xl mx-auto">
                 <h3 class="text-3xl sm:text-4xl section-heading text-center mb-12">Frequently Asked Questions</h3>
@@ -313,6 +329,7 @@
             </div>
         </section>
 
+        <!-- Contact Section - COMPLETED -->
         <section id="contact" class="bg-white py-20 px-4 sm:px-6 lg:px-8 border-t-4 border-pets-primary">
             <div class="max-w-3xl mx-auto text-center">
                 <h3 class="text-3xl sm:text-4xl section-heading mb-4">Join the Fun & Get Notified!</h3>
@@ -320,4 +337,102 @@
                     Be the first to know about new coloring books, merchandise, and exclusive discounts. Sign up for the Pets Unplugged newsletter below!
                 </p>
 
-                <form id="email-signup-form" class="bg-gray-50 p-
+                <form id="email-signup-form" class="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-inner max-w-lg mx-auto">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input type="email" 
+                               id="email-input"
+                               placeholder="Enter your email address" 
+                               required
+                               class="flex-grow p-4 rounded-lg border-2 border-gray-300 focus:border-pets-secondary focus:ring-2 focus:ring-pets-secondary focus:outline-none text-lg">
+                        <button type="submit" 
+                                class="bg-pets-dark text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:bg-indigo-900 cta-button text-lg">
+                            Sign Up
+                        </button>
+                    </div>
+                </form>
+                <div id="form-message" class="mt-6 text-lg"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer - ADDED -->
+    <footer class="bg-pets-dark text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="mb-6 md:mb-0">
+                <h4 class="text-2xl font-extrabold flex items-center justify-center md:justify-start logo-font">
+                    <i class="fas fa-paw mr-2 text-pets-primary"></i>Pets Unplugged
+                </h4>
+                <p class="text-gray-300 mt-2">Unplug, Color, & Animate.</p>
+            </div>
+            <div class="flex space-x-6 mb-6 md:mb-0">
+                <a href="#" class="text-gray-300 hover:text-white text-3xl transition duration-200"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-300 hover:text-white text-3xl transition duration-200"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-300 hover:text-white text-3xl transition duration-200"><i class="fab fa-pinterest"></i></a>
+                <a href="#" class="text-gray-300 hover:text-white text-3xl transition duration-200"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="text-gray-400 text-sm">
+                &copy; <span id="current-year"></span> Pets Unplugged. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript - ADDED -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+
+            // Toggle mobile menu
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                // Toggle icon
+                const icon = menuButton.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                    // Reset icon
+                    const icon = menuButton.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Handle email form submission
+            const emailForm = document.getElementById('email-signup-form');
+            const emailInput = document.getElementById('email-input');
+            const formMessage = document.getElementById('form-message');
+
+            emailForm.addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent actual form submission
+                
+                const email = emailInput.value;
+                if (email) {
+                    // Display a success message
+                    formMessage.textContent = `Thanks for signing up, ${email}! We'll keep you posted.`;
+                    formMessage.className = 'mt-6 text-lg text-green-700 font-medium';
+                    emailInput.value = ''; // Clear the input
+                } else {
+                    // Display an error (should be caught by 'required' but good to have)
+                    formMessage.textContent = 'Please enter a valid email address.';
+                    formMessage.className = 'mt-6 text-lg text-red-600 font-medium';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
