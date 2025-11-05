@@ -1,0 +1,14 @@
+source "https://rubygems.org"
+
+gem "jekyll", "~> 4.2" # Or your desired Jekyll version
+gem "kramdown-parser-gfm", "~> 1.1" # For GitHub Flavored Markdown
+# Add other plugins or themes as needed
+# For example, for Jekyll's default plugins:
+# group :jekyll_plugins do
+#   gem "jekyll-feed"
+#   gem "jekyll-sitemap"
+#   gem "jekyll-seo-tag"
+# end
+
+# For Windows users, to enable auto-regeneration:
+# gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?

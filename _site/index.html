@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-81TJS1GV21"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-81TJS1GV21');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Unplugged - Creative Coloring & Merchandise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom styles for a playful, artistic look */
+        html {
+            scroll-behavior: smooth; /* Added for smooth scrolling */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f3f9; /* Light, soft background */
+        }
+        .logo-font {
+            font-family: 'Permanent Marker', cursive;
+            letter-spacing: 1px;
+        }
+        .section-heading {
+            color: #4c1d95; /* Deep Violet */
+            font-weight: 800;
+        }
+        .card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+            border: 1px solid #f9fafb;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .cta-button {
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        .cta-button:hover {
+            transform: translateY(-1px);
+        }
+        /* Custom color definitions */
+        .bg-pets-primary { background-color: #fca5a5; } /* Light Red/Pink */
+        .text-pets-secondary { color: #818cf8; } /* Light Indigo */
+        
+        .feature-icon {
+            filter: drop-shadow(0 4px 6px rgba(129, 140, 248, 0.5));
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pets-primary': '#fca5a5',
+                        'pets-secondary': '#818cf8',
+                        'pets-dark': '#4c1d95',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header and Navigation -->
+    <header class="bg-white sticky top-0 z-10 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-3xl font-extrabold text-pets-dark flex items-center logo-font">
+                <i class="fas fa-paw mr-2 text-pets-primary"></i>Pets Unplugged
+            </a>
+            
+            <div class="hidden sm:flex space-x-4 items-center" id="desktop-menu">
+                <a href="#benefits" class="text-gray-600 hover:text-pets-dark font-medium">Benefits</a>
+                <a href="#books" class="text-gray-600 hover:text-pets-dark font-medium">Books</a>
+                <a href="#merchandise" class="text-gray-600 hover:text-pets-dark font-medium">Merch</a>
+                <a href="#about" class="text-gray-600 hover:text-pets-dark font-medium">About Us</a>
+                <a href="#faq" class="text-gray-600 hover:text-pets-dark font-medium">FAQ</a>
+                <a href="#contact" class="text-gray-600 hover:text-pets-dark font-medium">Contact</a>
+                <a href="#digital" class="bg-pets-primary text-pets-dark font-bold py-2 px-4 rounded-full shadow-md hover:bg-red-300 cta-button">Get Digital</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-button" class="sm:hidden text-pets-dark text-2xl p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-pets-secondary">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-white pb-4 px-4 shadow-inner">
+            <a href="#benefits" class="block py-2 px-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium">Benefits</a>
+            <a href="#books" class="block py-2 px-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium">Books</a>
+            <a href="#merchandise" class="block py-2 px-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium">Merch</a>
+            <a href="#about" class="block py-2 px-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium">About Us</a>
+            <a href="#faq" class="block py-2 px-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium">FAQ</a>
+            <a href="#contact" class="block py-2 px-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium">Contact</a>
+            <a href="#digital" class="block mt-2 text-center bg-pets-primary text-pets-dark font-bold py-2 rounded-full shadow-md hover:bg-red-300 cta-button">Get Digital</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="bg-pets-secondary bg-opacity-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-4xl sm:text-6xl font-black text-pets-dark leading-tight">
+                        Unplug, <span class="text-pets-primary">Color,</span> & <span class="text-pets-secondary">Animate!</span>
+                    </h2>
+                    <p class="mt-4 text-lg sm:text-xl text-gray-700">
+                        Welcome to Pets Unplugged—where every line is an adventure and every finished page can be brought to life. **Scan the QR code on any illustration to see a 6-second animation!**
+                    </p>
+                    <a href="#books" class="mt-8 inline-block bg-pets-dark text-white font-bold py-3 px-8 rounded-lg shadow-xl hover:bg-indigo-900 cta-button">
+                        Explore Our Coloring Books
+                    </a>
+                </div>
+                <div class="md:w-1/3 relative group">
+                    <!-- This path is correct. You need to rename your file to match -->
+                    <img src="assets/images/hero-corgi-splash.jpg"
+                         alt="Sample Coloring Page Illustration of a Corgi running on a beach"
+                         class="rounded-xl shadow-2xl w-full max-w-sm md:max-w-md mx-auto h-auto object-cover z-10 relative">
+                    
+                    <div class="absolute bottom-0 left-0 right-0 h-16 bg-white bg-opacity-90 backdrop-blur-sm rounded-b-xl border-t-2 border-pets-primary p-2 flex items-center justify-center space-x-3 z-20 shadow-inner group-hover:bg-opacity-100 transition duration-300">
+                        <div class="w-10 h-10 bg-gray-200 border-2 border-gray-400 rounded-md flex items-center justify-center">
+                            <i class="fas fa-qrcode text-xl text-gray-700"></i>
+                        </div>
+                        <p class="text-xs font-bold text-pets-dark uppercase tracking-wider">Scan to Animate! (Feature Demo)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Animation Feature Section -->
+        <section id="animation-feature" class="bg-pets-dark py-12 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto text-center text-white">
+                <h3 class="text-3xl sm:text-4xl font-extrabold mb-4">Scan and See the Magic!</h3>
+                <p class="text-base sm:text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+                    Every page is a portal. Scan the QR code next to your finished artwork and watch the **original illustration spring to life** in a fun, delightful animation!
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-12">
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-palette text-5xl feature-icon text-pets-primary mb-3"></i>
+                        <p class="font-bold text-xl mb-1">Color the Page</p>
+                        <p class="text-sm opacity-80">Use your imagination.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-qrcode text-5xl feature-icon text-pets-primary mb-3"></i>
+                        <p class="font-bold text-xl mb-1">Scan the Code</p>
+                        <p class="text-sm opacity-80">Use any smartphone camera.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-film text-5xl feature-icon text-pets-primary mb-3"></i>
+                        <p class="font-bold text-xl mb-1">Watch it Animate!</p>
+                        <p class="text-sm opacity-80">See your masterpiece move.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="bg-gray-100 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl section-heading text-center mb-12">
+                    The Hidden Benefits of Unplugging
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl card text-center">
+                        <i class="fas fa-heartbeat text-5xl feature-icon text-pets-primary mb-3"></i>
+                        <h3 class="text-xl font-semibold text-pets-dark mb-2">Reduce Stress & Anxiety</h3>
+                        <p class="text-gray-600 text-base">The focused action of coloring helps to quiet the mind, similar to meditation, lowering anxiety and promoting a sense of calm.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl card text-center">
+                        <i class="fas fa-eye text-5xl feature-icon text-pets-secondary mb-3"></i>
+                        <h3 class="text-xl font-semibold text-pets-dark mb-2">Sharpen Focus & Motor Skills</h3>
+                        <p class="text-gray-600 text-base">Concentrating on lines and colors improves sustained attention and fine motor control, beneficial for both children and adults.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl card text-center">
+                        <i class="fas fa-lightbulb text-5xl feature-icon text-pets-primary mb-3"></i>
+                        <h3 class="text-xl font-semibold text-pets-dark mb-2">Spark Creativity</h3>
+                        <p class="text-gray-600 text-base">Choose your colors, experiment with shading, and express yourself without the pressure of drawing, nurturing your artistic side.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Books Section -->
+        <section id="books" class="py-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <h3 class="text-3xl sm:text-4xl section-heading text-center mb-12">Get Ready for the New World!</h3>
+
+                <div class="max-w-xl mx-auto text-center">
+                    <h4 class="text-2xl sm:text-3xl font-black text-pets-dark mb-6">
+                        Watch the Sneak Peek!
+                    </h4>
+                    
+                    <!-- FIX: Updated path to match uploaded file name: teaser_video.mp4.mp4 -->
+                    <div class="w-full rounded-xl shadow-2xl border-4 border-pets-primary mb-8 bg-black aspect-video overflow-hidden">
+                        <video class="w-full h-full object-cover" controls autoplay loop muted playsinline>
+                            <source src="assets/videos/teaser_video.mp4.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    
+                    <p class="text-lg sm:text-xl text-gray-700 leading-relaxed mb-6">
+                        Our first interactive coloring book, **Puppies Unleashed Edition**, is launching soon. Every page is a **new world** waiting for your creative touch.
+                    </p>
+                    <a href="#contact" class="inline-block bg-pets-dark text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-900 cta-button">
+                        Be the First to Know! Sign Up for Updates
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Digital Download Section -->
+        <section id="digital" class="bg-pets-primary py-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-pets-dark mb-4">Want Digital? We'll Have It!</h3>
+                <p class="text-lg sm:text-xl text-gray-800 mb-8">
+                    When our books launch, high-resolution PDFs will be available for instant download. Print your favorite pages as many times as you like. **Digital versions include the scannable QR codes!**
+                </p>
+                <div class="bg-white p-6 rounded-xl shadow-2xl inline-block">
+                    <p class="text-xl sm:text-2xl font-bold text-gray-700 mb-4">Digital PDF - Coming Soon!</p>
+                    <a href="#contact" class="inline-block bg-gray-400 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg cursor-not-allowed">
+                        Notify Me
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Merchandise Section -->
+        <section id="merchandise" class="py-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <h3 class="text-3xl sm:text-4xl section-heading text-center mb-12">Match Your Art: Our Exclusive Merchandise</h3>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+
+                    <!-- This path is correct. You need to rename your file to match -->
+                    <div class="card bg-white p-4 rounded-xl text-center">
+                        <img src="assets/images/merch-dog-car.jpg"
+                             alt="Coloring page illustration of a dog with its head out a car window"
+                             class="rounded-lg w-full mb-3 shadow-md aspect-square object-cover">
+                        <h4 class="text-base sm:text-lg font-semibold text-pets-dark">"Wind in my Fur" Print</h4>
+                        <p class="text-sm text-gray-500">Coloring Page</p>
+                    </div>
+
+                    <!-- This path is correct. You need to rename your file to match -->
+                    <div class="card bg-white p-4 rounded-xl text-center">
+                        <img src="assets/images/merch-pomeranian.jpg"
+                             alt="Coloring page illustration of a pomeranian walking in a forest"
+                             class="rounded-lg w-full mb-3 shadow-md aspect-square object-cover">
+                        <h4 class="text-base sm:text-lg font-semibold text-pets-dark">"Forest Pompom" Print</h4>
+                        <p class="text-sm text-gray-500">Coloring Page</p>
+                    </div>
+
+                    <!-- This path is correct. You need to rename your file to match -->
+                    <div class="card bg-white p-4 rounded-xl text-center">
+                        <img src="assets/images/merch-sleeping-pup.jpg"
+                             alt="Coloring page illustration of a puppy sleeping with a teddy bear"
+                             class="rounded-lg w-full mb-3 shadow-md aspect-square object-cover">
+                        <h4 class="text-base sm:text-lg font-semibold text-pets-dark">"Sleepy Pup" Print</h4>
+                        <p class="text-sm text-gray-500">Coloring Page</p>
+                    </div>
+
+                    <!-- This path is correct. You need to rename your file to match -->
+                    <div class="card bg-white p-4 rounded-xl text-center">
+                        <img src="assets/images/merch-yorkie.jpg"
+                             alt="Coloring page illustration of a yorkie on a bed"
+                             class="rounded-lg w-full mb-3 shadow-md aspect-square object-cover">
+                        <h4 class="text-base sm:text-lg font-semibold text-pets-dark">"Bed Head" Print</h4>
+                        <p class="text-sm text-gray-500">Coloring Page</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#" class="inline-block bg-pets-secondary text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-600 cta-button">
+                        View Full Merch Store (External Link)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-3xl sm:text-4xl section-heading mb-4">About Pets Unplugged</h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Pets Unplugged was born from a passion for art, animals, and the simple joy of coloring. We believe in taking a moment to disconnect from the digital world and immerse ourselves in creativity. Our hand-drawn illustrations are designed to spark imagination and bring a smile to your face, especially now that every page offers a quick, delightful animated reward!
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Every coloring book and piece of merchandise is crafted with love, aiming to share the therapeutic and joyful experience of bringing vibrant life to our furry, feathered, and finned friends. Thank you for joining our journey!
+                </p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-t-4 border-pets-secondary">
+            <div class="max-w-3xl mx-auto">
+                <h3 class="text-3xl sm:text-4xl section-heading text-center mb-12">Frequently Asked Questions</h3>
+
+                <div class="space-y-6">
+                    <div class="border border-gray-200 rounded-lg p-6 bg-gray-50">
+                        <h4 class="text-lg sm:text-xl font-semibold text-pets-dark mb-2">How do the animated QR codes work?</h4>
+                        <p class="text-gray-700">
+                            Each illustration has a unique QR code printed next to it. Simply scan the code using your smartphone camera (or a QR reader app). It will open a short, 6-second animated clip showing the original, fully colored illustration subtly moving, adding a magical "life" element to the artwork you just colored!
+                        </p>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-6 bg-gray-50">
+                        <h4 class="text-lg sm:text-xl font-semibold text-pets-dark mb-2">What kind of illustrations are in your coloring books?</h4>
+                        <p class="text-gray-700">
+                            Our books feature a diverse range of hand-drawn pet illustrations, from fluffy puppies and playful kittens to exotic birds and aquatic wonders. Each illustration is designed with varying levels of detail to appeal to both beginners and experienced colorists.
+                        </p>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-6 bg-gray-50">
+                        <h4 class="text-lg sm:text-xl font-semibold text-pets-dark mb-2">Can I buy digital copies of the coloring books?</h4>
+                        <p class="text-gray-700">
+                            Not yet, but you will soon! Our first coloring book will be available as an instant digital download in PDF format upon launch. Sign up for our newsletter to get notified the moment it's available.
+                        </p>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-6 bg-gray-50">
+                        <h4 class="text-lg sm:text-xl font-semibold text-pets-dark mb-2">What kind of merchandise do you offer?</h4>
+                        <p class="text-gray-700">
+                            We offer a growing range of merchandise, including mugs, t-shirts, tote bags, and sticker packs, all featuring unique illustrations from our coloring books. We're always adding new items, check back often!
+                        </p>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-6 bg-gray-50">
+                        <h4 class="text-lg sm:text-xl font-semibold text-pets-dark mb-2">How can I stay updated on new releases?</h4>
+                        <p class="text-gray-700">
+                            The best way to stay in the loop is to sign up for our newsletter in the "Contact" section. You'll receive exclusive updates on new book launches, merchandise, and special offers directly to your inbox!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section - FIXED TYPO -->
+        <section id="contact" class="bg-white py-20 px-4 sm:px-6 lg:px-8 border-t-4 border-pets-primary">
+            <div class="max-w-3xl mx-auto text-center">
+                <h3 class="text-3xl sm:text-4xl section-heading mb-4">Join the Fun & Get Notified!</h3>
+                <p class="text-lg sm:text-xl text-gray-700 mb-8">
+                    Be the first to know about new coloring books, merchandise, and exclusive discounts. Sign up for the Pets Unplugged newsletter below!
+                </p> <!-- <-- This was previously </s, causing the error -->
+                <form id="email-signup-form" class="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-inner max-w-lg mx-auto">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input type="email" 
+                               id="email-input"
+                               placeholder="Enter your email address" 
+                               required
+                               class="flex-grow p-4 rounded-lg border-2 border-gray-300 focus:border-pets-secondary focus:ring-2 focus:ring-pets-secondary focus:outline-none text-lg">
+                        <button type="submit" 
+                                class="bg-pets-dark text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:bg-indigo-900 cta-button text-lg">
+                            Sign Up
+                        </button>
+                    </div>
+                </form>
+                <div id="form-message" class="mt-6 text-lg"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer - ADDED -->
+    <footer class="bg-pets-dark text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="mb-6 md:mb-0">
+                <h4 class="text-2xl font-extrabold flex items-center justify-center md:justify-start logo-font">
+                    <i class="fas fa-paw mr-2 text-pets-primary"></i>Pets Unplugged
+                </h4>
+                <p class="text-gray-300 mt-2">Unplug, Color, & Animate.</p>
+            </div>
+            <div class="flex space-x-6 mb-6 md:mb-0">
+                <a href="#" class="text-gray-300 hover:text-white text-3xl transition duration-200"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-300 hover:text-white text-3xl transition duration-200"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-300 hover:text-white text-3xl transition duration-200"><i class="fab fa-pinterest"></i></a>
+                <a href="#" class="text-gray-300 hover:text-white text-3xl transition duration-200"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="text-gray-400 text-sm">
+                &copy; <span id="current-year"></span> Pets Unplugged. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript - ADDED -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            // Toggle mobile menu
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    // Toggle icon
+                    const icon = menuButton.querySelector('i');
+                    if (icon) { // Added check for icon
+                        if (mobileMenu.classList.contains('hidden')) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        } else {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        }
+                    }
+                });
+            } else {
+                console.error('Mobile menu button or menu not found.');
+            }
+
+            // Close mobile menu when a link is clicked
+            if (mobileMenu) {
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    if (link) { // Added check for link
+                        link.addEventListener('click', function() {
+                            mobileMenu.classList.add('hidden');
+                            // Reset icon
+                            if (menuButton) {
+                                const icon = menuButton.querySelector('i');
+                                if (icon) { // Added check for icon
+                                    icon.classList.remove('fa-times');
+                                    icon.classList.add('fa-bars');
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+
+            // Set current year in footer
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+
+            // Handle email form submission
+            const emailForm = document.getElementById('email-signup-form');
+            const emailInput = document.getElementById('email-input');
+            const formMessage = document.getElementById('form-message');
+
+            if (emailForm && emailInput && formMessage) {
+                emailForm.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Prevent actual form submission
+                    
+                    const email = emailInput.value;
+                    if (email) {
+                        // Display a success message
+                        formMessage.textContent = `Thanks for signing up, ${email}! We'll keep you posted.`;
+                        formMessage.className = 'mt-6 text-lg text-green-700 font-medium';
+                        emailInput.value = ''; // Clear the input
+                    } else {
+                        // Display an error (should be caught by 'required' but good to have)
+                        formMessage.textContent = 'Please enter a valid email address.';
+                        formMessage.className = 'mt-6 text-lg text-red-600 font-medium';
+                    }
+                });
+            } else {
+                console.error('Email form elements not found.');
+            }
+        });
+    </script>
+
+</body>
+</html>
