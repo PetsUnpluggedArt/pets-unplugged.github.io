@@ -8,8 +8,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- START - Brevo Form Styles Integration -->
+
+    <!-- START - Brevo Form Styles (from user input) -->
+    <style>
+      @font-face {
+        font-display: block;
+        font-family: Roboto;
+        src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+      }
+
+      @font-face {
+        font-display: fallback;
+        font-family: Roboto;
+        font-weight: 600;
+        src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+      }
+
+      @font-face {
+        font-display: fallback;
+        font-family: Roboto;
+        font-weight: 700;
+        src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+      }
+
+      #sib-container input:-ms-input-placeholder {
+        text-align: left;
+        font-family: Helvetica, sans-serif;
+        color: #c0ccda;
+      }
+
+      #sib-container input::placeholder {
+        text-align: left;
+        font-family: Helvetica, sans-serif;
+        color: #c0ccda;
+      }
+
+      #sib-container textarea::placeholder {
+        text-align: left;
+        font-family: Helvetica, sans-serif;
+        color: #c0ccda;
+      }
+
+      #sib-container a {
+        text-decoration: underline;
+        color: #2BB2FC;
+      }
+    </style>
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+    <!-- END - Brevo Form Styles -->
+
     <style>
         /* Custom styles for a playful, artistic look */
         html {
@@ -28,587 +75,297 @@
             font-weight: 800;
         }
         .card {
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
-            border: 1px solid #f9fafb;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
-        .cta-button {
-            transition: background-color 0.2s, transform 0.1s;
-        }
-        .cta-button:hover {
-            transform: translateY(-1px);
-        }
-        /* Custom color definitions */
-        .bg-pets-primary { background-color: #fca5a5; } /* Light Red/Pink */
-        .text-pets-secondary { color: #818cf8; } /* Light Indigo */
-        
-        .feature-icon {
-            filter: drop-shadow(0 4px 6px rgba(129, 140, 248, 0.5));
-        }
-
-        /* Brevo Form custom fonts and placeholder styles */
-        @font-face {
-            font-display: block;
-            font-family: Roboto;
-            src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
-        }
-
-        @font-face {
-            font-display: fallback;
-            font-family: Roboto;
-            font-weight: 600;
-            src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
-        }
-
-        @font-face {
-            font-display: fallback;
-            font-family: Roboto;
-            font-weight: 700;
-            src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
-        }
-
-        #sib-container input:-ms-input-placeholder {
-            text-align: left;
-            font-family: Helvetica, sans-serif;
-            color: #c0ccda;
-        }
-
-        #sib-container input::placeholder {
-            text-align: left;
-            font-family: Helvetica, sans-serif;
-            color: #c0ccda;
-        }
-
-        #sib-container textarea::placeholder {
-            text-align: left;
-            font-family: Helvetica, sans-serif;
-            color: #c0ccda;
-        }
-
-        #sib-container a {
-            text-decoration: underline;
-            color: #2BB2FC;
-        }
-        
-        /* Apply Tailwind background/shadow to Brevo container to match site aesthetic */
-        #sib-form-container {
-            background-color: transparent !important; /* Managed by Tailwind wrapper */
-            box-shadow: none !important; /* Managed by Tailwind wrapper */
-            border: none !important; /* Managed by Tailwind wrapper */
-        }
-        #sib-container {
-            border-style: none !important; /* Remove Brevo's default border */
-            max-width: none !important; /* Allow Tailwind to manage width */
-            background-color: transparent !important; /* Use Tailwind wrapper color */
-        }
-        .sib-form-message-panel {
-            max-width: 100% !important; /* Ensure messages fit inside the Tailwind wrapper */
-        }
-        .sib-form-block__button {
-            /* Customize button to match site CTA style */
-            background-color: #4c1d95 !important; /* pets-dark */
-            border-radius: 9999px !important; /* rounded-full */
-            padding: 1rem 2.5rem !important; /* py-4 px-8 */
-            transition: background-color 0.2s, transform 0.1s;
-        }
-        .sib-form-block__button:hover {
-            background-color: #311361 !important; /* dark hover */
-        }
-
     </style>
-    <!-- END - Brevo Form Styles Integration -->
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'pets-primary': '#fca5a5',
-                        'pets-secondary': '#818cf8',
-                        'pets-dark': '#4c1d95',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 </head>
 <body class="text-gray-800">
 
-    <!-- Header and Navigation -->
-    <header class="bg-white sticky top-0 z-10 shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="#hero" class="text-3xl font-extrabold text-pets-dark flex items-center logo-font">
-                <i class="fas fa-paw mr-2 text-pets-primary"></i>Pets Unplugged
+    <!-- Header & Navigation -->
+    <header class="bg-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl logo-font text-fuchsia-600">
+                Pets Unplugged
             </a>
-            
-            <div class="hidden sm:flex space-x-4 items-center" id="desktop-menu">
-                <a href="#benefits" class="text-gray-600 hover:text-pets-dark font-medium">Benefits</a>
-                <a href="#books" class="text-gray-600 hover:text-pets-dark font-medium">Books</a>
-                <a href="#merchandise" class="text-gray-600 hover:text-pets-dark font-medium">Merch</a>
-                <a href="#about" class="text-gray-600 hover:text-pets-dark font-medium">About Us</a>
-                <a href="#faq" class="text-gray-600 hover:text-pets-dark font-medium">FAQ</a>
-                <a href="#contact" class="text-gray-600 hover:text-pets-dark font-medium">Contact</a>
-                <a href="#digital" class="bg-pets-primary text-pets-dark font-bold py-2 px-4 rounded-full shadow-md hover:bg-red-300 cta-button">Get Digital</a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button id="menu-button" class="sm:hidden text-pets-dark text-2xl p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-pets-secondary">
+            <nav class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="#coloring" class="text-gray-600 hover:text-fuchsia-600 transition duration-150">Coloring</a>
+                <a href="#merch" class="text-gray-600 hover:text-fuchsia-600 transition duration-150">Merch</a>
+                <a href="#about" class="text-gray-600 hover:text-fuchsia-600 transition duration-150">About</a>
+                <a href="#signup" class="text-fuchsia-600 font-bold hover:text-fuchsia-700 transition duration-150">Sign Up</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-fuchsia-600 text-2xl">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden sm:hidden bg-white pb-4 px-4 shadow-inner">
-            <a href="#benefits" class="block py-2 px-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium">Benefits</a>
-            <a href="#books" class="block py-2 px-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium">Books</a>
-            <a href="#merchandise" class="block py-2 px-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium">Merch</a>
-            <a href="#about" class="block py-2 px-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium">About Us</a>
-            <a href="#faq" class="block py-2 px-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium">FAQ</a>
-            <a href="#contact" class="block py-2 px-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium">Contact</a>
-            <a href="#digital" class="block mt-2 text-center bg-pets-primary text-pets-dark font-bold py-2 rounded-full shadow-md hover:bg-red-300 cta-button">Get Digital</a>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl">
+            <a href="#coloring" class="block px-6 py-3 text-gray-700 hover:bg-fuchsia-100">Coloring</a>
+            <a href="#merch" class="block px-6 py-3 text-gray-700 hover:bg-fuchsia-100">Merch</a>
+            <a href="#about" class="block px-6 py-3 text-gray-700 hover:bg-fuchsia-100">About</a>
+            <a href="#signup" class="block px-6 py-3 text-fuchsia-600 font-bold hover:bg-fuchsia-100">Sign Up</a>
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="bg-pets-secondary bg-opacity-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
-                <div class="md:w-1/2 mb-10 md:mb-0">
-                    <h2 class="text-4xl sm:text-6xl font-black text-pets-dark leading-tight">
-                        Unplug, <span class="text-pets-primary">Color,</span> & <span class="text-pets-secondary">Animate!</span>
-                    </h2>
-                    <p class="mt-4 text-lg sm:text-xl text-gray-700">
-                        Welcome to Pets Unplugged—where every line is an adventure and every finished page can be brought to life. **Scan the QR code on any illustration to see a 6-second animation!**
-                    </p>
-                    <a href="#books" class="mt-8 inline-block bg-pets-dark text-white font-bold py-3 px-8 rounded-lg shadow-xl hover:bg-indigo-900 cta-button">
-                        Explore Our Coloring Books
-                    </a>
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] md:h-[80vh] flex items-center justify-center bg-cover bg-center" style="background-image: url('https://placehold.co/1200x800/fecaca/9d174d?text=Creative+Pet+Art');">
+        <!-- Overlay for better text readability -->
+        <div class="absolute inset-0 bg-fuchsia-900 opacity-60"></div>
+        <div class="relative z-10 text-center text-white p-6 rounded-xl backdrop-blur-sm">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 logo-font tracking-wide">
+                Color Outside the Lines
+            </h1>
+            <p class="text-xl md:text-3xl mb-8 font-light">
+                Unleash your inner artist with pets that defy expectation.
+            </p>
+            <a href="#coloring" class="bg-yellow-400 hover:bg-yellow-500 text-fuchsia-900 font-extrabold text-xl py-4 px-10 rounded-full shadow-2xl transition duration-300 transform hover:scale-105 inline-block">
+                See the Art!
+            </a>
+        </div>
+    </section>
+
+    <!-- Coloring Section -->
+    <section id="coloring" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl sm:text-5xl section-heading mb-12 text-center">
+                The Coloring Book Collection
+            </h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Card 1: Cats -->
+                <div class="card bg-white p-6 rounded-xl shadow-2xl border-b-4 border-yellow-400 text-center">
+                    <img src="https://placehold.co/400x300/a78bfa/ffffff?text=Psychedelic+Cat" onerror="this.src='https://placehold.co/400x300/a78bfa/ffffff?text=Psychedelic+Cat';" class="w-full h-48 object-cover rounded-lg mb-4" alt="Psychedelic Cat Coloring Page">
+                    <h3 class="text-2xl font-bold text-violet-700 mb-2">Cosmic Kitties</h3>
+                    <p class="text-gray-600 mb-4">A whimsical journey through space with our feline friends. Perfect for marker and gel pens.</p>
+                    <a href="#" class="text-fuchsia-600 hover:text-fuchsia-800 font-semibold transition duration-150">Preview Pages &rarr;</a>
                 </div>
-                <div class="md:w-1/3 relative group">
-                    <!-- This path is correct. You need to rename your file to match -->
-                    <img src="assets/images/hero-corgi-splash.jpg"
-                         alt="Sample Coloring Page Illustration of a Corgi running on a beach"
-                         class="rounded-xl shadow-2xl w-full max-w-sm md:max-w-md mx-auto h-auto object-cover z-10 relative">
-                    
-                    <div class="absolute bottom-0 left-0 right-0 h-16 bg-white bg-opacity-90 backdrop-blur-sm rounded-b-xl border-t-2 border-pets-primary p-2 flex items-center justify-center space-x-3 z-20 shadow-inner group-hover:bg-opacity-100 transition duration-300">
-                        <div class="w-10 h-10 bg-gray-200 border-2 border-gray-400 rounded-md flex items-center justify-center">
-                            <i class="fas fa-qrcode text-xl text-gray-700"></i>
-                        </div>
-                        <p class="text-xs font-bold text-pets-dark uppercase tracking-wider">Scan to Animate! (Feature Demo)</p>
+
+                <!-- Card 2: Dogs -->
+                <div class="card bg-white p-6 rounded-xl shadow-2xl border-b-4 border-green-400 text-center">
+                    <img src="https://placehold.co/400x300/4ade80/ffffff?text=Bohemian+Dog" onerror="this.src='https://placehold.co/400x300/4ade80/ffffff?text=Bohemian+Dog';" class="w-full h-48 object-cover rounded-lg mb-4" alt="Bohemian Dog Coloring Page">
+                    <h3 class="text-2xl font-bold text-violet-700 mb-2">Boho Canines</h3>
+                    <p class="text-gray-600 mb-4">Dogs dressed in floral crowns and geometric patterns. A relaxing, meditative collection.</p>
+                    <a href="#" class="text-fuchsia-600 hover:text-fuchsia-800 font-semibold transition duration-150">Preview Pages &rarr;</a>
+                </div>
+
+                <!-- Card 3: Exotics -->
+                <div class="card bg-white p-6 rounded-xl shadow-2xl border-b-4 border-fuchsia-400 text-center">
+                    <img src="https://placehold.co/400x300/f472b6/ffffff?text=Unicorn+Llama" onerror="this.src='https://placehold.co/400x300/f472b6/ffffff?text=Unicorn+Llama';" class="w-full h-48 object-cover rounded-lg mb-4" alt="Unicorn Llama Coloring Page">
+                    <h3 class="text-2xl font-bold text-violet-700 mb-2">Unconventional Critters</h3>
+                    <p class="text-gray-600 mb-4">Llamas with unicorn horns, rainbow sloths, and more fantastical beasts to color.</p>
+                    <a href="#" class="text-fuchsia-600 hover:text-fuchsia-800 font-semibold transition duration-150">Preview Pages &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Merchandise Section -->
+    <section id="merch" class="py-20 bg-violet-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl sm:text-5xl section-heading mb-12 text-center">
+                Fun Merch for Pet Lovers
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Merch Item 1: T-Shirt -->
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden text-center">
+                    <img src="https://placehold.co/600x600/6b7280/ffffff?text=T-Shirt+Mockup" onerror="this.src='https://placehold.co/600x600/6b7280/ffffff?text=T-Shirt+Mockup';" class="w-full h-64 object-cover" alt="Pets Unplugged T-Shirt">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-gray-700">Neon Dog Tee</h3>
+                        <p class="text-fuchsia-600 font-semibold mt-1">$24.99</p>
+                    </div>
+                </div>
+                <!-- Merch Item 2: Mug -->
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden text-center">
+                    <img src="https://placehold.co/600x600/fca5a5/ffffff?text=Mug+Mockup" onerror="this.src='https://placehold.co/600x600/fca5a5/ffffff?text=Mug+Mockup';" class="w-full h-64 object-cover" alt="Pets Unplugged Mug">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-gray-700">Cosmic Kitty Mug</h3>
+                        <p class="text-fuchsia-600 font-semibold mt-1">$14.50</p>
+                    </div>
+                </div>
+                <!-- Merch Item 3: Tote Bag -->
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden text-center">
+                    <img src="https://placehold.co/600x600/94a3b8/ffffff?text=Tote+Bag+Mockup" onerror="this.src='https://placehold.co/600x600/94a3b8/ffffff?text=Tote+Bag+Mockup';" class="w-full h-64 object-cover" alt="Pets Unplugged Tote Bag">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-gray-700">Llama Tote</h3>
+                        <p class="text-fuchsia-600 font-semibold mt-1">$19.99</p>
+                    </div>
+                </div>
+                <!-- Merch Item 4: Stickers -->
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden text-center">
+                    <img src="https://placehold.co/600x600/3b82f6/ffffff?text=Sticker+Pack" onerror="this.src='https://placehold.co/600x600/3b82f6/ffffff?text=Sticker+Pack';" class="w-full h-64 object-cover" alt="Pets Unplugged Sticker Pack">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-gray-700">Vinyl Sticker Pack</h3>
+                        <p class="text-fuchsia-600 font-semibold mt-1">$9.00</p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Animation Feature Section -->
-        <section id="animation-feature" class="bg-pets-dark py-12 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-7xl mx-auto text-center text-white">
-                <h3 class="text-3xl sm:text-4xl font-extrabold mb-4">Scan and See the Magic!</h3>
-                <p class="text-base sm:text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-                    Every page is a portal. Scan the QR code next to your finished artwork and watch the **original illustration spring to life** in a fun, delightful animation!
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-12">
-                    <div class="flex flex-col items-center">
-                        <i class="fas fa-palette text-5xl feature-icon text-pets-primary mb-3"></i>
-                        <p class="font-bold text-xl mb-1">Color the Page</p>
-                        <p class="text-sm opacity-80">Use your imagination.</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <i class="fas fa-qrcode text-5xl feature-icon text-pets-primary mb-3"></i>
-                        <p class="font-bold text-xl mb-1">Scan the Code</p>
-                        <p class="text-sm opacity-80">Use any smartphone camera.</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <i class="fas fa-film text-5xl feature-icon text-pets-primary mb-3"></i>
-                        <p class="font-bold text-xl mb-1">Watch it Animate!</p>
-                        <p class="text-sm opacity-80">See your masterpiece move.</p>
-                    </div>
-                </div>
+            <div class="text-center mt-12">
+                <a href="#" class="bg-violet-600 hover:bg-violet-700 text-white font-bold text-lg py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-block">
+                    Shop All Merchandise
+                </a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Benefits Section -->
-        <section id="benefits" class="bg-gray-100 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-7xl mx-auto">
-                <h2 class="text-3xl sm:text-4xl section-heading text-center mb-12">
-                    The Hidden Benefits of Unplugging
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left">
+                <h2 class="text-4xl sm:text-5xl section-heading mb-6">
+                    Our Creative Mission
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl card text-center">
-                        <i class="fas fa-heartbeat text-5xl feature-icon text-pets-primary mb-3"></i>
-                        <h3 class="text-xl font-semibold text-pets-dark mb-2">Reduce Stress & Anxiety</h3>
-                        <p class="text-gray-600 text-base">The focused action of coloring helps to quiet the mind, similar to meditation, lowering anxiety and promoting a sense of calm.</p>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl card text-center">
-                        <i class="fas fa-eye text-5xl feature-icon text-pets-secondary mb-3"></i>
-                        <h3 class="text-xl font-semibold text-pets-dark mb-2">Sharpen Focus & Motor Skills</h3>
-                        <p class="text-gray-600 text-base">Concentrating on lines and colors improves sustained attention and fine motor control, beneficial for both children and adults.</p>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl card text-center">
-                        <i class="fas fa-lightbulb text-5xl feature-icon text-pets-primary mb-3"></i>
-                        <h3 class="text-xl font-semibold text-pets-dark mb-2">Spark Creativity</h3>
-                        <p class="text-gray-600 text-base">Choose your colors, experiment with shading, and express yourself without the pressure of drawing, nurturing your artistic side.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Books Section -->
-        <section id="books" class="py-16 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-7xl mx-auto">
-                <h3 class="text-3xl sm:text-4xl section-heading text-center mb-12">Get Ready for the New World!</h3>
-
-                <div class="max-w-xl mx-auto text-center">
-                    <h4 class="text-2xl sm:text-3xl font-black text-pets-dark mb-6">
-                        Watch the Sneak Peek!
-                    </h4>
-                    
-                    <!-- FIX: Updated path to match uploaded file name: teaser_video.mp4.mp4 -->
-                    <div class="w-full rounded-xl shadow-2xl border-4 border-pets-primary mb-8 bg-black aspect-video overflow-hidden">
-                        <video class="w-full h-full object-cover" controls autoplay loop muted playsinline>
-                            <source src="assets/videos/teaser_video.mp4.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    
-                    <p class="text-lg sm:text-xl text-gray-700 leading-relaxed mb-6">
-                        Our first interactive coloring book, **Puppies Unleashed Edition**, is launching soon. Every page is a **new world** waiting for your creative touch.
-                    </p>
-                    <a href="#contact" class="inline-block bg-pets-dark text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-900 cta-button">
-                        Be the First to Know! Sign Up for Updates
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Digital Download Section -->
-        <section id="digital" class="bg-pets-primary py-16 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center">
-                <h3 class="text-3xl sm:text-4xl font-extrabold text-pets-dark mb-4">Want Digital? We'll Have It!</h3>
-                <p class="text-lg sm:text-xl text-gray-800 mb-8">
-                    When our books launch, high-resolution PDFs will be available for instant download. Print your favorite pages as many times as you like. **Digital versions include the scannable QR codes!**
+                <p class="text-lg text-gray-700 mb-4">
+                    Pets Unplugged started with a simple idea: pets are more than just cute, they're characters. We blend detailed, complex line art with psychedelic and bohemian themes to create coloring experiences unlike any other.
                 </p>
-                <div class="bg-white p-6 rounded-xl shadow-2xl inline-block">
-                    <p class="text-xl sm:text-2xl font-bold text-gray-700 mb-4">Digital PDF - Coming Soon!</p>
-                    <a href="#contact" class="inline-block bg-gray-400 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg cursor-not-allowed">
-                        Notify Me
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Merchandise Section -->
-        <section id="merchandise" class="py-16 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-7xl mx-auto">
-                <h3 class="text-3xl sm:text-4xl section-heading text-center mb-12">Match Your Art: Our Exclusive Merchandise</h3>
-
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-
-                    <!-- This path is correct. You need to rename your file to match -->
-                    <div class="card bg-white p-4 rounded-xl text-center">
-                        <img src="assets/images/merch-dog-car.jpg"
-                             alt="Coloring page illustration of a dog with its head out a car window"
-                             class="rounded-lg w-full mb-3 shadow-md aspect-square object-cover">
-                        <h4 class="text-base sm:text-lg font-semibold text-pets-dark">"Wind in my Fur" Print</h4>
-                        <p class="text-sm text-gray-500">Coloring Page</p>
-                    </div>
-
-                    <!-- This path is correct. You need to rename your file to match -->
-                    <div class="card bg-white p-4 rounded-xl text-center">
-                        <img src="assets/images/merch-pomeranian.jpg"
-                             alt="Coloring page illustration of a pomeranian walking in a forest"
-                             class="rounded-lg w-full mb-3 shadow-md aspect-square object-cover">
-                        <h4 class="text-base sm:text-lg font-semibold text-pets-dark">"Forest Pompom" Print</h4>
-                        <p class="text-sm text-gray-500">Coloring Page</p>
-                    </div>
-
-                    <!-- This path is correct. You need to rename your file to match -->
-                    <div class="card bg-white p-4 rounded-xl text-center">
-                        <img src="assets/images/merch-sleeping-pup.jpg"
-                             alt="Coloring page illustration of a puppy sleeping with a teddy bear"
-                             class="rounded-lg w-full mb-3 shadow-md aspect-square object-cover">
-                        <h4 class="text-base sm:text-lg font-semibold text-pets-dark">"Sleepy Pup" Print</h4>
-                        <p class="text-sm text-gray-500">Coloring Page</p>
-                    </div>
-
-                    <!-- This path is correct. You need to rename your file to match -->
-                    <div class="card bg-white p-4 rounded-xl text-center">
-                        <img src="assets/images/merch-yorkie.jpg"
-                             alt="Coloring page illustration of a yorkie on a bed"
-                             class="rounded-lg w-full mb-3 shadow-md aspect-square object-cover">
-                        <h4 class="text-base sm:text-lg font-semibold text-pets-dark">"Bed Head" Print</h4>
-                        <p class="text-sm text-gray-500">Coloring Page</p>
-                    </div>
-                </div>
-
-                <div class="text-center mt-12">
-                    <a href="#" class="inline-block bg-pets-secondary text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-600 cta-button">
-                        View Full Merch Store (External Link)
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Us Section -->
-        <section id="about" class="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center">
-                <h3 class="text-3xl sm:text-4xl section-heading mb-4">About Pets Unplugged</h3>
-                <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                    Pets Unplugged was born from a passion for art, animals, and the simple joy of coloring. We believe in taking a moment to disconnect from the digital world and immerse ourselves in creativity. Our hand-drawn illustrations are designed to spark imagination and bring a smile to your face, especially now that every page offers a quick, delightful animated reward!
+                <p class="text-lg text-gray-700 mb-6 font-semibold">
+                    We believe art should be joyful, surprising, and a little bit wild.
                 </p>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                    Every coloring book and piece of merchandise is crafted with love, aiming to share the therapeutic and joyful experience of bringing vibrant life to our furry, feathered, and finned friends. Thank you for joining our journey!
-                </p>
+                <a href="#" class="text-lg text-fuchsia-600 hover:text-fuchsia-800 font-bold transition duration-150">
+                    Read the full story <i class="fas fa-arrow-right ml-2"></i>
+                </a>
             </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-t-4 border-pets-secondary">
-            <div class="max-w-3xl mx-auto">
-                <h3 class="text-3xl sm:text-4xl section-heading text-center mb-12">Frequently Asked Questions</h3>
-
-                <div class="space-y-6">
-                    <div class="border border-gray-200 rounded-lg p-6 bg-gray-50">
-                        <h4 class="text-lg sm:text-xl font-semibold text-pets-dark mb-2">How do the animated QR codes work?</h4>
-                        <p class="text-gray-700">
-                            Each illustration has a unique QR code printed next to it. Simply scan the code using your smartphone camera (or a QR reader app). It will open a short, 6-second animated clip showing the original, fully colored illustration subtly moving, adding a magical "life" element to the artwork you just colored!
-                        </p>
-                    </div>
-                    <div class="border border-gray-200 rounded-lg p-6 bg-gray-50">
-                        <h4 class="text-lg sm:text-xl font-semibold text-pets-dark mb-2">What kind of illustrations are in your coloring books?</h4>
-                        <p class="text-gray-700">
-                            Our books feature a diverse range of hand-drawn pet illustrations, from fluffy puppies and playful kittens to exotic birds and aquatic wonders. Each illustration is designed with varying levels of detail to appeal to both beginners and experienced colorists.
-                        </p>
-                    </div>
-
-                    <div class="border border-gray-200 rounded-lg p-6 bg-gray-50">
-                        <h4 class="text-lg sm:text-xl font-semibold text-pets-dark mb-2">Can I buy digital copies of the coloring books?</h4>
-                        <p class="text-gray-700">
-                            Not yet, but you will soon! Our first coloring book will be available as an instant digital download in PDF format upon launch. Sign up for our newsletter to get notified the moment it's available.
-                        </p>
-                    </div>
-
-                    <div class="border border-gray-200 rounded-lg p-6 bg-gray-50">
-                        <h4 class="text-lg sm:text-xl font-semibold text-pets-dark mb-2">What kind of merchandise do you offer?</h4>
-                        <p class="text-gray-700">
-                            We offer a growing range of merchandise, including mugs, t-shirts, tote bags, and sticker packs, all featuring unique illustrations from our coloring books. We're always adding new items, check back often!
-                        </p>
-                    </div>
-
-                    <div class="border border-gray-200 rounded-lg p-6 bg-gray-50">
-                        <h4 class="text-lg sm:text-xl font-semibold text-pets-dark mb-2">How can I stay updated on new releases?</h4>
-                        <p class="text-gray-700">
-                            The best way to stay in the loop is to sign up for our newsletter in the "Contact" section. You'll receive exclusive updates on new book launches, merchandise, and special offers directly to your inbox!
-                        </p>
-                    </div>
-                </div>
+            <div class="rounded-xl overflow-hidden shadow-2xl">
+                <img src="https://placehold.co/600x400/8b5cf6/ffffff?text=Art+Studio" onerror="this.src='https://placehold.co/600x400/8b5cf6/ffffff?text=Art+Studio';" alt="Creative Art Studio" class="w-full h-full object-cover">
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="bg-white py-20 px-4 sm:px-6 lg:px-8 border-t-4 border-pets-primary">
-            <div class="max-w-3xl mx-auto text-center">
-                <h3 class="text-3xl sm:text-4xl section-heading mb-4">Join the Fun & Get Notified!</h3>
-                <p class="text-lg sm:text-xl text-gray-700 mb-8">
-                    Be the first to know about new coloring books, merchandise, and exclusive discounts. Sign up for the Pets Unplugged newsletter below!
-                </p> 
-                
-                <!-- START - Brevo Form Insertion with Tailwind Wrapper -->
-                <div class="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-inner max-w-lg mx-auto">
-                    <div class="sib-form" style="text-align: center;">
-                        <div id="sib-form-container" class="sib-form-container">
-                            
-                            <!-- Error Message Panel -->
-                            <div id="error-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
-                                <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-                                    <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
-                                        <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
-                                    </svg>
-                                    <span class="sib-form-message-panel__inner-text">
-                                      Your subscription could not be saved. Please try again.
-                                    </span>
-                                </div>
-                            </div>
-                            
-                            <!-- Success Message Panel -->
-                            <div id="success-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#085229; background-color:#e7faf0; border-radius:3px; border-color:#13ce66;">
-                                <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-                                    <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
-                                        <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
-                                    </svg>
-                                    <span class="sib-form-message-panel__inner-text">
-                                      Your subscription has been successful.
-                                    </span>
-                                </div>
-                            </div>
+    <!-- Newsletter Signup Section (Now Brevo Integrated) -->
+    <section id="signup" class="py-20 bg-fuchsia-50">
+        <div class="container mx-auto px-6 text-center">
 
-                            <!-- Main Form Container -->
-                            <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; max-width:540px; border-radius:1rem; direction:ltr">
-                                <form id="sib-form" method="POST" action="https://d594eb7c.sibforms.com/serve/MUIFABmfHTEVJ28dkNYeTaFfmW_qPwTBV5P8SxDcCLcR-NYyAAYxlZgy-74UYUCBhidtZKzrzqRPZMfTH285qQzykDYuOJm-JAhVg8CuGaxllvtgwYsSCWNHecpQ_wSRvWe42qnmPhoOCFwsGEL8Xqbwy_6-SNbUbvQOD-OOLen4TK8eIlxH5dEgi0kwyFvYeg_vWNa9s4pw0A1qmw==" data-type="subscription">
-                                    <div style="padding: 8px 0;">
-                                        <div class="sib-form-block" style="font-size:32px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent; text-align:center">
-                                            <p>Get Early Access</p>
-                                        </div>
-                                    </div>
-                                    <div style="padding: 8px 0;">
-                                        <div class="sib-captcha sib-form-block">
-                                            <div class="form__entry entry_block">
-                                                <div class="form__label-row ">
-                                                    <script>
-                                                        function handleCaptchaResponse() {
-                                                            var event = new Event('captchaChange');
-                                                            document.getElementById('sib-captcha').dispatchEvent(event);
-                                                        }
-                                                    </script>
-                                                    <div class="g-recaptcha sib-visible-recaptcha" id="sib-captcha" data-sitekey="6LdwtQYsAAAAAN_q-4JZYxZAiQK_1K5aPM9Y9jaN" data-callback="handleCaptchaResponse" style="direction:ltr"></div>
-                                                </div>
-                                                <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div style="padding: 8px 0;">
-                                        <div class="sib-form-block" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent; text-align:center">
-                                            <div class="sib-text-form-block">
-                                                <p>Subscribe to our newsletter and stay updated.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div style="padding: 8px 0;">
-                                        <div class="sib-input sib-form-block">
-                                            <div class="form__entry entry_block">
-                                                <div class="form__label-row ">
-                                                    <label class="entry__label" style="font-weight: 700; text-align:left; font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3c4858;" for="EMAIL" data-required="*">Enter your email address to subscribe</label>
-
-                                                    <div class="entry__field">
-                                                        <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
-                                                    </div>
-                                                </div>
-
-                                                <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
-                                                </label>
-                                                <label class="entry__specification" style="font-size:12px; text-align:left; font-family:Helvetica, sans-serif; color:#8390A4; text-align:left">
-                                                    Provide your email address to subscribe. For e.g abc@xyz.com
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div style="padding: 8px 0;">
-                                        <div class="sib-form-block" style="text-align: center">
-                                            <button class="sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">
-                                                <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" style="">
-                                                    <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
-                                                </svg>
-                                                SUBSCRIBE
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <input type="text" name="email_address_check" value="" class="input--hidden">
-                                    <input type="hidden" name="locale" value="en">
-                                </form>
-                            </div>
+            <!-- START - Brevo Form HTML (Replacing old form) -->
+            <div class="sib-form" style="text-align: center;">
+                <div id="sib-form-container" class="sib-form-container">
+                    <div id="error-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px;">
+                      <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                        <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                          <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+                        </svg>
+                        <span class="sib-form-message-panel__inner-text">
+                                          Your subscription could not be saved. Please try again.
+                                      </span>
+                      </div>
+                    </div>
+                    <div></div>
+                    <div id="success-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#085229; background-color:#e7faf0; border-radius:3px; border-color:#13ce66;max-width:540px;">
+                      <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                        <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                          <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+                        </svg>
+                        <span class="sib-form-message-panel__inner-text">
+                                          Your subscription has been successful.
+                                      </span>
+                      </div>
+                    </div>
+                    <div></div>
+                    <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px; border-radius:3px; border-width:1px; border-color:#C0CCD9; border-style:solid; direction:ltr">
+                      <form id="sib-form" method="POST" action="https://d594eb7c.sibforms.com/serve/MUIFABmfHTEVJ28dkNYeTaFfmW_qPwTBV5P8SxDcCLcR-NYyAAYxlZgy-74UYUCBhidtZKzrzqRPZMfTH285qQzykDYuOJm-JAhVg8CuGaxllvtgwYsSCWNHecpQ_wSRvWe42qnmPhoOCFwsGEL8Xqbwy_6-SNbUbvQOD-OOLen4TK8eIlxH5dEgi0kwyFvYeg_vWNa9s4pw0A1qmw==" data-type="subscription">
+                        <div style="padding: 8px 0;">
+                          <div class="sib-form-block" style="font-size:32px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent; text-align:left">
+                            <p>Get Early Access</p>
+                          </div>
                         </div>
+                        <div style="padding: 8px 0;">
+                          <div class="sib-form-block" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent; text-align:left">
+                            <div class="sib-text-form-block">
+                              <p>Subscribe to our newsletter and stay updated.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div style="padding: 8px 0;">
+                          <div class="sib-input sib-form-block">
+                            <div class="form__entry entry_block">
+                              <div class="form__label-row ">
+                                <label class="entry__label" style="font-weight: 700; text-align:left; font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3c4858;" for="EMAIL" data-required="*">Enter your email address to subscribe</label>
+
+                                <div class="entry__field">
+                                  <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
+                                </div>
+                              </div>
+
+                              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
+                              </label>
+                              <label class="entry__specification" style="font-size:12px; text-align:left; font-family:Helvetica, sans-serif; color:#8390A4; text-align:left">
+                                Provide your email address to subscribe. For e.g abc@xyz.com
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div style="padding: 8px 0;">
+                          <div class="sib-form-block" style="text-align: left">
+                            <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#FFFFFF; background-color:#3E4857; border-radius:3px; border-width:0px;" form="sib-form" type="submit">
+                              <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" style="">
+                                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                              </svg>
+                              SUBSCRIBE
+                            </button>
+                          </div>
+                        </div>
+
+                        <input type="text" name="email_address_check" value="" class="input--hidden">
+                        <input type="hidden" name="locale" value="en">
+                      </form>
                     </div>
                 </div>
-                <!-- END - Brevo Form Insertion with Tailwind Wrapper -->
+            </div>
+            <!-- END - Brevo Form HTML -->
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-fuchsia-400 transition duration-150"><i class="fab fa-instagram text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-fuchsia-400 transition duration-150"><i class="fab fa-pinterest text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-fuchsia-400 transition duration-150"><i class="fab fa-facebook-f text-2xl"></i></a>
             </div>
-        </section>
-    </main>
-
-    <!-- Footer - ADDED -->
-    <footer class="bg-pets-dark text-white py-12 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-            <div class="mb-6 md:mb-0">
-                <h4 class="text-2xl font-extrabold flex items-center justify-center md:justify-start logo-font">
-                    <i class="fas fa-paw mr-2 text-pets-primary"></i>Pets Unplugged
-                </h4>
-                <p class="text-gray-300 mt-2">Unplug, Color, & Animate.</p>
-            </div>
-            <div class="flex space-x-6 mb-6 md:mb-0">
-                <a href="#" class="text-gray-300 hover:text-white text-3xl transition duration-200"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-gray-300 hover:text-white text-3xl transition duration-200"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="text-gray-300 hover:text-white text-3xl transition duration-200"><i class="fab fa-pinterest"></i></a>
-                <a href="#" class="text-gray-300 hover:text-white text-3xl transition duration-200"><i class="fab fa-tiktok"></i></a>
-            </div>
-            <div class="text-gray-400 text-sm">
-                &copy; <span id="current-year"></span> Pets Unplugged. All Rights Reserved.
-            </div>
+            <p class="text-sm text-gray-500">
+                &copy; <span id="current-year"></span> Pets Unplugged. All rights reserved.
+            </p>
         </div>
     </footer>
 
-    <!-- JavaScript - General DOM Setup -->
-    <script type="module">
-        // Function for setting up general DOM-related events (mobile menu, year)
-        function setupDOMEvents() {
-            // Toggle mobile menu
-            const menuButton = document.getElementById('menu-button');
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mobile menu toggle logic
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            
-            if (menuButton && mobileMenu) {
-                menuButton.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('hidden');
-                    const icon = menuButton.querySelector('i');
-                    if (icon) {
-                        if (mobileMenu.classList.contains('hidden')) {
-                            icon.classList.remove('fa-times');
-                            icon.classList.add('fa-bars');
-                        } else {
-                            icon.classList.remove('fa-bars');
-                            icon.classList.add('fa-times');
-                        }
-                    }
-                });
-            }
 
-            // Close mobile menu when a link is clicked
-            if (mobileMenu) {
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // Close menu when a link is clicked
                 const mobileLinks = mobileMenu.querySelectorAll('a');
                 mobileLinks.forEach(link => {
-                    if (link) {
-                        link.addEventListener('click', function() {
-                            mobileMenu.classList.add('hidden');
-                            if (menuButton) {
-                                const icon = menuButton.querySelector('i');
-                                if (icon) {
-                                    icon.classList.remove('fa-times');
-                                    icon.classList.add('fa-bars');
-                                }
-                            }
-                        });
-                    }
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
                 });
             }
 
-            // Set current year in footer
+            // Update current year in the footer
             const yearSpan = document.getElementById('current-year');
             if (yearSpan) {
                 yearSpan.textContent = new Date().getFullYear();
             }
-        }
 
-        // Start DOM setup
-        document.addEventListener('DOMContentLoaded', function() {
-            setupDOMEvents();
+            // NOTE: Old email form submission JS was removed as the Brevo form handles submission itself.
+
         });
     </script>
-    
-    <!-- START - Brevo Form Scripts -->
+
+    <!-- START - Brevo Form Scripts (from user input) -->
     <script>
       window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
       window.LOCALE = 'en';
       window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-
       window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
-
       window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
 
       window.translation = {
@@ -619,12 +376,10 @@
           selectedOptions: '{quantity} selected',
         }
       };
-
       var AUTOHIDE = Boolean(0);
     </script>
 
     <script src="https://sibforms.com/forms/end-form/build/main.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
     <!-- END - Brevo Form Scripts -->
 
 </body>
