@@ -17,7 +17,7 @@
             background-color: #f7f3f9; /* Light, soft background */
         }
         .logo-font {
-            font-family: 'Permanent Marker', cursive;
+            font-family: 'Permanent+Marker', cursive;
             letter-spacing: 1px;
         }
         .section-heading {
@@ -79,6 +79,24 @@
                 icon.classList.add('rotate-0');
             }
         }
+        
+        // NEW: Function to toggle the mobile menu visibility and icon
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+
+            // Toggle the visibility of the menu drawer
+            menu.classList.toggle('hidden');
+
+            // Toggle the icon between bars (closed) and times (open)
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        }
     </script>
 </head>
 <body class="text-gray-800">
@@ -88,25 +106,32 @@
             <h1 class="text-3xl font-extrabold text-pets-dark flex items-center logo-font">
                 <i class="fas fa-paw mr-2 text-pets-primary"></i>Pets Unplugged
             </h1>
-            <div class="space-x-4 flex items-center">
-                <!-- Navigation links hidden on small screens for cleaner mobile header -->
-                <a href="#books" class="text-gray-600 hover:text-pets-dark font-medium hidden sm:inline-block">Books</a>
-                <a href="#merchandise" class="text-gray-600 hover:text-pets-dark font-medium hidden sm:inline-block">Merch</a>
-                <a href="#about" class="text-gray-600 hover:text-pets-dark font-medium hidden sm:inline-block">About Us</a>
-                <a href="#faq" class="text-gray-600 hover:text-pets-dark font-medium hidden sm:inline-block">FAQ</a>
-                <!-- Contact and CTA button visible on all screens or responsive -->
+
+            <!-- Desktop Menu: Hidden on mobile, Flex on sm+ -->
+            <div class="hidden sm:flex space-x-4 items-center">
+                <a href="#books" class="text-gray-600 hover:text-pets-dark font-medium">Books</a>
+                <a href="#merchandise" class="text-gray-600 hover:text-pets-dark font-medium">Merch</a>
+                <a href="#about" class="text-gray-600 hover:text-pets-dark font-medium">About Us</a>
+                <a href="#faq" class="text-gray-600 hover:text-pets-dark font-medium">FAQ</a>
                 <a href="#contact" class="text-gray-600 hover:text-pets-dark font-medium">Contact</a>
                 <a href="#digital" class="bg-pets-primary text-pets-dark font-bold py-2 px-4 rounded-full shadow-md hover:bg-red-300 cta-button">Get Digital</a>
             </div>
+
+            <!-- Mobile Hamburger Button: Visible on mobile, Hidden on sm+ -->
+            <button id="menu-button" class="sm:hidden text-pets-dark text-2xl p-2 rounded-md hover:bg-gray-100" onclick="toggleMenu()">
+                <i id="menu-icon" class="fas fa-bars"></i>
+            </button>
         </nav>
         
-        <!-- Simple Mobile Menu Fallback -->
-        <div class="sm:hidden border-t border-gray-100 p-2">
-            <div class="flex justify-around text-sm font-medium text-gray-600">
-                <a href="#books" class="hover:text-pets-dark">Books</a>
-                <a href="#merchandise" class="hover:text-pets-dark">Merch</a>
-                <a href="#faq" class="hover:text-pets-dark">FAQ</a>
-            </div>
+        <!-- Mobile Menu Drawer: Hidden by default, toggled by JS. Full width layout. -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-white border-t border-gray-100 px-4 pb-4 shadow-inner">
+            <a href="#books" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Books</a>
+            <a href="#merchandise" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Merch</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">About Us</a>
+            <a href="#faq" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">FAQ</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Contact</a>
+            <!-- Mobile CTA button -->
+            <a href="#digital" class="mt-4 block w-full text-center bg-pets-primary text-pets-dark font-bold py-2 rounded-lg shadow-md hover:bg-red-300 cta-button" onclick="toggleMenu()">Get Digital</a>
         </div>
     </header>
 
