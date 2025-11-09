@@ -130,26 +130,30 @@
     <header class="bg-white sticky top-0 z-10 shadow-lg">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             
-            <!-- UPDATED: Text-based Logo Structure for 'UNPLUGGED' with Plug icon replacing the 'D' -->
+            <!-- START: Logo Structure for 'UNPLUGGED' with D as the plug body -->
             <div class="flex flex-col items-start leading-none -space-y-1">
                 <h1 class="flex items-center text-pets-dark leading-none">
                     <span class="logo-pets-font mr-1 text-pets-secondary">Pets</span>
-                    <!-- UNPLUGGE is displayed here -->
-                    <span class="logo-unplug-font flex items-center text-pets-dark">UNPLUGGE</span>
-                    <!-- Custom Plug Icon SVG (Replacing the final 'D' of UNPLUGGED) -->
-                    <svg class="h-6 w-8 ml-[-0.4rem] mr-1 text-pets-dark fill-current mb-[-0.2rem]" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Main Body -->
-                        <rect x="0" y="10" width="80" height="20" rx="5" />
-                        <!-- Prongs -->
-                        <rect x="80" y="13" width="15" height="4" rx="1" />
-                        <rect x="80" y="23" width="15" height="4" rx="1" />
-                        <!-- Cord Exit (The little line) -->
-                        <line x1="95" y1="20" x2="100" y2="20" stroke="currentColor" stroke-width="2"/>
-                    </svg>
+                    
+                    <!-- UNPLUGGE in deep violet -->
+                    <span class="logo-unplug-font text-pets-dark">UNPLUGGE</span>
+                    
+                    <!-- The final 'D' (plug body) in light pink and the cord SVG (indigo) -->
+                    <span class="logo-unplug-font text-pets-primary flex items-center">
+                        D
+                        <!-- Simplified Cord/Plug SVG: Cord line coming out of the D -->
+                        <svg class="h-6 w-7 ml-[-0.2rem] text-pets-secondary mb-[-0.2rem] fill-current" viewBox="0 0 80 40" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Cord line (starts near D, slightly curved) -->
+                            <path d="M0 20 C 10 15, 30 18, 40 18" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none"/>
+                            <!-- Plug Prongs (Unplugged look) -->
+                            <rect x="45" y="10" width="10" height="4" rx="1" fill="currentColor"/>
+                            <rect x="45" y="26" width="10" height="4" rx="1" fill="currentColor"/>
+                        </svg>
+                    </span>
                 </h1>
                 <p class="logo-tagline-font text-gray-500">UNPLUG COLOR ANIMATE</p>
             </div>
-            <!-- END UPDATED LOGO -->
+            <!-- END: Logo Structure -->
 
             <!-- Desktop Menu: Hidden on mobile, Flex on sm+ -->
             <div class="hidden sm:flex space-x-4 items-center">
