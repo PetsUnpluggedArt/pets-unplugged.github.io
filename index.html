@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pets Unplugged - Teaser Launch</title>
-    <!-- Load Tailwind CSS -->
+    <!-- Load Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Inter and Permanent Marker fonts -->
+    <!-- Load Inter (main body) and Permanent Marker (headers/logo) fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker:wght@400&display=swap" rel="stylesheet">
     <!-- Load Font Awesome for icons -->
@@ -23,12 +23,6 @@
       gtag('config', 'G-81TJS1GV21');
     </script>
     <!-- END - GOOGLE ANALYTICS (GA4) TRACKING CODE -->
-    
-    <!-- START - BREVO STYLES AND LINKS -->
-    <!-- We are only keeping the Brevo stylesheet link here. The included Brevo @font-face and other styles 
-         are being omitted to rely on the clean Tailwind styling, but the link is needed for Brevo's component functionality. -->
-    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-    <!-- END - BREVO STYLES AND LINKS -->
 
     <style>
         /* Custom styles for a playful, artistic look */
@@ -43,15 +37,6 @@
             font-family: 'Permanent Marker', cursive;
             letter-spacing: 1px;
             text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.7); /* Subtle white shadow */
-        }
-        /* Overriding Brevo's default text alignment for a centered look */
-        .sib-form-message-panel {
-             text-align: center !important; 
-             max-width: 100% !important; /* Ensure it respects parent width */
-        }
-        /* Hiding Brevo's default input/button styling to use Tailwind classes */
-        .sib-form-block__button, .entry__field .input {
-            all: unset !important;
         }
     </style>
 </head>
@@ -90,74 +75,34 @@
                     <!-- Video Embed -->
                     <div class="relative w-full aspect-video bg-gray-900 rounded-xl shadow-2xl overflow-hidden border-4 border-gray-700">
                         <video class="w-full h-full object-cover" controls autoplay loop muted playsinline>
-                            <!-- Use the uploaded file path -->
-                            <source src="assets/videos/teaser_video.mp4.mp4" type="video/mp4">
+                            <!-- CORRECTED VIDEO PATH: Removed the extra .mp4 extension -->
+                            <source src="assets/videos/teaser_video.mp4" type="video/mp4" onerror="this.parentElement.innerHTML = '<div class=\'w-full h-full flex items-center justify-center text-white text-xl\'>Video Not Found (Expected: assets/videos/teaser_video.mp4)</div>';">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                     
-                    <!-- SUBSCRIPTION FORM INTEGRATION (Brevo Code adapted for Tailwind) -->
+                    <!-- SUBSCRIPTION FORM IFRAME INTEGRATION -->
                     <div class="mt-12 pt-8 border-t-2 border-dashed border-gray-200">
                         <h3 class="text-3xl font-extrabold text-purple-800 mb-4">Don't Miss the Full Reveal</h3>
                         <p class="text-xl text-purple-600 mb-8 max-w-lg mx-auto">
                             Get the inside track on the hidden video feature and launch date!
                         </p>
                         
-                        <!-- Brevo Success/Error Messages (controlled by Brevo script) -->
-                        <div id="error-message" class="sib-form-message-panel hidden" style="color:#661d1d; background-color:#ffeded; border-radius:8px; border-color:#ff4949; padding: 12px; margin-bottom: 1rem; font-weight: 600;">
-                            <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-                                <span class="sib-form-message-panel__inner-text">Your subscription could not be saved. Please try again.</span>
-                            </div>
+                        <!-- Brevo Form Embedded via Iframe - Border set to none -->
+                        <div class="w-full max-w-xl mx-auto" style="min-height: 305px;">
+                            <iframe 
+                                width="540" 
+                                height="305" 
+                                src="https://d594eb7c.sibforms.com/serve/MUIFAFREjRqCppz4u-KEgduMAWGaL5-U7glX-nuNFfwGQ2LQc92EVwS76osxTrDF8cJVpKGJpX5sQDHaPmwfZ7nVNwT2Had_Pax1z9LrA-7QBurWloC-Q-pkzIE_zSRq2eD0DLP89-Zm5eWhYcNHpCId50MNHmaWuLzA8p1oSXegHAd6qXyyTof96C9eJXatvX0jomYOM1IMYAHHuQ==" 
+                                frameborder="0" 
+                                scrolling="auto" 
+                                allowfullscreen 
+                                class="mx-auto block"
+                                style="max-width: 100%; border: none;"
+                            ></iframe>
                         </div>
-                        <div id="success-message" class="sib-form-message-panel hidden" style="color:#085229; background-color:#e7faf0; border-radius:8px; border-color:#13ce66; padding: 12px; margin-bottom: 1rem; font-weight: 600;">
-                            <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-                                <span class="sib-form-message-panel__inner-text">Your subscription has been successful!</span>
-                            </div>
-                        </div>
-
-                        <!-- Core Brevo Form -->
-                        <form id="email-signup-form" 
-                              class="sib-form max-w-md mx-auto flex flex-col sm:flex-row gap-4" 
-                              method="POST" 
-                              action="https://d594eb7c.sibforms.com/serve/MUIFABmfHTEVJ28dkNYeTaFfmW_qPwTBV5P8SxDcCLcR-NYyAAYxlZgy-74UYUCBhidtZKzrzqRPZMfTH285qQzykDYuOJm-JAhVg8CuGaxllvtgwYsSCWNHecpQ_wSRvWe42qnmPhoOCFwsGEL8Xqbwy_6-SNbUbvQOD-OOLen4TK8eIlxH5dEgi0kwyFvYeg_vWNa9s4pw0A1qmw==" 
-                              data-type="subscription">
-                              
-                            <!-- Recaptcha Block (Kept hidden as requested by Brevo) -->
-                            <div class="g-recaptcha-v3" data-sitekey="6LdwtQYsAAAAAN_q-4JZYxZAiQK_1K5aPM9Y9jaN" style="display: none"></div>
-                            
-                            <!-- Email Input Block (Restyled with Tailwind) -->
-                            <div class="sib-input sib-form-block w-full flex-grow">
-                                <div class="form__entry entry_block">
-                                    <div class="entry__field">
-                                        <input class="w-full px-5 py-3 border border-purple-300 rounded-lg focus:ring-purple-500 focus:border-purple-500 text-gray-700 shadow-md flex-grow" 
-                                               type="text" 
-                                               id="EMAIL" 
-                                               name="EMAIL" 
-                                               autocomplete="off" 
-                                               placeholder="Your email address" 
-                                               data-required="true" 
-                                               required />
-                                    </div>
-                                    <!-- Brevo error/specification labels (hidden/styled by Brevo JS) -->
-                                    <label class="entry__error entry__error--primary"></label>
-                                </div>
-                            </div>
-                            
-                            <!-- Submit Button Block (Restyled with Tailwind) -->
-                            <div class="sib-form-block w-full sm:w-auto">
-                                <button class="w-full sm:w-auto px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition duration-150 shadow-lg" 
-                                        form="email-signup-form" 
-                                        type="submit">
-                                    SUBSCRIBE
-                                </button>
-                            </div>
-
-                            <!-- Hidden Fields Required by Brevo -->
-                            <input type="text" name="email_address_check" value="" class="input--hidden">
-                            <input type="hidden" name="locale" value="en">
-                        </form>
                     </div>
-                    <!-- END SUBSCRIPTION FORM INTEGRATION -->
+                    <!-- END SUBSCRIPTION FORM IFRAME INTEGRATION -->
                     
                 </div>
             </div>
@@ -172,30 +117,6 @@
         </div>
     </footer>
 
-    <!-- START - BREVO SCRIPTS (Placed before </body>) -->
-    <script>
-        // Brevo configuration variables
-        window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
-        window.LOCALE = 'en';
-        window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-        window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
-        window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-        window.translation = {
-            common: {
-                selectedList: '{quantity} list selected',
-                selectedLists: '{quantity} lists selected',
-                selectedOption: '{quantity} selected',
-                selectedOptions: '{quantity} selected',
-            }
-        };
-        var AUTOHIDE = Boolean(0);
-    </script>
-    
-    <!-- FIXED: ADDED DEFER HERE for stable loading of the external Brevo script -->
-    <script src="https://sibforms.com/forms/end-form/build/main.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js?render=6LdwtQYsAAAAAN_q-4JZYxZAiQK_1K5aPM9Y9jaN&hl=en" async defer></script>
-    <!-- END - BREVO SCRIPTS -->
-
     <script type="module">
         // Standard script to update current year in footer
         document.addEventListener('DOMContentLoaded', function() {
@@ -204,9 +125,6 @@
                 yearSpan.textContent = new Date().getFullYear();
             }
         });
-        
-        // Note: The form submission is now handled directly by the Brevo script via the action URL.
-        // We do not need local JavaScript form handling anymore.
     </script>
 
 </body>
