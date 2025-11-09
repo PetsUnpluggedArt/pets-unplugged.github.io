@@ -12,7 +12,7 @@
     <!-- 1. LOAD RECAPTCHA V3 API (Using the key provided by the Brevo form) -->
     <script src="https://www.google.com/recaptcha/api.js?render=6LdwtQYsAAAAAN_q-4JZYxZAiQK_1K5aPM9Y9jaN"></script>
 
-    <!-- Brevo Form Styles (START) -->
+    <!-- Brevo Form Styles (START) - These styles are necessary for the form's appearance and functionality -->
     <style>
       @font-face {
         font-display: block;
@@ -96,6 +96,7 @@
             border-radius: 0.5rem !important;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1) !important;
             text-transform: uppercase;
+            font-weight: 700 !important;
         }
         .sib-form-block__button:hover {
             background-color: #DB2777 !important; /* Fuchsia 600 */
@@ -261,7 +262,7 @@
                 <!-- START BREVO FORM INTEGRATION -->
                 <div class="sib-form">
                   <div id="sib-form-container" class="sib-form-container">
-                    <!-- Brevo error/success messages start here (original markup) -->
+                    <!-- Brevo error/success messages start here -->
                     <div id="error-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px; margin: 0 auto;">
                       <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
                         <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
@@ -286,7 +287,7 @@
                     <div></div>
                     <!-- END of Brevo error/success messages -->
                     <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(255,255,255,1); max-width:100%; border-radius:3px; border-width:1px; border-color:#C0CCD9; border-style:solid; direction:ltr">
-                      <form id="sib-form" method="POST" action="https://d594eb7c.sibforms.com/serve/MUIFABmfHTEVJ28dkNYeTaFfmW_qPwTBV5P8SxDcCLcR-NYyAAYxlZgy-74UYUCBhidtZKzrzqRPZMfTH285qQzykDYuOJm-JAhVg8CuGaxllvtgwYsSCWNHecpQ_wSRvWe42qnmPhoOCFwsGEL8Xqbwy_6-SNbUbvQOD-OOLen4TK8eIlxH5dEgi0kwzFvYeg_vWNa9s4pw0A1qmw==" data-type="subscription">
+                      <form id="sib-form" method="POST" action="https://d594eb7c.sibforms.com/serve/MUIFABmfHTEVJ28dkNYeTaFfmW_qPwTBV5P8SxDcCLcR-NYyAAYxlZgy-74UYUCBhidtZKzrzqRPZMfTH285qQzykDYuOJm-JAhVg8CuGaxllvtgwYsSCWNHecpQ_wSRvWe42qnmPhoOCFwsGEL8Xqbwy_6-SNbUbvQOD-OOLen4TK8eIlxH5dEgi0kwyFvYeg_vWNa9s4pw0A1qmw==" data-type="subscription">
                         <div style="padding: 8px 0;">
                           <div class="sib-form-block" style="font-size:32px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent; text-align:left">
                             <p>Get Early Access</p>
@@ -388,9 +389,6 @@
             if (yearSpan) {
                 yearSpan.textContent = new Date().getFullYear();
             }
-
-            // The custom reCAPTCHA v3 and form submission logic was removed
-            // because the Brevo form handles the submission and reCAPTCHA internally.
         });
     </script>
     
