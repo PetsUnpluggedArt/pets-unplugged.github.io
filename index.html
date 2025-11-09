@@ -101,6 +101,7 @@
         // Fallback image function
         function replaceImage(imgElement, altText) {
             imgElement.onerror = null; // Prevent infinite loop if placeholder fails
+            // Adjusted placeholder URL for better folder compatibility if images fail to load
             imgElement.src = `https://placehold.co/300x400/818cf8/ffffff?text=Image+Load+Error+-+${altText.replace(/ /g, '+')}`;
             imgElement.classList.add('p-4'); // Add padding to placeholder
         }
@@ -160,7 +161,8 @@
                 </div>
                 <!-- Image: Constrained size for better mobile fit -->
                 <div class="md:w-1/3">
-                    <img src="uploaded:hero-corgi-splash.jpg-6f75df48-050c-4f35-8f29-fdff8bbe3bda"
+                    <!-- UPDATED: Path to images/ folder -->
+                    <img src="images/hero-corgi-splash.jpg"
                          alt="Pomeranian running in the woods, line art illustration"
                          class="rounded-xl shadow-2xl w-full max-w-xs md:max-w-sm mx-auto h-auto object-cover"
                          onerror="replaceImage(this, this.alt)">
@@ -175,10 +177,11 @@
                 <div class="rounded-xl overflow-hidden shadow-2xl">
                     <video controls muted autoplay loop
                         class="w-full h-auto"
-                        poster="uploaded:merch-sleeping-pup.jpg-9603d2c0-544f-478b-8a81-4d0e7aadad9f"
+                        <!-- UPDATED: Path to images/ folder for the poster image -->
+                        poster="images/merch-sleeping-pup.jpg"
                     >
-                        <!-- Updated source path for robust loading (removed redundant .mp4 from ID) -->
-                        <source src="uploaded:teaser_video.mp4" type="video/mp4">
+                        <!-- UPDATED: Path to video/ folder for the source video -->
+                        <source src="video/teaser_video.mp4.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -192,7 +195,7 @@
         <section id="animation-feature" class="bg-pets-secondary py-10 sm:py-12 px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto text-center text-white">
                 <h3 class="text-3xl sm:text-4xl font-extrabold mb-8">Scan and See the Magic!</h3>
-                <!-- Fixed: Changed items-start to items-center to ensure horizontal centering when stacked on mobile -->
+                <!-- Alignment is already fixed to items-center -->
                 <div class="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-12">
                     <div class="flex flex-col items-center">
                         <i class="fas fa-palette text-5xl feature-icon text-pets-primary mb-3"></i>
@@ -223,7 +226,8 @@
 
                     <!-- Book 1: Furry Friends Fun Time -->
                     <div class="card bg-gray-50 p-6 rounded-xl text-center">
-                        <img src="uploaded:merch-dog-car.jpg-a15b249c-e90a-48a0-beac-c380571364d5"
+                        <!-- UPDATED: Path to images/ folder -->
+                        <img src="images/merch-dog-car.jpg"
                              alt="Happy Corgi splashing in water, line art coloring page"
                              class="rounded-lg w-full mb-4 shadow-md mx-auto max-h-96 object-cover"
                              onerror="replaceImage(this, this.alt)">
@@ -237,7 +241,8 @@
                     
                     <!-- Book 2: Scaly & Feathered Fantasies -->
                     <div class="card bg-gray-50 p-6 rounded-xl text-center">
-                        <img src="uploaded:merch-pomeranian.jpg-451efbb6-43ac-4587-acc9-d0c48a82ed06"
+                        <!-- UPDATED: Path to images/ folder -->
+                        <img src="images/merch-pomeranian.jpg"
                              alt="Sleeping puppy with teddy bear, line art coloring page"
                              class="rounded-lg w-full mb-4 shadow-md mx-auto max-h-96 object-cover"
                              onerror="replaceImage(this, this.alt)">
@@ -251,7 +256,8 @@
 
                     <!-- Book 3: Critters of the Wild -->
                     <div class="card bg-gray-50 p-6 rounded-xl text-center">
-                        <img src="uploaded:merch-yorkie.jpg-9977819c-df36-42d9-9731-e6f0bedf434d"
+                        <!-- UPDATED: Path to images/ folder -->
+                        <img src="images/merch-yorkie.jpg"
                              alt="Yorkie with hair flying out car window, line art coloring page"
                              class="rounded-lg w-full mb-4 shadow-md mx-auto max-h-96 object-cover"
                              onerror="replaceImage(this, this.alt)">
@@ -301,7 +307,8 @@
 
                     <!-- Merch Item 3: Tote Bag - Uses uploaded image -->
                     <div class="card bg-white p-4 rounded-xl text-center">
-                        <img src="uploaded:merch-sleeping-pup.jpg-9603d2c0-544f-478b-8a81-4d0e7aadad9f"
+                        <!-- UPDATED: Path to images/ folder -->
+                        <img src="images/merch-sleeping-pup.jpg"
                              alt="Tote Bag with Yorkie sleeping on a bed design"
                              class="rounded-lg w-full mb-3 shadow-sm mx-auto object-cover"
                              onerror="replaceImage(this, this.alt)">
