@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -131,27 +132,34 @@
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             
             <!-- START: Logo Structure for 'UNPLUGGED' with D as the plug body -->
-            <div class="flex flex-col items-start leading-none -space-y-1">
+            <!-- Adjusted: Removed negative spacing from parent and added margin to tagline for greater separation -->
+            <div class="flex flex-col items-start leading-none">
                 <h1 class="flex items-center text-pets-dark leading-none">
                     <span class="logo-pets-font mr-1 text-pets-secondary">Pets</span>
                     
-                    <!-- UNPLUGGE in deep violet -->
-                    <span class="logo-unplug-font text-pets-dark">UNPLUGGE</span>
+                    <!-- UNPLUGGE is now split into UNPLUGG and E (the implied socket) -->
+                    <span class="logo-unplug-font text-pets-dark">UNPLUGG</span>
+                    <span class="logo-unplug-font text-pets-dark">E</span>
                     
-                    <!-- The final 'D' (plug body) in light pink and the cord SVG (indigo) -->
-                    <span class="logo-unplug-font text-pets-primary flex items-center">
-                        D
-                        <!-- Simplified Cord/Plug SVG: Cord line coming out of the D -->
-                        <svg class="h-6 w-7 ml-[-0.2rem] text-pets-secondary mb-[-0.2rem] fill-current" viewBox="0 0 80 40" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Cord line (starts near D, slightly curved) -->
-                            <path d="M0 20 C 10 15, 30 18, 40 18" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none"/>
-                            <!-- Plug Prongs (Unplugged look) -->
-                            <rect x="45" y="10" width="10" height="4" rx="1" fill="currentColor"/>
-                            <rect x="45" y="26" width="10" height="4" rx="1" fill="currentColor"/>
+                    <!-- NEW: Cord/Plug SVG placed between E and D -->
+                    <span class="flex items-center">
+                        <!-- SVG: Prongs near the 'E' (socket) and cord extending to the 'D' (plug) -->
+                        <svg class="h-6 w-8 text-pets-secondary mb-[-0.2rem] ml-[-0.3rem] fill-current" viewBox="0 0 80 40" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Prongs being pulled out of the socket/E area -->
+                            <rect x="0" y="10" width="10" height="4" rx="1" fill="currentColor"/>
+                            <rect x="0" y="26" width="10" height="4" rx="1" fill="currentColor"/>
+                            <!-- Cord line connecting prongs to D's position -->
+                            <path d="M12 20 C 30 15, 60 18, 70 18" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none"/>
                         </svg>
                     </span>
+                    
+                    <!-- The final 'D' (plug body): Tilted and colored the same as 'Pets' (Indigo/Secondary) -->
+                    <span class="logo-unplug-font text-pets-secondary flex items-center transform -rotate-6">
+                        D
+                    </span>
                 </h1>
-                <p class="logo-tagline-font text-gray-500">UNPLUG COLOR ANIMATE</p>
+                <!-- Adjusted: Pushed tagline down with mt-2 for greater separation -->
+                <p class="logo-tagline-font text-gray-500 mt-2">UNPLUG COLOR ANIMATE</p>
             </div>
             <!-- END: Logo Structure -->
 
