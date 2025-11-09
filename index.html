@@ -80,7 +80,7 @@
             }
         }
         
-        // NEW: Function to toggle the mobile menu visibility and icon
+        // Function to toggle the mobile menu visibility and icon
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('menu-icon');
@@ -96,6 +96,13 @@
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-times');
             }
+        }
+
+        // Fallback image function
+        function replaceImage(imgElement, altText) {
+            imgElement.onerror = null; // Prevent infinite loop if placeholder fails
+            imgElement.src = `https://placehold.co/300x400/818cf8/ffffff?text=Image+Load+Error+-+${altText.replace(/ /g, '+')}`;
+            imgElement.classList.add('p-4'); // Add padding to placeholder
         }
     </script>
 </head>
@@ -155,7 +162,8 @@
                 <div class="md:w-1/3">
                     <img src="uploaded:hero-corgi-splash.jpg-6f75df48-050c-4f35-8f29-fdff8bbe3bda"
                          alt="Pomeranian running in the woods, line art illustration"
-                         class="rounded-xl shadow-2xl w-full max-w-xs md:max-w-sm mx-auto h-auto object-cover">
+                         class="rounded-xl shadow-2xl w-full max-w-xs md:max-w-sm mx-auto h-auto object-cover"
+                         onerror="replaceImage(this, this.alt)">
                 </div>
             </div>
         </section>
@@ -169,8 +177,8 @@
                         class="w-full h-auto"
                         poster="uploaded:merch-sleeping-pup.jpg-9603d2c0-544f-478b-8a81-4d0e7aadad9f"
                     >
-                        <!-- Video source using the uploaded file -->
-                        <source src="uploaded:teaser_video.mp4.mp4" type="video/mp4">
+                        <!-- Updated source path for robust loading (removed redundant .mp4 from ID) -->
+                        <source src="uploaded:teaser_video.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -184,8 +192,8 @@
         <section id="animation-feature" class="bg-pets-secondary py-10 sm:py-12 px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto text-center text-white">
                 <h3 class="text-3xl sm:text-4xl font-extrabold mb-8">Scan and See the Magic!</h3>
-                <!-- Flex layout stacks well by default but added space-y for mobile spacing -->
-                <div class="flex flex-col sm:flex-row justify-center items-start space-y-6 sm:space-y-0 sm:space-x-12">
+                <!-- Fixed: Changed items-start to items-center to ensure horizontal centering when stacked on mobile -->
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-12">
                     <div class="flex flex-col items-center">
                         <i class="fas fa-palette text-5xl feature-icon text-pets-primary mb-3"></i>
                         <p class="font-bold text-xl mb-1 text-pets-dark">Color the Page</p>
@@ -217,7 +225,8 @@
                     <div class="card bg-gray-50 p-6 rounded-xl text-center">
                         <img src="uploaded:merch-dog-car.jpg-a15b249c-e90a-48a0-beac-c380571364d5"
                              alt="Happy Corgi splashing in water, line art coloring page"
-                             class="rounded-lg w-full mb-4 shadow-md mx-auto max-h-96 object-cover">
+                             class="rounded-lg w-full mb-4 shadow-md mx-auto max-h-96 object-cover"
+                             onerror="replaceImage(this, this.alt)">
                         <h4 class="text-2xl font-semibold text-pets-dark">Furry Friends Fun Time</h4>
                         <p class="text-gray-600 mt-2">30 detailed pages of playful cats and dogs, **each with a scannable animation link!**</p>
                         <p class="text-3xl font-bold text-pets-primary mt-4">$15.99</p>
@@ -230,7 +239,8 @@
                     <div class="card bg-gray-50 p-6 rounded-xl text-center">
                         <img src="uploaded:merch-pomeranian.jpg-451efbb6-43ac-4587-acc9-d0c48a82ed06"
                              alt="Sleeping puppy with teddy bear, line art coloring page"
-                             class="rounded-lg w-full mb-4 shadow-md mx-auto max-h-96 object-cover">
+                             class="rounded-lg w-full mb-4 shadow-md mx-auto max-h-96 object-cover"
+                             onerror="replaceImage(this, this.alt)">
                         <h4 class="text-2xl font-semibold text-pets-dark">Scaly & Feathered Fantasies</h4>
                         <p class="text-gray-600 mt-2">Explore birds, reptiles, and fish in 30 unique habitats. Perfect for the exotic pet enthusiast.</p>
                         <p class="text-3xl font-bold text-pets-primary mt-4">$16.99</p>
@@ -243,7 +253,8 @@
                     <div class="card bg-gray-50 p-6 rounded-xl text-center">
                         <img src="uploaded:merch-yorkie.jpg-9977819c-df36-42d9-9731-e6f0bedf434d"
                              alt="Yorkie with hair flying out car window, line art coloring page"
-                             class="rounded-lg w-full mb-4 shadow-md mx-auto max-h-96 object-cover">
+                             class="rounded-lg w-full mb-4 shadow-md mx-auto max-h-96 object-cover"
+                             onerror="replaceImage(this, this.alt)">
                         <h4 class="text-2xl font-semibold text-pets-dark">Critters of the Wild</h4>
                         <p class="text-gray-600 mt-2">A coloring journey through the jungle and forest with 30 amazing wild animal illustrations.</p>
                         <p class="text-3xl font-bold text-pets-primary mt-4">$15.99</p>
@@ -264,7 +275,7 @@
                 <!-- Merch grid is responsive: 2 columns on mobile, 4 on medium+ -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
 
-                    <!-- Merch Item 1: Mug -->
+                    <!-- Merch Item 1: Mug - Placeholder image so no onerror needed -->
                     <div class="card bg-white p-4 rounded-xl text-center">
                         <img src="https://placehold.co/200x200/4c1d95/fca5a5?text=Pets+Mug"
                              alt="Ceramic Coffee Mug"
@@ -276,7 +287,7 @@
                         </button>
                     </div>
 
-                    <!-- Merch Item 2: T-Shirt -->
+                    <!-- Merch Item 2: T-Shirt - Placeholder image so no onerror needed -->
                     <div class="card bg-white p-4 rounded-xl text-center">
                         <img src="https://placehold.co/200x200/818cf8/ffffff?text=Pet+T-Shirt"
                              alt="Pet Unplugged T-Shirt"
@@ -288,11 +299,12 @@
                         </button>
                     </div>
 
-                    <!-- Merch Item 3: Tote Bag - Using merch-sleeping-pup.jpg -->
+                    <!-- Merch Item 3: Tote Bag - Uses uploaded image -->
                     <div class="card bg-white p-4 rounded-xl text-center">
                         <img src="uploaded:merch-sleeping-pup.jpg-9603d2c0-544f-478b-8a81-4d0e7aadad9f"
                              alt="Tote Bag with Yorkie sleeping on a bed design"
-                             class="rounded-lg w-full mb-3 shadow-sm mx-auto object-cover">
+                             class="rounded-lg w-full mb-3 shadow-sm mx-auto object-cover"
+                             onerror="replaceImage(this, this.alt)">
                         <h4 class="text-lg font-semibold text-gray-700">Cozy Pup Tote Bag</h4>
                         <p class="text-xl font-bold text-pets-primary mt-2">$19.50</p>
                         <button class="w-full mt-3 bg-gray-200 text-gray-700 font-medium py-2 rounded-lg hover:bg-gray-300 text-sm cta-button">
@@ -300,7 +312,7 @@
                         </button>
                     </div>
 
-                    <!-- Merch Item 4: Sticker Pack -->
+                    <!-- Merch Item 4: Sticker Pack - Placeholder image so no onerror needed -->
                     <div class="card bg-white p-4 rounded-xl text-center">
                         <img src="https://placehold.co/200x200/818cf8/4c1d95?text=Sticker+Pack"
                              alt="Pets Unplugged Sticker Pack"
