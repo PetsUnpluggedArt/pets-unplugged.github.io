@@ -159,26 +159,27 @@
                 </h1>
                 <p class="logo-tagline-font text-gray-500 mt-1">UNPLUG COLOR ANIMATE</p>
             </div>
-            <button id="menu-button" class="sm:hidden text-pets-dark text-2xl p-2 rounded-md hover:bg-gray-100" onclick="toggleMenu()">
-                <i id="menu-icon" class="fas fa-bars"></i>
-            </button>
             <div class="hidden sm:flex space-x-4 items-center">
                 <a href="#books" class="text-gray-600 hover:text-pets-dark font-medium">Books</a>
-                <a href="#downloads" class="text-gray-600 hover:text-pets-dark font-medium">Downloads</a>
                 <a href="#merchandise" class="text-gray-600 hover:text-pets-dark font-medium">Merch</a>
                 <a href="#about" class="text-gray-600 hover:text-pets-dark font-medium">About Us</a>
                 <a href="#faq" class="text-gray-600 hover:text-pets-dark font-medium">FAQ</a>
-                <a href="#contact" class="bg-pets-primary text-pets-dark font-bold py-2 px-4 rounded-full shadow-md hover:bg-red-300 cta-button">Join Our Pack</a>
+                <a href="#contact" class="text-gray-600 hover:text-pets-dark font-medium">Contact</a>
+                <a href="#digital" class="bg-pets-primary text-pets-dark font-bold py-2 px-4 rounded-full shadow-md hover:bg-red-300 cta-button">Get Digital</a>
             </div>
+
+            <button id="menu-button" class="sm:hidden text-pets-dark text-2xl p-2 rounded-md hover:bg-gray-100" onclick="toggleMenu()">
+                <i id="menu-icon" class="fas fa-bars"></i>
+            </button>
         </nav>
         
         <div id="mobile-menu" class="hidden sm:hidden bg-white border-t border-gray-100 px-4 pb-4 shadow-inner">
             <a href="#books" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Books</a>
-            <a href="#downloads" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Downloads</a>
             <a href="#merchandise" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Merch</a>
             <a href="#about" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">About Us</a>
             <a href="#faq" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">FAQ</a>
-            <a href="#contact" class="mt-4 block w-full text-center bg-pets-primary text-pets-dark font-bold py-2 rounded-lg shadow-md hover:bg-red-300 cta-button" onclick="toggleMenu()">Join Our Pack</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Contact</a>
+            <a href="#digital" class="mt-4 block w-full text-center bg-pets-primary text-pets-dark font-bold py-2 rounded-lg shadow-md hover:bg-red-300 cta-button" onclick="toggleMenu()">Get Digital</a>
         </div>
     </header>
 
@@ -193,7 +194,7 @@
                         Welcome to Pets Unplugged—where every page is an adventure and every finished illustration can be brought to life. **Scan the QR code on any illustration to see a 6-second animation!**
                     </p>
                     <a href="#books" class="mt-8 inline-block bg-pets-dark text-white font-bold py-3 px-8 rounded-lg shadow-xl hover:bg-indigo-900 cta-button">
-                        See Our First Book!
+                        Explore Our Coloring Books
                     </a>
                 </div>
                 <div class="md:w-1/3">
@@ -211,9 +212,9 @@
                 <div class="rounded-xl overflow-hidden shadow-2xl">
                     <video controls muted autoplay loop
                         class="w-full h-auto"
-                        poster="assets/videos/merch-sleeping-pup.jpg"
+                        poster="assets/images/merch-sleeping-pup.jpg"
                     >
-                        <source src="assets/videos/teaser_video.mp4" type="video/mp4">
+                        <source src="assets/videos/teaser_video.mp4.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -246,101 +247,48 @@
             </div>
         </section>
 
-        <!-- BOOKS SECTION: COMING SOON PREVIEW - Fur-tastic Frolics: Scan, Color, Story Time -->
         <section id="books" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
             <div class="max-w-7xl mx-auto">
-                <h3 class="text-3xl sm:text-4xl section-heading text-center mb-12">Our First Coloring Book: Coming Soon!</h3>
+                <h3 class="text-3xl sm:text-4xl section-heading text-center mb-12">Our Current Coloring Adventures</h3>
 
-                <!-- Single Preview Card -->
-                <div class="flex flex-col md:flex-row items-center bg-gray-50 p-8 rounded-xl shadow-2xl max-w-4xl mx-auto border-4 border-pets-secondary border-dashed">
-                    
-                    <!-- Preview Image -->
-                    <div class="md:w-1/2 mb-8 md:mb-0 md:pr-10">
-                        <!-- Placeholder image reflecting the brand colors/theme -->
-                        <img src="https://placehold.co/600x600/fca5a5/4c1d95?text=FUR-TASTIC+FROLICS+COVER"
-                             alt="Placeholder image for the Fur-tastic Frolics coloring book cover"
-                             class="rounded-lg w-full shadow-xl mx-auto max-h-96 object-cover"
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <div class="card bg-gray-50 p-6 rounded-xl text-center">
+                        <img src="assets/images/merch-dog-car.jpg"
+                             alt="Happy Corgi splashing in water, line art coloring page"
+                             class="rounded-lg w-full mb-4 shadow-md mx-auto max-h-96 object-cover"
                              onerror="replaceImage(this, this.alt)">
+                        <h4 class="text-2xl font-semibold text-pets-dark">Furry Friends Fun Time</h4>
+                        <p class="text-gray-600 mt-2">30 detailed pages of playful cats and dogs, **each with a scannable animation link!**</p>
+                        <p class="text-3xl font-bold text-pets-primary mt-4">$15.99</p>
+                        <button class="w-full mt-4 bg-pets-secondary text-white font-bold py-3 rounded-lg shadow-md hover:bg-indigo-500 cta-button">
+                            Add to Cart
+                        </button>
                     </div>
-
-                    <!-- Coming Soon Details -->
-                    <div class="md:w-1/2 text-center md:text-left">
-                        <h4 class="text-4xl font-bold text-pets-dark mb-4 leading-tight">Fur-tastic Frolics: Scan, Color, Story Time</h4>
-                        <p class="text-lg text-gray-700 mb-6 italic">
-                            Get ready for **30 pages** of delightful illustrations in **Fur-tastic Frolics**! Each spread contains playful, mischievous, and adorable pets, waiting for your creative touch before it leaps to life in a short animated story.
-                        </p>
-                        
-                        <div class="space-y-3 mb-8 text-gray-600">
-                             <p class="flex items-center justify-center md:justify-start text-pets-secondary font-medium"><i class="fas fa-check-circle mr-2"></i> High-Quality, Bleed-Resistant Paper</p>
-                             <p class="flex items-center justify-center md:justify-start text-pets-secondary font-medium"><i class="fas fa-check-circle mr-2"></i> 30 Unique Scannable Animations</p>
-                             <p class="flex items-center justify-center md:justify-start text-pets-secondary font-medium"><i class="fas fa-check-circle mr-2"></i> Featuring all your favorite pet breeds and friends!</p>
-                             <p class="flex items-center justify-center md:justify-start text-pets-secondary font-medium"><i class="fas fa-check-circle mr-2"></i> Every animation is paired with a short, original story!</p>
-                        </div>
-
-                        <p class="text-2xl font-black text-pets-primary mt-4 mb-6">Anticipated Launch: Fall 2025</p>
-
-                        <a href="#contact" class="inline-block bg-pets-dark text-white font-bold py-3 px-8 rounded-full shadow-xl hover:bg-indigo-900 cta-button">
-                            Get Launch Notification!
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!-- END BOOKS SECTION -->
-        
-        <!-- NEW DIGITAL DOWNLOADS SECTION -->
-        <section id="downloads" class="py-16 px-4 sm:px-6 lg:px-8 bg-pets-secondary bg-opacity-10">
-            <div class="max-w-7xl mx-auto">
-                <h3 class="text-3xl sm:text-4xl section-heading text-center mb-12">Digital Downloads</h3>
-                
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-
-                    <!-- DOWNLOAD ITEM 1: Single Coloring Page -->
-                    <div class="card bg-white p-4 rounded-xl text-center">
-                        <img src="https://placehold.co/200x200/4c1d95/fca5a5?text=Themed+Six+Pack"
-                             alt="Themed Six-Pack: Exclusive Illustrations"
-                             class="rounded-lg w-full mb-3 shadow-sm mx-auto object-cover">
-                        <h4 class="text-lg font-semibold text-gray-700">Themed Six-Pack: Exclusive Illustrations</h4>
-                        <p class="text-xl font-bold text-pets-primary mt-2">$1.99</p>
-                        <button class="w-full mt-3 bg-pets-secondary text-white font-bold py-2 rounded-lg hover:bg-indigo-600 text-sm cta-button">
-                            Download Now
+                    
+                    <div class="card bg-gray-50 p-6 rounded-xl text-center">
+                        <img src="assets/images/merch-pomeranian.jpg"
+                             alt="Sleeping puppy with teddy bear, line art coloring page"
+                             class="rounded-lg w-full mb-4 shadow-md mx-auto max-h-96 object-cover"
+                             onerror="replaceImage(this, this.alt)">
+                        <h4 class="text-2xl font-semibold text-pets-dark">Scaly & Feathered Fantasies</h4>
+                        <p class="text-gray-600 mt-2">Explore birds, reptiles, and fish in 30 unique habitats. Perfect for the exotic pet enthusiast.</p>
+                        <p class="text-3xl font-bold text-pets-primary mt-4">$16.99</p>
+                        <button class="w-full mt-4 bg-pets-secondary text-white font-bold py-3 rounded-lg shadow-md hover:bg-indigo-500 cta-button">
+                            Add to Cart
                         </button>
                     </div>
 
-                    <!-- DOWNLOAD ITEM 2: Puppy Wallpaper -->
-                    <div class="card bg-white p-4 rounded-xl text-center">
-                        <img src="https://placehold.co/200x200/818cf8/ffffff?text=Desktop+Wallpaper"
-                             alt="Desktop and Mobile Puppy Wallpaper"
-                             class="rounded-lg w-full max-w-sm mb-3 shadow-sm mx-auto object-cover">
-                        <h4 class="text-lg font-semibold text-gray-700">Exclusive Desktop Wallpaper Pack</h4>
-                        <p class="text-xl font-bold text-pets-primary mt-2">$0.99</p>
-                        <button class="w-full mt-3 bg-pets-secondary text-white font-bold py-2 rounded-lg hover:bg-indigo-600 text-sm cta-button">
-                            Download Now
-                        </button>
-                    </div>
-
-                    <!-- DOWNLOAD ITEM 3: Full Digital Coloring Book -->
-                    <div class="card bg-white p-4 rounded-xl text-center">
-                        <img src="https://placehold.co/200x200/fca5a5/4c1d95?text=Fur-tastic+Frolics+Digital+Book"
-                             alt="Digital Version of Fur-tastic Frolics: Scan, Color, Story Time"
-                             class="rounded-lg w-full max-w-sm mb-3 shadow-sm mx-auto object-cover">
-                        <h4 class="text-lg font-semibold text-gray-700">Digital Book: Fur-tastic Frolics</h4>
-                        <p class="text-xl font-bold text-pets-primary mt-2">$4.99</p>
-                        <button class="w-full mt-3 bg-pets-secondary text-white font-bold py-2 rounded-lg hover:bg-indigo-600 text-sm cta-button">
-                            Download Now
-                        </button>
-                    </div>
-
-                    <!-- DOWNLOAD ITEM 4: Kids Activity Sheets -->
-                    <div class="card bg-white p-4 rounded-xl text-center">
-                        <img src="https://placehold.co/200x200/818cf8/4c1d95?text=Activity+Sheets"
-                             alt="Kids Activity Sheets and Puzzles"
-                             class="rounded-lg w-full max-w-sm mb-3 shadow-sm mx-auto object-cover">
-                        <h4 class="text-lg font-semibold text-gray-700">Kids Activity Sheets & Puzzles</h4>
-                        <p class="text-xl font-bold text-pets-primary mt-2">$3.50</p>
-                        <button class="w-full mt-3 bg-pets-secondary text-white font-bold py-2 rounded-lg hover:bg-indigo-600 text-sm cta-button">
-                            Download Now
+                    <div class="card bg-gray-50 p-6 rounded-xl text-center">
+                        <img src="assets/images/merch-yorkie.jpg"
+                             alt="Yorkie with hair flying out car window, line art coloring page"
+                             class="rounded-lg w-full mb-4 shadow-md mx-auto max-h-96 object-cover"
+                             onerror="replaceImage(this, this.alt)">
+                        <h4 class="text-2xl font-semibold text-pets-dark">Critters of the Wild</h4>
+                        <p class="text-gray-600 mt-2">A coloring journey through the jungle and forest with 30 amazing wild animal illustrations.</p>
+                        <p class="text-3xl font-bold text-pets-primary mt-4">$15.99</p>
+                        <button class="w-full mt-4 bg-pets-secondary text-white font-bold py-3 rounded-lg shadow-md hover:bg-indigo-500 cta-button">
+                            Add to Cart
                         </button>
                     </div>
 
@@ -350,54 +298,52 @@
 
         <section id="merchandise" class="py-16 px-4 sm:px-6 lg:px-8 bg-f7f3f9">
             <div class="max-w-7xl mx-auto">
-                <h3 class="text-3xl sm:text-4xl section-heading text-center mb-12">Fur-tastic Frolics Merch</h3>
+                <h3 class="text-3xl sm:text-4xl section-heading text-center mb-12">Fun Pet-Themed Merch</h3>
                 
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
 
-                    <!-- ITEM 1: Mug - Path updated to .png -->
+                    <!-- MUG IMAGE SOURCE: assets/images/dogsleep-mug.png (Filename updated to avoid cache issues) -->
                     <div class="card bg-white p-4 rounded-xl text-center">
-                        <img src="assets/images/dogbirdslogo.png" 
-                             alt="Ceramic Coffee Mug with Golden Retriever and birds line art design"
+                        <img src="assets/images/dogsleep-mug.png"
+                             alt="White Coffee Mug with a sketch of a winking corgi puppy wrapped in a blanket"
                              class="rounded-lg w-full mb-3 shadow-sm mx-auto object-cover"
                              onerror="replaceImage(this, this.alt)">
-                        <h4 class="text-lg font-semibold text-gray-700">Fur-tastic Frolics Mug</h4>
+                        <h4 class="text-lg font-semibold text-gray-700">"Unplugged" Coffee Mug</h4>
                         <p class="text-xl font-bold text-pets-primary mt-2">$9.99</p>
                         <button class="w-full mt-3 bg-gray-200 text-gray-700 font-medium py-2 rounded-lg hover:bg-gray-300 text-sm cta-button">
                             Buy Now
                         </button>
                     </div>
+                    <!-- END MUG IMAGE SOURCE -->
 
-                    <!-- ITEM 2: T-Shirt -->
                     <div class="card bg-white p-4 rounded-xl text-center">
-                        <img src="https://placehold.co/200x200/818cf8/ffffff?text=Leash-Free+Tee"
-                             alt="T-Shirt featuring a running puppy illustration"
+                        <img src="https://placehold.co/200x200/818cf8/ffffff?text=Pet+T-Shirt"
+                             alt="Pet Unplugged T-Shirt"
                              class="rounded-lg w-full max-w-sm mb-3 shadow-sm mx-auto object-cover">
-                        <h4 class="text-lg font-semibold text-gray-700">"Leash-Free Fun" T-Shirt</h4>
+                        <h4 class="text-lg font-semibold text-gray-700">Logo T-Shirt (Unisex)</h4>
                         <p class="text-xl font-bold text-pets-primary mt-2">$24.99</p>
                         <button class="w-full mt-3 bg-gray-200 text-gray-700 font-medium py-2 rounded-lg hover:bg-gray-300 text-sm cta-button">
                             Buy Now
                         </button>
                     </div>
 
-                    <!-- ITEM 3: Tote Bag -->
                     <div class="card bg-white p-4 rounded-xl text-center">
-                        <img src="https://placehold.co/200x200/fca5a5/4c1d95?text=Puppy+Art+Tote"
-                             alt="Tote Bag featuring line art of a sleeping puppy"
+                        <img src="assets/images/merch-sleeping-pup.jpg"
+                             alt="Tote Bag with Yorkie sleeping on a bed design"
                              class="rounded-lg w-full max-w-sm mb-3 shadow-sm mx-auto object-cover"
                              onerror="replaceImage(this, this.alt)">
-                        <h4 class="text-lg font-semibold text-gray-700">Color-Me Puppy Tote</h4>
+                        <h4 class="text-lg font-semibold text-gray-700">Cozy Pup Tote Bag</h4>
                         <p class="text-xl font-bold text-pets-primary mt-2">$19.50</p>
                         <button class="w-full mt-3 bg-gray-200 text-gray-700 font-medium py-2 rounded-lg hover:bg-gray-300 text-sm cta-button">
                             Buy Now
                         </button>
                     </div>
 
-                    <!-- ITEM 4: Sticker Pack -->
                     <div class="card bg-white p-4 rounded-xl text-center">
-                        <img src="https://placehold.co/200x200/818cf8/4c1d95?text=Puppy+Sticker+Pack"
-                             alt="Puppies Unleashed Vinyl Sticker Pack"
+                        <img src="https://placehold.co/200x200/818cf8/4c1d95?text=Sticker+Pack"
+                             alt="Pets Unplugged Sticker Pack"
                              class="rounded-lg w-full max-w-sm mb-3 shadow-sm mx-auto object-cover">
-                        <h4 class="text-lg font-semibold text-gray-700">Puppy Sticker Pack (5-Pack)</h4>
+                        <h4 class="text-lg font-semibold text-gray-700">3-Pack Vinyl Stickers</h4>
                         <p class="text-xl font-bold text-pets-primary mt-2">$4.99</p>
                         <button class="w-full mt-3 bg-gray-200 text-gray-700 font-medium py-2 rounded-lg hover:bg-gray-300 text-sm cta-button">
                             Buy Now
@@ -407,42 +353,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- MOVED ABOUT SECTION: Our Story: Unplugging Creativity -->
-        <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-            <div class="max-w-7xl mx-auto">
-                <h3 class="text-3xl sm:text-4xl section-heading text-center mb-12">Our Story: Unplugging Creativity</h3>
-
-                <div class="flex flex-col md:flex-row items-center md:space-x-12">
-                    <div class="md:w-1/2 mb-8 md:mb-0">
-                        <p class="text-lg text-gray-700 mb-4">
-                            Pets Unplugged was founded on a simple belief: the best creativity happens when we step away from screens. We combine the joy of traditional coloring with the magic of modern technology, offering a unique experience that sparks imagination in both kids and adults.
-                        </p>
-                        <p class="text-lg text-gray-700 mb-4 font-semibold text-pets-dark">
-                            Our mission is to bridge the gap between analog art and digital fun.
-                        </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-600">
-                            <li>We use high-quality, bleed-resistant paper.</li>
-                            <li>Each illustration is hand-drawn by talented artists.</li>
-                            <li>Every page connects to a unique, short, looping animation.</li>
-                        </ul>
-                    </div>
-                    <div class="md:w-1/2">
-                        <img src="https://placehold.co/600x400/fca5a5/4c1d95?text=About+Us+Team+Photo"
-                             alt="Stylized illustration of a person coloring next to a dog"
-                             class="rounded-xl shadow-xl w-full h-auto object-cover"
-                             onerror="replaceImage(this, this.alt)">
-                    </div>
-                </div>
-                
-                <div class="text-center mt-12">
-                     <a href="#contact" class="inline-block bg-pets-primary text-pets-dark font-bold py-3 px-8 rounded-lg shadow-xl hover:bg-red-400 cta-button">
-                        Meet the Founders
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!-- END MOVED ABOUT SECTION -->
 
         <section id="faq" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
             <div class="max-w-4xl mx-auto">
@@ -490,7 +400,7 @@
                 </p>
                 
                 <!-- IFRAME FOR SIGN-UP FORM (Height is set to 305px) -->
-                <iframe width="540" height="305" src="https://d594eb7c.sibforms.com/serve/MUIFANGdb0jKFrBXiNX2Hq2bKn4r-c14bcEGV-BiOMN221c5jrdcUYXPD0vEnTvxzE4V8O09i-6btQMjoiSofRFKpfyGHTx1E9xYtefgb9FKTCfxHZ88bhmN7A1bOOiU91kLmqhXMPYBlKMaAGuaIwKPFMyWlV7Gngzp8U3g6sCz4wz4oCSOCREFJY0xdnSA35yRDpnu_2nEFyF7wA==" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
+                <iframe width="540" height="305" src="https://d594eb7c.sibforms.com/serve/MUIFANGdb0jKFrBXiNX2Hq2bKn4r-c14bcEGV-BiOMN221c5jrdcUYXPD0vEnTvxzE4V8O09i-6btQMjoiSofRFKpfyGHTx1E9xYtefgb9FKTCfxHZ88hhmN7A1bOOiU91kLmqhXMPYBlKMaAGuaIwKPFMyWlV7Gngzp8U3g6sCz4wz4oCSOCREFJY0xdvSA35yRDpnu_2nEFyF7wA==" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
                 </div>
         </section>
 
