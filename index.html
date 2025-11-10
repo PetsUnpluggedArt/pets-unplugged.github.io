@@ -161,6 +161,7 @@
             </div>
             <div class="hidden sm:flex space-x-4 items-center">
                 <a href="#books" class="text-gray-600 hover:text-pets-dark font-medium">Books</a>
+                <a href="#downloads" class="text-gray-600 hover:text-pets-dark font-medium">Downloads</a>
                 <a href="#merchandise" class="text-gray-600 hover:text-pets-dark font-medium">Merch</a>
                 <a href="#about" class="text-gray-600 hover:text-pets-dark font-medium">About Us</a>
                 <a href="#faq" class="text-gray-600 hover:text-pets-dark font-medium">FAQ</a>
@@ -174,6 +175,7 @@
         
         <div id="mobile-menu" class="hidden sm:hidden bg-white border-t border-gray-100 px-4 pb-4 shadow-inner">
             <a href="#books" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Books</a>
+            <a href="#downloads" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Downloads</a>
             <a href="#merchandise" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Merch</a>
             <a href="#about" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">About Us</a>
             <a href="#faq" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">FAQ</a>
@@ -245,41 +247,7 @@
             </div>
         </section>
 
-        <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-            <div class="max-w-7xl mx-auto">
-                <h3 class="text-3xl sm:text-4xl section-heading text-center mb-12">Our Story: Unplugging Creativity</h3>
-
-                <div class="flex flex-col md:flex-row items-center md:space-x-12">
-                    <div class="md:w-1/2 mb-8 md:mb-0">
-                        <p class="text-lg text-gray-700 mb-4">
-                            Pets Unplugged was founded on a simple belief: the best creativity happens when we step away from screens. We combine the joy of traditional coloring with the magic of modern technology, offering a unique experience that sparks imagination in both kids and adults.
-                        </p>
-                        <p class="text-lg text-gray-700 mb-4 font-semibold text-pets-dark">
-                            Our mission is to bridge the gap between analog art and digital fun.
-                        </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-600">
-                            <li>We use high-quality, bleed-resistant paper.</li>
-                            <li>Each illustration is hand-drawn by talented artists.</li>
-                            <li>Every page connects to a unique, short, looping animation.</li>
-                        </ul>
-                    </div>
-                    <div class="md:w-1/2">
-                        <img src="https://placehold.co/600x400/fca5a5/4c1d95?text=About+Us+Team+Photo"
-                             alt="Stylized illustration of a person coloring next to a dog"
-                             class="rounded-xl shadow-xl w-full h-auto object-cover"
-                             onerror="replaceImage(this, this.alt)">
-                    </div>
-                </div>
-                
-                <div class="text-center mt-12">
-                     <a href="#contact" class="inline-block bg-pets-primary text-pets-dark font-bold py-3 px-8 rounded-lg shadow-xl hover:bg-red-400 cta-button">
-                        Meet the Founders
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- UPDATED BOOKS SECTION: COMING SOON PREVIEW - Puppies Unleashed -->
+        <!-- BOOKS SECTION: COMING SOON PREVIEW - Puppies Unleashed -->
         <section id="books" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
             <div class="max-w-7xl mx-auto">
                 <h3 class="text-3xl sm:text-4xl section-heading text-center mb-12">Our First Coloring Book: Coming Soon!</h3>
@@ -319,7 +287,67 @@
 
             </div>
         </section>
-        <!-- END UPDATED BOOKS SECTION -->
+        <!-- END BOOKS SECTION -->
+        
+        <!-- NEW DIGITAL DOWNLOADS SECTION -->
+        <section id="downloads" class="py-16 px-4 sm:px-6 lg:px-8 bg-pets-secondary bg-opacity-10">
+            <div class="max-w-7xl mx-auto">
+                <h3 class="text-3xl sm:text-4xl section-heading text-center mb-12">Digital Downloads</h3>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+                    <!-- DOWNLOAD ITEM 1: Single Coloring Page -->
+                    <div class="card bg-white p-4 rounded-xl text-center">
+                        <img src="https://placehold.co/200x200/4c1d95/fca5a5?text=Color+Page+Pack+1"
+                             alt="Digital Coloring Page Pack"
+                             class="rounded-lg w-full mb-3 shadow-sm mx-auto object-cover">
+                        <h4 class="text-lg font-semibold text-gray-700">Digital Coloring Page Pack (3)</h4>
+                        <p class="text-xl font-bold text-pets-primary mt-2">$2.99</p>
+                        <button class="w-full mt-3 bg-pets-secondary text-white font-bold py-2 rounded-lg hover:bg-indigo-600 text-sm cta-button">
+                            Download Now
+                        </button>
+                    </div>
+
+                    <!-- DOWNLOAD ITEM 2: Puppy Wallpaper -->
+                    <div class="card bg-white p-4 rounded-xl text-center">
+                        <img src="https://placehold.co/200x200/818cf8/ffffff?text=Desktop+Wallpaper"
+                             alt="Desktop and Mobile Puppy Wallpaper"
+                             class="rounded-lg w-full max-w-sm mb-3 shadow-sm mx-auto object-cover">
+                        <h4 class="text-lg font-semibold text-gray-700">Premium Puppy Wallpaper Pack</h4>
+                        <p class="text-xl font-bold text-pets-primary mt-2">$1.99</p>
+                        <button class="w-full mt-3 bg-pets-secondary text-white font-bold py-2 rounded-lg hover:bg-indigo-600 text-sm cta-button">
+                            Download Now
+                        </button>
+                    </div>
+
+                    <!-- DOWNLOAD ITEM 3: Animation Short Loop -->
+                    <div class="card bg-white p-4 rounded-xl text-center">
+                        <img src="https://placehold.co/200x200/fca5a5/4c1d95?text=Animation+Loop+Set"
+                             alt="Animated GIF Loop Set for Social Media"
+                             class="rounded-lg w-full max-w-sm mb-3 shadow-sm mx-auto object-cover">
+                        <h4 class="text-lg font-semibold text-gray-700">Animated Loop GIF Set</h4>
+                        <p class="text-xl font-bold text-pets-primary mt-2">$4.99</p>
+                        <button class="w-full mt-3 bg-pets-secondary text-white font-bold py-2 rounded-lg hover:bg-indigo-600 text-sm cta-button">
+                            Download Now
+                        </button>
+                    </div>
+
+                    <!-- DOWNLOAD ITEM 4: Kids Activity Sheets -->
+                    <div class="card bg-white p-4 rounded-xl text-center">
+                        <img src="https://placehold.co/200x200/818cf8/4c1d95?text=Activity+Sheets"
+                             alt="Kids Activity Sheets and Puzzles"
+                             class="rounded-lg w-full max-w-sm mb-3 shadow-sm mx-auto object-cover">
+                        <h4 class="text-lg font-semibold text-gray-700">Kids Activity Sheets & Puzzles</h4>
+                        <p class="text-xl font-bold text-pets-primary mt-2">$3.50</p>
+                        <button class="w-full mt-3 bg-pets-secondary text-white font-bold py-2 rounded-lg hover:bg-indigo-600 text-sm cta-button">
+                            Download Now
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- END DIGITAL DOWNLOADS SECTION -->
 
         <section id="merchandise" class="py-16 px-4 sm:px-6 lg:px-8 bg-f7f3f9">
             <div class="max-w-7xl mx-auto">
@@ -379,6 +407,42 @@
                 </div>
             </div>
         </section>
+
+        <!-- MOVED ABOUT SECTION: Our Story: Unplugging Creativity -->
+        <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <h3 class="text-3xl sm:text-4xl section-heading text-center mb-12">Our Story: Unplugging Creativity</h3>
+
+                <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <p class="text-lg text-gray-700 mb-4">
+                            Pets Unplugged was founded on a simple belief: the best creativity happens when we step away from screens. We combine the joy of traditional coloring with the magic of modern technology, offering a unique experience that sparks imagination in both kids and adults.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-4 font-semibold text-pets-dark">
+                            Our mission is to bridge the gap between analog art and digital fun.
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li>We use high-quality, bleed-resistant paper.</li>
+                            <li>Each illustration is hand-drawn by talented artists.</li>
+                            <li>Every page connects to a unique, short, looping animation.</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/fca5a5/4c1d95?text=About+Us+Team+Photo"
+                             alt="Stylized illustration of a person coloring next to a dog"
+                             class="rounded-xl shadow-xl w-full h-auto object-cover"
+                             onerror="replaceImage(this, this.alt)">
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                     <a href="#contact" class="inline-block bg-pets-primary text-pets-dark font-bold py-3 px-8 rounded-lg shadow-xl hover:bg-red-400 cta-button">
+                        Meet the Founders
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- END MOVED ABOUT SECTION -->
 
         <section id="faq" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
             <div class="max-w-4xl mx-auto">
