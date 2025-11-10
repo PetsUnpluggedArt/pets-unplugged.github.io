@@ -159,6 +159,9 @@
                 </h1>
                 <p class="logo-tagline-font text-gray-500 mt-1">UNPLUG COLOR ANIMATE</p>
             </div>
+            <button id="menu-button" class="sm:hidden text-pets-dark text-2xl p-2 rounded-md hover:bg-gray-100" onclick="toggleMenu()">
+                <i id="menu-icon" class="fas fa-bars"></i>
+            </button>
             <div class="hidden sm:flex space-x-4 items-center">
                 <a href="#books" class="text-gray-600 hover:text-pets-dark font-medium">Books</a>
                 <a href="#downloads" class="text-gray-600 hover:text-pets-dark font-medium">Downloads</a>
@@ -167,10 +170,6 @@
                 <a href="#faq" class="text-gray-600 hover:text-pets-dark font-medium">FAQ</a>
                 <a href="#contact" class="bg-pets-primary text-pets-dark font-bold py-2 px-4 rounded-full shadow-md hover:bg-red-300 cta-button">Join Our Pack</a>
             </div>
-
-            <button id="menu-button" class="sm:hidden text-pets-dark text-2xl p-2 rounded-md hover:bg-gray-100" onclick="toggleMenu()">
-                <i id="menu-icon" class="fas fa-bars"></i>
-            </button>
         </nav>
         
         <div id="mobile-menu" class="hidden sm:hidden bg-white border-t border-gray-100 px-4 pb-4 shadow-inner">
@@ -212,7 +211,7 @@
                 <div class="rounded-xl overflow-hidden shadow-2xl">
                     <video controls muted autoplay loop
                         class="w-full h-auto"
-                        poster="assets/images/merch-sleeping-pup.jpg"
+                        poster="assets/videos/merch-sleeping-pup.jpg"
                     >
                         <source src="assets/videos/teaser_video.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -348,7 +347,6 @@
                 </div>
             </div>
         </section>
-        <!-- END DIGITAL DOWNLOADS SECTION -->
 
         <section id="merchandise" class="py-16 px-4 sm:px-6 lg:px-8 bg-f7f3f9">
             <div class="max-w-7xl mx-auto">
@@ -356,9 +354,9 @@
                 
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
 
-                    <!-- ITEM 1: Mug - UPDATED WITH USER'S NEW IMAGE -->
+                    <!-- ITEM 1: Mug - Path updated to .png -->
                     <div class="card bg-white p-4 rounded-xl text-center">
-                        <img src="dogbirdslogo.jpg"
+                        <img src="assets/images/dogbirdslogo.png" 
                              alt="Ceramic Coffee Mug with Golden Retriever and birds line art design"
                              class="rounded-lg w-full mb-3 shadow-sm mx-auto object-cover"
                              onerror="replaceImage(this, this.alt)">
