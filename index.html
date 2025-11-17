@@ -134,7 +134,8 @@
             
             <div class="flex items-center leading-none">
                 <a href="#hero" class="block">
-                    <img src="logo.png" 
+                    <!-- Updated path for logo.png -->
+                    <img src="assets/images/logo.png" 
                          alt="Pets Unplugged Logo" 
                          class="header-logo" 
                          onerror="replaceImage(this, 'Logo Placeholder')"
@@ -217,8 +218,8 @@
                 <div class="flex flex-col lg:flex-row items-center justify-center gap-8">
                     
                     <div class="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl border-4 border-pets-primary">
-                        <!-- UPDATED IMAGE SOURCE: dogpianosample.jpg -->
-                        <img src="dogpianosample.jpg" 
+                        <!-- Updated path for dogpianosample.jpg -->
+                        <img src="assets/images/dogpianosample.jpg" 
                              alt="Sleeping puppy on a piano coloring page"
                              class="w-full h-auto object-cover"
                              title="Illustration from Fur-tastic Frolics"
@@ -226,12 +227,15 @@
                     </div>
 
                     <div class="w-full lg:w-1/2 flex flex-col items-center p-4 bg-white rounded-xl shadow-2xl">
-                        <!-- QR CODE SOURCE (now using filename only) -->
-                        <img src="dogpianosampleqrcode.png" 
-                             alt="QR Code for animation link"
-                             class="w-48 h-48 sm:w-64 sm:h-64 mx-auto mb-6 p-4 border-4 border-pets-secondary"
-                             title="Scan to see the 6-second animation!"
-                             onerror="replaceImage(this, 'QR Code Missing')">
+                        
+                        <!-- QR Code Image now wrapped in a clickable link -->
+                        <a href="http://petsunplugged.com/animation-landing/dogpianosample.html" target="_blank" class="block">
+                            <img src="assets/images/dogpianosampleqrcode.png" 
+                                 alt="QR Code for animation link (Clickable)"
+                                 class="w-48 h-48 sm:w-64 sm:h-64 mx-auto mb-6 p-4 border-4 border-pets-secondary"
+                                 title="Scan or Click to see the 6-second animation!"
+                                 onerror="replaceImage(this, 'QR Code Missing')">
+                        </a>
                         
                         <p class="text-md font-semibold text-pets-dark mb-4">
                             Love this page? Get the whole book!
@@ -279,7 +283,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     <div class="card bg-gray-50 p-6 rounded-xl text-center">
-                        <img src="dogpianosample.jpg" 
+                        <!-- Updated path for dogpianosample.jpg -->
+                        <img src="assets/images/dogpianosample.jpg" 
                              alt="Cover image for Fur-tastic Frolics: A puppy sleeping on a piano"
                              class="rounded-lg w-full mb-4 shadow-md mx-auto max-h-96 object-cover"
                              onerror="replaceImage(this, this.alt)">
