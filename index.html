@@ -122,7 +122,7 @@
         function replaceImage(imgElement, altText) {
             imgElement.onerror = null; // Prevent infinite loop if placeholder fails
             // Adjusted placeholder URL for better folder compatibility if images fail to load
-            imgElement.src = `https://placehold.co/200x50/818cf8/ffffff?text=LOGO+LOAD+ERROR`;
+            imgElement.src = `https://placehold.co/300x400/818cf8/ffffff?text=${altText.toUpperCase().replace(/\s/g, '+')}`;
             imgElement.classList.add('p-2'); // Add padding to placeholder
         }
     </script>
@@ -132,7 +132,6 @@
     <header class="bg-white sticky top-0 z-10 shadow-lg">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             
-            <!-- Logo Section - Updated to use the new path: assets/images/Logo_MAX.png -->
             <div class="flex items-center leading-none">
                 <a href="#hero" class="block">
                     <img src="assets/images/Logo_MAX.png" 
@@ -170,6 +169,7 @@
     <main>
         <section id="hero" class="bg-pets-secondary bg-opacity-10 py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-center md:text-left">
+                
                 <div class="md:w-1/2 mb-10 md:mb-0">
                     <h2 class="text-5xl sm:text-6xl font-black text-pets-dark leading-tight">
                         Unplug, <span class="text-pets-primary">Color,</span> & <span class="text-pets-secondary">Animate!</span>
@@ -181,29 +181,67 @@
                         Explore Our Coloring Books
                     </a>
                 </div>
-                <div class="md:w-1/3">
-                    <img src="https://placehold.co/400x400/818cf8/ffffff?text=Pomeranian+Running"
-                         alt="Pomeranian running in the woods, line art illustration"
-                         class="rounded-xl shadow-2xl w-full max-w-xs md:max-w-sm mx-auto h-auto object-cover"
-                         onerror="replaceImage(this, this.alt)">
+                
+                <div class="md:w-1/2 mt-10 md:mt-0 text-left px-4">
+                    <h3 class="text-2xl font-black text-pets-dark mb-4">Why Color? The Benefits Are Huge!</h3>
+                    <ul class="space-y-3 text-lg text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pets-secondary mt-1 mr-3 text-xl"></i>
+                            <span>**Stress Relief & Relaxation:** A calming, meditative activity for adults.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pets-secondary mt-1 mr-3 text-xl"></i>
+                            <span>**Boosted Focus & Patience:** Improves concentration and attention span.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pets-secondary mt-1 mr-3 text-xl"></i>
+                            <span>**Motor Skills & Coordination:** Essential development for younger colorists.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pets-secondary mt-1 mr-3 text-xl"></i>
+                            <span>**Unleash Creativity:** Experiment with colors and artistic expression.</span>
+                        </li>
+                    </ul>
                 </div>
+                
             </div>
         </section>
 
-        <section id="teaser-video" class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-pets-dark">
+        <section id="fur-tastic-peek" class="py-16 px-4 sm:px-6 lg:px-8 bg-pets-dark">
             <div class="max-w-4xl mx-auto text-center">
-                <h3 class="text-3xl sm:text-4xl text-white font-extrabold mb-8">See the Magic in Motion!</h3>
-                <div class="rounded-xl overflow-hidden shadow-2xl">
-                    <video controls muted loop
-                        class="w-full h-auto"
-                        poster="https://placehold.co/600x400/4c1d95/ffffff?text=Video+Teaser+Poster"
-                    >
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <p class="text-white text-md sm:text-lg mt-6 opacity-90">
-                    This is a sneak peek of how our coloring pages come alive!
+                <h3 class="text-3xl sm:text-4xl text-white font-extrabold mb-4">Sneak Peek: Scan to See the Animation!</h3>
+                <p class="text-lg text-white opacity-90 mb-10">
+                    Get a taste of the magic with this page from our *Fur-tastic Frolics* book.
                 </p>
+
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-8">
+                    
+                    <div class="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl border-4 border-pets-primary">
+                        <img src="05.jpg" 
+                             alt="Sleeping puppy on a piano coloring page"
+                             class="w-full h-auto object-cover"
+                             title="Illustration from Fur-tastic Frolics">
+                    </div>
+
+                    <div class="w-full lg:w-1/2 flex flex-col items-center p-4 bg-white rounded-xl shadow-2xl">
+                        <img src="sample.png" 
+                             alt="QR Code for animation link"
+                             class="w-48 h-48 sm:w-64 sm:h-64 mx-auto mb-6 p-4 border-4 border-pets-secondary"
+                             title="Scan to see the 6-second animation!">
+                        
+                        <p class="text-md font-semibold text-pets-dark mb-4">
+                            Love this page? Get the whole book!
+                        </p>
+
+                        <a href="#books" class="w-full sm:w-auto inline-block bg-pets-secondary text-white font-bold py-3 px-8 rounded-lg shadow-xl hover:bg-indigo-500 cta-button">
+                            <i class="fas fa-shopping-cart mr-2"></i> Find the Book on Amazon
+                        </a>
+                        
+                        <a href="#digital" class="mt-3 text-pets-dark hover:text-pets-secondary font-medium underline cta-button">
+                            Or Get the Digital Download Here
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
         
@@ -237,13 +275,13 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     <div class="card bg-gray-50 p-6 rounded-xl text-center">
-                        <img src="https://placehold.co/300x400/818cf8/ffffff?text=Happy+Corgi"
-                             alt="Happy Corgi splashing in water, line art coloring page"
+                        <img src="05.jpg" 
+                             alt="Cover image for Fur-tastic Frolics: A puppy sleeping on a piano"
                              class="rounded-lg w-full mb-4 shadow-md mx-auto max-h-96 object-cover"
                              onerror="replaceImage(this, this.alt)">
-                        <h4 class="text-2xl font-semibold text-pets-dark">Furry Friends Fun Time</h4>
-                        <p class="text-gray-600 mt-2">30 detailed pages of playful cats and dogs, **each with a scannable animation link!**</p>
-                        <p class="text-3xl font-bold text-pets-primary mt-4">$15.99</p>
+                        <h4 class="text-2xl font-semibold text-pets-dark">Fur-tastic Frolics</h4>
+                        <p class="text-gray-600 mt-2">30 delightful pages of various dogs in whimsical scenes. Each illustration has a scannable animation link.</p>
+                        <p class="text-3xl font-bold text-pets-primary mt-4">$11.99</p>
                         <button class="w-full mt-4 bg-pets-secondary text-white font-bold py-3 rounded-lg shadow-md hover:bg-indigo-500 cta-button">
                             Add to Cart
                         </button>
@@ -352,7 +390,7 @@
                     <div class="bg-gray-50 rounded-xl shadow-sm p-4 cursor-pointer" onclick="toggleFAQ(this)">
                         <div class="flex justify-between items-center">
                             <h4 class="text-lg font-medium text-pets-dark">Can I see the animations on my computer?</h4>
-                            <svg class="w-6 h-6 transform transition-transform duration-300 rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-6 h-6 transform transition-transform duration-300 rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3d.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
                         <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-gray-700 py-0">
                             <p>Yes, while the QR codes are designed for easy mobile access, you can manually type the URL (which appears when you scan the code) into any desktop web browser to view the animations.</p>
@@ -379,7 +417,6 @@
                     Get free coloring pages, exclusive merchandise discounts, and animation updates right in your inbox.
                 </p>
                 
-                <!-- Brevo Subscriber Form -->
                 <div class="iframe-container">
                     <iframe 
                         src="https://d594eb7c.sibforms.com/serve/MUIFANGdb0jKFrBXiNX2Hq2bKn4r-c14bcEGV-BiOMN221c5jrdcUYXPD0vEnTvxzE4V8O09i-6btQMjoiSofRFKpfyGHTx1E9xYtefgb9FKTCfxHZ88bhmN7A1bOOiU91kLmqhXMPYBlKMaAGuaIwKPFMyWlV7Gngzp8U3g6sCz4wz4oCSOCREFJY0xdvSA35yRDpnu_2nEFyF7wA==" 
@@ -410,5 +447,5 @@
         </div>
     </footer>
 
-    </body>
+</body>
 </html>
