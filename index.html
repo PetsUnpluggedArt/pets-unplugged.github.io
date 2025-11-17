@@ -134,8 +134,7 @@
             
             <div class="flex items-center leading-none">
                 <a href="#hero" class="block">
-                    <!-- UPDATED LOGO PATH -->
-                    <img src="assets/images/logo.png" 
+                    <img src="logo.png" 
                          alt="Pets Unplugged Logo" 
                          class="header-logo" 
                          onerror="replaceImage(this, 'Logo Placeholder')"
@@ -218,14 +217,16 @@
                 <div class="flex flex-col lg:flex-row items-center justify-center gap-8">
                     
                     <div class="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl border-4 border-pets-primary">
-                        <img src="05.jpg" 
+                        <!-- UPDATED IMAGE SOURCE: dogpianosample.jpg -->
+                        <img src="dogpianosample.jpg" 
                              alt="Sleeping puppy on a piano coloring page"
                              class="w-full h-auto object-cover"
-                             title="Illustration from Fur-tastic Frolics">
+                             title="Illustration from Fur-tastic Frolics"
+                             onerror="replaceImage(this, 'Sleeping Puppy Coloring Page')">
                     </div>
 
                     <div class="w-full lg:w-1/2 flex flex-col items-center p-4 bg-white rounded-xl shadow-2xl">
-                        <!-- UPDATED QR CODE PATH TO USE FILENAME ONLY -->
+                        <!-- QR CODE SOURCE (now using filename only) -->
                         <img src="dogpianosampleqrcode.png" 
                              alt="QR Code for animation link"
                              class="w-48 h-48 sm:w-64 sm:h-64 mx-auto mb-6 p-4 border-4 border-pets-secondary"
@@ -278,7 +279,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     <div class="card bg-gray-50 p-6 rounded-xl text-center">
-                        <img src="05.jpg" 
+                        <img src="dogpianosample.jpg" 
                              alt="Cover image for Fur-tastic Frolics: A puppy sleeping on a piano"
                              class="rounded-lg w-full mb-4 shadow-md mx-auto max-h-96 object-cover"
                              onerror="replaceImage(this, this.alt)">
@@ -291,8 +292,8 @@
                     </div>
                     
                     <div class="card bg-gray-50 p-6 rounded-xl text-center">
-                        <img src="https://placehold.co/300x400/818cf8/ffffff?text=Sleeping+Puppy"
-                             alt="Sleeping puppy with teddy bear, line art coloring page"
+                        <img src="https://placehold.co/300x400/818cf8/ffffff?text=Scaly+Feathered"
+                             alt="Scaly and feathered fantasy coloring page placeholder"
                              class="rounded-lg w-full mb-4 shadow-md mx-auto max-h-96 object-cover"
                              onerror="replaceImage(this, this.alt)">
                         <h4 class="text-2xl font-semibold text-pets-dark">Scaly & Feathered Fantasies</h4>
@@ -304,8 +305,8 @@
                     </div>
 
                     <div class="card bg-gray-50 p-6 rounded-xl text-center">
-                        <img src="https://placehold.co/300x400/818cf8/ffffff?text=Wild+Yorkie"
-                             alt="Yorkie with hair flying out car window, line art coloring page"
+                        <img src="https://placehold.co/300x400/818cf8/ffffff?text=Wild+Critters"
+                             alt="Wild critters coloring page placeholder"
                              class="rounded-lg w-full mb-4 shadow-md mx-auto max-h-96 object-cover"
                              onerror="replaceImage(this, this.alt)">
                         <h4 class="text-2xl font-semibold text-pets-dark">Critters of the Wild</h4>
@@ -340,7 +341,8 @@
                     <div class="card bg-white p-4 rounded-xl text-center">
                         <img src="https://placehold.co/200x200/818cf8/ffffff?text=Pet+T-Shirt"
                              alt="Pet Unplugged T-Shirt"
-                             class="rounded-lg w-full max-w-sm mb-3 shadow-sm mx-auto object-cover">
+                             class="rounded-lg w-full max-w-sm mb-3 shadow-sm mx-auto object-cover"
+                             onerror="replaceImage(this, this.alt)">
                         <h4 class="text-lg font-semibold text-gray-700">Logo T-Shirt (Unisex)</h4>
                         <p class="text-xl font-bold text-pets-primary mt-2">$24.99</p>
                         <button class="w-full mt-3 bg-gray-200 text-gray-700 font-medium py-2 rounded-lg hover:bg-gray-300 text-sm cta-button">
@@ -363,7 +365,8 @@
                     <div class="card bg-white p-4 rounded-xl text-center">
                         <img src="https://placehold.co/200x200/818cf8/4c1d95?text=Sticker+Pack"
                              alt="Pets Unplugged Sticker Pack"
-                             class="rounded-lg w-full max-w-sm mb-3 shadow-sm mx-auto object-cover">
+                             class="rounded-lg w-full max-w-sm mb-3 shadow-sm mx-auto object-cover"
+                             onerror="replaceImage(this, this.alt)">
                         <h4 class="text-lg font-semibold text-gray-700">3-Pack Vinyl Stickers</h4>
                         <p class="text-xl font-bold text-pets-primary mt-2">$4.99</p>
                         <button class="w-full mt-3 bg-gray-200 text-gray-700 font-medium py-2 rounded-lg hover:bg-gray-300 text-sm cta-button">
