@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dog Piano Animation</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    // Define a clean, centralized color palette
+                    colors: {
+                        'primary': '#4c1d95', // Deep Violet (Original pets-dark)
+                        'secondary': '#818cf8', // Light Indigo (Original pets-secondary)
+                        'background': '#f7f3f9', // Light off-white
+                        'accent': '#fca5a5', // Light Red/Pink (Original pets-primary - for highlighting)
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles */
+        body {
+            /* Use Tailwind classes for font and background color */
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .cta-button:hover {
+            /* Small hover effect */
+            transform: translateY(-2px);
+            box-shadow: 0 15px 20px -3px rgba(76, 29, 149, 0.3), 0 6px 10px -4px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Responsive Video Embed Container (4:3 aspect ratio by default, 16:9 on wider screens) */
+        .video-container {
+            position: relative;
+            padding-bottom: 75%; /* 4:3 Aspect Ratio (3/4 = 0.75) */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+        }
+
+        /* Override for larger screens to use 16:9 */
+        @media (min-width: 640px) {
+            .video-container {
+                padding-bottom: 56.25%; /* 16:9 Aspect Ratio (9/16 = 0.5625) */
+            }
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="bg-background text-gray-800 flex flex-col min-h-screen">
+
+    <main class="flex-grow py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            
+            <h1 class="text-4xl sm:text-6xl font-black text-primary leading-tight mb-4">
+                The <span class="text-secondary">Dog Piano</span> Animation!
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+                Watch this adorable animation, inspired by a coloring page in our **Fur-tastic Frolics** book.
+            </p>
+
+            <!-- Vimeo Video Embed -->
+            <div class="video-container rounded-xl shadow-2xl transition duration-300 hover:shadow-primary/50">
+                <iframe 
+                    src="https://player.vimeo.com/video/1137780238?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                    allowfullscreen
+                    title="Dog Playing Piano Animation"
+                    class="rounded-xl"
+                ></iframe>
+            </div>
+
+            <!-- Button Group -->
+            <div class="mt-12 flex flex-col sm:flex-row flex-wrap justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                
+                <!-- Book Link (Primary Button) -->
+                <a href="../../index.html#books" class="inline-block bg-primary text-white font-extrabold py-3 px-6 rounded-full shadow-lg hover:bg-indigo-900 cta-button text-xl transition duration-300 ease-in-out">
+                    <i class="fas fa-book-open mr-2"></i> Find this Page in the Book!
+                </a>
+                
+                <!-- Merch Link (Secondary Button) -->
+                <a href="../../index.html#merch" class="inline-block bg-accent text-primary font-extrabold py-3 px-6 rounded-full shadow-lg hover:bg-pink-400 cta-button text-xl transition duration-300 ease-in-out">
+                    <i class="fas fa-tshirt mr-2"></i> Get the Merch!
+                </a>
+                
+                <!-- Download/Watch Link -->
+                <!-- UPDATED to use the provided Vimeo watch page link. -->
+                <a href="https://vimeo.com/1137780238?share=copy&fl=sv&fe=ci" target="_blank" class="inline-block bg-secondary text-white font-extrabold py-3 px-6 rounded-full shadow-lg hover:bg-indigo-600 cta-button text-xl transition duration-300 ease-in-out mt-4 sm:mt-0">
+                    <i class="fas fa-external-link-alt mr-2"></i> Watch on Vimeo
+                </a>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="bg-primary text-white py-6 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm opacity-80">&copy; 2025 Pets Unplugged. Animation link provided for coloring book users.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
