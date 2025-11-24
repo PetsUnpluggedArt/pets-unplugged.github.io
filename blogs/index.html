@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Unplugged - Creative Coloring & Merchandise - Blog</title>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-81TJS1GV21"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-81TJS1GV21');
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Reusing your custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f3f9; /* Light, soft background */
+        }
+        .header-logo {
+            height: 100%; 
+            width: 100%;
+        }
+        @media (min-width: 640px) { 
+            .header-logo {
+                height: auto; 
+                width: auto;
+            }
+        }
+        .section-heading {
+            color: #4c1d95; /* Deep Violet */
+            font-weight: 800;
+        }
+        /* Style for the blog post preview cards */
+        .post-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+            border: 1px solid #f9fafb;
+            border-left: 5px solid #818cf8; /* Highlight the left border */
+        }
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #fca5a5; /* Hover color */
+        }
+        /* Custom color definitions */
+        .bg-pets-primary { background-color: #fca5a5; } /* Light Red/Pink */
+        .text-pets-secondary { color: #818cf8; } /* Light Indigo */
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pets-primary': '#fca5a5', 
+                        'pets-secondary': '#818cf8', 
+                        'pets-dark': '#4c1d95', 
+                    }
+                }
+            }
+        }
+
+        // Functions from main index.html for menu and image handling
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+
+            menu.classList.toggle('hidden');
+
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        }
+
+        function replaceImage(imgElement, altText) {
+            imgElement.onerror = null; 
+            imgElement.src = `https://placehold.co/300x400/818cf8/ffffff?text=${altText.toUpperCase().replace(/\s/g, '+')}`;
+            imgElement.classList.add('p-2'); 
+        }
+    </script>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-white sticky top-0 z-10 shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            
+            <div class="flex items-center leading-none">
+                <a href="/index.html" class="block"> 
+                    <img src="/assets/images/logo_max.png" 
+                         alt="Pets Unplugged Logo" 
+                         class="header-logo" 
+                         onerror="replaceImage(this, 'Logo Placeholder')">
+                </a>
+            </div>
+            
+            <div class="hidden sm:flex space-x-4 items-center">
+                <a href="/index.html#digital" class="text-gray-600 hover:text-pets-dark font-medium">Digital</a>
+                <a href="/index.html#books" class="text-gray-600 hover:text-pets-dark font-medium">Books</a>
+                <a href="/index.html#merchandise" class="text-gray-600 hover:text-pets-dark font-medium">Merch</a>
+                
+                <a href="/blog_index.html" class="bg-pets-secondary text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-indigo-500 cta-button">Blog</a> 
+            </div>
+
+            <button id="menu-button" class="sm:hidden text-pets-dark text-2xl p-2 rounded-md hover:bg-gray-100" onclick="toggleMenu()">
+                <i id="menu-icon" class="fas fa-bars"></i>
+            </button>
+        </nav>
+        
+        <div id="mobile-menu" class="hidden sm:hidden bg-white border-t border-gray-100 px-4 pb-4 shadow-inner">
+            <a href="/index.html#digital" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Digital</a>
+            <a href="/index.html#books" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Books</a>
+            <a href="/index.html#merchandise" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Merch</a>
+           
+            <a href="/blog_index.html" class="mt-4 block w-full text-center bg-pets-secondary text-white font-bold py-2 rounded-lg shadow-md hover:bg-indigo-500 cta-button" onclick="toggleMenu()">Blog</a>
+        </div>
+    </header>
+    
+    <main>
+        <section id="blog-header" class="bg-pets-primary bg-opacity-20 py-12 px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-7xl mx-auto">
+                <h1 class="text-5xl font-black text-pets-dark leading-tight">
+                    The Pets Unplugged <span class="text-pets-secondary">Creative Blog</span>
+                </h1>
+                <p class="mt-4 text-xl text-gray-700">
+                    Tips, tricks, behind-the-scenes, and updates on our scannable coloring adventures!
+                </p>
+            </div>
+        </section>
+
+        <section id="blog-list" class="py-16 px-4 sm:px-6 lg:px-8 bg-f7f3f9">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl section-heading text-center mb-12">Latest Posts</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    {% for post in site.posts %}
+                        <div class="post-card bg-white p-6 rounded-xl">
+                            {% if post.image %}
+                                <img src="{{ post.image }}" 
+                                     alt="{{ post.title }} thumbnail"
+                                     class="rounded-lg w-full mb-4 max-h-48 object-cover"
+                                     onerror="replaceImage(this, 'Post Thumbnail')">
+                            {% endif %}
+
+                            <h3 class="text-2xl font-semibold text-pets-dark mb-2">
+                                <a href="{{ post.url | relative_url }}" class="hover:text-pets-secondary">{{ post.title }}</a>
+                            </h3>
+                            
+                            <p class="text-sm text-gray-500 mb-4">
+                                <i class="far fa-calendar-alt mr-2"></i>{{ post.date | date: "%B %d, %Y" }}
+                                {% if post.author %} 
+                                    <span class="ml-3"><i class="fas fa-user-edit mr-1"></i>{{ post.author }}</span>
+                                {% endif %}
+                            </p>
+                            
+                            <p class="text-gray-700 mb-4">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                            
+                            <a href="{{ post.url | relative_url }}" class="inline-flex items-center text-pets-secondary font-bold hover:text-pets-dark transition duration-150">
+                                Read More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    {% endfor %}
+                    {% if site.posts.size == 0 %}
+                        <div class="post-card bg-white p-6 rounded-xl">
+                            <img src="https://placehold.co/600x400/818cf8/ffffff?text=First+Blog+Post" 
+                                 alt="Placeholder thumbnail for blog post"
+                                 class="rounded-lg w-full mb-4 max-h-48 object-cover"
+                                 onerror="replaceImage(this, 'First Post Image')">
+                            <h3 class="text-2xl font-semibold text-pets-dark mb-2">
+                                <a href="#" class="hover:text-pets-secondary">How to Start Your First Animated Coloring Page</a>
+                            </h3>
+                            <p class="text-sm text-gray-500 mb-4">
+                                <i class="far fa-calendar-alt mr-2"></i>November 23, 2025
+                                <span class="ml-3"><i class="fas fa-user-edit mr-1"></i>The Pets Unplugged Team</span>
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                This is a placeholder for your first blog post summary. Once you create a post in the `_posts` folder, it will appear here automatically! 
+                            </p>
+                            <a href="#" class="inline-flex items-center text-pets-secondary font-bold hover:text-pets-dark transition duration-150">
+                                Read More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    {% endif %}
+                    
+                </div>
+
+                </div>
+        </section>
+        
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <p class="text-sm mb-4 md:mb-0">&copy; 2025 Pets Unplugged. All rights reserved.</p>
+            <div class="flex space-x-6 text-sm">
+                <a href="#" class="hover:text-pets-primary transition duration-150">Privacy Policy</a>
+                <a href="#" class="hover:text-pets-primary transition duration-150">Terms</a>
+                <a href="#" target="_blank" class="hover:text-pets-primary transition duration-150" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" class="hover:text-pets-primary transition duration-150" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" class="hover:text-pets-primary transition duration-150" aria-label="Follow us on X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" target="_blank" class="hover:text-pets-primary transition duration-150" aria-label="Follow us on Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                <a href="https://github.com/petsunplugged/site" target="_blank" class="hover:text-pets-primary transition duration-150"><i class="fab fa-github mr-1"></i>GitHub</a>
+                </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
