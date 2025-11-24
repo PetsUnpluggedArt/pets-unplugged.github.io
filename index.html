@@ -67,7 +67,6 @@
             min-height: 400px;
         }
     </style>
-    <!-- Begin Brevo Form Styles (START - We recommend to place the below code in head tag of your website html) -->
     <style>
       @font-face {
         font-display: block;
@@ -113,8 +112,6 @@
       }
     </style>
     <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-    <!-- End Brevo Form Styles -->
-
     <script>
         tailwind.config = {
             theme: {
@@ -206,10 +203,9 @@
             
             <div class="flex items-center leading-none">
                 <a href="#hero" class="block">
-                    <!-- Updated path for logo_max.png -->
-                    <img src="assets/images/logo_max.png"> 
-                         <alt="Pets Unplugged Logo"> 
-                         <class="header-logo" 
+                    <img src="assets/images/logo_max.png" 
+                         alt="Pets Unplugged Logo" 
+                         class="header-logo" 
                          onerror="replaceImage(this, 'Logo Placeholder')">
                 </a>
             </div>
@@ -220,7 +216,7 @@
                 <a href="#merchandise" class="text-gray-600 hover:text-pets-dark font-medium">Merch</a>
                 <a href="#about" class="text-gray-600 hover:text-pets-dark font-medium">About Us</a>
                 <a href="#faq" class="text-gray-600 hover:text-pets-dark font-medium">FAQ</a>
-                <a href="#contact" class="text-gray-600 hover:text-pets-dark font-medium">Contact</a>
+                <a href="blog_index.html" class="text-gray-600 hover:text-pets-dark font-medium">Blog</a>
                 <a href="#digital" class="bg-pets-primary text-pets-dark font-bold py-2 px-4 rounded-full shadow-md hover:bg-red-300 cta-button">Get Digital</a>
             </div>
 
@@ -235,7 +231,7 @@
             <a href="#merchandise" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Merch</a>
             <a href="#about" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">About Us</a>
             <a href="#faq" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">FAQ</a>
-            <a href="#contact" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Contact</a>
+            <a href="blog_index.html" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Blog</a>
             <a href="#digital" class="mt-4 block w-full text-center bg-pets-primary text-pets-dark font-bold py-2 rounded-lg shadow-md hover:bg-red-300 cta-button" onclick="toggleMenu()">Get Digital</a>
         </div>
     </header>
@@ -281,7 +277,6 @@
             </div>
         </section>
 
-        <!-- NEW SECTION: Digital Downloads CTAs -->
         <section id="digital" class="py-12 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100">
             <div class="max-w-7xl mx-auto text-center">
                 <h3 class="text-3xl sm:text-4xl section-heading font-extrabold mb-4">Instantly Color! Digital Downloads Available.</h3>
@@ -293,8 +288,6 @@
                 </a>
             </div>
         </section>
-        <!-- END NEW SECTION -->
-
         <section id="paws-peek" class="py-16 px-4 sm:px-6 lg:px-8 bg-pets-dark">
             <div class="max-w-4xl mx-auto text-center">
                 <h3 class="text-3xl sm:text-4xl text-white font-extrabold mb-4">Sneak Peek: Scan to See the Animation!</h3>
@@ -305,7 +298,6 @@
                 <div class="flex flex-col lg:flex-row items-center justify-center gap-8">
                     
                     <div class="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl border-4 border-pets-primary">
-                        <!-- Updated path for dogpianosample.png -->
                         <img src="assets/images/dogpianosample.png" 
                              alt="Sleeping puppy on a piano coloring page"
                              class="w-full h-auto object-cover"
@@ -315,7 +307,6 @@
 
                     <div class="w-full lg:w-1/2 flex flex-col items-center p-4 bg-white rounded-xl shadow-2xl">
                         
-                        <!-- QR Code Image now wrapped in a clickable link -->
                         <a href="http://petsunplugged.com/animation-landing/dogpianosample.html" target="_blank" class="block">
                             <img src="assets/images/dogpianosampleqrcode.png" 
                                  alt="QR Code for animation link (Clickable)"
@@ -370,9 +361,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     <div class="card bg-gray-50 p-6 rounded-xl text-center">
-                        <!-- Updated path for paws_cover.jpg -->
-                        <img src="assets/images/paws_cover.jpg">
-                             <alt="Cover image for Paws: Paws cover art"
+                        <img src="assets/images/paws_cover.jpg"
+                             alt="Cover image for Paws: Paws cover art"
                              class="rounded-lg w-full mb-4 shadow-md mx-auto max-h-96 object-cover"
                              onerror="replaceImage(this, this.alt)">
                         <h4 class="text-2xl font-semibold text-pets-dark">Paws</h4>
@@ -520,15 +510,12 @@
                 
                 <div class="flex flex-col md:flex-row gap-8 justify-center items-start">
                     
-                    <!-- Form 1: New Brevo Form (Official Integration) -->
                     <div class="w-full md:w-1/2 flex flex-col items-center">
                         <h4 class="text-xl font-semibold mb-3 text-pets-dark">Official Email Sign-Up</h4>
                         
-                        <!-- START Brevo Form HTML -->
                         <div class="sib-form w-full rounded-xl overflow-hidden shadow-lg border-2 border-pets-dark/50" 
                              style="text-align: center; background-color: #fca5a5; max-width: 100%;">
                           <div id="sib-form-container" class="sib-form-container">
-                            <!-- Success/Error Message Panels (Hidden by default) -->
                             <div id="error-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px; margin: 0 auto;">
                               <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
                                 <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
@@ -551,7 +538,6 @@
                               </div>
                             </div>
                             <div></div>
-                            <!-- Form Block -->
                             <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(252,165,165,1); max-width:100%; border-radius:3px; border-width:1px; border-color:#C0CCD9; border-style:solid; direction:ltr">
                               <form id="sib-form" method="POST" action="https://d594eb7c.sibforms.com/serve/MUIFANGdb0jKFrBXiNX2Hq2bKn4r-c14bcEGV-BiOMN221c5jrdcUYXPD0vEnTvxzE4V8O09i-6btQMjoiSofRFKpfyGHTx1E9xYtefgb9FKTCfxHZ88bhmN7A1bOOiU91kLmqhXMPYBlKMaAGuaIwKPFMyWlV7Gngzp8U3g6sCz4wz4oCSOCREFJY0xdvSA35yRDpnu_2nEFyF7wA==" data-type="subscription">
                                 <div style="padding: 16px 0;">
@@ -593,8 +579,7 @@
                             </div>
                           </div>
                         </div>
-                        <!-- END Brevo Form HTML -->
-                    </div>
+                        </div>
 
     </main>
 
@@ -614,7 +599,6 @@
         </div>
     </footer>
     
-    <!-- Begin Brevo Form Scripts (START - We recommend to place the below code in footer or bottom of your website html) -->
     <script>
       window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
       window.LOCALE = 'en';
@@ -639,13 +623,6 @@
     <script src="https://sibforms.com/forms/end-form/build/main.js"></script>
     
     <script src="https://www.google.com/recaptcha/api.js?render=6LeGDBYsAAAAANJG0zCw4hsc78Njlij97aBInOIt&hl=en" async defer></script>
-    <!-- End Brevo Form Scripts -->
-
-</body>
+    </body>
 
 </html>
-
-
-
-
-
