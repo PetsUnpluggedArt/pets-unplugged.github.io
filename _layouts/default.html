@@ -1,3 +1,6 @@
+---
+layout: default
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +13,9 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Dog Piano Animation</title>
+    
+    <title>{{ page.title | default: "Default Page Title" }}</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -65,18 +70,21 @@
             
             <header class="text-center mb-10">
                 <h1 class="text-4xl sm:text-5xl font-extrabold text-primary mb-2">
-                    The Dog Piano Animation
+                    {{ page.title | default: "Animation Title" }}
                 </h1>
-                <p class="text-xl text-secondary">A masterpiece of furry musical genius.</p>
+                <p class="text-xl text-secondary">{{ page.subtitle | default: "A fun and creative animation." }}</p>
             </header>
             
             <div class="video-container mb-10 rounded-lg shadow-xl">
-                <iframe src="https://player.vimeo.com/video/1137780238?h=21de130f58&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&title=0&byline=0&portrait=0" 
+                {% assign video_url = page.vimeo_video_id | prepend: "https://player.vimeo.com/video/" %}
+                {% assign video_params = "autoplay=1&loop=1&title=0&byline=0&portrait=0" %}
+                
+                <iframe src="{{ video_url }}?h={{ page.vimeo_hash | default: '21de130f58' }}&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&{{ video_params }}" 
                         frameborder="0" 
                         allow="autoplay; fullscreen; picture-in-picture" 
                         allowfullscreen 
                         style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-                        title="The Dog Piano Animation">
+                        title="{{ page.title | default: 'The Animation' }}">
                 </iframe>
             </div>
             
@@ -90,7 +98,7 @@
                     <i class="fas fa-tshirt mr-2"></i> Get the Merch!
                 </a>
                 
-                <a href="https://vimeo.com/1137780238/21de130f58?share=copy&fl=sv&fe=ci" class="inline-block bg-secondary text-white font-extrabold py-3 px-6 rounded-full shadow-lg hover:bg-indigo-600 cta-button text-xl transition duration-300 ease-in-out mt-4 sm:mt-0">
+                <a href="{{ page.video_download_link | default: 'https://vimeo.com/your-default-download-link' }}" class="inline-block bg-secondary text-white font-extrabold py-3 px-6 rounded-full shadow-lg hover:bg-indigo-600 cta-button text-xl transition duration-300 ease-in-out mt-4 sm:mt-0">
                     <i class="fas fa-download mr-2"></i> Download Video
                 </a>
             </div>
