@@ -39,10 +39,10 @@ plugins:
 collections:
   collections:
     output: true
-    permalink: /collections/:path/
+    
   videos:
     output: true
-    permalink: /videos/:path/
+    
 # -------------------------------------
 
 # Exclude from processing.
