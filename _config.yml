@@ -31,14 +31,6 @@ collections:
   videos:
     output: true
  
- # _config.yml
-
-# This tells Jekyll to look inside the 'blogs' directory 
-# for a folder named '_posts'
-collections_dir: blogs 
-permalink: /blogs/:year/:month/:day/:title/
-# The rest of your configuration (e.g., theme, title, etc.)
-title: My Jekyll Site  
 # -------------------------------------
 
 # Exclude from processing.
