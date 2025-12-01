@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: video
 title: Paws & Dream
 subtitle: Currently recharging at    100% fluff
 vimeo_video_id: 1141702070
