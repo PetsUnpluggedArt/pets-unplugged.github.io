@@ -4,11 +4,9 @@ permalink: /merchandise/
 title: Pets Unplugged - Awesome Merch Collection
 ---
 
-<!-- Load Tailwind CSS and Alpine.js for interactivity -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-<!-- Custom Tailwind Config for Pets Colors -->
 <style>
   :root {
     --pets-primary: #fca5a5; /* Pink-400 */
@@ -55,12 +53,10 @@ title: Pets Unplugged - Awesome Merch Collection
     </div>
 </section>
 
-<!-- Interactive Product Carousel Section -->
 <section id="featured" class="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
     <div class="max-w-7xl mx-auto">
         <h2 class="text-4xl font-extrabold text-pets-dark mb-10 text-center">Featured Gear</h2>
         
-        <!-- Alpine.js Carousel Container -->
         <div x-data="{ 
             items: [
                 { id: 1, title: 'The Animated Corgi Mug', price: '14.99', image: 'assets/images/dogpianomug.png', description: 'Your morning coffee companion, featuring the winking corgi.' },
@@ -85,16 +81,13 @@ title: Pets Unplugged - Awesome Merch Collection
             }
         }" class="relative w-full overflow-hidden">
             
-            <!-- Slides Container -->
             <div class="flex transition-transform duration-500 ease-in-out" 
                  :style="`transform: translateX(-${activeSlide * 100}%)`">
                  
-                <!-- Loop through items to create slides -->
                 <template x-for="(item, index) in items" :key="item.id">
                     <div class="w-full flex-shrink-0">
                         <div class="flex flex-col lg:flex-row items-center bg-gray-50 p-6 sm:p-12 rounded-2xl shadow-2xl space-y-8 lg:space-y-0 lg:space-x-12 min-h-[500px]">
                             
-                            <!-- Product Image -->
                             <div class="w-full lg:w-1/2 flex justify-center">
                                 <img :src="item.image" 
                                      :alt="item.title"
@@ -102,7 +95,6 @@ title: Pets Unplugged - Awesome Merch Collection
                                      onerror="this.onerror=null; this.src='https://placehold.co/400x400/fca5a5/4c1d95?text=Image+Error'">
                             </div>
                             
-                            <!-- Product Details -->
                             <div class="w-full lg:w-1/2 text-center lg:text-left">
                                 <span class="text-sm font-semibold text-pets-secondary uppercase tracking-widest mb-2 inline-block">Featured Item</span>
                                 <h3 class="text-4xl font-black text-pets-dark mb-3" x-text="item.title"></h3>
@@ -125,7 +117,6 @@ title: Pets Unplugged - Awesome Merch Collection
                 </template>
             </div>
             
-            <!-- Navigation Arrows -->
             <button @click="prev()" 
                     class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-3 shadow-lg z-10 text-pets-dark transition hidden md:block">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"></path></svg>
@@ -136,7 +127,6 @@ title: Pets Unplugged - Awesome Merch Collection
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path></svg>
             </button>
             
-            <!-- Dots Indicator -->
             <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
                 <template x-for="(item, index) in items" :key="item.id">
                     <button @click="activeSlide = index" 
@@ -148,30 +138,24 @@ title: Pets Unplugged - Awesome Merch Collection
             </div>
             
         </div>
-        <!-- End Alpine.js Carousel -->
-        
-    </div>
+        </div>
 </section>
 
 
-<!-- All Merchandise Grid (Utilizing Jekyll Data for easy updates) -->
 <section id="all-merch" class="py-16 px-4 sm:px-6 lg:px-8 bg-pets-dark">
     <div class="max-w-7xl mx-auto">
         <h2 class="text-4xl font-extrabold text-white mb-10 text-center">The Full Collection</h2>
         
-        <!-- DEBUG: Check if data is loading. -->
         {% assign merch_items = site.data.merchandise_data.items %}
         <p class="text-center text-lg font-mono text-gray-300 mb-6">
             DEBUG: {{ merch_items | size }} items loaded from YAML file.
         </p>
         
-        <!-- Jekyll loop to display all items from the YAML data file -->
         {% if merch_items %}
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
 
             {% for item in merch_items %}
             <div class="card bg-white p-4 rounded-xl text-center shadow-lg hover:shadow-2xl transition duration-300">
-                <!-- Use item.image for the source and item.title for alt text -->
                 <img src="{{ item.image }}"
                         alt="{{ item.title }}"
                         class="rounded-lg w-full mb-3 shadow-md mx-auto aspect-square object-cover"
@@ -187,7 +171,6 @@ title: Pets Unplugged - Awesome Merch Collection
             </div>
             {% endfor %}
             
-            <!-- Fallback/Placeholder Card -->
             <div class="card bg-white p-4 rounded-xl text-center shadow-lg opacity-70">
                 <img src="https://placehold.co/400x400/818cf8/4c1d95?text=New+Items+Coming+Soon"
                         alt="Placeholder for new merchandise"
@@ -202,7 +185,6 @@ title: Pets Unplugged - Awesome Merch Collection
             
         </div>
         {% else %}
-        <!-- Display this error message if the data list is empty or the path is wrong -->
         <div class="p-8 bg-red-100 border-l-4 border-red-500 text-red-700 rounded-lg max-w-xl mx-auto text-left" role="alert">
             <p class="font-bold">Merchandise Data Error!</p>
             <p class="mt-2 text-sm">Jekyll could not find the merchandise list. Please check:</p>
@@ -215,14 +197,13 @@ title: Pets Unplugged - Awesome Merch Collection
     </div>
 </section>
 
-<!-- Footer/Call to Action matching index.html style -->
 <section id="merch-cta" class="py-10 bg-pets-secondary px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto text-center text-white">
         <h3 class="text-3xl sm:text-4xl font-extrabold mb-4">Don't Miss the Next Drop!</h3>
         <p class="text-lg text-pets-dark opacity-90 mb-6">
             Sign up for updates and get 10% off your first merchandise order.
         </p>
-        <a href="#contact" class="inline-flex items-center bg-pets-primary text-pets-dark font-black py-3 px-8 rounded-lg shadow-xl hover:bg-red-300 cta-button text-xl">
+        <a href="/index.html#contact" class="inline-flex items-center bg-pets-primary text-pets-dark font-black py-3 px-8 rounded-lg shadow-xl hover:bg-red-300 cta-button text-xl">
             <i class="fas fa-paw mr-3"></i> Get My Discount
         </a>
     </div>
