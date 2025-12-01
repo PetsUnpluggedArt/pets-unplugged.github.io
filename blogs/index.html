@@ -1,0 +1,38 @@
+---
+layout: default
+title: Pets Unplugged Blog
+---
+
+<div class="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <h1 class="text-5xl font-black text-pets-dark mb-10 text-center section-heading">
+        Our Blog
+    </h1>
+
+    <div class="space-y-12">
+        {% for post in site.posts %}
+        <div class="card bg-white p-6 rounded-xl border-l-8 border-pets-secondary shadow-md">
+            <h2 class="text-3xl font-bold text-pets-dark mb-2">
+                <a href="{{ post.url | relative_url }}" class="hover:text-pets-primary transition duration-200">
+                    {{ post.title }}
+                </a>
+            </h2>
+            <p class="text-sm text-gray-500 mb-4">
+                Posted on {{ post.date | date: "%B %-d, %Y" }}
+                {% if post.author %}by {{ post.author }}{% endif %}
+            </p>
+            <p class="text-gray-700 mb-4">
+                {{ post.excerpt | strip_html | truncatewords: 30 }}
+            </p>
+            <a href="{{ post.url | relative_url }}" class="text-pets-secondary font-semibold hover:text-pets-dark transition duration-200">
+                Read Full Post &rarr;
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% if site.posts.size == 0 %}
+    <p class="text-center text-lg text-gray-500 mt-10">
+        No blog posts found. Add files to your `_posts` folder (e.g., `_posts/2025-01-01-first-post.md`) to see them appear here.
+    </p>
+    {% endif %}
+</div>
