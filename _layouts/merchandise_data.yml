@@ -1,0 +1,30 @@
+items:
+  - title: "The Animated Corgi Mug"
+    tagline: "Featuring the Winking Corgi design."
+    price: "14.99"
+    image: "assets/images/dogpianomug.png"
+    link: "https://example.com/corgi-mug"
+  
+  - title: "Logo T-Shirt (Unisex)"
+    tagline: "Soft cotton with the Pets Unplugged logo."
+    price: "24.99"
+    image: "https://placehold.co/400x400/818cf8/ffffff?text=Logo+T-Shirt"
+    link: "https://example.com/logo-shirt"
+
+  - title: "3-Pack Vinyl Stickers"
+    tagline: "Durable, weather-resistant sticker pack."
+    price: "4.99"
+    image: "https://placehold.co/400x400/fca5a5/4c1d95?text=Sticker+Pack"
+    link: "https://example.com/sticker-pack"
+
+  - title: "Cozy Pup Tote Bag"
+    tagline: "For carrying your coloring books in style."
+    price: "19.50"
+    image: "https://placehold.co/400x400/818cf8/ffffff?text=Cozy+Pup+Tote"
+    link: "https://example.com/tote-bag"
+
+  - title: "Lizard King Snapback"
+    tagline: "Design from the Scaly & Feathered book."
+    price: "28.00"
+    image: "https://placehold.co/400x400/4c1d95/fca5a5?text=Lizard+Hat"
+    link: "https://example.com/lizard-hat"

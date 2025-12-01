@@ -1,0 +1,230 @@
+---
+layout: default
+title: Pets Unplugged - Awesome Merch Collection
+---
+
+<!-- Load Tailwind CSS and Alpine.js for interactivity (required for the carousel) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<!-- Custom Tailwind Config for Pets Colors (matching index.html structure) -->
+<style>
+  :root {
+    --pets-primary: #fca5a5; /* Pink-400 */
+    --pets-secondary: #818cf8; /* Indigo-400 */
+    --pets-dark: #4c1d95; /* Indigo-900 */
+  }
+  .bg-pets-primary { background-color: var(--pets-primary); }
+  .text-pets-primary { color: var(--pets-primary); }
+  .bg-pets-secondary { background-color: var(--pets-secondary); }
+  .text-pets-secondary { color: var(--pets-secondary); }
+  .text-pets-dark { color: var(--pets-dark); }
+  .bg-pets-dark { background-color: var(--pets-dark); }
+  .border-pets-dark { border-color: var(--pets-dark); }
+  .cta-button { transition: background-color 0.3s, transform 0.3s; }
+  .cta-button:hover { transform: translateY(-2px); }
+  
+  /* Custom scrollbar for aesthetic carousel scrolling on desktop */
+  .carousel-container::-webkit-scrollbar {
+    height: 8px;
+  }
+  .carousel-container::-webkit-scrollbar-thumb {
+    background-color: var(--pets-secondary);
+    border-radius: 10px;
+  }
+</style>
+
+
+<section id="hero-merch" class="bg-pets-primary bg-opacity-20 py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto text-center">
+        <h1 class="text-6xl sm:text-7xl font-black text-pets-dark leading-tight mb-4">
+            Gear Up with <span class="text-pets-secondary">Pet Swag!</span>
+        </h1>
+        <p class="mt-4 text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto">
+            Bring your favorite animated pets to life with our exclusive collection of apparel, mugs, and accessories. Everything features original, color-able artwork!
+        </p>
+        <div class="mt-8 flex justify-center space-x-4">
+            <a href="#featured" class="inline-block bg-pets-dark text-white font-bold py-3 px-8 rounded-full shadow-xl hover:bg-indigo-900 cta-button">
+                Shop Best Sellers
+            </a>
+            <a href="#all-merch" class="inline-block bg-white border-2 border-pets-dark text-pets-dark font-bold py-3 px-8 rounded-full shadow-xl hover:bg-gray-100 cta-button">
+                View All Items
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Interactive Product Carousel Section -->
+<section id="featured" class="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-extrabold text-pets-dark mb-10 text-center">Featured Gear</h2>
+        
+        <!-- Alpine.js Carousel Container -->
+        <!-- We use an x-data block to manage the current visible item (activeSlide) and the list of products (items) -->
+        <div x-data="{ 
+            items: [
+                { id: 1, title: 'The Animated Corgi Mug', price: '14.99', image: 'assets/images/dogpianomug.png', description: 'Your morning coffee companion, featuring the winking corgi.' },
+                { id: 2, title: 'Pets Unplugged Logo Tee', price: '24.99', image: 'https://placehold.co/400x400/818cf8/ffffff?text=Logo+T-Shirt', description: 'Comfortable unisex t-shirt with the official brand logo.' },
+                { id: 3, title: 'Cozy Pup Tote Bag', price: '19.50', image: 'https://placehold.co/400x400/818cf8/ffffff?text=Cozy+Pup+Tote', description: 'Perfect reusable tote for books or groceries.' },
+                { id: 4, title: 'Dragon Scales Water Bottle', price: '29.00', image: 'https://placehold.co/400x400/fca5a5/4c1d95?text=Water+Bottle', description: 'Keep hydrated with this rugged, scaly-themed bottle.' }
+            ],
+            activeSlide: 0,
+            
+            // Function to advance the carousel
+            next() { 
+                this.activeSlide = (this.activeSlide + 1) % this.items.length; 
+            },
+            
+            // Function to go back in the carousel
+            prev() { 
+                this.activeSlide = (this.activeSlide - 1 + this.items.length) % this.items.length; 
+            },
+            
+            // Auto-advance every 5 seconds
+            init() {
+                setInterval(() => {
+                    this.next();
+                }, 5000);
+            }
+        }" class="relative w-full overflow-hidden">
+            
+            <!-- Slides Container (Flexbox for horizontal layout) -->
+            <div class="flex transition-transform duration-500 ease-in-out" 
+                 :style="`transform: translateX(-${activeSlide * 100}%)`">
+                 
+                <!-- Loop through items to create slides -->
+                <template x-for="(item, index) in items" :key="item.id">
+                    <div class="w-full flex-shrink-0">
+                        <div class="flex flex-col lg:flex-row items-center bg-gray-50 p-6 sm:p-12 rounded-2xl shadow-2xl space-y-8 lg:space-y-0 lg:space-x-12 min-h-[500px]">
+                            
+                            <!-- Product Image (Large and Centered) -->
+                            <div class="w-full lg:w-1/2 flex justify-center">
+                                <!-- Use the item's image and alt text for the placeholder logic -->
+                                <img :src="item.image" 
+                                     :alt="item.title"
+                                     class="w-full max-w-xs sm:max-w-sm h-auto rounded-xl shadow-lg border-4 border-pets-secondary/50 transition-all duration-500 hover:scale-[1.03]"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/400x400/fca5a5/4c1d95?text=Image+Error'">
+                            </div>
+                            
+                            <!-- Product Details -->
+                            <div class="w-full lg:w-1/2 text-center lg:text-left">
+                                <span class="text-sm font-semibold text-pets-secondary uppercase tracking-widest mb-2 inline-block">Featured Item</span>
+                                <h3 class="text-4xl font-black text-pets-dark mb-3" x-text="item.title"></h3>
+                                <p class="text-xl text-gray-600 mb-6" x-text="item.description"></p>
+                                
+                                <p class="text-5xl font-extrabold text-pets-primary mb-8">
+                                    $<span x-text="item.price"></span>
+                                </p>
+                                
+                                <button class="w-full lg:w-3/4 bg-pets-dark text-white font-bold py-4 px-10 rounded-full text-xl shadow-2xl hover:bg-indigo-900 cta-button">
+                                    <i class="fas fa-shopping-cart mr-2"></i> Add to Cart Now
+                                </button>
+                                
+                                <p class="mt-4 text-sm text-gray-500">
+                                    Item number <span x-text="item.id"></span> of <span x-text="items.length"></span>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+            
+            <!-- Navigation Arrows (Absolute positioning for overlay) -->
+            <button @click="prev()" 
+                    class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-3 shadow-lg z-10 text-pets-dark transition hidden md:block">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            
+            <button @click="next()" 
+                    class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-3 shadow-lg z-10 text-pets-dark transition hidden md:block">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+            
+            <!-- Dots Indicator -->
+            <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+                <template x-for="(item, index) in items" :key="item.id">
+                    <button @click="activeSlide = index" 
+                            :class="{'bg-pets-secondary': activeSlide === index, 'bg-gray-300': activeSlide !== index}" 
+                            class="w-3 h-3 rounded-full transition-colors duration-300 hover:bg-pets-dark"
+                            :aria-label="'Go to slide ' + (index + 1)">
+                    </button>
+                </template>
+            </div>
+            
+        </div>
+        <!-- End Alpine.js Carousel -->
+        
+    </div>
+</section>
+
+
+<!-- All Merchandise Grid (Utilizing Jekyll Data for easy updates) -->
+<section id="all-merch" class="py-16 px-4 sm:px-6 lg:px-8 bg-pets-dark">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-extrabold text-white mb-10 text-center">The Full Collection</h2>
+        
+        <!-- Jekyll loop to display all items from the YAML data file -->
+        <!-- NOTE: This loop structure requires the merchandise_data.yml file below -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+
+            {% for item in site.data.merchandise_data.items %}
+            <div class="card bg-white p-4 rounded-xl text-center shadow-lg hover:shadow-2xl transition duration-300">
+                <!-- Use item.image for the source and item.title for alt text -->
+                <img src="{{ item.image }}"
+                        alt="{{ item.title }}"
+                        class="rounded-lg w-full mb-3 shadow-md mx-auto aspect-square object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/400x400/818cf8/4c1d95?text={{ item.title | url_encode }}'">
+                
+                <h4 class="text-xl font-semibold text-pets-dark mt-2">{{ item.title }}</h4>
+                <p class="text-sm text-gray-500">{{ item.tagline }}</p>
+                <p class="text-2xl font-bold text-pets-primary mt-3">${{ item.price }}</p>
+                
+                <a href="{{ item.link }}" target="_blank" class="w-full mt-4 bg-pets-secondary text-white font-bold py-3 rounded-lg shadow-lg hover:bg-indigo-500 cta-button block">
+                    <i class="fas fa-tag mr-2"></i> View Details
+                </a>
+            </div>
+            {% endfor %}
+            
+            <!-- Fallback/Placeholder Card -->
+            <div class="card bg-white p-4 rounded-xl text-center shadow-lg opacity-70">
+                <img src="https://placehold.co/400x400/818cf8/4c1d95?text=New+Items+Coming+Soon"
+                        alt="Placeholder for new merchandise"
+                        class="rounded-lg w-full mb-3 shadow-md mx-auto aspect-square object-cover">
+                <h4 class="text-xl font-semibold text-pets-dark mt-2">More Pets Merch!</h4>
+                <p class="text-sm text-gray-500">We are always designing new items.</p>
+                <p class="text-2xl font-bold text-pets-primary mt-3">TBD</p>
+                <button class="w-full mt-4 bg-gray-400 text-white font-bold py-3 rounded-lg block cursor-not-allowed" disabled>
+                    Coming Soon
+                </button>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Footer/Call to Action matching index.html style -->
+<section id="merch-cta" class="py-10 bg-pets-secondary px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto text-center text-white">
+        <h3 class="text-3xl sm:text-4xl font-extrabold mb-4">Don't Miss the Next Drop!</h3>
+        <p class="text-lg text-pets-dark opacity-90 mb-6">
+            Sign up for updates and get 10% off your first merchandise order.
+        </p>
+        <a href="#contact" class="inline-flex items-center bg-pets-primary text-pets-dark font-black py-3 px-8 rounded-lg shadow-xl hover:bg-red-300 cta-button text-xl">
+            <i class="fas fa-paw mr-3"></i> Get My Discount
+        </a>
+    </div>
+</section>
+
+<script>
+    // Add font-awesome dependency dynamically
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css';
+    document.head.appendChild(link);
+    
+    // Simple image replacement utility for onerror handling (copied from index.html structure)
+    function replaceImage(img, altText) {
+        img.style.objectFit = 'contain';
+        img.src = `https://placehold.co/400x400/818cf8/4c1d95?text=${encodeURIComponent(altText)}`;
+    }
+</script>

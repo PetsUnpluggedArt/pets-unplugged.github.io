@@ -223,9 +223,10 @@
             <div class="hidden sm:flex space-x-4 items-center">
                 
                 <a href="/#books" class="text-gray-600 hover:text-pets-dark font-medium">Books</a>
-                <a href="/#merchandise" class="text-gray-600 hover:text-pets-dark font-medium">Merch</a>
+                <!-- UPDATED: Link Merchandise to merchande_landing.html -->
+                <a href="{{ site.baseurl }}/merchande_landing.html" class="text-gray-600 hover:text-pets-dark font-medium">Merchandise</a>
                 
-                <a href="{{ site.baseurl }}/blogs/index.html" class="text-gray-600 hover:text-pets-dark font-medium">Blog</a>
+                <a href="{{ site.baseurl }}/blogs/index.html" class="text-gray-600 hover:text-pets-dark font-medium">Blogs</a>
                 <a href="/#digital" class="bg-pets-primary text-pets-dark font-bold py-2 px-4 rounded-full shadow-md hover:bg-red-300 cta-button">Get Digital</a>
             </div>
 
@@ -237,9 +238,10 @@
         <div id="mobile-menu" class="hidden sm:hidden bg-white border-t border-gray-100 px-4 pb-4 shadow-inner">
             
             <a href="/#books" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Books</a>
-            <a href="/#merchandise" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Merch</a>
+            <!-- UPDATED: Link Merchandise in mobile menu to merchande_landing.html -->
+            <a href="{{ site.baseurl }}/merchande_landing.html" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Merchandise</a>
             
-            <a href="{{ site.baseurl }}/blogs/index.html" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Blog</a>
+            <a href="{{ site.baseurl }}/blogs/index.html" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Blogs</a>
             <a href="/#digital" class="mt-4 block w-full text-center bg-pets-primary text-pets-dark font-bold py-2 rounded-lg shadow-md hover:bg-red-300 cta-button" onclick="toggleMenu()">Get Digital</a>
         </div>
     </header>
@@ -287,6 +289,7 @@
     
     <script src="https://sibforms.com/forms/end-form/build/main.js"></script>
     
-    <script src="https://www.google.com/recaptcha/api.js?render=6LeGDBYsAAAAANJG0zCw4hsc78Njlij97aBInOIt&hl=en" async defer></script>
+    <!-- FIX: Removed 'async defer' attributes from the reCAPTCHA script to prevent potential global script errors upon loading. -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeGDBYsAAAAANJG0zCw4hsc78Njlij97aBInOIt&hl=en"></script>
     </body>
 </html>
