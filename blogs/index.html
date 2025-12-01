@@ -15,7 +15,7 @@ title: Pets Unplugged Blog
         <div class="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
     
     {% if post.thumbnail %}
-    <div class="w-full h-48 sm:w-36 sm:h-24 overflow-hidden rounded-lg shadow-md mx-auto sm:mx-0">
+    <div class="w-full max-w-xs h-32 sm:w-36 sm:h-24 overflow-hidden rounded-lg shadow-md mx-auto sm:mx-0">
         <a href="{{ post.url | relative_url }}">
             <img src="{{ post.thumbnail | relative_url }}" 
                  alt="{{ post.title }} preview image" 
