@@ -13,32 +13,40 @@ title: Pets Unplugged Blog
     <div class="card bg-white p-6 rounded-xl border-l-8 border-pets-secondary shadow-md">
         
         <div class="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
-    
-    {% if post.thumbnail %}
-    <div class="w-full max-w-xs h-32 sm:w-36 sm:h-24 overflow-hidden rounded-lg shadow-md mx-auto sm:mx-0">
-        <a href="{{ post.url | relative_url }}">
-            <img src="{{ post.thumbnail | relative_url }}" 
-                 alt="{{ post.title }} preview image" 
-                 class="w-full h-full object-cover">
+            
+            {% if post.thumbnail %}
+            <div class="w-full max-w-xs h-32 sm:w-36 sm:h-24 overflow-hidden rounded-lg shadow-md mx-auto sm:mx-0">
+                <a href="{{ post.url | relative_url }}">
+                    <img src="{{ post.thumbnail | relative_url }}" 
+                         alt="{{ post.title }} preview image" 
+                         class="w-full h-full object-cover">
+                </a>
+            </div>
+            {% endif %}
+
+            <div class="w-full sm:flex-grow"> 
+                <h2 class="text-2xl font-bold text-pets-dark mb-1">
+                    <a href="{{ post.url | relative_url }}" class="hover:text-pets-primary transition duration-200">
+                        {{ post.title }}
+                    </a>
+                </h2>
+                <p class="text-sm text-gray-500 mb-3">
+                    Posted on {{ post.date | date: "%B %-d, %Y" }}
+                    {% if post.author %}by {{ post.author }}{% endif %}
+                </p>
+                <p class="text-gray-700 text-sm">
+                    {{ post.excerpt | strip_html | truncatewords: 25 }}
+                </p>
+            </div>
+        </div>
+        <a href="{{ post.url | relative_url }}" class="text-pets-secondary font-semibold hover:text-pets-dark transition duration-200 mt-4 pt-3 block w-full text-right border-t border-gray-100">
+            Read Full Post &rarr;
         </a>
     </div>
-    {% endif %}
 
-    <div class="w-full sm:flex-grow"> 
-        <h2 class="text-2xl font-bold text-pets-dark mb-1">
-            <a href="{{ post.url | relative_url }}" class="hover:text-pets-primary transition duration-200">
-                {{ post.title }}
-            </a>
-        </h2>
-        <p class="text-sm text-gray-500 mb-3">
-            Posted on {{ post.date | date: "%B %-d, %Y" }}
-            {% if post.author %}by {{ post.author }}{% endif %}
-        </p>
-        <p class="text-gray-700 text-sm">
-            {{ post.excerpt | strip_html | truncatewords: 25 }}
-        </p>
-    </div>
+    {% endfor %} </div> {% if site.posts.size == 0 %}
+    <p class="text-center text-lg text-gray-500 mt-10">
+        No blog posts found. Add files to your `_posts` folder (e.g., `_posts/2025-01-01-first-post.md`) to see them appear here.
+    </p>
+    {% endif %}
 </div>
-<a href="{{ post.url | relative_url }}" class="text-pets-secondary font-semibold hover:text-pets-dark transition duration-200 mt-4 pt-3 block w-full text-right border-t border-gray-100">
-    Read Full Post &rarr;
-</a>
