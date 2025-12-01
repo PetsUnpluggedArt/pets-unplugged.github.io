@@ -1,5 +1,5 @@
 ---
-layout: video
+layout: video_page
 title: Floofy McStareface
 subtitle: “I can do this all day”
 vimeo_video_id: 1141576988

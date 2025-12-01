@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: video_page
 title: The Curious Cloud
 subtitle: 100% cotton, 0% stealth
 vimeo_video_id: 1141704096
