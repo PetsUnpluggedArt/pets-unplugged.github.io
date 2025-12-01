@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Beyond the Lines: The 3 Simple Blending Techniques That Make Your Pet Coloring Pages Pop"
-author: Your Name
+author: The Pets Unplugged Team
 date: 2025-12-01 15:47:00 -0500 
 categories: [art techniques, coloring tips, how-to]
 tags: [colored pencils, blending, shading, fur texture, pets unplugged]
