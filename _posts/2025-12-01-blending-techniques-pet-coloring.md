@@ -7,7 +7,7 @@ categories: [art techniques, coloring tips, how-to]
 tags: [colored pencils, blending, shading, fur texture, pets unplugged]
 ---
 
-You’ve got your **Pets Unplugged** coloring book and your pencils sharpened—now it’s time to bring that adorable pup or exotic bird to life! While simply coloring within the lines is relaxing, a few easy techniques can transform a flat page into a vibrant illustration, ready for its big animated debut.
+You’ve got your **Pets Unplugged** coloring book and your pencils sharpened—now it’s time to bring that adorable pup to life! While simply coloring within the lines is relaxing, a few easy techniques can transform a flat page into a vibrant illustration, ready for its big animated debut.
 
 Here are three simple blending and shading techniques to maximize the look of your pet art.
 
