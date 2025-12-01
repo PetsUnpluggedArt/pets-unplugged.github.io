@@ -1,13 +1,14 @@
 ---
 layout: default
+permalink: /merchandise/
 title: Pets Unplugged - Awesome Merch Collection
 ---
 
-<!-- Load Tailwind CSS and Alpine.js for interactivity (required for the carousel) -->
+<!-- Load Tailwind CSS and Alpine.js for interactivity -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-<!-- Custom Tailwind Config for Pets Colors (matching index.html structure) -->
+<!-- Custom Tailwind Config for Pets Colors -->
 <style>
   :root {
     --pets-primary: #fca5a5; /* Pink-400 */
@@ -60,7 +61,6 @@ title: Pets Unplugged - Awesome Merch Collection
         <h2 class="text-4xl font-extrabold text-pets-dark mb-10 text-center">Featured Gear</h2>
         
         <!-- Alpine.js Carousel Container -->
-        <!-- We use an x-data block to manage the current visible item (activeSlide) and the list of products (items) -->
         <div x-data="{ 
             items: [
                 { id: 1, title: 'The Animated Corgi Mug', price: '14.99', image: 'assets/images/dogpianomug.png', description: 'Your morning coffee companion, featuring the winking corgi.' },
@@ -70,17 +70,14 @@ title: Pets Unplugged - Awesome Merch Collection
             ],
             activeSlide: 0,
             
-            // Function to advance the carousel
             next() { 
                 this.activeSlide = (this.activeSlide + 1) % this.items.length; 
             },
             
-            // Function to go back in the carousel
             prev() { 
                 this.activeSlide = (this.activeSlide - 1 + this.items.length) % this.items.length; 
             },
             
-            // Auto-advance every 5 seconds
             init() {
                 setInterval(() => {
                     this.next();
@@ -88,7 +85,7 @@ title: Pets Unplugged - Awesome Merch Collection
             }
         }" class="relative w-full overflow-hidden">
             
-            <!-- Slides Container (Flexbox for horizontal layout) -->
+            <!-- Slides Container -->
             <div class="flex transition-transform duration-500 ease-in-out" 
                  :style="`transform: translateX(-${activeSlide * 100}%)`">
                  
@@ -97,9 +94,8 @@ title: Pets Unplugged - Awesome Merch Collection
                     <div class="w-full flex-shrink-0">
                         <div class="flex flex-col lg:flex-row items-center bg-gray-50 p-6 sm:p-12 rounded-2xl shadow-2xl space-y-8 lg:space-y-0 lg:space-x-12 min-h-[500px]">
                             
-                            <!-- Product Image (Large and Centered) -->
+                            <!-- Product Image -->
                             <div class="w-full lg:w-1/2 flex justify-center">
-                                <!-- Use the item's image and alt text for the placeholder logic -->
                                 <img :src="item.image" 
                                      :alt="item.title"
                                      class="w-full max-w-xs sm:max-w-sm h-auto rounded-xl shadow-lg border-4 border-pets-secondary/50 transition-all duration-500 hover:scale-[1.03]"
@@ -129,7 +125,7 @@ title: Pets Unplugged - Awesome Merch Collection
                 </template>
             </div>
             
-            <!-- Navigation Arrows (Absolute positioning for overlay) -->
+            <!-- Navigation Arrows -->
             <button @click="prev()" 
                     class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-3 shadow-lg z-10 text-pets-dark transition hidden md:block">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"></path></svg>
@@ -163,9 +159,9 @@ title: Pets Unplugged - Awesome Merch Collection
     <div class="max-w-7xl mx-auto">
         <h2 class="text-4xl font-extrabold text-white mb-10 text-center">The Full Collection</h2>
         
-        <!-- DEBUG: Check if data is loading. This will display 0 if the file path is wrong. -->
+        <!-- DEBUG: Check if data is loading. -->
+        {% assign merch_items = site.data.merchandise_data.items %}
         <p class="text-center text-lg font-mono text-gray-300 mb-6">
-            {% assign merch_items = site.data.merchandise_data.items %}
             DEBUG: {{ merch_items | size }} items loaded from YAML file.
         </p>
         
