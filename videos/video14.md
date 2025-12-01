@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: video_page
 title: Pocket-Sized Snooze
 subtitle: “Officially too cute to wake”
 vimeo_video_id: 1141733550

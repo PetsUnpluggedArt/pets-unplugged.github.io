@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: video_page
 title: Matching Fluff Squad
 subtitle: “Cuteness level, synchronized”
 vimeo_video_id: 1141730754

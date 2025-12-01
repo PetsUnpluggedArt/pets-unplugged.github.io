@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: video_page
 title: Puppy Earmuff
 subtitle: “Built-in cozy”
 vimeo_video_id: 1141734178

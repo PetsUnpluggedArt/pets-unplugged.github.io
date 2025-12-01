@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: video_page
 title: Handful of Fluff x2
 subtitle: “Cuteness overload in progress”
 vimeo_video_id: 1141737156

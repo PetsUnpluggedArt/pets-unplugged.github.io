@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: video_page
 title: Bow & Behold
 subtitle: “Cuteness delivered daily”
 vimeo_video_id: 1141745493

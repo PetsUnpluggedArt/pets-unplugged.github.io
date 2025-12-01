@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: video_page
 title: Golden Ripple Maker
 subtitle: “Spreading Love One Paw at a Time”
 vimeo_video_id: 1141743587

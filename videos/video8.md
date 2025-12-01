@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: video_page
 title: My Emotional Support Bear
 subtitle: “He understands me”
 vimeo_video_id: 1141718344

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: video_page
 title: The Living Masterpup
 subtitle: “Framed by love”
 vimeo_video_id: 1141735926

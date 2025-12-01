@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: video_page
 title: Two-Minute Boss Mode
 subtitle: “Bird patrol”
 vimeo_video_id: 1141746397

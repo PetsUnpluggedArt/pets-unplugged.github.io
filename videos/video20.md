@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: video_page
 title: Sun-Kissed Corgi Cutie
 subtitle: “Now with extra sparkle”
 vimeo_video_id: 1141737734

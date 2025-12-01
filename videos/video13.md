@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: video_page
 title: Santa Paws’ Little Buddy
 subtitle: “Delivering cuteness worldwide”
 vimeo_video_id: 1141731999

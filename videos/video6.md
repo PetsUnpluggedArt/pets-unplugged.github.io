@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: video_page
 title: Road Trip Rockstar
 subtitle: “Hair metal level, legendary"
 vimeo_video_id: 1141714631
