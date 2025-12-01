@@ -7,7 +7,7 @@ categories: [wellness, creativity, news]
 tags: [coloring, stress relief, mindfulness, animation, pets]
 ---
 
-![Coloring provides therapeutic calm on the left and a rewarding animation on the right.](/assets/images/coloring-dog.jpg)
+![Coloring provides therapeutic calm on the left and a rewarding animation on the right.](/assets/images/coloring-dog.png)
 
 Coloring. It’s what we did as kids, but it’s making a massive comeback as an essential activity for well-being. At **Pets Unplugged**, we love combining the fun of coloring with our unique animation rewards, but the real power lies in the simple act of putting color to paper.
 
