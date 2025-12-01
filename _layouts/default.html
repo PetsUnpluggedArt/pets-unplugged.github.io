@@ -1,0 +1,288 @@
+---
+# Minimal Front Matter required for Jekyll to recognize this as a layout
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-81TJS1GV21"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-81TJS1GV21');
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Custom styles for a playful, artistic look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f3f9; /* Light, soft background */
+        }
+        
+        /* LOGO STYLES for responsiveness and size control */
+        .header-logo {
+            height: 75%; /* Base height for small screens */
+            width: 75%;
+        }
+        @media (min-width: 640px) { /* sm breakpoint */
+            .header-logo {
+                height: auto; /* Slightly larger on desktop */
+                width: auto;
+            }
+        }
+        
+        .section-heading {
+            color: #4c1d95; /* Deep Violet */
+            font-weight: 800;
+        }
+        .card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+            border: 1px solid #f9fafb;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .cta-button {
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        .cta-button:hover {
+            transform: translateY(-1px);
+        }
+        /* Custom color definitions */
+        .bg-pets-primary { background-color: #fca5a5; } /* Light Red/Pink */
+        .text-pets-secondary { color: #818cf8; } /* Light Indigo */
+        .feature-icon {
+            color: #4c1d95;
+            filter: drop-shadow(0 4px 6px rgba(129, 140, 248, 0.5));
+        }
+        /* RESPONSIVE IFRAME STYLES */
+        .iframe-container {
+            /* This div helps ensure the iframe fills its parent but maintains a minimum height */
+            width: 100%;
+            min-height: 400px;
+        }
+    </style>
+    <style>
+      /* Brevo/Sendinblue Form Styles - Must be in the layout if form is global, otherwise move to index.html */
+      @font-face {
+        font-display: block;
+        font-family: Roboto;
+        src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+      }
+    
+      @font-face {
+        font-display: fallback;
+        font-family: Roboto;
+        font-weight: 600;
+        src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+      }
+    
+      @font-face {
+        font-display: fallback;
+        font-family: Roboto;
+        font-weight: 700;
+        src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+      }
+    
+      #sib-container input:-ms-input-placeholder {
+        text-align: left;
+        font-family: Helvetica, sans-serif;
+        color: #c0ccda;
+      }
+    
+      #sib-container input::placeholder {
+        text-align: left;
+        font-family: Helvetica, sans-serif;
+        color: #c0ccda;
+      }
+    
+      #sib-container textarea::placeholder {
+        text-align: left;
+        font-family: Helvetica, sans-serif;
+        color: #c0ccda;
+      }
+    
+      #sib-container a {
+        text-decoration: underline;
+        color: #2BB2FC;
+      }
+    </style>
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pets-primary': '#fca5a5', // Light Red/Pink
+                        'pets-secondary': '#818cf8', // Light Indigo
+                        'pets-dark': '#4c1d95', // Deep Violet
+                    }
+                }
+            }
+        }
+
+        // Simple script to toggle FAQ answers
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('svg');
+            
+            if (answer.classList.contains('max-h-0')) {
+                // Open
+                answer.classList.remove('max-h-0', 'py-0');
+                answer.classList.add('max-h-96', 'py-4');
+                icon.classList.remove('rotate-0');
+                icon.classList.add('rotate-180');
+            } else {
+                // Close
+                answer.classList.remove('max-h-96', 'py-4');
+                answer.classList.add('max-h-0', 'py-0');
+                icon.classList.remove('rotate-180');
+                icon.classList.add('rotate-0');
+            }
+        }
+        
+        // Function to toggle the mobile menu visibility and icon
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+
+            // Toggle the visibility of the menu drawer
+            menu.classList.toggle('hidden');
+
+            // Toggle the icon between bars (closed) and times (open)
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        }
+
+        // Fallback image function
+        function replaceImage(imgElement, altText) {
+            imgElement.onerror = null; // Prevent infinite loop if placeholder fails
+            // Adjusted placeholder URL for better folder compatibility if images fail to load
+            imgElement.src = `https://placehold.co/300x400/818cf8/ffffff?text=${altText.toUpperCase().replace(/\s/g, '+')}`;
+            imgElement.classList.add('p-2'); // Add padding to placeholder
+        }
+
+        // Form submission handler (Mock)
+        function handleSignup(event) {
+            event.preventDefault();
+            const form = event.target;
+            const name = form.elements.name.value;
+            const email = form.elements.email.value;
+            
+            console.log("Mock Signup Submission:");
+            console.log(`Name: ${name}`);
+            console.log(`Email: ${email}`);
+
+            // Display success message
+            const messageContainer = document.getElementById('signup-message');
+            messageContainer.textContent = `Thanks for joining the pack, ${name}! Check your console for the mock data.`;
+            messageContainer.classList.remove('hidden');
+            form.reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                messageContainer.classList.add('hidden');
+                messageContainer.textContent = '';
+            }, 5000);
+        }
+    </script>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-white sticky top-0 z-10 shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            
+            <div class="flex items-center leading-none">
+                <a href="/" class="block">
+                    <img src="assets/images/logo_max.png" 
+                         alt="Pets Unplugged Logo" 
+                         class="header-logo" 
+                         onerror="replaceImage(this, 'Logo Placeholder')">
+                </a>
+            </div>
+            
+            <div class="hidden sm:flex space-x-4 items-center">
+                
+                <a href="/#books" class="text-gray-600 hover:text-pets-dark font-medium">Books</a>
+                <a href="/#merchandise" class="text-gray-600 hover:text-pets-dark font-medium">Merch</a>
+                
+                <a href="{{ site.baseurl }}/blogs/index.html" class="text-gray-600 hover:text-pets-dark font-medium">Blog</a>
+                <a href="/#digital" class="bg-pets-primary text-pets-dark font-bold py-2 px-4 rounded-full shadow-md hover:bg-red-300 cta-button">Get Digital</a>
+            </div>
+
+            <button id="menu-button" class="sm:hidden text-pets-dark text-2xl p-2 rounded-md hover:bg-gray-100" onclick="toggleMenu()">
+                <i id="menu-icon" class="fas fa-bars"></i>
+            </button>
+        </nav>
+        
+        <div id="mobile-menu" class="hidden sm:hidden bg-white border-t border-gray-100 px-4 pb-4 shadow-inner">
+            
+            <a href="/#books" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Books</a>
+            <a href="/#merchandise" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Merch</a>
+            
+            <a href="{{ site.baseurl }}/blogs/index.html" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Blog</a>
+            <a href="/#digital" class="mt-4 block w-full text-center bg-pets-primary text-pets-dark font-bold py-2 rounded-lg shadow-md hover:bg-red-300 cta-button" onclick="toggleMenu()">Get Digital</a>
+        </div>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <p class="text-sm mb-4 md:mb-0">&copy; 2025 Pets Unplugged. All rights reserved.</p>
+            <div class="flex space-x-6 text-sm">
+                <a href="#" class="hover:text-pets-primary transition duration-150">Privacy Policy</a>
+                <a href="#" class="hover:text-pets-primary transition duration-150">Terms</a>
+                
+                <a href="#" target="_blank" class="hover:text-pets-primary transition duration-150" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" class="hover:text-pets-primary transition duration-150" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" class="hover:text-pets-primary transition duration-150" aria-label="Follow us on X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" target="_blank" class="hover:text-pets-primary transition duration-150" aria-label="Follow us on Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                <a href="https://github.com/petsunplugged/site" target="_blank" class="hover:text-pets-primary transition duration-150"><i class="fab fa-github mr-1"></i>GitHub</a>
+                </div>
+        </div>
+    </footer>
+    
+    <script>
+      window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+      window.LOCALE = 'en';
+      window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+    
+      window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+    
+      window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+    
+      window.translation = {
+        common: {
+          selectedList: '{quantity} list selected',
+          selectedLists: '{quantity} lists selected',
+          selectedOption: '{quantity} selected',
+          selectedOptions: '{quantity} selected',
+        }
+      };
+    
+      var AUTOHIDE = Boolean(0);
+    </script>
+    
+    <script src="https://sibforms.com/forms/end-form/build/main.js"></script>
+    
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeGDBYsAAAAANJG0zCw4hsc78Njlij97aBInOIt&hl=en" async defer></script>
+    </body>
+</html>
