@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Winning the Screen Time Battle A Pet Chore Checklist That Turns Chores into Fun
+title: Winning the Screen Time Battle 
+subtitle:A Pet Chore Checklist That Turns Chores into Fun
 author: Pets Unplugged Team
 date: 2025-12-02 01:00:00 -0500
 categories: [parenting, activities]
