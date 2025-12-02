@@ -36,11 +36,11 @@ Here is a simple, tiered checklist to integrate pet responsibilities into your d
 
 ## ⭐ Get Started with Your Unplugged Family Plan
 
-!(/assets/images/pet-chore-checklist.png)
+![family gather around playing together/huge pet chore checklist displayed](/assets/images/pet-chore-checklist.png)
 
 Ready to implement these **screen time solutions for parents**? A physical checklist helps visualize success and is the perfect screen-free tool!
 
-* **Download Now:** Get our FREE <u>**[Printable Pet Chore Checklist](/downloads/)**</u> to make tracking fun and visible.
+* **Download Now:** Get our FREE <u>[Printable Pet Chore Checklist](/downloads/)</u> to make tracking fun and visible.
 * **Celebrate Success:** Once your child masters their responsibilities, reward them with a small piece of **Pets Unplugged Merchandise**, like a sticker or a mug featuring Buster the Dog **[Link to Merchandise Page](/merchandise/)**, celebrating their status as a true Pet Champion!
 
 Replacing screen time with meaningful **unplugged family activities** is the best long-term strategy for a happy, healthy home. Start with your pet today!
