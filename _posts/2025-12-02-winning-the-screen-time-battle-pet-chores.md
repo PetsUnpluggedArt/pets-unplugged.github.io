@@ -25,22 +25,21 @@ This simple shift changes the narrative from "You can't play on the tablet" to "
 
 Here is a simple, tiered checklist to integrate pet responsibilities into your daily routine and start winning the battle against screen time:
 
-| Age Range | Chore | Life Skill Taught | Time Commitment |
+| Age | Chore | Life Skill Taught | Time |
 | :--- | :--- | :--- | :--- |
-| **Toddler (2-4)** | **Water Bowl Watch:** Check the bowl and announce when it's empty (parent pours). | Observation, Communication | 1 minute |
-| **Preschool (5-6)** | **Food Prep Captain:** Measure out dry food into the bowl before pouring (using a designated scoop). | Counting, Following Directions | 3 minutes |
-| **Elementary (7-10)** | **Buster’s Brush-Up:** Supervise a 5-minute brushing session to promote grooming habits. | Gentle touch, Routine | 5 minutes |
-| **Older Kids (11+)** | **Walk & Report:** Take the dog for a short walk and report back on their behavior or any sights seen. | Responsibility, Physical Activity | 15 minutes |
-
+| **2-4** | **Water Bowl Watch:** Check the bowl and announce when it's empty (parent pours). | Observation, Communication | 1 min |
+| **5-6** | **Food Prep Captain:** Measure out dry food into the bowl before pouring (using a designated scoop). | Counting, Following Directions | 3 min |
+| **7-10** | **Buster’s Brush-Up:** Supervise a 5-minute brushing session to promote grooming habits. | Gentle touch, Routine | 5 min |
+| **11+** | **Walk & Report:** Take the dog for a short walk and report back on their behavior or any sights seen. | Responsibility, Physical Activity | 15 min |
 **Pro Tip:** Tie screen time directly to the checklist. For instance: "Pet chores must be completed before any free screen time begins."
 
 ## ⭐ Get Started with Your Unplugged Family Plan
 
-![family gather around playing together/huge pet chore checklist displayed](/assets/images/pet-chore-checklist.png)
+**![Physical Pet Chore Checklist](/assets/images/pet-chore-checklist.png)**
 
 Ready to implement these **screen time solutions for parents**? A physical checklist helps visualize success and is the perfect screen-free tool!
 
-* **Download Now:** Get our FREE **[Printable Pet Chore Checklist](/downloads/)** to make tracking fun and visible.
+* **Download Now:** Get our FREE **[CLICK HERE TO DOWNLOAD THE FREE CHECKLIST](/downloads/)** to make tracking fun and visible.
 * **Celebrate Success:** Once your child masters their responsibilities, reward them with a small piece of **Pets Unplugged Merchandise**, like a sticker or a mug featuring Buster the Dog **[Link to Merchandise Page](/merchandise/)**, celebrating their status as a true Pet Champion!
 
 Replacing screen time with meaningful **unplugged family activities** is the best long-term strategy for a happy, healthy home. Start with your pet today!
