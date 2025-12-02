@@ -4,16 +4,16 @@ name: "Pets Unplugged Sample Coloring Page"
 description: "A high-resolution, printable PDF of our most popular character, Buster the Dog, perfect for an afternoon of fun."
 price: "FREE"
 file_url: "/assets/downloads/buster_coloring.pdf" # Update this to the actual file path
-image_url: "https://www.google.com/search?q=https://placehold.co/600x400/4c1d95/ffffff%3Ftext%3DBuster%2BColoring%2BPage" # Replace with a real image
+image_url: "https://www.google.com/search?q=https://placehold.co/600x400/4c1d95/ffffff%3Ftext%3DBuster%2BColoring%2BPage"
 
 name: "Seasonal Activity Pack - Autumn"
 description: "Includes a word search, crossword, and a connect-the-dots activity, all with an autumnal pet theme. Great for classrooms!"
 price: "$2.99"
 file_url: "/assets/downloads/autumn_pack.zip" # Update this to the actual file path
-image_url: "https://www.google.com/search?q=https://placehold.co/600x400/fca5a5/4c1d95%3Ftext%3DAutumn%2BPack" # Replace with a real image
+image_url: "https://www.google.com/search?q=https://placehold.co/600x400/fca5a5/4c1d95%3Ftext%3DAutumn%2BPack"
 
 name: "Desktop Wallpaper Pack"
 description: "A collection of 10 high-definition wallpapers featuring our animated pets for all screen sizes (1920x1080 and 4k resolution)."
 price: "FREE"
 file_url: "/assets/downloads/wallpaper_pack.zip" # Update this to the actual file path
-image_url: "https://www.google.com/search?q=https://placehold.co/600x400/818cf8/ffffff%3Ftext%3DWallpaper%2BPack" # Replace with a real image
+image_url: "https://www.google.com/search?q=https://placehold.co/600x400/818cf8/ffffff%3Ftext%3DWallpaper%2BPack"
