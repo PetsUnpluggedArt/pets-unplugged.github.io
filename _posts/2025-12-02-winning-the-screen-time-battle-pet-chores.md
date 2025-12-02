@@ -2,7 +2,7 @@
 layout: post
 title: Winning the Screen Time Battle A Pet Chore Checklist That Turns Chores into Fun
 author: Pets Unplugged Team
-date: 2025-12-02 10:00:00 -0500
+date: 2025-12-02 01:00:00 -0500
 categories: [parenting, activities]
 tags: [how to reduce kids screen time, kids responsibility with pets checklist, screen time solutions for parents, unplugged, pet ownership, family activities]
 thumbnail: /assets/images/pet-chore-checklist.png # OPTIONAL: Update with a real image path
