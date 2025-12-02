@@ -5,7 +5,7 @@ author: Pets Unplugged Team
 date: 2025-12-02 01:00:00 -0500
 categories: [parenting, activities]
 tags: [how to reduce kids screen time, kids responsibility with pets checklist, screen time solutions for parents, unplugged, pet ownership, family activities]
-thumbnail: /assets/images/pet-chore-checklist.png # OPTIONAL: Update with a real image path
+thumbnail: /assets/images/pet-chore-checklist.png 
 excerpt: Learn how to effectively reduce your kids screen time by replacing passive scrolling with rewarding, hands-on pet responsibilities.
 ---
 
@@ -35,6 +35,8 @@ Here is a simple, tiered checklist to integrate pet responsibilities into your d
 **Pro Tip:** Tie screen time directly to the checklist. For instance: "Pet chores must be completed before any free screen time begins."
 
 ## ⭐ Get Started with Your Unplugged Family Plan
+
+![Image of a family/fun activity, pet chore checklist](/assets/images/pet-chore-checklist.png)
 
 Ready to implement these **screen time solutions for parents**? A physical checklist helps visualize success and is the perfect screen-free tool!
 
