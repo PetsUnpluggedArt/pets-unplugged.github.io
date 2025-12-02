@@ -16,3 +16,9 @@ items:
   price: "FREE"
   file_url: "/assets/downloads/wallpaper_pack.zip" # Update this to the actual file path
   image_url: "https://www.google.com/search?q=https://placehold.co/600x400/818cf8/ffffff%3Ftext%3DWallpaper%2BPack"
+
+- name: "Printable Pet Chore Checklist"
+  description: "Winning the Screen Time Battle: A Pet Chore Checklist That Turns Chores into Fun"
+  price: "FREE"
+  file_url: "/digital_downloads/Pets_Unplugged_ Screen-Free_ Pet_ Chore_ Checklist.pdf
+  image_url: "assets/images/pet-checklist.png
