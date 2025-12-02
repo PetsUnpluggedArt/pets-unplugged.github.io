@@ -35,7 +35,7 @@ Here is a simple, tiered checklist to integrate pet responsibilities into your d
 
 ## ⭐ Get Started with Your Unplugged Family Plan
 
-**![Physical Pet Chore Checklist](/assets/images/pet-chore-checklist.png)**
+![Physical Pet Chore Checklist](/assets/images/pet-chore-checklist.png)
 
 Ready to implement these **screen time solutions for parents**? A physical checklist helps visualize success and is the perfect screen-free tool!
 
