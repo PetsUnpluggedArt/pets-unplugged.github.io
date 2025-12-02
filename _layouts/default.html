@@ -1,5 +1,5 @@
----
 # Minimal Front Matter required for Jekyll to recognize this as a layout
+---
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -223,11 +223,10 @@
             <div class="hidden sm:flex space-x-4 items-center">
                 
                 <a href="/#books" class="text-gray-600 hover:text-pets-dark font-medium">Books</a>
-                <!-- Link updated to the permalink /merchandise/ -->
                 <a href="{{ site.baseurl }}/merchandise/" class="text-gray-600 hover:text-pets-dark font-medium">Merchandise</a>
                 
                 <a href="{{ site.baseurl }}/blogs/index.html" class="text-gray-600 hover:text-pets-dark font-medium">Blogs</a>
-                <a href="/#digital" class="bg-pets-primary text-pets-dark font-bold py-2 px-4 rounded-full shadow-md hover:bg-red-300 cta-button">Get Digital</a>
+                <a href="downloads.html" class="bg-pets-primary text-pets-dark font-bold py-2 px-4 rounded-full shadow-md hover:bg-red-300 cta-button">Get Digital</a>
             </div>
 
             <button id="menu-button" class="sm:hidden text-pets-dark text-2xl p-2 rounded-md hover:bg-gray-100" onclick="toggleMenu()">
@@ -238,11 +237,10 @@
         <div id="mobile-menu" class="hidden sm:hidden bg-white border-t border-gray-100 px-4 pb-4 shadow-inner">
             
             <a href="/#books" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Books</a>
-            <!-- Link updated to the permalink /merchandise/ -->
             <a href="{{ site.baseurl }}/merchandise/" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Merchandise</a>
             
             <a href="{{ site.baseurl }}/blogs/index.html" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Blogs</a>
-            <a href="/#digital" class="mt-4 block w-full text-center bg-pets-primary text-pets-dark font-bold py-2 rounded-lg shadow-md hover:bg-red-300 cta-button" onclick="toggleMenu()">Get Digital</a>
+            <a href="downloads.html" class="mt-4 block w-full text-center bg-pets-primary text-pets-dark font-bold py-2 rounded-lg shadow-md hover:bg-red-300 cta-button" onclick="toggleMenu()">Get Digital</a>
         </div>
     </header>
 
@@ -289,7 +287,6 @@
     
     <script src="https://sibforms.com/forms/end-form/build/main.js"></script>
     
-    <!-- FIX: Removed 'async defer' attributes from the reCAPTCHA script to prevent potential global script errors upon loading. -->
     <script src="https://www.google.com/recaptcha/api.js?render=6LeGDBYsAAAAANJG0zCw4hsc78Njlij97aBInOIt&hl=en"></script>
     </body>
 </html>
