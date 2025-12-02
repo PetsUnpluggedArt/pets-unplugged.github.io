@@ -1,0 +1,149 @@
+---
+layout: default
+permalink: /downloads/
+title: Pets Unplugged - Digital & Free Downloads
+---
+
+
+<style>
+  /* Define custom color variables for the theme consistency */
+  :root {
+    --pets-primary: #fca5a5; /* Pink-400 */
+    --pets-secondary: #818cf8; /* Indigo-400 */
+    --pets-dark: #4c1d95; /* Indigo-900 */
+  }
+  .bg-pets-primary { background-color: var(--pets-primary); }
+  .text-pets-primary { color: var(--pets-primary); }
+  .bg-pets-secondary { background-color: var(--pets-secondary); }
+  .text-pets-secondary { color: var(--pets-secondary); }
+  .text-pets-dark { color: var(--pets-dark); }
+  .bg-pets-dark { background-color: var(--pets-dark); }
+  .border-pets-dark { border-color: var(--pets-dark); }
+  .cta-button { 
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  }
+  .cta-button:hover { 
+    transform: translateY(-2px); 
+    box-shadow: 0 8px 15px rgba(76, 29, 149, 0.3); /* Shadow based on pets-dark */
+  }
+  .download-card {
+    transition: all 0.3s ease-in-out;
+    border: 3px solid var(--pets-dark); /* Changed default card border to dark for contrast */
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+  }
+  .download-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px -8px rgba(0, 0, 0, 0.2);
+  }
+</style>
+
+<section id="downloads-hero" class="bg-pets-primary bg-opacity-20 py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto text-center">
+        <h1 class="text-5xl sm:text-6xl font-black text-pets-dark leading-tight mb-4">
+            Digital Downloads & Coloring Packs
+        </h1>
+        <p class="text-xl sm:text-2xl text-gray-700 mb-6 max-w-3xl mx-auto">
+            Find premium bundles to fuel your creativity or grab free samples to start coloring right away!
+        </p>
+    </div>
+</section>
+
+<section id="premium-downloads" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-extrabold text-pets-dark text-center mb-12 border-b-4 border-pets-secondary pb-3 inline-block">
+            Exclusive Theme Packs (Six Illustrations)
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <div class="download-card p-8 bg-white rounded-xl flex flex-col items-center justify-between border-pets-dark">
+                <div class="mb-4">
+                    <img src="https://placehold.co/600x400/818cf8/4c1d95?text=Fantasy+Pets+Pack" 
+                         alt="Fantasy Pets Theme Pack Preview" 
+                         class="rounded-lg shadow-xl mb-4 w-full h-auto object-cover border-4 border-pets-secondary">
+                    <h3 class="text-3xl font-bold text-pets-dark mb-2">Theme Pack 1: Fantasy Pets (6 Illustrations)</h3>
+                    <p class="text-gray-700 text-lg mb-4">Six high-resolution, printable PDF illustrations featuring magical dogs and cats. Each illustration has a unique animation!</p>
+                </div>
+                <a href="https://gumroad.com/l/fantasy-pets-pack" target="_blank"
+                   class="cta-button bg-pets-secondary text-white font-black py-4 px-8 rounded-lg w-full text-center text-xl hover:bg-indigo-700 transition duration-300">
+                    <i class="fas fa-shopping-cart mr-3"></i> Purchase for $1.99
+                </a>
+            </div>
+
+            <div class="download-card p-8 bg-white rounded-xl flex flex-col items-center justify-between border-pets-dark">
+                <div class="mb-4">
+                    <img src="https://placehold.co/600x400/fca5a5/4c1d95?text=Underwater+Pets+Pack" 
+                         alt="Underwater World Theme Pack Preview" 
+                         class="rounded-lg shadow-xl mb-4 w-full h-auto object-cover border-4 border-pets-primary">
+                    <h3 class="text-3xl font-bold text-pets-dark mb-2">Theme Pack 2: Underwater World (6 Illustrations)</h3>
+                    <p class="text-gray-700 text-lg mb-4">Six mesmerizing illustrations of ocean pets, delivered as high-res PNG and PDF files, complete with unique animated AR features.</p>
+                </div>
+                <a href="https://gumroad.com/l/underwater-pets-pack" target="_blank"
+                   class="cta-button bg-pets-primary text-pets-dark font-black py-4 px-8 rounded-lg w-full text-center text-xl hover:bg-red-400 transition duration-300">
+                    <i class="fas fa-tag mr-3"></i> Purchase for $1.99
+                </a>
+            </div>
+            
+        </div>
+        </div>
+</section>
+
+<section id="free-samples" class="py-16 px-4 sm:px-6 lg:px-8 bg-pets-secondary bg-opacity-10">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-extrabold text-pets-dark text-center mb-12 border-b-4 border-pets-primary pb-3 inline-block">
+            Our Gift to You: Free Samples
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="download-card p-6 bg-white rounded-xl flex flex-col items-center justify-between border-pets-secondary">
+                <div class="mb-4 text-center">
+                    <i class="fas fa-paint-brush text-5xl text-pets-primary mb-3"></i>
+                    <h3 class="text-2xl font-bold text-pets-dark mb-2">Exclusive Cat Coloring Page (PDF)</h3>
+                    <p class="text-gray-600 text-sm">One printable PDF page to test the quality of our book.</p>
+                </div>
+                <a href="/assets/downloads/pets-unplugged-cat-sample.pdf" download 
+                   class="cta-button bg-pets-primary text-pets-dark font-black py-3 px-6 rounded-lg w-full text-center hover:bg-red-400 transition duration-300">
+                    <i class="fas fa-download mr-2"></i> Free Download
+                </a>
+            </div>
+
+            <div class="download-card p-6 bg-white rounded-xl flex flex-col items-center justify-between border-pets-secondary">
+                <div class="mb-4 text-center">
+                    <i class="fab fa-youtube text-5xl text-pets-dark mb-3"></i>
+                    <h3 class="text-2xl font-bold text-pets-dark mb-2">Quick Start Animation Guide</h3>
+                    <p class="text-gray-600 text-sm">Watch a short video explaining how to scan and view the animation.</p>
+                </div>
+                <a href="https://youtube.com/petsunplugged/quickstart" target="_blank" 
+                   class="cta-button bg-pets-dark text-white font-black py-3 px-6 rounded-lg w-full text-center hover:bg-indigo-800 transition duration-300">
+                    <i class="fas fa-external-link-alt mr-2"></i> View Guide Video
+                </a>
+            </div>
+
+            <div class="download-card p-6 bg-white rounded-xl flex flex-col items-center justify-between border-pets-secondary">
+                <div class="mb-4 text-center">
+                    <i class="fas fa-image text-5xl text-pets-secondary mb-3"></i>
+                    <h3 class="text-2xl font-bold text-pets-dark mb-2">Sample Desktop Wallpaper (PNG)</h3>
+                    <p class="text-gray-600 text-sm">A single, high-res image to brighten your desktop background.</p>
+                </div>
+                <a href="/assets/downloads/pets-unplugged-sample-wallpaper.png" download 
+                   class="cta-button bg-pets-secondary text-white font-black py-3 px-6 rounded-lg w-full text-center hover:bg-indigo-500 transition duration-300">
+                    <i class="fas fa-file-image mr-2"></i> Free Download
+                </a>
+            </div>
+
+        </div>
+        <div class="mt-16 p-8 bg-pets-dark text-white rounded-xl shadow-2xl max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-extrabold mb-3">Want More Freebies?</h2>
+            <p class="text-lg opacity-90 mb-6">
+                Sign up for our newsletter to get monthly exclusive coloring pages and coupon codes!
+            </p>
+            <a href="/index.html#contact" class="inline-flex items-center bg-pets-primary text-pets-dark font-black py-3 px-8 rounded-lg shadow-xl hover:bg-red-300 cta-button text-xl">
+                <i class="fas fa-envelope mr-3"></i> Sign Me Up
+            </a>
+        </div>
+    </div>
+</section>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
