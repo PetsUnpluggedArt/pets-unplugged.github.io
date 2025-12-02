@@ -20,5 +20,5 @@ items:
 - name: "Printable Pet Chore Checklist"
   description: "Winning the Screen Time Battle: A Pet Chore Checklist That Turns Chores into Fun"
   price: "FREE"
-  file_url: "/digital_downloads/Pets_Unplugged_ Screen-Free_ Pet_ Chore_ Checklist.pdf
-  image_url: "assets/images/pet-checklist.png
+  file_url: "/digital-downloads/Pets_Unplugged_ Screen-Free_ Pet_ Chore_ Checklist.pdf"
+  image_url: "assets/images/pet-checklist.png"
