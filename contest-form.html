@@ -58,28 +58,23 @@ title: Monthly Art Contest Submission
             </div>
 
             <div>
-                <label for="artwork_file" class="block text-sm font-bold text-gray-700 mb-1">
+                <label for="artwork_file" class="block text-sm font-bold text-gray-700 mb-2">
                     Upload Artwork (JPG, PNG, or PDF, Max 10MB) <span class="text-red-500">*</span>
                 </label>
-                <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
-                    <div class="space-y-1 text-center">
-                        <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
-                            <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m-4-4l4 4m-4-4l4 4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <div class="flex text-sm text-gray-600">
-                            <label for="artwork_file" class="relative cursor-pointer bg-white rounded-md font-medium text-pets-dark hover:text-pets-secondary focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-pets-dark">
-                                <span>Upload a file</span>
-                                <input id="artwork_file" name="File" type="file" required accept=".jpg,.jpeg,.png,.pdf" class="sr-only">
-                            </label>
-                            <p class="pl-1">or drag and drop</p>
-                        </div>
-                        <p class="text-xs text-gray-500">
-                            Maximum file size 10MB
-                        </p>
-                    </div>
-                </div>
+                
+                <input type="file" id="artwork_file" name="File" required accept=".jpg,.jpeg,.png,.pdf" 
+                       class="mt-1 block w-full text-lg text-gray-500
+                              file:mr-4 file:py-3 file:px-6
+                              file:rounded-lg file:border-0
+                              file:text-base file:font-semibold
+                              file:bg-pets-dark file:text-white 
+                              hover:file:bg-indigo-900 
+                              transition duration-150 ease-in-out border border-gray-300 p-2 rounded-md">
+                
+                <p class="text-xs text-gray-500 mt-2">
+                    Drag and drop your file onto the button above, or click to select the file.
+                </p>
             </div>
-
             <div class="pt-4">
                 <div class="flex items-start">
                     <div class="flex items-center h-5">
@@ -88,7 +83,7 @@ title: Monthly Art Contest Submission
                     </div>
                     <div class="ml-3 text-sm">
                         <label for="terms" class="font-medium text-gray-700">
-                            I confirm the artwork is original and agree to the <a href="#contest-rules" class="text-pets-dark hover:underline">Submission Guidelines</a>. <span class="text-red-500">*</span>
+                            I confirm the artwork is original and agree to the <a href="/contest.html#contest-rules" class="text-pets-dark hover:underline">Submission Guidelines</a>. <span class="text-red-500">*</span>
                         </label>
                     </div>
                 </div>
