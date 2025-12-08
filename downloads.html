@@ -1,0 +1,56 @@
+---
+layout: default
+permalink: /downloads/
+title: Minimal Downloads Test
+---
+
+<style>
+  body { font-family: sans-serif; padding: 20px; }
+  .card { border: 1px solid #000; padding: 15px; margin-bottom: 15px; }
+  .price { font-weight: bold; color: green; }
+</style>
+
+<h1>Digital Downloads - Minimal Test Page</h1>
+
+{% comment %} 
+    The item_card template uses the CORRECT {% capture %} tag.
+{% endcomment %}
+{% assign items_to_render = site.data.downloads_data %}
+
+{% capture item_card %}
+    <div class="card">
+        <h3>Item Name: {{ item.name }}</h3>
+        <p>Description: {{ item.description }}</p>
+        <span class="price">Price: {{ item.price }}</span>
+        <p><a href="{{ item.file_url | default: '#' }}">Download Link</a></p>
+    </div>
+{% endcapture %}
+
+
+<section id="coloring-books">
+    <h2>1. Coloring Books</h2>
+    {% assign items = items_to_render.coloring_books %}
+    {% for item in items %}
+        {{ item_card }}
+    {% endfor %}
+</section>
+
+<hr>
+
+<section id="theme-packs">
+    <h2>2. Theme Packs</h2>
+    {% assign items = items_to_render.theme_packs %}
+    {% for item in items %}
+        {{ item_card }}
+    {% endfor %}
+</section>
+
+<hr>
+
+<section id="free-samples">
+    <h2>3. Free Samples</h2>
+    {% assign items = items_to_render.free_samples %}
+    {% for item in items %}
+        {{ item_card }}
+    {% endfor %}
+</section>

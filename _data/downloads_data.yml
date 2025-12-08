@@ -1,0 +1,20 @@
+coloring_books:
+  - name: Test Book 1
+    description: A simple test book download.
+    price: $4.99
+    image_url: /assets/test/book1.jpg
+    file_url: /assets/test/book1.pdf
+
+theme_packs:
+  - name: Test Pack 1
+    description: A simple test theme pack.
+    price: $1.99
+    image_url: /assets/test/pack1.jpg
+    file_url: /assets/test/pack1.pdf
+
+free_samples:
+  - name: Test Free Sample 1
+    description: A simple test free download.
+    price: FREE
+    image_url: /assets/test/free1.jpg
+    file_url: /assets/test/free1.pdf
