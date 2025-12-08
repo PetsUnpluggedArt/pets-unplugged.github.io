@@ -2,8 +2,8 @@ coloring_books:
   - name: PAWS
     description: 30 delightful pages of various dogs in whimsical scenes. Each illustration has a scannable animation link.
     price: $11.99
-    image_url: assets/images/paws_cover.jpg
-    file_url: assets/downloads/paws_coloring_book.pdf # You will need to verify this exact PDF download link.
+    image_url: /assets/images/paws_cover.jpg
+    file_url: /assets/downloads/paws_coloring_book.pdf # You will need to verify this exact PDF download link.
 
 theme_packs:
   - name: Test Pack 1
