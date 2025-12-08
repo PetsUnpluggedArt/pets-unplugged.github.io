@@ -1,0 +1,196 @@
+---
+layout: default
+permalink: /downloads/
+title: Pets Unplugged - Digital Downloads & Printables
+---
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<style>
+  /* Custom color variables from merchandise.html for consistency */
+  :root {
+    --pets-primary: #fca5a5; /* Pink-400 */
+    --pets-secondary: #818cf8; /* Indigo-400 */
+    --pets-dark: #4c1d95; /* Indigo-900 */
+  }
+  .bg-pets-primary { background-color: var(--pets-primary); }
+  .text-pets-primary { color: var(--pets-primary); }
+  .bg-pets-secondary { background-color: var(--pets-secondary); }
+  .text-pets-secondary { color: var(--pets-secondary); }
+  .text-pets-dark { color: var(--pets-dark); }
+  .bg-pets-dark { background-color: var(--pets-dark); }
+  .border-pets-dark { border-color: var(--pets-dark); }
+  .cta-button { transition: background-color 0.3s, transform 0.3s; }
+  .cta-button:hover { transform: translateY(-2px); }
+  /* Utility class for section separation */
+  .section-divider { margin-top: 4rem; border-top: 1px solid #e5e7eb; padding-top: 4rem; }
+</style>
+
+<section id="hero" class="bg-pets-secondary bg-opacity-10 py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-5xl sm:text-6xl font-black text-pets-dark leading-tight">
+            Creative <span class="text-pets-primary">Downloads</span> & <span class="text-pets-dark">Printables</span>
+        </h2>
+        <p class="mt-4 text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto">
+            Get instant access to coloring pages, activity sheets, wallpapers, and more. Unplug and create!
+        </p>
+    </div>
+</section>
+
+{% comment %} 
+    New macro for rendering a single download item card.
+    FIXED: Changed {% assign %} to {% capture %} to resolve Liquid Syntax Error.
+{% endcomment %}
+{% assign default_image = 'https://placehold.co/600x400/818cf8/ffffff?text=Digital+Download' %}
+{% assign items_to_render = site.data.downloads_data %}
+
+{% capture item_card %}
+    <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300 border border-gray-100">
+        
+        <div class="h-64 bg-gray-200 relative">
+            <img src="{{ item.image_url | default: default_image }}" 
+                 alt="{{ item.name }}" class="w-full h-full object-cover">
+            <span class="absolute top-3 right-3 bg-pets-primary text-white text-sm font-black px-3 py-1 rounded-full shadow-lg">
+                {{ item.price | default: 'N/A' }}
+            </span>
+        </div>
+        
+        <div class="p-6">
+            <h4 class="text-2xl font-black text-pets-dark mb-2">{{ item.name }}</h4>
+            <p class="text-gray-600 mb-4">{{ item.description }}</p>
+            
+            <a href="{{ item.file_url | default: '#' }}" 
+               target="_blank" 
+               class="w-full inline-flex items-center justify-center bg-pets-dark text-white font-bold py-3 px-6 rounded-lg shadow-xl hover:bg-indigo-800 transition duration-300 cta-button text-lg" 
+               {% if item.file_url %}download{% endif %}>
+                <i class="fas fa-download mr-3"></i> 
+                {% if item.price == 'FREE' or item.price == '$0.00' %}
+                    Download Now
+                {% else %}
+                    Buy & Download
+                {% endif %}
+            </a>
+        </div>
+    </div>
+{% endcapture %}
+
+
+<section id="coloring-books" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <h3 class="text-3xl font-bold text-pets-dark mb-10 text-center">
+            Complete Coloring Book Digital Downloads
+        </h3>
+        
+        {% assign items = items_to_render.coloring_books %}
+        
+        {% if items and items.size > 0 %}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {% for item in items %}
+                {{ item_card }}
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="text-center p-12 bg-gray-50 rounded-lg border-2 border-dashed border-gray-300 text-gray-600">
+            <i class="fas fa-book-open text-4xl mb-4 text-pets-secondary"></i>
+            <p class="text-xl font-semibold mb-2">No Full Digital Books Available Yet</p>
+            <p>Our complete coloring book PDFs will be available soon for **$4.99** each. Check out our free samples below!</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<section id="theme-packs" class="section-divider py-16 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <h3 class="text-3xl font-bold text-pets-dark mb-10 text-center">
+            Exclusive Six Illustration Theme Packs
+        </h3>
+        
+        {% assign items = items_to_render.theme_packs %}
+        
+        {% if items and items.size > 0 %}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {% for item in items %}
+                {{ item_card }}
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="text-center p-12 bg-gray-50 rounded-lg border-2 border-dashed border-gray-300 text-gray-600">
+            <i class="fas fa-image text-4xl mb-4 text-pets-secondary"></i>
+            <p class="text-xl font-semibold mb-2">No Theme Packs Available Yet</p>
+            <p>Our curated six-illustration theme packs will be available soon for **$1.99** each! Sign up for our newsletter to be notified when they drop.</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<section id="free-samples" class="section-divider py-16 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <h3 class="text-3xl font-bold text-pets-dark mb-10 text-center">
+            Free Sample Page Downloads & Other Free Downloads
+        </h3>
+        
+        {% assign items = items_to_render.free_samples %}
+        
+        {% if items and items.size > 0 %}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {% for item in items %}
+                {% comment %} Use a slight primary color background for free items {% endcomment %}
+                <div class="bg-pets-primary bg-opacity-20 rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300 border border-pets-primary/50">
+                    
+                    <div class="h-64 bg-gray-200 relative">
+                        <img src="{{ item.image_url | default: default_image }}" 
+                            alt="{{ item.name }}" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-pets-secondary text-white text-sm font-black px-3 py-1 rounded-full shadow-lg">
+                            {{ item.price | default: 'FREE' }}
+                        </span>
+                    </div>
+                    
+                    <div class="p-6">
+                        <h4 class="text-2xl font-black text-pets-dark mb-2">{{ item.name }}</h4>
+                        <p class="text-gray-600 mb-4">{{ item.description }}</p>
+                        
+                        <a href="{{ item.file_url | default: '#' }}" 
+                            target="_blank" 
+                            class="w-full inline-flex items-center justify-center bg-pets-secondary text-white font-bold py-3 px-6 rounded-lg shadow-xl hover:bg-indigo-500 transition duration-300 cta-button text-lg" 
+                            {% if item.file_url %}download{% endif %}>
+                            <i class="fas fa-download mr-3"></i> 
+                            Get Your Free Download
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="text-center p-12 bg-gray-50 rounded-lg border-2 border-dashed border-gray-300 text-gray-600">
+            <i class="fas fa-gift text-4xl mb-4 text-pets-secondary"></i>
+            <p class="text-xl font-semibold mb-2">No Free Downloads Available Right Now</p>
+            <p>Check back soon for free samples from our coloring books and exclusive wallpapers!</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+
+<section id="download-cta" class="py-10 bg-pets-primary px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto text-center text-pets-dark">
+        <h3 class="text-3xl sm:text-4xl font-extrabold mb-4">Want Custom Printables?</h3>
+        <p class="text-lg opacity-90 mb-6">
+            Contact us about custom coloring pages, commissioned art, or specific activity packs!
+        </p>
+        <a href="/index.html#contact" class="inline-flex items-center bg-pets-dark text-white font-black py-3 px-8 rounded-lg shadow-xl hover:bg-indigo-900 cta-button text-xl">
+            <i class="fas fa-envelope mr-3"></i> Get in Touch
+        </a>
+    </div>
+</section>
+
+<script>
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css';
+    document.head.appendChild(link);
+</script>
+
+---
+
+Do you have any other Liquid files you'd like me to check before you try your next build?
