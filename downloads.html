@@ -6,6 +6,7 @@ title: Digital Downloads - Pets Unplugged
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <style>
   :root {
@@ -53,13 +54,14 @@ title: Digital Downloads - Pets Unplugged
 <section id="coloring-books" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
     <div class="max-w-7xl mx-auto">
         <div class="text-center mb-12">
-            <h2 class="text-4xl font-extrabold text-pets-dark">Full Coloring Books</h2>
-            <p class="text-lg text-gray-600 mt-2">Complete PDF versions of our physical books.</p>
+            <h2 class="text-4xl font-extrabold text-pets-dark">Full Coloring Books (Digital)</h2>
+            <p class="text-lg text-gray-600 mt-2">Complete PDF versions for unlimited printing.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
             {% for item in items_to_render.coloring_books %}
-            <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition duration-300 flex flex-col h-full">
+            <div class="col-span-1 bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition duration-300 flex flex-col h-full">
                 <div class="w-full bg-gray-100 rounded-xl mb-6 overflow-hidden aspect-[3/4]">
                     <img src="{{ item.image_url }}" 
                          alt="{{ item.name }}"
@@ -69,7 +71,7 @@ title: Digital Downloads - Pets Unplugged
                 
                 <div class="flex-grow text-center">
                     <h3 class="text-2xl font-black text-pets-dark mb-2">{{ item.name }}</h3>
-                    <p class="text-gray-600 mb-4">{{ item.description }}</p>
+                    <p class="text-gray-600 mb-4 line-clamp-2">{{ item.description }}</p>
                     <div class="text-3xl font-extrabold text-pets-primary mb-6">{{ item.price }}</div>
                 </div>
 
@@ -78,14 +80,38 @@ title: Digital Downloads - Pets Unplugged
                 </a>
             </div>
             {% endfor %}
+            
+            <div class="col-span-1 bg-pets-dark p-6 rounded-2xl shadow-lg border-2 border-pets-primary relative flex flex-col h-full">
+                <div class="absolute top-0 right-0 bg-pets-primary text-pets-dark text-sm font-bold px-4 py-1 rounded-bl-lg rounded-tr-xl z-10 transform translate-y-[-1px]">
+                    Coming Soon!
+                </div>
+                
+                <div class="w-full bg-gray-100 rounded-xl mb-6 overflow-hidden aspect-[3/4] opacity-70">
+                    <img src="/assets/images/whiskers_cover_coming_soon.jpg" 
+                         alt="Whiskers Cat Coloring Book Cover"
+                         class="w-full h-full object-cover grayscale"
+                         onerror="replaceImage(this, 'Whiskers CATS')">
+                </div>
+                
+                <div class="flex-grow text-center text-white">
+                    <h3 class="text-2xl font-black mb-2 text-pets-primary">WHISKERS</h3>
+                    <p class="text-gray-300 mb-4">Our next animal-themed book: a full collection of adorable cats!</p>
+                    <div class="text-3xl font-extrabold text-white mb-6">TBD</div>
+                </div>
+
+                <a href="/index.html#contact" class="w-full block text-center bg-pets-primary text-pets-dark font-bold py-3 rounded-lg shadow-md hover:bg-pink-300 cta-button">
+                    <i class="fas fa-envelope mr-2"></i> Get Notified!
+                </a>
+            </div>
         </div>
     </div>
 </section>
 
-<section id="theme-packs" class="py-16 px-4 sm:px-6 lg:px-8 bg-f7f3f9" style="background-color: #fdf2f8;"> <div class="max-w-7xl mx-auto">
+<section id="theme-packs" class="py-16 px-4 sm:px-6 lg:px-8" style="background-color: #fdf2f8;">
+    <div class="max-w-7xl mx-auto">
         <div class="text-center mb-12">
-            <h2 class="text-4xl font-extrabold text-pets-dark">Exclusive Theme Packs</h2>
-            <p class="text-lg text-gray-600 mt-2">Curated 6-pack illustrations focused on specific themes.</p>
+            <h2 class="text-4xl font-extrabold text-pets-dark">Exclusive Six-Pack Theme Illustrations</h2>
+            <p class="text-lg text-gray-600 mt-2">Curated illustration sets focused on specific themes.</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -141,12 +167,36 @@ title: Digital Downloads - Pets Unplugged
     </div>
 </section>
 
-<section id="downloads-cta" class="py-12 bg-pets-secondary px-4 sm:px-6 lg:px-8">
-    <div class="max-w-4xl mx-auto text-center text-white">
-        <h3 class="text-3xl font-black mb-4">Need Physical Books?</h3>
-        <p class="text-lg mb-8 opacity-90">Prefer the real deal? Order our professionally printed coloring books on Amazon.</p>
-        <a href="/index.html#books" class="inline-block bg-white text-pets-dark font-black py-3 px-8 rounded-lg shadow-xl hover:bg-gray-100 cta-button">
-            View Physical Books
-        </a>
+<section id="paws-cta" class="py-16 bg-pets-secondary px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col lg:flex-row items-center bg-pets-primary/30 p-8 rounded-2xl shadow-2xl space-y-8 lg:space-y-0 lg:space-x-12">
+            
+            <div class="w-full lg:w-1/3 flex justify-center">
+                <div class="max-w-xs w-full rounded-xl overflow-hidden shadow-2xl border-4 border-pets-dark/50">
+                    <img src="assets/images/paws_cover.jpg" 
+                        alt="PAWS Coloring Book Cover"
+                        class="w-full h-auto object-cover"
+                        onerror="replaceImage(this, 'PAWS Book Cover')">
+                </div>
+            </div>
+            
+            <div class="w-full lg:w-2/3 text-center lg:text-left">
+                <span class="text-lg font-semibold text-pets-dark uppercase tracking-widest mb-2 inline-block">Physical Edition Available</span>
+                <h3 class="text-4xl font-black text-pets-dark mb-4">
+                    The Original: PAWS Coloring Book!
+                </h3>
+                <p class="text-xl text-gray-700 mb-6 max-w-lg lg:max-w-none">
+                    Prefer a professionally printed book with perforated pages and a gorgeous cover? **PAWS** is our current best-seller!
+                </p>
+                
+                <p class="text-3xl font-extrabold text-pets-dark mb-8">
+                    Start coloring and animating today.
+                </p>
+                
+                <a href="/index.html#books" class="w-full md:w-auto inline-block bg-pets-dark text-white font-bold py-4 px-10 rounded-full text-xl shadow-2xl hover:bg-indigo-900 cta-button">
+                    <i class="fas fa-book-open mr-2"></i> View PAWS Book Details
+                </a>
+            </div>
+        </div>
     </div>
 </section>
