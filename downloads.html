@@ -40,7 +40,7 @@ title: Pets Unplugged - Digital Downloads & Printables
 
 {% comment %} 
     New macro for rendering a single download item card.
-    CORRECTION: Changed {% assign item_card %} to {% capture item_card %} to fix Liquid syntax error.
+    **FIXED SYNTAX:** Changed {% assign %} to {% capture %} to correctly store the HTML block.
 {% endcomment %}
 {% assign default_image = 'https://placehold.co/600x400/818cf8/ffffff?text=Digital+Download' %}
 {% assign items_to_render = site.data.downloads_data %}
