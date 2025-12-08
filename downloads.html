@@ -1,58 +1,152 @@
 ---
 layout: default
 permalink: /downloads/
-title: Minimal Downloads Test
+title: Digital Downloads - Pets Unplugged
 ---
 
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 <style>
-  body { font-family: sans-serif; padding: 20px; }
-  .card { border: 1px solid #000; padding: 15px; margin-bottom: 15px; }
-  .price { font-weight: bold; color: green; }
+  :root {
+    --pets-primary: #fca5a5; /* Pink-400 */
+    --pets-secondary: #818cf8; /* Indigo-400 */
+    --pets-dark: #4c1d95; /* Indigo-900 */
+  }
+  .bg-pets-primary { background-color: var(--pets-primary); }
+  .text-pets-primary { color: var(--pets-primary); }
+  .bg-pets-secondary { background-color: var(--pets-secondary); }
+  .text-pets-secondary { color: var(--pets-secondary); }
+  .text-pets-dark { color: var(--pets-dark); }
+  .bg-pets-dark { background-color: var(--pets-dark); }
+  .border-pets-dark { border-color: var(--pets-dark); }
+  
+  /* Button Hover Effects */
+  .cta-button { transition: all 0.3s; }
+  .cta-button:hover { transform: translateY(-2px); }
 </style>
 
-<h1>Digital Downloads - Minimal Test Page</h1>
+<script>
+    function replaceImage(img, text) {
+        img.src = `https://placehold.co/400x500/818cf8/4c1d95?text=${encodeURIComponent(text)}`;
+    }
+</script>
+
+<section id="hero-downloads" class="bg-pets-secondary bg-opacity-10 py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto text-center">
+        <h1 class="text-5xl sm:text-7xl font-black text-pets-dark leading-tight mb-4">
+            Instant <span class="text-pets-primary">Digital</span> Fun
+        </h1>
+        <p class="mt-4 text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto">
+            Skip the shipping! Download our coloring books, exclusive theme packs, and free samples instantly. Print them at home and start coloring today.
+        </p>
+        <div class="mt-8">
+            <a href="#coloring-books" class="inline-block bg-pets-dark text-white font-bold py-3 px-8 rounded-full shadow-xl hover:bg-indigo-900 cta-button">
+                Browse Downloads
+            </a>
+        </div>
+    </div>
+</section>
 
 {% assign items_to_render = site.data.downloads_data %}
 
-<section id="coloring-books">
-    <h2>1. Coloring Books</h2>
-    {% assign items = items_to_render.coloring_books %}
-    {% for item in items %}
-        <div class="card">
-            <h3>Item Name: {{ item.name }}</h3>
-            <p>Description: {{ item.description }}</p>
-            <span class="price">Price: {{ item.price }}</span>
-            <p><a href="{{ item.file_url | default: '#' }}">Download Link</a></p>
+<section id="coloring-books" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-pets-dark">Full Coloring Books</h2>
+            <p class="text-lg text-gray-600 mt-2">Complete PDF versions of our physical books.</p>
         </div>
-    {% endfor %}
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for item in items_to_render.coloring_books %}
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition duration-300 flex flex-col h-full">
+                <div class="w-full bg-gray-100 rounded-xl mb-6 overflow-hidden aspect-[3/4]">
+                    <img src="{{ item.image_url }}" 
+                         alt="{{ item.name }}"
+                         class="w-full h-full object-cover"
+                         onerror="replaceImage(this, '{{ item.name }}')">
+                </div>
+                
+                <div class="flex-grow text-center">
+                    <h3 class="text-2xl font-black text-pets-dark mb-2">{{ item.name }}</h3>
+                    <p class="text-gray-600 mb-4">{{ item.description }}</p>
+                    <div class="text-3xl font-extrabold text-pets-primary mb-6">{{ item.price }}</div>
+                </div>
+
+                <a href="{{ item.file_url | default: '#' }}" class="w-full block text-center bg-pets-secondary text-white font-bold py-3 rounded-lg shadow-md hover:bg-indigo-500 cta-button">
+                    <i class="fas fa-download mr-2"></i> Download PDF
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </section>
 
-<hr>
-
-<section id="theme-packs">
-    <h2>2. Theme Packs</h2>
-    {% assign items = items_to_render.theme_packs %}
-    {% for item in items %}
-        <div class="card">
-            <h3>Item Name: {{ item.name }}</h3>
-            <p>Description: {{ item.description }}</p>
-            <span class="price">Price: {{ item.price }}</span>
-            <p><a href="{{ item.file_url | default: '#' }}">Download Link</a></p>
+<section id="theme-packs" class="py-16 px-4 sm:px-6 lg:px-8 bg-f7f3f9" style="background-color: #fdf2f8;"> <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-pets-dark">Exclusive Theme Packs</h2>
+            <p class="text-lg text-gray-600 mt-2">Curated 6-pack illustrations focused on specific themes.</p>
         </div>
-    {% endfor %}
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {% for item in items_to_render.theme_packs %}
+            <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-2 border-pets-primary/20">
+                <div class="w-full bg-gray-100 rounded-lg mb-4 overflow-hidden aspect-square">
+                    <img src="{{ item.image_url }}" 
+                         alt="{{ item.name }}"
+                         class="w-full h-full object-cover"
+                         onerror="replaceImage(this, '{{ item.name }}')">
+                </div>
+
+                <div class="text-center">
+                    <h3 class="text-xl font-bold text-pets-dark leading-tight">{{ item.name }}</h3>
+                    <p class="text-sm text-gray-500 mt-2 line-clamp-2">{{ item.description }}</p>
+                    <div class="text-2xl font-bold text-pets-secondary mt-3">{{ item.price }}</div>
+                    
+                    <a href="{{ item.file_url | default: '#' }}" class="mt-4 block w-full bg-pets-dark text-white font-bold py-2 px-4 rounded-lg text-sm shadow hover:bg-indigo-900 cta-button">
+                        Get the Pack
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </section>
 
-<hr>
+<section id="free-samples" class="py-16 px-4 sm:px-6 lg:px-8 bg-pets-dark">
+    <div class="max-w-7xl mx-auto text-center text-white">
+        <h2 class="text-4xl font-extrabold mb-4">Free Downloads</h2>
+        <p class="text-xl opacity-90 mb-10 max-w-2xl mx-auto">
+            Try before you buy! Download these high-quality samples completely free.
+        </p>
 
-<section id="free-samples">
-    <h2>3. Free Samples</h2>
-    {% assign items = items_to_render.free_samples %}
-    {% for item in items %}
-        <div class="card">
-            <h3>Item Name: {{ item.name }}</h3>
-            <p>Description: {{ item.description }}</p>
-            <span class="price">Price: {{ item.price }}</span>
-            <p><a href="{{ item.file_url | default: '#' }}">Download Link</a></p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {% for item in items_to_render.free_samples %}
+            <div class="bg-white text-pets-dark p-6 rounded-2xl shadow-2xl transform hover:scale-105 transition duration-300">
+                <div class="w-full bg-gray-100 rounded-lg mb-4 overflow-hidden aspect-square border border-gray-200">
+                    <img src="{{ item.image_url }}" 
+                         alt="{{ item.name }}"
+                         class="w-full h-full object-cover"
+                         onerror="replaceImage(this, '{{ item.name }}')">
+                </div>
+                <h3 class="text-xl font-bold mb-2">{{ item.name }}</h3>
+                <p class="text-gray-600 text-sm mb-4">{{ item.description }}</p>
+                
+                <a href="{{ item.file_url | default: '#' }}" class="block w-full bg-green-500 text-white font-bold py-3 rounded-lg shadow-md hover:bg-green-600 cta-button">
+                    <i class="fas fa-gift mr-2"></i> Download Free
+                </a>
+            </div>
+            {% endfor %}
         </div>
-    {% endfor %}
+    </div>
+</section>
+
+<section id="downloads-cta" class="py-12 bg-pets-secondary px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center text-white">
+        <h3 class="text-3xl font-black mb-4">Need Physical Books?</h3>
+        <p class="text-lg mb-8 opacity-90">Prefer the real deal? Order our professionally printed coloring books on Amazon.</p>
+        <a href="/index.html#books" class="inline-block bg-white text-pets-dark font-black py-3 px-8 rounded-lg shadow-xl hover:bg-gray-100 cta-button">
+            View Physical Books
+        </a>
+    </div>
 </section>
