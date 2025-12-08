@@ -40,12 +40,12 @@ title: Pets Unplugged - Digital Downloads & Printables
 
 {% comment %} 
     New macro for rendering a single download item card.
-    This replaces repeated HTML code in the loops below.
+    CORRECTION: Changed {% assign item_card %} to {% capture item_card %} to fix Liquid syntax error.
 {% endcomment %}
 {% assign default_image = 'https://placehold.co/600x400/818cf8/ffffff?text=Digital+Download' %}
 {% assign items_to_render = site.data.downloads_data %}
 
-{% assign item_card %}
+{% capture item_card %}
     <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300 border border-gray-100">
         
         <div class="h-64 bg-gray-200 relative">
@@ -73,7 +73,7 @@ title: Pets Unplugged - Digital Downloads & Printables
             </a>
         </div>
     </div>
-{% endassign %}
+{% endcapture %}
 
 
 <section id="coloring-books" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
