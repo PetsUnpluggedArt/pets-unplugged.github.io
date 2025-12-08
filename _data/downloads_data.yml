@@ -1,48 +1,20 @@
-# =================================================================
-# _data/downloads_data.yml
-# This file populates the three sections on the /downloads/ page.
-# =================================================================
-
-# 1. COLORING BOOK DIGITAL DOWNLOADS (Price: $4.99 each)
 coloring_books:
-  - name: Paws Coloring Book Digital Edition
-    description: The complete 30-page PDF of dog illustrations with scannable animation QR codes. Print as many times as you like!
+  - name: Test Book 1
+    description: A simple test book download.
     price: $4.99
-    image_url: /assets/images/paws_digital_cover.jpg # Replace with actual image URL
-    file_url: /assets/pdfs/paws_full_download.pdf # Link to the digital file
+    image_url: /assets/test/book1.jpg
+    file_url: /assets/test/book1.pdf
 
-  # Add your other coloring books here when available:
-  # - name: Whiskers Coloring Book Digital Edition (Coming Soon)
-  #   ...
-
-# -----------------------------------------------------------------
-
-# 2. EXCLUSIVE SIX ILLUSTRATION THEME PACKS (Price: $1.99 each)
 theme_packs:
-  - name: Cozy Cat Nap Pack
-    description: Six high-resolution, full-page cat illustrations in cozy sleeping poses. Great for quick coloring sessions!
+  - name: Test Pack 1
+    description: A simple test theme pack.
     price: $1.99
-    image_url: /assets/images/cozy_cat_pack.png # Replace with actual image URL
-    file_url: /assets/pdfs/cozy_cat_pack_download.pdf # Link to the digital file
+    image_url: /assets/test/pack1.jpg
+    file_url: /assets/test/pack1.pdf
 
-  - name: Dino-Pets Pack
-    description: Six whimsical illustrations of pets dressed as dinosaurs. A fun, unique theme.
-    price: $1.99
-    image_url: /assets/images/dino_pet_pack.png # Replace with actual image URL
-    file_url: /assets/pdfs/dino_pet_pack_download.pdf # Link to the digital file
-
-# -----------------------------------------------------------------
-
-# 3. FREE SAMPLE PAGE DOWNLOADS & OTHER FREE DOWNLOADS
 free_samples:
-  - name: Free Sample - Beethoven's Fluffiest Fan
-    description: A single, high-quality sample page from the 'Paws' coloring book for you to try.
+  - name: Test Free Sample 1
+    description: A simple test free download.
     price: FREE
-    image_url: /assets/images/dogpianosample.png # Use existing sample image
-    file_url: /assets/pdfs/paws_free_sample.pdf # Link to the actual free PDF file
-
-  - name: Desktop Wallpaper - Indigo Pup
-    description: A free digital wallpaper for desktop or mobile featuring the Pets Unplugged Indigo Pup mascot.
-    price: FREE
-    image_url: /assets/images/wallpaper_pup.png # Replace with actual image URL
-    file_url: /assets/images/wallpaper_pup_full.jpg # Link to the image file
+    image_url: /assets/test/free1.jpg
+    file_url: /assets/test/free1.pdf
