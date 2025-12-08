@@ -1,24 +1,48 @@
-items:
-- name: "Pets Unplugged Sample Coloring Page"
-  description: "A high-resolution, printable PDF of our most popular character, Buster the Dog, perfect for an afternoon of fun."
-  price: "FREE"
-  file_url: "/assets/downloads/buster_coloring.pdf" # Update this to the actual file path
-  image_url: "https://www.google.com/search?q=https://placehold.co/600x400/4c1d95/ffffff%3Ftext%3DBuster%2BColoring%2BPage"
+# =================================================================
+# _data/downloads_data.yml
+# This file populates the three sections on the /downloads/ page.
+# =================================================================
 
-- name: "Seasonal Activity Pack - Autumn"
-  description: "Includes a word search, crossword, and a connect-the-dots activity, all with an autumnal pet theme. Great for classrooms!"
-  price: "$2.99"
-  file_url: "/assets/downloads/autumn_pack.zip" # Update this to the actual file path
-  image_url: "https://www.google.com/search?q=https://placehold.co/600x400/fca5a5/4c1d95%3Ftext%3DAutumn%2BPack"
+# 1. COLORING BOOK DIGITAL DOWNLOADS (Price: $4.99 each)
+coloring_books:
+  - name: Paws Coloring Book Digital Edition
+    description: The complete 30-page PDF of dog illustrations with scannable animation QR codes. Print as many times as you like!
+    price: $4.99
+    image_url: /assets/images/paws_digital_cover.jpg # Replace with actual image URL
+    file_url: /assets/pdfs/paws_full_download.pdf # Link to the digital file
 
-- name: "Desktop Wallpaper Pack"
-  description: "A collection of 10 high-definition wallpapers featuring our animated pets for all screen sizes (1920x1080 and 4k resolution)."
-  price: "FREE"
-  file_url: "/assets/downloads/wallpaper_pack.zip" # Update this to the actual file path
-  image_url: "https://www.google.com/search?q=https://placehold.co/600x400/818cf8/ffffff%3Ftext%3DWallpaper%2BPack"
+  # Add your other coloring books here when available:
+  # - name: Whiskers Coloring Book Digital Edition (Coming Soon)
+  #   ...
 
-- name: "Printable Pet Chore Checklist"
-  description: "Winning the Screen Time Battle: A Pet Chore Checklist That Turns Chores into Fun"
-  price: "FREE"
-  file_url: "/digital-downloads/Pets_Unplugged_ Screen-Free_ Pet_ Chore_ Checklist.pdf"
-  image_url: "/assets/images/pet-checklist.png"
+# -----------------------------------------------------------------
+
+# 2. EXCLUSIVE SIX ILLUSTRATION THEME PACKS (Price: $1.99 each)
+theme_packs:
+  - name: Cozy Cat Nap Pack
+    description: Six high-resolution, full-page cat illustrations in cozy sleeping poses. Great for quick coloring sessions!
+    price: $1.99
+    image_url: /assets/images/cozy_cat_pack.png # Replace with actual image URL
+    file_url: /assets/pdfs/cozy_cat_pack_download.pdf # Link to the digital file
+
+  - name: Dino-Pets Pack
+    description: Six whimsical illustrations of pets dressed as dinosaurs. A fun, unique theme.
+    price: $1.99
+    image_url: /assets/images/dino_pet_pack.png # Replace with actual image URL
+    file_url: /assets/pdfs/dino_pet_pack_download.pdf # Link to the digital file
+
+# -----------------------------------------------------------------
+
+# 3. FREE SAMPLE PAGE DOWNLOADS & OTHER FREE DOWNLOADS
+free_samples:
+  - name: Free Sample - Beethoven's Fluffiest Fan
+    description: A single, high-quality sample page from the 'Paws' coloring book for you to try.
+    price: FREE
+    image_url: /assets/images/dogpianosample.png # Use existing sample image
+    file_url: /assets/pdfs/paws_free_sample.pdf # Link to the actual free PDF file
+
+  - name: Desktop Wallpaper - Indigo Pup
+    description: A free digital wallpaper for desktop or mobile featuring the Pets Unplugged Indigo Pup mascot.
+    price: FREE
+    image_url: /assets/images/wallpaper_pup.png # Replace with actual image URL
+    file_url: /assets/images/wallpaper_pup_full.jpg # Link to the image file
