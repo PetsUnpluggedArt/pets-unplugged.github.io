@@ -6,15 +6,15 @@ coloring_books:
     file_url: /assets/downloads/paws_coloring_book.pdf # You will need to verify this exact PDF download link.
 
 theme_packs:
-  - name: Test Pack 1
-    description: A simple test theme pack.
+  - name: Coming Soon!
+    description: Six Illustration Theme Pack
     price: $1.99
     image_url: /assets/test/pack1.jpg
     file_url: /assets/test/pack1.pdf
 
-free_samples:
-  - name: Test Free Sample 1
-    description: A simple test free download.
-    price: FREE
+expansion packs:
+  - name: Coming Soon!
+    description: Continue the Journey
+    price: $0.99
     image_url: /assets/test/free1.jpg
     file_url: /assets/test/free1.pdf
