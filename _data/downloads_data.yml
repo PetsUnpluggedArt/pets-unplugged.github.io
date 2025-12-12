@@ -15,6 +15,6 @@ theme_packs:
 expansion_packs:
   - name: Coming Soon!
     description: Continue the Journey
-    price: $.99
+    price: $0.99
     image_url: /assets/test/expansion.jpg
     file_url: /assets/test/expansion.pdf
