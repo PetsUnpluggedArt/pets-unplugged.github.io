@@ -139,6 +139,7 @@ title: Digital Downloads - Pets Unplugged
                 <h3 class="text-xl font-bold mb-2">{{ item.name }}</h3>
                 <p class="text-gray-600 text-sm mb-4">{{ item.description }}</p>
                 
+                <div class="text-3xl font-extrabold text-pets-primary mb-6">{{ item.price }}</div>
                 <a href="{{ item.file_url | default: '#' }}" class="mt-4 block w-full bg-pets-dark text-white font-bold py-2 px-4 rounded-lg text-sm shadow hover:bg-indigo-900 cta-button">
                     Get the Expansion Pack
                 </a>
@@ -147,7 +148,6 @@ title: Digital Downloads - Pets Unplugged
         </div>
     </div>
 </section>
-
 <section id="paws-cta" class="py-16 bg-pets-secondary px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
         <div class="flex flex-col lg:flex-row items-center bg-pets-primary/30 p-8 rounded-2xl shadow-2xl space-y-8 lg:space-y-0 lg:space-x-12">
