@@ -120,7 +120,7 @@ title: Digital Downloads - Pets Unplugged
     </div>
 </section>
 
-<section id="expansion packs" class="py-16 px-4 sm:px-6 lg:px-8 bg-pets-dark">
+<section id="expansion_packs" class="py-16 px-4 sm:px-6 lg:px-8 bg-pets-dark">
     <div class="max-w-7xl mx-auto text-center text-white">
         <h2 class="text-4xl font-extrabold mb-4">Expansion Packs</h2>
         <p class="text-xl opacity-90 mb-10 max-w-2xl mx-auto">
@@ -128,7 +128,7 @@ title: Digital Downloads - Pets Unplugged
          </p>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {% for item in items_to_render.expansion packs %}
+            {% for item in items_to_render.expansion_packs %}
             <div class="bg-white text-pets-dark p-6 rounded-2xl shadow-2xl transform hover:scale-105 transition duration-300">
                 <div class="w-full bg-gray-100 rounded-lg mb-4 overflow-hidden aspect-square border border-gray-200">
                     <img src="{{ item.image_url }}" 
@@ -140,7 +140,7 @@ title: Digital Downloads - Pets Unplugged
                 <p class="text-gray-600 text-sm mb-4">{{ item.description }}</p>
                 
                 <a href="{{ item.file_url | default: '#' }}" class="block w-full bg-green-500 text-white font-bold py-3 rounded-lg shadow-md hover:bg-green-600 cta-button">
-                    <i class="fas fa-gift mr-2"></i> Expansion Pack 1.0
+                    <i class="fas fa-gift mr-2"></i> Get the Expansion
                 </a>
             </div>
             {% endfor %}
