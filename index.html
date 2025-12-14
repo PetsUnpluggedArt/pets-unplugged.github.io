@@ -3,9 +3,9 @@ layout: default
 title: Pets Unplugged - Creative Coloring & Merchandise
 ---
 
-<section id="hero" class="bg-pets-secondary bg-opacity-10 py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
+<section id="hero" class="bg-pets-secondary bg-opacity-10 py-12 sm:py-20 px-6 lg:px-8">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-left">
-        <div class="md:w-1/2 mb-10 md:mb-0 py-4 text-left px-4 sm:px-0">
+        <div class="md:w-1/2 mb-10 md:mb-0 py-4 text-left">
         
             <h2 class="text-5xl sm:text-6xl font-black text-pets-dark leading-tight">
                 Unplug. <span class="text-pets-primary">Color.<span class="text-pets-secondary">Animate.</span>
@@ -18,7 +18,7 @@ title: Pets Unplugged - Creative Coloring & Merchandise
             </a>
         </div>
         
-        <div class="md:w-1/2 mt-10 md:mt-0 text-left px-4 sm:px-0">
+        <div class="md:w-1/2 mt-10 md:mt-0 text-left">
             <h3 class="text-2xl font-black text-pets-dark mb-4">Why Color? The Benefits Are Huge!</h3>
             <ul class="space-y-3 text-lg text-gray-700">
                 <li class="flex items-start">
@@ -41,8 +41,7 @@ title: Pets Unplugged - Creative Coloring & Merchandise
         </div>
         
     </div>
-</section>
-<section id="digital" class="py-12 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100">
+</section><section id="digital" class="py-12 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100">
     <div class="max-w-7xl mx-auto text-center">
         <h3 class="text-3xl sm:text-4xl section-heading font-extrabold mb-4">Instantly Color! Digital Downloads Available.</h3>
         <p class="text-lg text-gray-600 mb-8">
@@ -330,3 +329,34 @@ title: Pets Unplugged - Creative Coloring & Merchandise
 
         </div>
 </section>
+<script>
+    function toggleFAQ(element) {
+        // Find the next sibling that is a div, which should be the answer container
+        const answer = element.nextElementSibling;
+        const icon = element.querySelector('svg');
+
+        if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+            // If the answer is open, close it (set max-height to 0)
+            answer.style.maxHeight = '0px';
+            answer.style.paddingTop = '0';
+            answer.style.paddingBottom = '0';
+            icon.classList.remove('rotate-180');
+        } else {
+            // If the answer is closed, open it (set max-height to its content height)
+            // Use scrollHeight to get the full height of the content
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+            answer.style.paddingTop = '1rem'; // Add padding back when open
+            answer.style.paddingBottom = '1rem'; // Add padding back when open
+            icon.classList.add('rotate-180');
+        }
+    }
+    // Set initial state to ensure the py-0 class is respected initially
+    document.addEventListener('DOMContentLoaded', function() {
+        const answers = document.querySelectorAll('#faq .max-h-0');
+        answers.forEach(answer => {
+            answer.style.maxHeight = '0px';
+            answer.style.paddingTop = '0';
+            answer.style.paddingBottom = '0';
+        });
+    });
+</script>
