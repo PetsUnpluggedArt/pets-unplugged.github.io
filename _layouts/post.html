@@ -3,104 +3,77 @@ layout: default
 ---
 
 <main class="flex-grow container mx-auto px-4 sm:px-8 py-12">
-    <article class="max-w-4xl mx-auto">
-        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
-            
-            <!-- Featured Image (if provided in front matter) -->
-            {% if page.thumbnail %}
-            <div class="w-full h-96 md:h-[500px] overflow-hidden">
-                <img src="{{ page.thumbnail }}" 
-                     alt="{{ page.title }} featured image" 
-                     class="w-full h-full object-cover"
-                     loading="lazy">
+  <article class="max-w-4xl mx-auto">
+    <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+
+      {% if page.thumbnail %}
+      <div class="w-full h-96 md:h-[500px] overflow-hidden">
+        <img src="{{ page.thumbnail }}" alt="{{ page.title }}" class="w-full h-full object-cover" loading="lazy">
+      </div>
+      {% endif %}
+
+      <div class="p-8 sm:p-12 lg:p-16">
+        <header class="text-center mb-12">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-pets-dark leading-tight mb-6">
+            {{ page.title }}
+          </h1>
+
+          <div class="flex flex-wrap justify-center gap-4 text-lg text-gray-600 mb-6">
+            <div class="flex items-center">
+              <i class="fas fa-calendar-alt mr-2 text-pets-secondary"></i>
+              {{ page.date | date: "%B %-d, %Y" }}
+            </div>
+            {% if page.author %}
+            <span class="hidden sm:inline">•</span>
+            <div class="flex items-center">
+              <i class="fas fa-user-circle mr-2 text-pets-secondary"></i>
+              {{ page.author }}
             </div>
             {% endif %}
+          </div>
 
-            <div class="p-8 sm:p-12 lg:p-16">
-                
-                <!-- Header -->
-                <header class="text-center mb-12">
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-pets-dark leading-tight mb-6">
-                        {{ page.title }}
-                    </h1>
+          {% if page.tags %}
+          <div class="flex flex-wrap justify-center gap-3">
+            {% for tag in page.tags %}
+            <span class="bg-pets-secondary/10 text-pets-secondary px-4 py-2 rounded-full text-sm font-bold">#{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </header>
 
-                    <div class="flex flex-wrap items-center justify-center gap-4 text-lg text-gray-600">
-                        <div class="flex items-center">
-                            <i class="fas fa-calendar-alt mr-2 text-pets-secondary"></i>
-                            <time datetime="{{ page.date | date_to_xmlschema }}">
-                                {{ page.date | date: "%B %-d, %Y" }}
-                            </time>
-                        </div>
-
-                        {% if page.author %}
-                        <span class="hidden sm:inline text-gray-400">•</span>
-                        <div class="flex items-center">
-                            <i class="fas fa-user-circle mr-2 text-pets-secondary"></i>
-                            <span class="font-medium">{{ page.author }}</span>
-                        </div>
-                        {% endif %}
-
-                        {% if page.categories %}
-                        <span class="hidden sm:inline text-gray-400">•</span>
-                        <div class="flex items-center">
-                            <i class="fas fa-folder-open mr-2 text-pets-secondary"></i>
-                            <span>{{ page.categories | join: ", " }}</span>
-                        </div>
-                        {% endif %}
-                    </div>
-
-                    <!-- Tags -->
-                    {% if page.tags %}
-                    <div class="mt-6 flex flex-wrap justify-center gap-2">
-                        {% for tag in page.tags %}
-                        <span class="inline-block bg-pets-secondary/10 text-pets-secondary px-4 py-2 rounded-full text-sm font-medium">
-                            #{{ tag }}
-                        </span>
-                        {% endfor %}
-                    </div>
-                    {% endif %}
-                </header>
-
-                <!-- Main Content -->
-                <div class="prose prose-lg max-w-none 
-                            prose-headings:font-black prose-headings:text-pets-dark 
-                            prose-a:text-pets-secondary prose-a:no-underline hover:prose-a:underline
-                            prose-strong:text-pets-dark
-                            prose-blockquote:border-l-pets-primary prose-blockquote:bg-pets-primary/5
-                            prose-img:rounded-xl prose-img:shadow-lg prose-img:my-8">
-                    {{ content }}
-                </div>
-
-                <!-- Optional Share Buttons -->
-                <div class="mt-16 pt-8 border-t border-gray-200">
-                    <p class="text-center text-gray-600 mb-6 font-medium">Share this article:</p>
-                    <div class="flex justify-center gap-4">
-                        <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ page.url }}" 
-                           target="_blank" 
-                           class="bg-pets-secondary text-white p-4 rounded-full shadow-lg hover:bg-indigo-600 transition">
-                            <i class="fab fa-x-twitter text-xl"></i>
-                        </a>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" 
-                           target="_blank"
-                           class="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition">
-                            <i class="fab fa-facebook-f text-xl"></i>
-                        </a>
-                        <a href="https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&media={{ site.url }}{{ page.thumbnail }}&description={{ page.title }}" 
-                           target="_blank"
-                           class="bg-red-600 text-white p-4 rounded-full shadow-lg hover:bg-red-700 transition">
-                            <i class="fab fa-pinterest-p text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Back to Blog -->
-                <div class="mt-12 text-center">
-                    <a href="{{ site.baseurl }}/blog/" 
-                       class="inline-flex items-center bg-pets-dark text-white font-bold py-4 px-10 rounded-full shadow-xl hover:bg-indigo-900 cta-button text-xl transition">
-                        <i class="fas fa-arrow-left mr-3"></i> Back to All Articles
-                    </a>
-                </div>
-            </div>
+        <!-- Main Content with Enhanced Styling -->
+        <div class="prose prose-lg max-w-none mx-auto
+                    prose-headings:font-black prose-headings:text-pets-dark
+                    prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b-4 prose-h2:border-pets-primary/50
+                    prose-h3:text-2xl prose-h3:text-pets-secondary
+                    prose-p:text-gray-700 prose-p:leading-relaxed
+                    prose-li:text-gray-700 prose-li:my-2
+                    prose-strong:text-pets-dark prose-strong:font-bold
+                    prose-a:text-pets-secondary prose-a:font-bold hover:prose-a:text-pets-dark hover:prose-a:underline
+                    prose-blockquote:border-l-8 prose-blockquote:border-pets-primary prose-blockquote:bg-pets-primary/10 prose-blockquote:italic prose-blockquote:px-6 prose-blockquote:py-4
+                    prose-img:rounded-2xl prose-img:shadow-xl prose-img:my-12 prose-img:mx-auto
+                    prose-table:w-full prose-table:border-collapse prose-table:my-10
+                    prose-th:bg-pets-secondary/20 prose-th:text-pets-dark prose-th:font-black prose-th:py-4 prose-th:px-6 prose-th:text-left
+                    prose-td:py-4 prose-td:px-6 prose-td:border-b prose-td:border-gray-300 prose-td:text-gray-700">
+          {{ content }}
         </div>
-    </article>
+
+        <!-- Back Button -->
+        <div class="mt-16 text-center">
+          <a href="{{ site.baseurl }}/blog/" class="inline-flex items-center bg-pets-dark text-white font-bold py-4 px-10 rounded-full shadow-xl hover:bg-indigo-900 cta-button text-xl">
+            <i class="fas fa-arrow-left mr-3"></i> Back to All Articles
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
 </main>
+
+<style>
+  .cta-button {
+    transition: all 0.3s ease;
+  }
+  .cta-button:hover {
+    transform: translateY(-4px);
+  }
+</style>

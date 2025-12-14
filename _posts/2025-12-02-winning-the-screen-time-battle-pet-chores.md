@@ -25,12 +25,12 @@ This simple shift changes the narrative from "You can't play on the tablet" to "
 
 Here is a simple, tiered checklist to integrate pet responsibilities into your daily routine and start winning the battle against screen time:
 
-| Age | Chore | Life Skill Taught | Time |
-| :--- | :--- | :--- | :--- |
-| **2-4** | **Water Bowl Watch:** Check the bowl and announce when it's empty (parent pours). | Observation, Communication | 1 min |
-| **5-6** | **Food Prep Captain:** Measure out dry food into the bowl before pouring (using a designated scoop). | Counting, Following Directions | 3 min |
-| **7-10** | **Buster’s Brush-Up:** Supervise a 5-minute brushing session to promote grooming habits. | Gentle touch, Routine | 5 min |
-| **11+** | **Walk & Report:** Take the dog for a short walk and report back on their behavior or any sights seen. | Responsibility, Physical Activity | 15 min |
+| Age    | Chore                     | Life Skill Taught             | Time   |
+|--------|---------------------------|-------------------------------|--------|
+| **2-4**   | **Water Bowl Watch**      | Observation, Communication    | 1 min  |
+| **5-6**   | **Food Prep Captain**     | Counting, Following Directions| 3 min  |
+| **7-10**  | **Buster’s Brush-Up**     | Gentle touch, Routine         | 5 min  |
+| **11+**   | **Walk & Report**         | Responsibility, Physical Activity | 15 min |
 
 **Pro Tip:** Tie screen time directly to the checklist. For instance: "Pet chores must be completed before any free screen time begins."
 
