@@ -1,5 +1,5 @@
 ---
-layout: video_page
+layout: video
 title: Fluff with Attitude
 subtitle: “100% Spice, 0% Chill”
 vimeo_video_id: 1141744149

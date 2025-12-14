@@ -1,5 +1,5 @@
 ---
-layout: video_page
+layout: video
 title: Fluff² Activated
 subtitle: “Cuteness overload imminent”
 vimeo_video_id: 1141708652

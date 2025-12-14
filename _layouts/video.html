@@ -1,0 +1,149 @@
+---
+layout: video
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-81TJS1GV21"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-81TJS1GV21');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{ page.title | default: "Default Page Title" }}</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#4c1d95',
+                        'secondary': '#818cf8',
+                        'background': '#f7f3f9',
+                        'accent': '#fca5a5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.cta-button {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.cta-button:hover {
+    transform: translateY(-3px);
+}
+    </style>
+</head>
+<body class="bg-background min-h-screen flex flex-col font-sans text-gray-800">
+
+    <main class="flex-grow container mx-auto p-4 sm:p-8">
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-6 sm:p-10">
+            
+            <header class="text-center mb-10">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-primary mb-2">
+                    {{ page.title | default: "Animation Title" }}
+                </h1>
+                <p class="text-xl text-secondary">{{ page.subtitle | default: "A fun and creative animation." }}</p>
+            </header>
+            
+            <div class="video-container mb-10">
+                {% assign video_url = page.vimeo_video_id | prepend: "https://player.vimeo.com/video/" %}
+                {% assign video_params = "autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=0" %}
+                
+                <iframe src="{{ video_url }}?h={{ page.vimeo_hash | default: '21de130f58' }}&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&{{ video_params }}" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture" 
+                        allowfullscreen 
+                        title="{{ page.title | default: 'The Animation' }}">
+                </iframe>
+            </div>
+            
+            <!-- Main CTAs -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                <a href="{{ site.baseurl }}/index.html#books" class="inline-block bg-primary text-white font-extrabold py-4 px-8 rounded-full shadow-lg hover:bg-indigo-900 cta-button text-xl text-center">
+                    <i class="fas fa-book-open mr-2"></i> Get the Full Coloring Book
+                </a>
+                
+                <a href="{{ site.baseurl }}/downloads/" class="inline-block bg-secondary text-white font-extrabold py-4 px-8 rounded-full shadow-lg hover:bg-indigo-600 cta-button text-xl text-center">
+                    <i class="fas fa-download mr-2"></i> Instant Digital Download
+                </a>
+            </div>
+
+            <!-- Coming Soon Section -->
+            <div class="bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl p-8 text-center">
+                <h2 class="text-3xl font-black text-primary mb-6">
+                    More Magic <span class="text-secondary">Coming Soon!</span>
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div class="bg-white/70 rounded-xl p-6 shadow-md">
+                        <i class="fas fa-tshirt text-5xl text-accent mb-4"></i>
+                        <h3 class="text-xl font-bold text-primary mb-2">Exclusive Merch</h3>
+                        <p class="text-gray-700">T-shirts, mugs, hoodies, tote bags and stickers featuring this exact illustration – coming soon!</p>
+                    </div>
+                    
+                    <div class="bg-white/70 rounded-xl p-6 shadow-md">
+                        <i class="fas fa-images text-5xl text-secondary mb-4"></i>
+                        <h3 class="text-xl font-bold text-primary mb-2">Themed Six-Packs</h3>
+                        <p class="text-gray-700">A curated set of 6 extra illustrations + animations just for this character – exclusive digital pack coming soon.</p>
+                    </div>
+                    
+                    <div class="bg-white/70 rounded-xl p-6 shadow-md">
+                        <i class="fas fa-film text-5xl text-accent mb-4"></i>
+                        <h3 class="text-xl font-bold text-primary mb-2">Expansion Packs</h3>
+                        <p class="text-gray-700">Brand-new continuation illustrations and longer animations for this page – coming soon!</p>
+                    </div>
+                </div>
+                
+                <p class="text-lg text-gray-800 mb-6">
+                    Want to be the first to know when these drop? Join our pack and get exclusive early access + special launch discounts!
+                </p>
+                
+                <a href="{{ site.baseurl }}/index.html#contact" class="inline-block bg-primary text-white font-extrabold py-4 px-10 rounded-full shadow-xl hover:bg-indigo-900 cta-button text-2xl">
+                    <i class="fas fa-bell mr-3"></i> Notify Me – Get Early Access!
+                </a>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="bg-primary text-white p-6 text-center mt-12">
+        <p class="text-sm">&copy; 2025 Pets Unplugged. All rights reserved.</p>
+        <p class="text-xs mt-2 opacity-80">Thanks for scanning and watching!</p>
+    </footer>
+
+</body>
+</html>

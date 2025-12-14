@@ -1,5 +1,5 @@
 ---
-layout: video_page
+layout: video
 title: Paws & Reflect
 subtitle: “Life Is Pretty Great”
 vimeo_video_id: 1141743119

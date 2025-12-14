@@ -1,5 +1,5 @@
 ---
-layout: video_page
+layout: video
 title: Sunshine Supervisor
 subtitle: “Officially on flower patrol”
 vimeo_video_id: 1141729364

@@ -1,5 +1,5 @@
 ---
-layout: video_page
+layout: video
 title: Serious Face Activated
 subtitle: “Secretly plotting cuddles”
 vimeo_video_id: 1141746036
