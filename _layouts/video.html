@@ -6,8 +6,8 @@ layout: default
   <div class="max-w-5xl mx-auto">
     <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
 
-      <!-- Video -->
-      <div class="video-container">
+      <!-- Video - Fixed rounded top corners only -->
+      <div class="rounded-t-3xl overflow-hidden video-container">
         {% assign video_url = page.vimeo_video_id | prepend: "https://player.vimeo.com/video/" %}
         <iframe src="{{ video_url }}?h={{ page.vimeo_hash | default: '' }}&autoplay=1&loop=1&muted=0&title=0&byline=0&portrait=0&controls=1"
                 frameborder="0"
@@ -27,37 +27,31 @@ layout: default
             <p class="text-2xl text-secondary font-bold mb-6">{{ page.subtitle }}</p>
           {% endif %}
           {% if content %}
-            <div class="prose prose-lg max-w-none text-center text-gray-700 mb-8">
+            <div class="prose prose-lg max-w-none text-center text-gray-700 mb-12">
               {{ content }}
             </div>
           {% endif %}
         </header>
 
-        <!-- Action Buttons - Fixed Grid -->
+        <!-- Action Buttons -->
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl mx-auto mb-20">
-          
-          <!-- Get the Book -->
           <a href="{{ site.baseurl }}/books/" class="flex flex-col items-center justify-center bg-primary text-white font-extrabold py-8 px-6 rounded-3xl shadow-xl hover:bg-indigo-900 cta-button text-center">
             <i class="fas fa-book text-5xl mb-4"></i>
             <span class="text-xl">Get the PAWS Book</span>
           </a>
 
-          <!-- Digital Download -->
           <a href="{{ site.baseurl }}/downloads/" class="flex flex-col items-center justify-center bg-secondary text-white font-extrabold py-8 px-6 rounded-3xl shadow-xl hover:bg-indigo-600 cta-button text-center">
             <i class="fas fa-download text-5xl mb-4"></i>
             <span class="text-xl">Instant Digital Version</span>
           </a>
 
-          <!-- Download This Video -->
           {% if page.video_download_link %}
-          <a href="{{ page.video_download_link }}" 
-             download="{{ page.title | slugify }}.mp4"
+          <a href="{{ page.video_download_link }}" download="{{ page.title | slugify }}.mp4"
              class="flex flex-col items-center justify-center bg-accent text-primary font-extrabold py-8 px-6 rounded-3xl shadow-xl hover:bg-pink-600 cta-button text-center">
             <i class="fas fa-file-download text-5xl mb-4"></i>
             <span class="text-xl">Download This Video</span>
           </a>
           {% endif %}
-
         </div>
 
         <!-- Share Buttons -->
@@ -79,34 +73,36 @@ layout: default
           </div>
         </div>
 
-        <!-- Coming Soon Teasers -->
-        <div class="bg-gradient-to-br from-accent/20 to-secondary/20 rounded-3xl p-10 text-center">
+        <!-- Coming Soon Teasers - Now visible on light background -->
+        <div class="bg-gradient-to-br from-accent/20 to-secondary/20 rounded-3xl p-10 text-center mb-16">
           <h2 class="text-3xl sm:text-4xl font-black text-primary mb-8">
             Even More Magic <span class="text-secondary">Coming Soon!</span>
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-            <div class="bg-white/80 rounded-2xl p-8 shadow-lg">
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
               <i class="fas fa-tshirt text-6xl text-accent mb-6"></i>
               <h3 class="text-2xl font-bold text-primary mb-3">Exclusive Merch</h3>
               <p class="text-gray-700">T-shirts, mugs, stickers featuring this character!</p>
             </div>
-            <div class="bg-white/80 rounded-2xl p-8 shadow-lg">
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
               <i class="fas fa-images text-6xl text-secondary mb-6"></i>
               <h3 class="text-2xl font-bold text-primary mb-3">Themed Six-Packs</h3>
               <p class="text-gray-700">6 extra pages + animations of this pet.</p>
             </div>
-            <div class="bg-white/80 rounded-2xl p-8 shadow-lg">
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
               <i class="fas fa-film text-6xl text-accent mb-6"></i>
               <h3 class="text-2xl font-bold text-primary mb-3">Expansion Packs</h3>
               <p class="text-gray-700">Longer stories and new scenes!</p>
             </div>
           </div>
+
+          <!-- Notify Me Button - Now clearly visible -->
           <a href="{{ site.baseurl }}/#contact" class="inline-flex items-center bg-primary text-white font-extrabold py-5 px-12 rounded-full shadow-2xl hover:bg-indigo-900 cta-button text-2xl">
             <i class="fas fa-bell mr-4"></i> Notify Me!
           </a>
         </div>
 
-        <div class="text-center mt-16 text-gray-600">
+        <div class="text-center text-gray-600">
           <p class="text-lg">Thanks for scanning and watching! 🐾</p>
         </div>
       </div>
