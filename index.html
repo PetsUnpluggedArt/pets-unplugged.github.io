@@ -1,8 +1,18 @@
+<DOCUMENT filename="index.html">
 ---
 layout: default
 title: Pets Unplugged - Creative Coloring & Merchandise
 ---
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-81TJS1GV21"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-81TJS1GV21');
+</script>
+
+<!-- Hero Section -->
 <section id="hero" class="bg-pets-secondary bg-opacity-10 py-16 sm:py-24 px-6 lg:px-8">
     <div class="max-w-7xl mx-auto text-center">
         <h2 class="text-6xl sm:text-7xl font-black text-pets-dark leading-tight">
@@ -24,7 +34,7 @@ title: Pets Unplugged - Creative Coloring & Merchandise
                     <i class="fas fa-check-circle text-pets-secondary mt-1 mr-4 text-2xl"></i>
                     <div>
                         <p class="font-bold text-pets-dark text-lg">Stress Relief & Relaxation</p>
-                        <p class="text-gray-600">A calming, meditative activity for adults.</p>
+                        <p class="text-gray-600">A calming, meditative activity for adults & kids.</p>
                     </div>
                 </div>
                 <div class="flex items-start bg-white p-6 rounded-xl shadow-sm border border-gray-100">
@@ -53,6 +63,7 @@ title: Pets Unplugged - Creative Coloring & Merchandise
     </div>
 </section>
 
+<!-- Digital CTA -->
 <section id="digital" class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100">
     <div class="max-w-4xl mx-auto text-center">
         <h3 class="text-4xl sm:text-5xl font-extrabold text-pets-dark mb-6">Instantly Color! Digital Downloads Available.</h3>
@@ -65,6 +76,7 @@ title: Pets Unplugged - Creative Coloring & Merchandise
     </div>
 </section>
 
+<!-- Paws Peek -->
 <section id="paws-peek" class="py-16 px-4 sm:px-6 lg:px-8 bg-pets-dark">
     <div class="max-w-5xl mx-auto text-center">
         <h3 class="text-3xl sm:text-4xl text-white font-extrabold mb-4">Sneak Peek: Scan to See the Animation!</h3>
@@ -74,20 +86,22 @@ title: Pets Unplugged - Creative Coloring & Merchandise
 
         <div class="flex flex-col lg:flex-row items-center justify-center gap-8">
             <div class="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl border-4 border-pets-primary">
-                <img src="assets/images/dogpianosample.png" 
-                        alt="Beethoven’s Fluffiest Fan"
-                        class="w-full h-auto object-cover"
-                        title="Illustration from Paws">
+                <img src="assets/images/paws_cover.jpg" alt="PAWS Coloring Book Sample Page" class="w-full" loading="lazy" onerror="replaceImage(this, 'PAWS Sample')">
             </div>
-
-            <div class="w-full lg:w-1/2 flex flex-col items-center p-8 bg-white rounded-xl shadow-2xl">
-                <a href="https://petsunplugged.com/videos/dogvideo.html" target="_blank" class="block">
+            <div class="w-full lg:w-1/2">
+                <!-- Sample Animation Embed -->
+                <div class="video-container mb-6 rounded-lg shadow-xl">
+                    <iframe src="https://player.vimeo.com/video/REPLACE_WITH_REAL_VIMEO_ID?h=21de130f58&autoplay=0&loop=1&title=0&byline=0&portrait=0" 
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+                <a href="assets/images/dogpianosampleqrcode.png" target="_blank">
                     <img src="assets/images/dogpianosampleqrcode.png" 
-                            alt="QR code to view 6-second dog piano animation"
-                            class="w-48 h-48 sm:w-64 sm:h-64 mx-auto mb-6 p-4 border-4 border-pets-secondary">
+                         alt="QR code to view 6-second dog piano animation"
+                         class="w-48 h-48 sm:w-64 sm:h-64 mx-auto mb-6 p-4 border-4 border-pets-secondary" loading="lazy">
                 </a>
                 <p class="text-lg font-bold text-pets-dark mb-6">Love this page? Get the whole book!</p>
-                <a href="#books" class="w-full bg-pets-secondary text-white font-bold py-4 px-8 rounded-lg shadow-xl hover:bg-indigo-500 cta-button">
+                <a href="https://www.amazon.com/s?k=PAWS+Unplug+Color+Animate+Tony+W+Jackson" class="w-full bg-pets-secondary text-white font-bold py-4 px-8 rounded-lg shadow-xl hover:bg-indigo-500 cta-button">
                     <i class="fas fa-shopping-cart mr-2"></i> Find on Amazon
                 </a>
                 <a href="/downloads/" class="mt-4 text-pets-dark hover:text-pets-secondary font-medium underline">
@@ -98,6 +112,7 @@ title: Pets Unplugged - Creative Coloring & Merchandise
     </div>
 </section>
 
+<!-- Animation Feature -->
 <section id="animation-feature" class="bg-pets-secondary py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto text-center text-white">
         <h3 class="text-4xl font-extrabold mb-12 text-pets-dark">Scan and See the Magic!</h3>
@@ -118,19 +133,21 @@ title: Pets Unplugged - Creative Coloring & Merchandise
     </div>
 </section>
 
+<!-- Books Section -->
 <section id="books" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
     <div class="max-w-7xl mx-auto">
         <h3 class="text-4xl font-black text-center text-pets-dark mb-12">Our Current Coloring Books</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             <div class="card bg-gray-50 p-8 rounded-2xl text-center shadow-lg">
-                <img src="assets/images/paws_cover.jpg" alt="PAWS Cover" class="rounded-lg w-full mb-6 shadow-md mx-auto">
+                <img src="assets/images/paws_cover.jpg" alt="PAWS Cover" class="rounded-lg w-full mb-6 shadow-md mx-auto" loading="lazy">
                 <h4 class="text-3xl font-bold text-pets-dark">PAWS</h4>
                 <p class="text-gray-600 mt-4">30 delightful pages of various dogs in whimsical scenes. Scannable animation links on every page.</p>
+                <p class="text-sm text-gray-500 mt-2">Artwork by Anna Nesterkaya<br>Author: Tony W Jackson</p>
                 <p class="text-4xl font-black text-pets-primary mt-6">$11.99</p>
                 <a href="/downloads/#coloring-books" class="block text-pets-secondary font-bold mt-4 hover:underline">Get Digital Version</a>
             </div>
             <div class="card bg-gray-50 p-8 rounded-2xl text-center shadow-lg opacity-75">
-                <img src="https://placehold.co/300x400/818cf8/ffffff?text=Whiskers+Coming+Soon" alt="Whiskers" class="rounded-lg w-full mb-6 shadow-md mx-auto">
+                <img src="https://placehold.co/300x400/818cf8/ffffff?text=Whiskers+Coming+Soon" alt="Whiskers" class="rounded-lg w-full mb-6 shadow-md mx-auto" loading="lazy">
                 <h4 class="text-3xl font-bold text-pets-dark">Whiskers</h4>
                 <p class="text-gray-600 mt-4">A book dedicated to our feline friends! 30 cat illustrations with animations coming soon.</p>
                 <p class="text-3xl font-bold text-gray-400 mt-6">Coming Soon</p>
@@ -139,6 +156,7 @@ title: Pets Unplugged - Creative Coloring & Merchandise
     </div>
 </section>
 
+<!-- Contact Section -->
 <section id="contact" class="py-20 bg-pets-primary px-4 sm:px-6 lg:px-8">
     <div class="max-w-2xl mx-auto text-center">
         <h2 class="text-4xl font-black text-pets-dark mb-6">Join Our Exclusive Pack!</h2>
@@ -152,5 +170,12 @@ title: Pets Unplugged - Creative Coloring & Merchandise
                     style="display: block;margin-left: auto;margin-right: auto;max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
             </iframe>
         </div>
-        </div>
+    </div>
 </section>
+
+<!-- Footer -->
+<footer class="bg-pets-dark text-white p-4 text-center">
+    <p class="text-sm">&copy; 2025 Tony W Jackson. All Rights Reserved. Pets Unplugged™</p>
+    <p class="text-xs mt-2">For permission requests, contact the publisher at: [Insert Permissions Email Address Here]PAWS Pets Unplugged TM</p>
+</footer>
+</DOCUMENT>
