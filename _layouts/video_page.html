@@ -24,12 +24,11 @@ layout: video
         tailwind.config = {
             theme: {
                 extend: {
-                    // Define a clean, centralized color palette
                     colors: {
-                        'primary': '#4c1d95', // Deep Violet (Original pets-dark)
-                        'secondary': '#818cf8', // Light Indigo (Original pets-secondary)
-                        'background': '#f7f3f9', // Light off-white
-                        'accent': '#fca5a5', // Light Red/Pink (Original pets-primary - for highlighting)
+                        'primary': '#4c1d95',
+                        'secondary': '#818cf8',
+                        'background': '#f7f3f9',
+                        'accent': '#fca5a5',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -41,25 +40,30 @@ layout: video
     <style>
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     max-width: 100%;
     background: #000;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-.video-container iframe,
-.video-container object,
-.video-container embed {
+.video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    border-radius: 1rem;
 }
 
 .cta-button {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.cta-button:hover {
+    transform: translateY(-3px);
 }
     </style>
 </head>
@@ -75,39 +79,70 @@ layout: video
                 <p class="text-xl text-secondary">{{ page.subtitle | default: "A fun and creative animation." }}</p>
             </header>
             
-            <div class="video-container mb-10 rounded-lg shadow-xl">
+            <div class="video-container mb-10">
                 {% assign video_url = page.vimeo_video_id | prepend: "https://player.vimeo.com/video/" %}
-                {% assign video_params = "autoplay=1&loop=1&title=0&byline=0&portrait=0" %}
+                {% assign video_params = "autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=0" %}
                 
                 <iframe src="{{ video_url }}?h={{ page.vimeo_hash | default: '21de130f58' }}&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&{{ video_params }}" 
                         frameborder="0" 
                         allow="autoplay; fullscreen; picture-in-picture" 
                         allowfullscreen 
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
                         title="{{ page.title | default: 'The Animation' }}">
                 </iframe>
             </div>
             
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                
-                <a href="../../index.html#books" class="inline-block bg-primary text-white font-extrabold py-3 px-6 rounded-full shadow-lg hover:bg-indigo-900 cta-button text-xl transition duration-300 ease-in-out">
-                    <i class="fas fa-book-open mr-2"></i> Find this Page in the Book!
+            <!-- Main CTAs -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                <a href="{{ site.baseurl }}/index.html#books" class="inline-block bg-primary text-white font-extrabold py-4 px-8 rounded-full shadow-lg hover:bg-indigo-900 cta-button text-xl text-center">
+                    <i class="fas fa-book-open mr-2"></i> Get the Full Coloring Book
                 </a>
                 
-                <a href="{{ site.baseurl }}/merchandise/" class="inline-block bg-accent text-primary font-extrabold py-3 px-6 rounded-full shadow-lg hover:bg-pink-400 cta-button text-xl transition duration-300 ease-in-out">
-    <i class="fas fa-tshirt mr-2"></i> Get the Merch!
-</a>
+                <a href="{{ site.baseurl }}/downloads/" class="inline-block bg-secondary text-white font-extrabold py-4 px-8 rounded-full shadow-lg hover:bg-indigo-600 cta-button text-xl text-center">
+                    <i class="fas fa-download mr-2"></i> Instant Digital Download
+                </a>
+            </div>
+
+            <!-- Coming Soon Section -->
+            <div class="bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl p-8 text-center">
+                <h2 class="text-3xl font-black text-primary mb-6">
+                    More Magic <span class="text-secondary">Coming Soon!</span>
+                </h2>
                 
-                <a href="{{ page.video_download_link | default: 'https://vimeo.com/your-default-download-link' }}" class="inline-block bg-secondary text-white font-extrabold py-3 px-6 rounded-full shadow-lg hover:bg-indigo-600 cta-button text-xl transition duration-300 ease-in-out mt-4 sm:mt-0">
-                    <i class="fas fa-download mr-2"></i> Download Video
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div class="bg-white/70 rounded-xl p-6 shadow-md">
+                        <i class="fas fa-tshirt text-5xl text-accent mb-4"></i>
+                        <h3 class="text-xl font-bold text-primary mb-2">Exclusive Merch</h3>
+                        <p class="text-gray-700">T-shirts, mugs, hoodies, tote bags and stickers featuring this exact illustration – coming soon!</p>
+                    </div>
+                    
+                    <div class="bg-white/70 rounded-xl p-6 shadow-md">
+                        <i class="fas fa-images text-5xl text-secondary mb-4"></i>
+                        <h3 class="text-xl font-bold text-primary mb-2">Themed Six-Packs</h3>
+                        <p class="text-gray-700">A curated set of 6 extra illustrations + animations just for this character – exclusive digital pack coming soon.</p>
+                    </div>
+                    
+                    <div class="bg-white/70 rounded-xl p-6 shadow-md">
+                        <i class="fas fa-film text-5xl text-accent mb-4"></i>
+                        <h3 class="text-xl font-bold text-primary mb-2">Expansion Packs</h3>
+                        <p class="text-gray-700">Brand-new continuation illustrations and longer animations for this page – coming soon!</p>
+                    </div>
+                </div>
+                
+                <p class="text-lg text-gray-800 mb-6">
+                    Want to be the first to know when these drop? Join our pack and get exclusive early access + special launch discounts!
+                </p>
+                
+                <a href="{{ site.baseurl }}/index.html#contact" class="inline-block bg-primary text-white font-extrabold py-4 px-10 rounded-full shadow-xl hover:bg-indigo-900 cta-button text-2xl">
+                    <i class="fas fa-bell mr-3"></i> Notify Me – Get Early Access!
                 </a>
             </div>
             
         </div>
     </main>
 
-    <footer class="bg-primary text-white p-4 text-center">
+    <footer class="bg-primary text-white p-6 text-center mt-12">
         <p class="text-sm">&copy; 2025 Pets Unplugged. All rights reserved.</p>
+        <p class="text-xs mt-2 opacity-80">Thanks for scanning and watching!</p>
     </footer>
 
 </body>
