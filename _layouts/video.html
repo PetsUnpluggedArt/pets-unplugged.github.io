@@ -12,7 +12,8 @@ layout: default
         <iframe src="{{ video_url }}?h={{ page.vimeo_hash | default: '' }}&autoplay=1&loop=1&muted=0&title=0&byline=0&portrait=0&controls=1"
                 frameborder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen>
+                allowfullscreen
+                title="{{ page.title }}">
         </iframe>
       </div>
 
@@ -25,28 +26,35 @@ layout: default
           {% if page.subtitle %}
             <p class="text-2xl text-secondary font-bold mb-6">{{ page.subtitle }}</p>
           {% endif %}
+          {% if content %}
+            <div class="prose prose-lg max-w-none text-center text-gray-700 mb-8">
+              {{ content }}
+            </div>
+          {% endif %}
         </header>
 
-        <!-- Action Buttons -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
-
+        <!-- Action Buttons - Fixed Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl mx-auto mb-20">
+          
           <!-- Get the Book -->
-          <a href="{{ site.baseurl }}/books/" class="flex flex-col items-center justify-center bg-primary text-white font-extrabold py-6 px-8 rounded-2xl shadow-xl hover:bg-indigo-900 cta-button text-center">
-            <i class="fas fa-book text-4xl mb-4"></i>
-            <span class="text-lg">Get the PAWS Book</span>
+          <a href="{{ site.baseurl }}/books/" class="flex flex-col items-center justify-center bg-primary text-white font-extrabold py-8 px-6 rounded-3xl shadow-xl hover:bg-indigo-900 cta-button text-center">
+            <i class="fas fa-book text-5xl mb-4"></i>
+            <span class="text-xl">Get the PAWS Book</span>
           </a>
 
           <!-- Digital Download -->
-          <a href="{{ site.baseurl }}/downloads/" class="flex flex-col items-center justify-center bg-secondary text-white font-extrabold py-6 px-8 rounded-2xl shadow-xl hover:bg-indigo-600 cta-button text-center">
-            <i class="fas fa-download text-4xl mb-4"></i>
-            <span class="text-lg">Instant Digital Version</span>
+          <a href="{{ site.baseurl }}/downloads/" class="flex flex-col items-center justify-center bg-secondary text-white font-extrabold py-8 px-6 rounded-3xl shadow-xl hover:bg-indigo-600 cta-button text-center">
+            <i class="fas fa-download text-5xl mb-4"></i>
+            <span class="text-xl">Instant Digital Version</span>
           </a>
 
-          <!-- Download Video -->
+          <!-- Download This Video -->
           {% if page.video_download_link %}
-          <a href="{{ page.video_download_link }}" download class="flex flex-col items-center justify-center bg-accent text-primary font-extrabold py-6 px-8 rounded-2xl shadow-xl hover:bg-pink-600 cta-button text-center">
-            <i class="fas fa-file-download text-4xl mb-4"></i>
-            <span class="text-lg">Download This Video</span>
+          <a href="{{ page.video_download_link }}" 
+             download="{{ page.title | slugify }}.mp4"
+             class="flex flex-col items-center justify-center bg-accent text-primary font-extrabold py-8 px-6 rounded-3xl shadow-xl hover:bg-pink-600 cta-button text-center">
+            <i class="fas fa-file-download text-5xl mb-4"></i>
+            <span class="text-xl">Download This Video</span>
           </a>
           {% endif %}
 
@@ -54,8 +62,8 @@ layout: default
 
         <!-- Share Buttons -->
         <div class="text-center mb-16">
-          <p class="text-xl text-gray-700 mb-6">Love this animation? Share it with friends!</p>
-          <div class="flex justify-center gap-6">
+          <p class="text-xl text-gray-700 mb-6">Love this animation? Share it!</p>
+          <div class="flex justify-center gap-6 flex-wrap">
             <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ page.url }}" target="_blank" class="bg-secondary text-white p-5 rounded-full shadow-lg hover:bg-indigo-600">
               <i class="fab fa-x-twitter text-2xl"></i>
             </a>
@@ -80,17 +88,17 @@ layout: default
             <div class="bg-white/80 rounded-2xl p-8 shadow-lg">
               <i class="fas fa-tshirt text-6xl text-accent mb-6"></i>
               <h3 class="text-2xl font-bold text-primary mb-3">Exclusive Merch</h3>
-              <p class="text-gray-700">T-shirts, mugs, hoodies & stickers featuring this illustration!</p>
+              <p class="text-gray-700">T-shirts, mugs, stickers featuring this character!</p>
             </div>
             <div class="bg-white/80 rounded-2xl p-8 shadow-lg">
               <i class="fas fa-images text-6xl text-secondary mb-6"></i>
               <h3 class="text-2xl font-bold text-primary mb-3">Themed Six-Packs</h3>
-              <p class="text-gray-700">6 extra illustrations + animations of this character.</p>
+              <p class="text-gray-700">6 extra pages + animations of this pet.</p>
             </div>
             <div class="bg-white/80 rounded-2xl p-8 shadow-lg">
               <i class="fas fa-film text-6xl text-accent mb-6"></i>
               <h3 class="text-2xl font-bold text-primary mb-3">Expansion Packs</h3>
-              <p class="text-gray-700">Longer animations and new scenes!</p>
+              <p class="text-gray-700">Longer stories and new scenes!</p>
             </div>
           </div>
           <a href="{{ site.baseurl }}/#contact" class="inline-flex items-center bg-primary text-white font-extrabold py-5 px-12 rounded-full shadow-2xl hover:bg-indigo-900 cta-button text-2xl">
@@ -125,6 +133,6 @@ layout: default
     transition: all 0.3s ease;
   }
   .cta-button:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
   }
 </style>
