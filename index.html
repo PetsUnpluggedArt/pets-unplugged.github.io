@@ -41,7 +41,8 @@ title: Pets Unplugged - Creative Coloring & Merchandise
         </div>
         
     </div>
-</section><section id="digital" class="py-12 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100">
+</section>
+<section id="digital" class="py-12 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100">
     <div class="max-w-7xl mx-auto text-center">
         <h3 class="text-3xl sm:text-4xl section-heading font-extrabold mb-4">Instantly Color! Digital Downloads Available.</h3>
         <p class="text-lg text-gray-600 mb-8">
@@ -227,7 +228,7 @@ title: Pets Unplugged - Creative Coloring & Merchandise
             <div class="bg-gray-50 rounded-xl shadow-sm p-4 cursor-pointer" onclick="toggleFAQ(this)">
                 <div class="flex justify-between items-center">
                     <h4 class="text-lg font-medium text-pets-dark">Can I see the animations on my computer?</h4>
-                    <svg class="w-6 h-6 transform transition-transform duration-300 rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3d.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="w-6 h-6 transform transition-transform duration-300 rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </div>
                 <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-gray-700 py-0">
                     <p>Yes, while the QR codes are designed for easy mobile access, you can manually type the URL (which appears when you scan the code) into any desktop web browser to view the animations.</p>
@@ -329,6 +330,7 @@ title: Pets Unplugged - Creative Coloring & Merchandise
 
         </div>
 </section>
+
 <script>
     function toggleFAQ(element) {
         // Find the next sibling that is a div, which should be the answer container
@@ -342,15 +344,15 @@ title: Pets Unplugged - Creative Coloring & Merchandise
             answer.style.paddingBottom = '0';
             icon.classList.remove('rotate-180');
         } else {
-            // If the answer is closed, open it (set max-height to its content height)
-            // Use scrollHeight to get the full height of the content
-            answer.style.maxHeight = answer.scrollHeight + 'px';
-            answer.style.paddingTop = '1rem'; // Add padding back when open
-            answer.style.paddingBottom = '1rem'; // Add padding back when open
+            // If the answer is closed, open it (set max-height to its content height + 32px for padding)
+            // The 32px accounts for the 1rem top and bottom padding we add on expand.
+            answer.style.maxHeight = answer.scrollHeight + 32 + 'px';
+            answer.style.paddingTop = '1rem';
+            answer.style.paddingBottom = '1rem';
             icon.classList.add('rotate-180');
         }
     }
-    // Set initial state to ensure the py-0 class is respected initially
+    // Set initial state to ensure the max-h-0 class is respected initially
     document.addEventListener('DOMContentLoaded', function() {
         const answers = document.querySelectorAll('#faq .max-h-0');
         answers.forEach(answer => {
