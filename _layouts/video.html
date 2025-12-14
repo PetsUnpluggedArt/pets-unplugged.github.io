@@ -23,11 +23,8 @@ layout: default
             {{ page.title | default: "Your Colored Creation Comes to Life!" }}
           </h1>
           {% if page.subtitle %}
-            <p class="text-2xl text-secondary font-bold">{{ page.subtitle }}</p>
+            <p class="text-2xl text-secondary font-bold mb-6">{{ page.subtitle }}</p>
           {% endif %}
-          <p class="text-xl text-gray-700 mt-6 max-w-3xl mx-auto">
-            Amazing job coloring! Watch your artwork move below.
-          </p>
         </header>
 
         <!-- Action Buttons -->
@@ -68,13 +65,13 @@ layout: default
             <a href="https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title | uri_escape }}" target="_blank" class="bg-red-600 text-white p-5 rounded-full shadow-lg hover:bg-red-700">
               <i class="fab fa-pinterest-p text-2xl"></i>
             </a>
-            <a href="whatsapp://send?text={{ page.title | uri_escape }}%20{{ site.url }}{{ page.url }}" data-action="share/whatsapp/share" class="bg-green-500 text-white p-5 rounded-full shadow-lg hover:bg-green-600">
+            <a href="whatsapp://send?text={{ page.title | uri_escape }}%20{{ site.url }}{{ page.url }}" class="bg-green-500 text-white p-5 rounded-full shadow-lg hover:bg-green-600">
               <i class="fab fa-whatsapp text-2xl"></i>
             </a>
           </div>
         </div>
 
-        <!-- Coming Soon Teasers (same as before) -->
+        <!-- Coming Soon Teasers -->
         <div class="bg-gradient-to-br from-accent/20 to-secondary/20 rounded-3xl p-10 text-center">
           <h2 class="text-3xl sm:text-4xl font-black text-primary mb-8">
             Even More Magic <span class="text-secondary">Coming Soon!</span>
