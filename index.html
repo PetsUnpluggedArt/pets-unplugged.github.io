@@ -139,32 +139,6 @@ title: Pets Unplugged - Creative Coloring & Merchandise
     </div>
 </section>
 
-<section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-    <div class="max-w-3xl mx-auto">
-        <h3 class="text-4xl font-black text-center text-pets-dark mb-12">Frequently Asked Questions</h3>
-        <div class="space-y-4">
-            <div class="bg-white rounded-xl shadow-md overflow-hidden">
-                <button class="w-full p-6 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
-                    <span class="text-xl font-bold text-pets-dark">How do the scannable animations work?</span>
-                    <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white px-6">
-                    <p class="pb-6 text-gray-700 text-lg">Next to every illustration, you'll find a small QR code. Simply point your smartphone camera at the code, and a link will pop up taking you to a 6-second animation of that illustration!</p>
-                </div>
-            </div>
-            <div class="bg-white rounded-xl shadow-md overflow-hidden">
-                <button class="w-full p-6 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
-                    <span class="text-xl font-bold text-pets-dark">Can I see the animations on my computer?</span>
-                    <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white px-6">
-                    <p class="pb-6 text-gray-700 text-lg">Yes! You can manually type the URL found under the QR code into any desktop browser to view the animations.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section id="contact" class="py-20 bg-pets-primary px-4 sm:px-6 lg:px-8">
     <div class="max-w-2xl mx-auto text-center">
         <h2 class="text-4xl font-black text-pets-dark mb-6">Join Our Exclusive Pack!</h2>
@@ -176,23 +150,3 @@ title: Pets Unplugged - Creative Coloring & Merchandise
     </div>
 </section>
 
-<script>
-    function toggleFAQ(button) {
-        const answer = button.nextElementSibling;
-        const icon = button.querySelector('svg');
-
-        if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
-            answer.style.maxHeight = '0px';
-            icon.classList.remove('rotate-180');
-        } else {
-            // Close all other open answers first (Optional but cleaner)
-            document.querySelectorAll('#faq .max-h-0').forEach(el => {
-                el.style.maxHeight = '0px';
-                el.previousElementSibling.querySelector('svg').classList.remove('rotate-180');
-            });
-            // Open clicked answer
-            answer.style.maxHeight = answer.scrollHeight + 'px';
-            icon.classList.add('rotate-180');
-        }
-    }
-</script>
