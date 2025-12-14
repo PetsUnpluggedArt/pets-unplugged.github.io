@@ -77,7 +77,6 @@ title: Pets Unplugged - Creative Coloring & Merchandise
 
         <div class="flex flex-col lg:flex-row items-center justify-center gap-8">
             <div class="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl border-4 border-pets-primary">
-                <!-- Updated to the correct illustration filename -->
                 <img src="assets/images/dogpianosample.png" alt="PAWS Coloring Book Sample Page - Beethoven’s Fluffiest Fan: Fluffy dog sleeping on piano keys" class="w-full" loading="lazy">
             </div>
             <div class="w-full lg:w-1/2">
@@ -93,12 +92,14 @@ title: Pets Unplugged - Creative Coloring & Merchandise
                          class="w-48 h-48 sm:w-64 sm:h-64 mx-auto mb-6 p-4 border-4 border-pets-secondary" loading="lazy">
                 </a>
                 <p class="text-lg font-bold text-white mb-6">Love this page? Get the whole book!</p>
-                <a href="https://www.amazon.com/s?k=PAWS+Unplug+Color+Animate+Tony+W+Jackson" class="w-full bg-pets-secondary text-white font-bold py-4 px-8 rounded-lg shadow-xl hover:bg-indigo-500 cta-button">
-                    <i class="fas fa-shopping-cart mr-2"></i> Find on Amazon
-                </a>
-                <a href="/downloads/" class="mt-4 text-white hover:text-pets-secondary font-medium underline">
-                    Or Get Digital Download
-                </a>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="https://www.amazon.com/s?k=PAWS+Unplug+Color+Animate+Tony+W+Jackson" class="bg-pets-secondary text-white font-bold py-4 px-8 rounded-lg shadow-xl hover:bg-indigo-500 cta-button">
+                        <i class="fas fa-shopping-cart mr-2"></i> Find on Amazon
+                    </a>
+                    <a href="/downloads/" class="bg-pets-primary text-pets-dark font-bold py-4 px-8 rounded-lg shadow-xl hover:bg-red-300 cta-button">
+                        <i class="fas fa-download mr-2"></i> Get Digital Download
+                    </a>
+                </div>
             </div>
         </div>
     </div>
