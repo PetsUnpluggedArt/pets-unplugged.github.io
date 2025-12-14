@@ -20,11 +20,11 @@ layout: default
       <!-- Content -->
       <div class="p-6 sm:p-12 lg:p-16">
         <header class="text-center mb-10">
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-primary leading-tight mb-4">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-pets-dark leading-tight mb-4">
             {{ page.title | default: "Your Colored Creation Comes to Life!" }}
           </h1>
           {% if page.subtitle %}
-            <p class="text-xl sm:text-2xl text-secondary font-bold mb-6">{{ page.subtitle }}</p>
+            <p class="text-xl sm:text-2xl text-pets-secondary font-bold mb-6">{{ page.subtitle }}</p>
           {% endif %}
           {% if content %}
             <div class="prose prose-lg max-w-none text-center text-gray-700 mb-10">
@@ -33,68 +33,71 @@ layout: default
           {% endif %}
         </header>
 
-        <!-- Action Buttons - Mobile-friendly: full-width on small screens -->
+        <!-- Action Buttons - High contrast, always visible -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          <a href="{{ site.baseurl }}/books/" class="flex flex-col items-center justify-center bg-primary text-white font-extrabold py-8 px-6 rounded-3xl shadow-xl hover:bg-indigo-900 cta-button text-center min-h-48">
+          <!-- Get the Book -->
+          <a href="{{ site.baseurl }}/books/" class="flex flex-col items-center justify-center bg-pets-dark text-white font-extrabold py-10 px-6 rounded-3xl shadow-2xl hover:bg-indigo-900 cta-button text-center">
             <i class="fas fa-book text-5xl mb-4"></i>
             <span class="text-lg sm:text-xl">Get the PAWS Book</span>
           </a>
 
-          <a href="{{ site.baseurl }}/downloads/" class="flex flex-col items-center justify-center bg-secondary text-white font-extrabold py-8 px-6 rounded-3xl shadow-xl hover:bg-indigo-600 cta-button text-center min-h-48">
+          <!-- Digital Version -->
+          <a href="{{ site.baseurl }}/downloads/" class="flex flex-col items-center justify-center bg-pets-secondary text-white font-extrabold py-10 px-6 rounded-3xl shadow-2xl hover:bg-indigo-600 cta-button text-center">
             <i class="fas fa-download text-5xl mb-4"></i>
             <span class="text-lg sm:text-xl">Instant Digital Version</span>
           </a>
 
+          <!-- Download Video -->
           {% if page.video_download_link %}
-          <a href="{{ page.video_download_link }}" target="_blank" class="flex flex-col items-center justify-center bg-accent text-primary font-extrabold py-8 px-6 rounded-3xl shadow-xl hover:bg-pink-600 cta-button text-center min-h-48">
+          <a href="{{ page.video_download_link }}" target="_blank" class="flex flex-col items-center justify-center bg-pets-primary text-pets-dark font-extrabold py-10 px-6 rounded-3xl shadow-2xl hover:bg-red-300 cta-button text-center">
             <i class="fas fa-file-download text-5xl mb-4"></i>
             <span class="text-lg sm:text-xl">Download This Video</span>
           </a>
           {% endif %}
         </div>
 
-        <!-- Share Buttons - Wrap nicely on mobile -->
+        <!-- Share Buttons - Always visible -->
         <div class="text-center mb-16">
-          <p class="text-lg sm:text-xl text-gray-700 mb-6">Love this animation? Share it!</p>
-          <div class="flex justify-center gap-4 sm:gap-6 flex-wrap">
-            <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ page.url }}" target="_blank" class="bg-secondary text-white p-4 sm:p-5 rounded-full shadow-lg hover:bg-indigo-600">
-              <i class="fab fa-x-twitter text-xl sm:text-2xl"></i>
+          <p class="text-lg sm:text-xl text-gray-800 mb-6 font-bold">Love this animation? Share it!</p>
+          <div class="flex justify-center gap-6 flex-wrap">
+            <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ page.url }}" target="_blank" class="bg-pets-secondary text-white p-5 rounded-full shadow-lg hover:bg-indigo-600">
+              <i class="fab fa-x-twitter text-2xl"></i>
             </a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank" class="bg-blue-600 text-white p-4 sm:p-5 rounded-full shadow-lg hover:bg-blue-700">
-              <i class="fab fa-facebook-f text-xl sm:text-2xl"></i>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank" class="bg-blue-600 text-white p-5 rounded-full shadow-lg hover:bg-blue-700">
+              <i class="fab fa-facebook-f text-2xl"></i>
             </a>
-            <a href="https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title | uri_escape }}" target="_blank" class="bg-red-600 text-white p-4 sm:p-5 rounded-full shadow-lg hover:bg-red-700">
-              <i class="fab fa-pinterest-p text-xl sm:text-2xl"></i>
+            <a href="https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title | uri_escape }}" target="_blank" class="bg-red-600 text-white p-5 rounded-full shadow-lg hover:bg-red-700">
+              <i class="fab fa-pinterest-p text-2xl"></i>
             </a>
-            <a href="whatsapp://send?text={{ page.title | uri_escape }}%20{{ site.url }}{{ page.url }}" class="bg-green-500 text-white p-4 sm:p-5 rounded-full shadow-lg hover:bg-green-600">
-              <i class="fab fa-whatsapp text-xl sm:text-2xl"></i>
+            <a href="whatsapp://send?text={{ page.title | uri_escape }}%20{{ site.url }}{{ page.url }}" class="bg-green-500 text-white p-5 rounded-full shadow-lg hover:bg-green-600">
+              <i class="fab fa-whatsapp text-2xl"></i>
             </a>
           </div>
         </div>
 
-        <!-- Coming Soon - Stack on mobile -->
-        <div class="bg-gradient-to-br from-accent/20 to-secondary/20 rounded-3xl p-8 sm:p-10 text-center mb-12">
-          <h2 class="text-3xl sm:text-4xl font-black text-primary mb-8">
-            Even More Magic <span class="text-secondary">Coming Soon!</span>
+        <!-- Coming Soon -->
+        <div class="bg-gradient-to-br from-pets-primary/20 to-pets-secondary/20 rounded-3xl p-8 sm:p-10 text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-black text-pets-dark mb-8">
+            Even More Magic <span class="text-pets-secondary">Coming Soon!</span>
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
             <div class="bg-white rounded-2xl p-8 shadow-lg">
-              <i class="fas fa-tshirt text-5xl sm:text-6xl text-accent mb-6"></i>
-              <h3 class="text-xl sm:text-2xl font-bold text-primary mb-3">Exclusive Merch</h3>
+              <i class="fas fa-tshirt text-5xl sm:text-6xl text-pets-primary mb-6"></i>
+              <h3 class="text-xl sm:text-2xl font-bold text-pets-dark mb-3">Exclusive Merch</h3>
               <p class="text-gray-700 text-sm sm:text-base">T-shirts, mugs, stickers featuring this character!</p>
             </div>
             <div class="bg-white rounded-2xl p-8 shadow-lg">
-              <i class="fas fa-images text-5xl sm:text-6xl text-secondary mb-6"></i>
-              <h3 class="text-xl sm:text-2xl font-bold text-primary mb-3">Themed Six-Packs</h3>
+              <i class="fas fa-images text-5xl sm:text-6xl text-pets-secondary mb-6"></i>
+              <h3 class="text-xl sm:text-2xl font-bold text-pets-dark mb-3">Themed Six-Packs</h3>
               <p class="text-gray-700 text-sm sm:text-base">6 extra pages + animations of this pet.</p>
             </div>
             <div class="bg-white rounded-2xl p-8 shadow-lg">
-              <i class="fas fa-film text-5xl sm:text-6xl text-accent mb-6"></i>
-              <h3 class="text-xl sm:text-2xl font-bold text-primary mb-3">Expansion Packs</h3>
+              <i class="fas fa-film text-5xl sm:text-6xl text-pets-primary mb-6"></i>
+              <h3 class="text-xl sm:text-2xl font-bold text-pets-dark mb-3">Expansion Packs</h3>
               <p class="text-gray-700 text-sm sm:text-base">Longer stories and new scenes!</p>
             </div>
           </div>
-          <a href="{{ site.baseurl }}/#contact" class="inline-flex items-center bg-primary text-white font-extrabold py-5 px-12 rounded-full shadow-2xl hover:bg-indigo-900 cta-button text-xl sm:text-2xl">
+          <a href="{{ site.baseurl }}/#contact" class="inline-flex items-center bg-pets-dark text-white font-extrabold py-5 px-12 rounded-full shadow-2xl hover:bg-indigo-900 cta-button text-xl sm:text-2xl">
             <i class="fas fa-bell mr-4"></i> Notify Me!
           </a>
         </div>
@@ -125,13 +128,9 @@ layout: default
   .cta-button {
     transition: all 0.3s ease;
   }
-  .cta-button:hover {
+  .cta-button:hover,
+  .cta-button:focus {
     transform: translateY(-6px);
-  }
-  /* Extra mobile tap safety */
-  @media (max-width: 640px) {
-    .cta-button {
-      min-height: 60px;
-    }
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
   }
 </style>
