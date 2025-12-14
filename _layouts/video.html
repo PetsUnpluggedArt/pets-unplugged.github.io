@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<main class="flex-grow py-12 px-4 sm:px-6 lg:px-8 bg-pets-secondary/10">  <!-- Fixed background -->
+<main class="flex-grow py-12 px-4 sm:px-6 lg:px-8 bg-pets-secondary/10">
   <div class="max-w-5xl mx-auto">
     <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
 
@@ -34,24 +34,28 @@ layout: default
         </header>
 
         <!-- Action Buttons -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl mx-auto mb-20">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mb-20">
+
+          <!-- Get the Book -->
           <a href="{{ site.baseurl }}/books/" class="flex flex-col items-center justify-center bg-primary text-white font-extrabold py-8 px-6 rounded-3xl shadow-xl hover:bg-indigo-900 cta-button text-center">
             <i class="fas fa-book text-5xl mb-4"></i>
             <span class="text-xl">Get the PAWS Book</span>
           </a>
 
+          <!-- Digital Version -->
           <a href="{{ site.baseurl }}/downloads/" class="flex flex-col items-center justify-center bg-secondary text-white font-extrabold py-8 px-6 rounded-3xl shadow-xl hover:bg-indigo-600 cta-button text-center">
             <i class="fas fa-download text-5xl mb-4"></i>
             <span class="text-xl">Instant Digital Version</span>
           </a>
 
+          <!-- Download Video - Uses the link from .md file -->
           {% if page.video_download_link %}
-          <a href="{{ page.video_download_link }}" download="{{ page.title | slugify }}.mp4"
-             class="flex flex-col items-center justify-center bg-accent text-primary font-extrabold py-8 px-6 rounded-3xl shadow-xl hover:bg-pink-600 cta-button text-center">
+          <a href="{{ page.video_download_link }}" target="_blank" class="flex flex-col items-center justify-center bg-accent text-primary font-extrabold py-8 px-6 rounded-3xl shadow-xl hover:bg-pink-600 cta-button text-center">
             <i class="fas fa-file-download text-5xl mb-4"></i>
             <span class="text-xl">Download This Video</span>
           </a>
           {% endif %}
+
         </div>
 
         <!-- Share Buttons -->
