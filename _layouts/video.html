@@ -2,11 +2,11 @@
 layout: default
 ---
 
-<main class="flex-grow py-12 px-4 sm:px-6 lg:px-8 bg-background">
+<main class="flex-grow py-12 px-4 sm:px-6 lg:px-8 bg-pets-secondary/10">  <!-- Fixed background -->
   <div class="max-w-5xl mx-auto">
     <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
 
-      <!-- Video - Fixed rounded top corners only -->
+      <!-- Video -->
       <div class="rounded-t-3xl overflow-hidden video-container">
         {% assign video_url = page.vimeo_video_id | prepend: "https://player.vimeo.com/video/" %}
         <iframe src="{{ video_url }}?h={{ page.vimeo_hash | default: '' }}&autoplay=1&loop=1&muted=0&title=0&byline=0&portrait=0&controls=1"
@@ -73,7 +73,7 @@ layout: default
           </div>
         </div>
 
-        <!-- Coming Soon Teasers - Now visible on light background -->
+        <!-- Coming Soon -->
         <div class="bg-gradient-to-br from-accent/20 to-secondary/20 rounded-3xl p-10 text-center mb-16">
           <h2 class="text-3xl sm:text-4xl font-black text-primary mb-8">
             Even More Magic <span class="text-secondary">Coming Soon!</span>
@@ -95,8 +95,6 @@ layout: default
               <p class="text-gray-700">Longer stories and new scenes!</p>
             </div>
           </div>
-
-          <!-- Notify Me Button - Now clearly visible -->
           <a href="{{ site.baseurl }}/#contact" class="inline-flex items-center bg-primary text-white font-extrabold py-5 px-12 rounded-full shadow-2xl hover:bg-indigo-900 cta-button text-2xl">
             <i class="fas fa-bell mr-4"></i> Notify Me!
           </a>
