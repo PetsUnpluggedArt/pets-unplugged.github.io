@@ -4,14 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Interactive pet-themed coloring books with QR animations. Unplug, color, and animate with Pets Unplugged!">
-    <meta name="keywords" content="coloring books, pet illustrations, QR animations, stress relief, creativity">
-    <title>{{ page.title | default: site.title }}</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">    
-    <link rel="manifest" href="/site.webmanifest">    
-    <meta name="theme-color" content="#ffffff">  
+    <title>{{ page.title | default: "Pets Unplugged" }}</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-81TJS1GV21"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -21,257 +15,120 @@
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
     <style>
-        /* Custom styles for a playful, artistic look */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7f3f9; /* Light, soft background */
+        :root {
+            --pets-primary: #fca5a5;
+            --pets-secondary: #818cf8;
+            --pets-dark: #4c1d95;
         }
-        
-        /* LOGO STYLES for responsiveness and size control */
-.header-logo {
-    /* Set max height for the entire header bar */
-    max-height: 100px; 
-    height: auto;
-    width: auto;
-}
-@media (min-width: 640px) { /* sm breakpoint: desktop size */
-    .header-logo {
-        /* Set a specific maximum height for desktop view */
-        max-height: 110px; 
-        /* Ensure the width is not excessively large, let height control it */
-        width: auto;
-    }
-}
-        
-        .section-heading {
-            color: #4c1d95; /* Deep Violet */
-            font-weight: 800;
+        body { font-family: 'Inter', sans-serif; background-color: #f7f3f9; }
+        .bg-pets-primary { background-color: var(--pets-primary); }
+        .text-pets-primary { color: var(--pets-primary); }
+        .bg-pets-secondary { background-color: var(--pets-secondary); }
+        .text-pets-secondary { color: var(--pets-secondary); }
+        .text-pets-dark { color: var(--pets-dark); }
+        .bg-pets-dark { background-color: var(--pets-dark); }
+        .cta-button { transition: all 0.3s ease; }
+        .cta-button:hover { transform: translateY(-3px); }
+        .header-logo { max-height: 100px; height: auto; width: auto; }
+        @media (min-width: 640px) { .header-logo { max-height: 110px; } }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
-        .card {
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
-            border: 1px solid #f9fafb;
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            border-radius: 1rem;
         }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-        }
-        .cta-button {
-            transition: background-color 0.2s, transform 0.1s;
-        }
-        .cta-button:hover {
-            transform: translateY(-1px);
-        }
-        /* Custom color definitions */
-        .bg-pets-primary { background-color: #fca5a5; } /* Light Red/Pink */
-        .text-pets-secondary { color: #818cf8; } /* Light Indigo */
-        .pets-dark { color: #4c1d95; } /* Deep Violet */
-        .feature-icon {
-            color: #4c1d95;
-            filter: drop-shadow(0 4px 6px rgba(129, 140, 248, 0.5));
-        }
-        /* RESPONSIVE IFRAME STYLES */
-        .iframe-container {
-            /* This div helps ensure the iframe fills its parent but maintains a minimum height */
-            width: 100%;
-            min-height: 400px;
+        .social-icon:hover { opacity: 0.8; transform: scale(1.1); }
+        /* Active page highlight - pink oval */
+        .nav-active {
+            @apply bg-pets-primary text-pets-dark font-bold rounded-full px-6 py-2 shadow-md;
         }
     </style>
-    <style>
-      /* Brevo/Sendinblue Form Styles */
-      @font-face {
-        font-display: block;
-        font-family: Roboto;
-        src: ur[](https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), ur[](https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
-      }
-    
-      @font-face {
-        font-display: fallback;
-        font-family: Roboto;
-        font-weight: 600;
-        src: ur[](https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), ur[](https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
-      }
-    
-      @font-face {
-        font-display: fallback;
-        font-family: Roboto;
-        font-weight: 700;
-        src: ur[](https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), ur[](https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
-      }
-    
-      #sib-container input:-ms-input-placeholder {
-        text-align: left;
-        font-family: Helvetica, sans-serif;
-        color: #c0ccda;
-      }
-    
-      #sib-container input::placeholder {
-        text-align: left;
-        font-family: Helvetica, sans-serif;
-        color: #c0ccda;
-      }
-    
-      #sib-container textarea::placeholder {
-        text-align: left;
-        font-family: Helvetica, sans-serif;
-        color: #c0ccda;
-      }
-    
-      #sib-container a {
-        text-decoration: underline;
-        color: #2BB2FC;
-      }
-    </style>
-    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-    
-    <script>
-      tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'pets-primary': '#fca5a5', // Light Red/Pink
-                        'pets-secondary': '#818cf8', // Light Indigo
-                        'pets-dark': '#4c1d95', // Deep Violet
-                    }
-                }
-            }
-        }
-
-        // Simple script to toggle FAQ answers
-        function toggleFAQ(element) {
-            const answer = element.nextElementSibling;
-            const icon = element.querySelector('svg');
-            
-            if (answer.classList.contains('max-h-0')) {
-                // Open
-                answer.classList.remove('max-h-0', 'py-0');
-                answer.classList.add('max-h-96', 'py-4');
-                icon.classList.remove('rotate-0');
-                icon.classList.add('rotate-180');
-            } else {
-                // Close
-                answer.classList.remove('max-h-96', 'py-4');
-                answer.classList.add('max-h-0', 'py-0');
-                icon.classList.remove('rotate-180');
-                icon.classList.add('rotate-0');
-            }
-        }
-        
-        // Function to toggle the mobile menu visibility and icon
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            const icon = document.getElementById('menu-icon');
-
-            // Toggle the visibility of the menu drawer
-            menu.classList.toggle('hidden');
-
-            // Toggle the icon between bars (closed) and times (open)
-            if (menu.classList.contains('hidden')) {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            }
-        }
-
-        // Fallback image function
-        function replaceImage(imgElement, altText) {
-            imgElement.onerror = null; // Prevent infinite loop if placeholder fails
-            // Adjusted placeholder URL for better folder compatibility if images fail to load
-            imgElement.src = `https://placehold.co/300x400/818cf8/ffffff?text=${altText.toUpperCase().replace(/\s/g, '+')}`;
-            imgElement.classList.add('p-2'); // Add padding to placeholder
-        }
-    </script>
 </head>
-<body class="text-gray-800">
+<body class="min-h-screen flex flex-col">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <a href="/" class="flex items-center">
+                <img src="assets/images/logo.png" alt="Pets Unplugged Logo" class="header-logo">
+            </a>
+            <div class="hidden sm:flex items-center space-x-8">
+                <a href="/" {% if page.url == "/" or page.url == "/index.html" or page.url == "/default.html" %}class="nav-active"{% else %}class="text-gray-700 font-medium hover:text-pets-secondary"{% endif %}>Home</a>
 
-    <header class="bg-white sticky top-0 z-10 shadow-lg">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            
-            <div> 
-                <a href="/" class="block">
-                    <img src="/assets/images/LOGO_MAX.svg" 
-                         alt="Pets Unplugged Logo" 
-                         class="header-logo" 
-                         loading="lazy"
-                         onerror="replaceImage(this, 'Logo Placeholder')">
-                </a>
-            </div>
-            
-            <div class="hidden sm:flex space-x-4 items-center">
+                <a href="/books/" {% if page.url contains "/books/" or page.url == "/books" %}class="nav-active"{% else %}class="text-gray-700 font-medium hover:text-pets-secondary"{% endif %}>Books</a>
+                <a href="/downloads/" {% if page.url contains "/downloads/" or page.url == "/downloads" %}class="nav-active"{% else %}class="text-gray-700 font-medium hover:text-pets-secondary"{% endif %}>Downloads</a>
+                <a href="/merchandise/" {% if page.url contains "/merchandise/" or page.url == "/merchandise" %}class="nav-active"{% else %}class="text-gray-700 font-medium hover:text-pets-secondary"{% endif %}>Merch</a>
                 
-                <a href="/books/" class="text-gray-600 hover:text-pets-dark font-medium">Books</a>
-                <a href="/merchandise/" class="text-gray-600 hover:text-pets-dark font-medium">Merchandise</a>
-                <a href="/contest.html" class="text-gray-600 hover:text-pets-dark font-medium">Contest</a>
+                <a href="/contest.html" {% if page.url == "/contest.html" %}class="nav-active"{% else %}class="text-gray-700 font-medium hover:text-pets-secondary"{% endif %}>Contest</a>
                 
-                <a href="/blog/index.html" class="text-gray-600 hover:text-pets-dark font-medium">Blog</a>
-                <a href="/downloads/" class="bg-pets-primary text-pets-dark font-bold py-2 px-4 rounded-full shadow-md hover:bg-red-300 cta-button">Get Digital</a>
-            </div>
-
-            <button id="menu-button" class="sm:hidden text-pets-dark text-2xl p-2 rounded-md hover:bg-gray-100" onclick="toggleMenu()">
+                <a href="/blog/index.html" {% if page.url contains "/blog/" or page.url == "/blog" %}class="nav-active"{% else %}class="text-gray-700 font-medium hover:text-pets-secondary"{% endif %}>Blog</a>
+                
+                <a href="/downloads/" class="text-gray-700 font-bold hover:text-pets-secondary">Get Digital</a>
+                </div>
+            <button id="menu-button" class="sm:hidden text-pets-dark text-2xl p-2 rounded-md hover:bg-gray-100">
                 <i id="menu-icon" class="fas fa-bars"></i>
             </button>
         </nav>
-        
-        <div id="mobile-menu" class="hidden sm:hidden bg-white border-t border-gray-100 px-4 pb-4 shadow-inner">
-            
-            <a href="/books/" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Books</a>
-            <a href="/merchandise/" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Merchandise</a>
-            <a href="/contest.html" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Contest</a>
-            
-            <a href="/blog/index.html" class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium px-2" onclick="toggleMenu()">Blog</a>
-            <a href="/downloads/" class="mt-4 block w-full text-center bg-pets-primary text-pets-dark font-bold py-2 rounded-lg shadow-md hover:bg-red-300 cta-button" onclick="toggleMenu()">Get Digital</a>
-        </div>
+        <div id="mobile-menu" class="hidden sm:hidden bg-white border-t border-gray-100 px-4 pb-4">
+            <a href="/" {% if page.url == "/" or page.url == "/index.html" or page.url == "/default.html" %}class="block py-2 nav-active text-center"{% else %}class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium"{% endif %}>Home</a>
+            <a href="/books/" {% if page.url contains "/books/" or page.url == "/books" %}class="block py-2 nav-active text-center"{% else %}class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium"{% endif %}>Books</a>
+            <a href="/downloads/" {% if page.url contains "/downloads/" or page.url == "/downloads" %}class="block py-2 nav-active text-center"{% else %}class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium"{% endif %}>Downloads</a>
+            <a href="/merchandise/" {% if page.url contains "/merchandise/" or page.url == "/merchandise" %}class="block py-2 nav-active text-center"{% else %}class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium"{% endif %}>Merch</a>
+            <a href="/contest.html" {% if page.url == "/contest.html" %}class="block py-2 nav-active text-center"{% else %}class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium"{% endif %}>Contest</a>
+            <a href="/blog/index.html" {% if page.url contains "/blog/" or page.url == "/blog" %}class="block py-2 nav-active text-center"{% else %}class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium"{% endif %}>Blog</a>
+            <a href="/downloads/" class="block py-2 text-gray-700 font-bold hover:text-pets-secondary text-center">Get Digital</a>
+            </div>
     </header>
 
-    <main>
-        {{ content }} 
+    <main class="flex-grow">
+        {{ content }}
     </main>
 
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-            <p class="text-sm mb-4 md:mb-0">&copy; 2025 Tony W Jackson. All Rights Reserved. Pets Unplugged™</p>
-            <div class="flex space-x-6 text-sm">
-                <a href="#" class="hover:text-pets-primary transition duration-150">Privacy Policy</a>
-                <a href="#" class="hover:text-pets-primary transition duration-150">Terms</a>
-                
-                <a href="#" target="_blank" class="hover:text-pets-primary transition duration-150" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" target="_blank" class="hover:text-pets-primary transition duration-150" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" target="_blank" class="hover:text-pets-primary transition duration-150" aria-label="Follow us on X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-                <a href="#" target="_blank" class="hover:text-pets-primary transition duration-150" aria-label="Follow us on Pinterest"><i class="fab fa-pinterest-p"></i></a>
-                <a href="https://github.com/petsunplugged/site" target="_blank" class="hover:text-pets-primary transition duration-150"><i class="fab fa-github mr-1"></i>GitHub</a>
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm mb-6">&copy; 2025 Tony W Jackson. All Rights Reserved. Pets Unplugged™</p>
+            
+            <div class="mb-8">
+                <p class="text-sm text-gray-400 mb-4">Share Pets Unplugged</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpetsunplugged.com" target="_blank" class="text-3xl social-icon transition" aria-label="Share on Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpetsunplugged.com&text=Check%20out%20Pets%20Unplugged%20-%20interactive%20coloring%20books%20with%20QR%20animations!" target="_blank" class="text-3xl social-icon transition" aria-label="Share on X (Twitter)">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fpetsunplugged.com&media=&description=Interactive%20pet%20coloring%20books%20that%20come%20to%20life!" target="_blank" class="text-3xl social-icon transition" aria-label="Share on Pinterest">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="text-3xl social-icon transition" aria-label="Follow on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
+            </div>
+            
+            <div class="flex justify-center space-x-6 text-sm">
+                <a href="#" class="hover:text-pets-primary">Privacy</a>
+                <a href="#" class="hover:text-pets-primary">Terms</a>
+                <a href="https://github.com/petsunplugged/site" target="_blank" class="hover:text-pets-primary"><i class="fab fa-github mr-1"></i>GitHub</a>
+            </div>
         </div>
     </footer>
-    
+
     <script>
-      window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
-      window.LOCALE = 'en';
-      window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-    
-      window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
-    
-      window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-    
-      window.translation = {
-        common: {
-          selectedList: '{quantity} list selected',
-          selectedLists: '{quantity} lists selected',
-          selectedOption: '{quantity} selected',
-          selectedOptions: '{quantity} selected',
-        }
-      };
-    
-      var AUTOHIDE = Boolean(0);
+        document.getElementById('menu-button').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+            const icon = document.getElementById('menu-icon');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
     </script>
-    
-    <script src="https://sibforms.com/forms/end-form/build/main.js"></script>
-    
-    <script src="https://www.google.com/recaptcha/api.js?render=6LeGDBYsAAAAANJG0zCw4hsc78Njlij97aBInOIt&hl=en"></script>
-    </body>
+</body>
 </html>
