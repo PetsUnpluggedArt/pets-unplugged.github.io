@@ -22,6 +22,8 @@ title: PAWS Interactive Dog Coloring Book | Physical & Digital Editions
   .bg-pets-dark { background-color: var(--pets-dark); }
   .cta-button { transition: all 0.3s ease; }
   .cta-button:hover { transform: translateY(-3px); }
+  /* Styling for selected thumbnail (optional) */
+  .thumbnail-active { border: 3px solid var(--pets-secondary); box-shadow: 0 0 10px rgba(129, 143, 248, 0.5); }
 </style>
 
 <section class="bg-pets-secondary bg-opacity-10 py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
@@ -60,9 +62,34 @@ title: PAWS Interactive Dog Coloring Book | Physical & Digital Editions
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
       <div id="paws" class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:col-span-2 lg:col-span-3">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
-          <div class="space-y-6">
-            <img src="/assets/images/paws_cover.jpg" alt="PAWS Front Cover" class="rounded-xl shadow-lg w-full max-w-sm mx-auto" loading="lazy">
-          </div>
+          
+          <div class="flex flex-col items-center">
+            <img id="main-product-image" src="/assets/images/paws_cover.jpg" alt="PAWS Front Cover" class="rounded-xl shadow-lg w-full max-w-sm mx-auto mb-4" loading="lazy">
+            
+            <div class="flex space-x-3 w-full max-w-sm mx-auto">
+              
+              <img onclick="document.getElementById('main-product-image').src='/assets/images/paws_cover.jpg'; this.parentElement.querySelectorAll('img').forEach(el => el.classList.remove('thumbnail-active')); this.classList.add('thumbnail-active');"
+                   src="/assets/images/paws_cover.jpg" 
+                   alt="Front Cover Thumbnail" 
+                   class="w-1/4 rounded-md border-2 border-gray-300 hover:border-pets-secondary cursor-pointer thumbnail-active">
+              
+              <img onclick="document.getElementById('main-product-image').src='/assets/images/PAWS _Coloring Book-images-6.jpg'; this.parentElement.querySelectorAll('img').forEach(el => el.classList.remove('thumbnail-active')); this.classList.add('thumbnail-active');"
+                   src="/assets/images/PAWS _Coloring Book-images-6.jpg" 
+                   alt="Corgi Illustration Thumbnail" 
+                   class="w-1/4 rounded-md border-2 border-gray-300 hover:border-pets-secondary cursor-pointer">
+              
+              <img onclick="document.getElementById('main-product-image').src='/assets/images/PAWS _Coloring Book-images-5.jpg'; this.parentElement.querySelectorAll('img').forEach(el => el.classList.remove('thumbnail-active')); this.classList.add('thumbnail-active');"
+                   src="/assets/images/PAWS _Coloring Book-images-5.jpg" 
+                   alt="QR Code Scan Thumbnail" 
+                   class="w-1/4 rounded-md border-2 border-gray-300 hover:border-pets-secondary cursor-pointer">
+              
+              <img onclick="document.getElementById('main-product-image').src='/assets/images/back_cover.png'; this.parentElement.querySelectorAll('img').forEach(el => el.classList.remove('thumbnail-active')); this.classList.add('thumbnail-active');"
+                   src="/assets/images/back_cover.png" 
+                   alt="Back Cover Benefits Thumbnail" 
+                   class="w-1/4 rounded-md border-2 border-gray-300 hover:border-pets-secondary cursor-pointer">
+              
+            </div>
+            </div>
           <div class="flex flex-col justify-center">
             <h3 class="text-4xl font-black text-pets-dark mb-6">PAWS Interactive Dog Coloring Book</h3>
             <p class="text-lg text-gray-600 mb-8">
