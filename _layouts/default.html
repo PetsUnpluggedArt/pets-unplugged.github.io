@@ -62,7 +62,6 @@
             </a>
             <div class="hidden sm:flex items-center space-x-8">
                 <a href="/books/" {% if page.url contains "/books/" or page.url == "/books" %}class="nav-active"{% else %}class="text-gray-700 font-medium hover:text-pets-secondary"{% endif %}>Books</a>
-                <a href="/downloads/" {% if page.url contains "/downloads/" or page.url == "/downloads" %}class="nav-active"{% else %}class="text-gray-700 font-medium hover:text-pets-secondary"{% endif %}>Downloads</a>
                 <a href="/merchandise/" {% if page.url contains "/merchandise/" or page.url == "/merchandise" %}class="nav-active"{% else %}class="text-gray-700 font-medium hover:text-pets-secondary"{% endif %}>Merch</a>
                 
                 <a href="/contest.html" {% if page.url == "/contest.html" %}class="nav-active"{% else %}class="text-gray-700 font-medium hover:text-pets-secondary"{% endif %}>Contest</a>
@@ -77,7 +76,6 @@
         </nav>
         <div id="mobile-menu" class="hidden sm:hidden bg-white border-t border-gray-100 px-4 pb-4">
             <a href="/books/" {% if page.url contains "/books/" or page.url == "/books" %}class="block py-2 nav-active text-center"{% else %}class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium"{% endif %}>Books</a>
-            <a href="/downloads/" {% if page.url contains "/downloads/" or page.url == "/downloads" %}class="block py-2 nav-active text-center"{% else %}class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium"{% endif %}>Downloads</a>
             <a href="/merchandise/" {% if page.url contains "/merchandise/" or page.url == "/merchandise" %}class="block py-2 nav-active text-center"{% else %}class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium"{% endif %}>Merch</a>
             <a href="/contest.html" {% if page.url == "/contest.html" %}class="block py-2 nav-active text-center"{% else %}class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium"{% endif %}>Contest</a>
             <a href="/blog/index.html" {% if page.url contains "/blog/" or page.url == "/blog" %}class="block py-2 nav-active text-center"{% else %}class="block py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium"{% endif %}>Blog</a>
