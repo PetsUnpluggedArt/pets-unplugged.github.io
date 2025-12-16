@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://petsunplugged.com/sitemap
+Sitemap: https://petsunplugged.com/sitemap.xml
