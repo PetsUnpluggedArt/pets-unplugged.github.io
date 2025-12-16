@@ -12,4 +12,14 @@
     <loc>https://petsunplugged.com/downloads/</loc>
     <priority>0.8</priority>
   </url>
+<url>
+
+<loc>https://petsunplugged.com/contest/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+
+<loc>https://petsunplugged.com/merchandise/</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>
