@@ -21,6 +21,8 @@
 title: Pets Unplugged
 description: Interactive pet-themed coloring books with animations. Unplug, color, and animate!
 
+sitemap: true
+
 # --- New Collections Configuration ---
 collections:
 
