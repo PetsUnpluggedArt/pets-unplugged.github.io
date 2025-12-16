@@ -14,7 +14,7 @@
 #
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files
-# will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
@@ -29,6 +29,7 @@ collections:
     
   videos:
     output: true
+    sitemap: false # THIS LINE EXCLUDES THE VIDEOS COLLECTION FROM THE SITEMAP
 
 # Add for merchandise if using posts for items
   merchandise:
