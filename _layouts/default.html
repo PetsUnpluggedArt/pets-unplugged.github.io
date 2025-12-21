@@ -51,14 +51,26 @@
         .nav-active {
             @apply bg-pets-primary text-pets-dark font-bold rounded-full px-6 py-2 shadow-md;
         }
-        /* Style for the countdown digits */
         .countdown-box {
             font-variant-numeric: tabular-nums;
             letter-spacing: 0.05em;
         }
+        .pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .7; }
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
+    <a href="https://a.co/d/eSoy98s" target="_blank" class="bg-pets-dark text-white py-3 px-4 text-center text-sm font-bold hover:bg-opacity-90 transition-all border-b border-pets-primary flex items-center justify-center gap-2">
+        <i class="fab fa-amazon text-pets-primary"></i> 
+        <span>PAWS Interactive Dog Coloring Book - Available Now on Amazon!</span>
+        <i class="fas fa-external-link-alt text-[10px] opacity-70"></i>
+    </a>
+
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
             <div class="flex-shrink-0">
@@ -67,8 +79,8 @@
                 </a>
             </div>
 
-            <div id="countdown-container" class="hidden md:flex flex-col items-center bg-pets-dark text-white px-6 py-2 rounded-2xl shadow-lg border-2 border-pets-primary">
-                <span class="text-[10px] uppercase font-black tracking-[0.2em] text-pets-primary mb-1">Book Drops on Amazon In:</span>
+            <div id="countdown-container" class="hidden md:flex flex-col items-center bg-pets-dark text-white px-6 py-2 rounded-2xl shadow-lg border-2 border-pets-secondary">
+                <span class="text-[10px] uppercase font-black tracking-[0.2em] text-pets-secondary mb-1">Sound for Videos Drops In:</span>
                 <div id="countdown-timer" class="font-mono font-bold text-xl countdown-box">
                     00:00:00:00
                 </div>
@@ -88,8 +100,8 @@
         </nav>
 
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 pb-4">
-            <div id="mobile-countdown-container" class="my-4 p-3 bg-pets-dark text-white rounded-lg text-center">
-                <p class="text-[10px] uppercase font-bold tracking-widest text-pets-primary">Drops on Amazon In:</p>
+            <div id="mobile-countdown-container" class="my-4 p-3 bg-pets-dark text-white rounded-lg text-center border border-pets-secondary">
+                <p class="text-[10px] uppercase font-bold tracking-widest text-pets-secondary">Sound Features In:</p>
                 <div id="mobile-countdown-timer" class="font-mono text-lg font-bold">00:00:00:00</div>
             </div>
             <a href="/books/" class="block py-2 text-gray-700 font-medium">Books</a>
@@ -133,19 +145,18 @@
             icon.classList.toggle('fa-times');
         });
 
-        // Countdown Timer Logic
+        // Countdown Logic for Sound to Videos
         function updateCountdown() {
-            // Target: Dec 19, 2025 at 19:00:00 (KDP Time)
-            const targetDate = new Date("December 19, 2025 20:00:00").getTime();
+            // Target: 14 days from December 20, 2025 -> January 3, 2026
+            const targetDate = new Date("January 3, 2026 00:00:00").getTime();
             const now = new Date().getTime();
             const difference = targetDate - now;
 
             const desktopTimer = document.getElementById("countdown-timer");
             const mobileTimer = document.getElementById("mobile-countdown-timer");
-            const containers = [document.getElementById("countdown-container"), document.getElementById("mobile-countdown-container")];
 
             if (difference < 0) {
-                const liveHtml = "<span class='text-pets-primary font-black pulse'>AVAILABLE ON AMAZON NOW!</span>";
+                const liveHtml = "<span class='text-pets-secondary font-black pulse'>SOUND IS LIVE!</span>";
                 desktopTimer.innerHTML = liveHtml;
                 mobileTimer.innerHTML = liveHtml;
                 return;
