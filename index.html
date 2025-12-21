@@ -21,8 +21,8 @@ description: Interactive pet coloring books that come to life! Kids color adorab
   <meta name="twitter:image" content="https://petsunplugged.com/assets/images/dogpianosample.png">
 </head>
 
-<section class="bg-gray-50 py-16 sm:py-28 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto text-center">
+<section class="relative bg-gradient-to-b from-gray-100 to-white py-20 sm:py-32 px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto text-center relative z-10">
         <h1 class="text-6xl sm:text-8xl font-black text-pets-dark leading-tight tracking-tight">
             Unplug. <span class="text-pets-primary">Color.</span> <span class="text-pets-dark">Animate.</span>
         </h1>
@@ -38,29 +38,38 @@ description: Interactive pet coloring books that come to life! Kids color adorab
             </a>
         </div>
     </div>
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-white" style="clip-path: ellipse(70% 100% at 50% 100%);"></div>
 </section>
 
-<section class="py-24 bg-pets-secondary bg-opacity-10 border-y border-pets-secondary border-opacity-20">
+<section class="py-24 bg-pets-secondary bg-opacity-10 border-y border-pets-secondary border-opacity-10">
     <div class="max-w-7xl mx-auto px-4 text-center">
         <h2 class="text-4xl sm:text-5xl font-black text-pets-dark mb-16">Why Families Love Pets Unplugged</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="bg-white p-8 rounded-2xl shadow-xl border border-white transition-all hover:-translate-y-2">
-                <i class="fas fa-brain text-5xl text-pets-secondary mb-6"></i>
+            <div class="bg-white p-8 rounded-3xl shadow-xl border border-white transition-all hover:-translate-y-2">
+                <div class="w-16 h-16 bg-pets-secondary bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-brain text-3xl text-pets-secondary"></i>
+                </div>
                 <h3 class="text-xl font-bold text-pets-dark mb-3">Calming & Therapeutic</h3>
                 <p class="text-gray-600">A screen-free way to unwind and practice mindfulness for all ages.</p>
             </div>
-            <div class="bg-white p-8 rounded-2xl shadow-xl border border-white transition-all hover:-translate-y-2">
-                <i class="fas fa-heart text-5xl text-pets-primary mb-6"></i>
+            <div class="bg-white p-8 rounded-3xl shadow-xl border border-white transition-all hover:-translate-y-2">
+                <div class="w-16 h-16 bg-pets-primary bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-heart text-3xl text-pets-primary"></i>
+                </div>
                 <h3 class="text-xl font-bold text-pets-dark mb-3">Sparks Creativity</h3>
                 <p class="text-gray-600">Encourages personal expression with whimsical pet scenes.</p>
             </div>
-            <div class="bg-white p-8 rounded-2xl shadow-xl border border-white transition-all hover:-translate-y-2">
-                <i class="fas fa-child text-5xl text-pets-secondary mb-6"></i>
+            <div class="bg-white p-8 rounded-3xl shadow-xl border border-white transition-all hover:-translate-y-2">
+                <div class="w-16 h-16 bg-pets-secondary bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-child text-3xl text-pets-secondary"></i>
+                </div>
                 <h3 class="text-xl font-bold text-pets-dark mb-3">Perfect for All Ages</h3>
                 <p class="text-gray-600">Simple for kids, yet detailed enough for teens and adults.</p>
             </div>
-            <div class="bg-white p-8 rounded-2xl shadow-xl border border-white transition-all hover:-translate-y-2">
-                <i class="fas fa-magic text-5xl text-pets-primary mb-6"></i>
+            <div class="bg-white p-8 rounded-3xl shadow-xl border border-white transition-all hover:-translate-y-2">
+                <div class="w-16 h-16 bg-pets-primary bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-magic text-3xl text-pets-primary"></i>
+                </div>
                 <h3 class="text-xl font-bold text-pets-dark mb-3">Magical QR Tech</h3>
                 <p class="text-gray-600">The only coloring book where your art truly comes to life!</p>
             </div>
@@ -70,60 +79,63 @@ description: Interactive pet coloring books that come to life! Kids color adorab
 
 <section id="magic" class="py-24 bg-white overflow-hidden">
     <div class="max-w-6xl mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl sm:text-5xl font-black text-pets-dark mb-4">See the Magic in Action</h2>
+        <div class="text-center mb-20">
+            <span class="bg-pets-primary bg-opacity-20 text-pets-dark px-4 py-2 rounded-full text-sm font-bold uppercase tracking-widest">How it works</span>
+            <h2 class="text-4xl sm:text-6xl font-black text-pets-dark mt-4 mb-4">See the Magic in Action</h2>
             <p class="text-xl text-gray-600 max-w-2xl mx-auto">From paper to screen in two simple steps.</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-5 relative group">
                 <div class="absolute -top-6 -left-6 bg-pets-primary text-pets-dark font-black w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-xl z-10 border-4 border-white">1</div>
-                <div class="overflow-hidden rounded-3xl shadow-2xl transition-transform duration-500 group-hover:rotate-1 border-4 border-gray-100">
+                <div class="overflow-hidden rounded-3xl shadow-2xl transition-all duration-500 group-hover:rotate-1 border-8 border-gray-50">
                     <img src="/assets/images/dogpianosample.png" alt="Colored sample" class="w-full h-auto object-cover" loading="lazy">
                 </div>
-                <div class="mt-6 text-center lg:text-left">
-                    <h3 class="text-2xl font-bold text-pets-dark">Color Your Masterpiece</h3>
-                    <p class="text-gray-600">Use your favorite tools to bring the illustration to life on the page.</p>
+                <div class="mt-8 text-center lg:text-left">
+                    <h3 class="text-3xl font-bold text-pets-dark mb-2">Color Your Page</h3>
+                    <p class="text-lg text-gray-600 leading-relaxed">Use markers or pencils to bring the pet to life on the page.</p>
                 </div>
             </div>
 
             <div class="hidden lg:flex lg:col-span-2 justify-center items-center">
-                <i class="fas fa-arrow-right text-5xl text-pets-secondary animate-pulse"></i>
+                <div class="w-16 h-16 rounded-full border-2 border-dashed border-pets-secondary flex items-center justify-center">
+                    <i class="fas fa-arrow-right text-2xl text-pets-secondary animate-pulse"></i>
+                </div>
             </div>
 
             <div class="lg:col-span-5 relative group">
                 <div class="absolute -top-6 -left-6 bg-pets-secondary text-white font-black w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-xl z-10 border-4 border-white">2</div>
-                <div class="relative rounded-3xl shadow-2xl overflow-hidden border-4 border-gray-100 aspect-video bg-black">
+                <div class="relative rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-50 aspect-video bg-black">
                     <iframe src="https://player.vimeo.com/video/1137780238?h=21de130f58&autoplay=0&loop=1&title=0&byline=0&portrait=0" 
                             frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
                             class="absolute top-0 left-0 w-full h-full"></iframe>
                 </div>
-                <div class="mt-6 text-center lg:text-left">
-                    <h3 class="text-2xl font-bold text-pets-dark">Scan & Watch</h3>
-                    <p class="text-gray-600">Scan the unique QR code to watch a delightful 6-second animation of your pet!</p>
+                <div class="mt-8 text-center lg:text-left">
+                    <h3 class="text-3xl font-bold text-pets-dark mb-2">Scan & Watch</h3>
+                    <p class="text-lg text-gray-600 leading-relaxed">Scan the unique QR code to watch a 6-second animation of your art!</p>
                 </div>
             </div>
         </div>
 
         <div class="mt-20 text-center">
-            <a href="/downloads/#free-samples" class="inline-flex items-center bg-pets-dark text-white font-bold py-5 px-14 rounded-full shadow-2xl hover:bg-indigo-900 transition-all transform hover:-translate-y-1 text-xl">
+            <a href="/downloads/#free-samples" class="inline-flex items-center bg-pets-dark text-white font-bold py-6 px-16 rounded-full shadow-2xl hover:bg-indigo-900 transition-all transform hover:-translate-y-1 text-2xl">
                 <i class="fas fa-magic mr-3"></i> Get Your Free Sample Page
             </a>
-            <p class="mt-4 text-sm text-gray-500 font-bold uppercase tracking-widest">Instant Download • No Sign-up Required</p>
+            <p class="mt-6 text-sm text-gray-400 font-bold uppercase tracking-widest">Instant PDF Download • Start in Minutes</p>
         </div>
     </div>
 </section>
 
-<section id="contact" class="py-24 bg-pets-primary px-4 sm:px-6 lg:px-8">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-4xl sm:text-5xl font-black text-pets-dark mb-6">Join the Pack!</h2>
-        <p class="text-xl text-gray-800 mb-12">Get free sample pages, exclusive discounts, and be the first to know about new books.</p>
+<section id="contact" class="py-24 bg-pets-primary px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+        <h2 class="text-4xl sm:text-6xl font-black text-pets-dark mb-6">Join the Pack!</h2>
+        <p class="text-xl text-gray-800 mb-12 font-medium">Get free sample pages, exclusive discounts, and be the first to know about new books.</p>
         
-        <div class="bg-white p-2 rounded-2xl shadow-2xl">
-            <iframe width="100%" height="400"
+        <div class="bg-white p-4 rounded-3xl shadow-2xl">
+            <iframe width="100%" height="420"
                     src="https://d594eb7c.sibforms.com/serve/MUIFANGdb0jKFrBXiNX2Hq2bKn4r-c14bcEGV-BiOMN221c5jrdcUYXPD0vEnTvxzE4V8O09i-6btQMjoiSofRFKpfyGHTx1E9xYtefgb9FKTCfxHZ88bhmN7A1bOOiU91kLmqhXMPYBlKMaAGuaIwKPFMyWlV7Gngzp8U3g6sCz4wz4oCSOCREFJY0xdvSA35yRDpnu_2nEFyF7wA=="
                     frameborder="0" scrolling="auto" allowfullscreen
-                    class="rounded-xl">
+                    class="rounded-2xl">
             </iframe>
         </div>
     </div>
