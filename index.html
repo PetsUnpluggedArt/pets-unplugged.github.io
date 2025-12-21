@@ -9,14 +9,12 @@ description: Interactive pet coloring books that come to life! Kids color adorab
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ page.description }}">
 
-  <!-- Open Graph / Social Sharing Tags -->
   <meta property="og:title" content="{{ page.title }}">
   <meta property="og:description" content="{{ page.description }}">
   <meta property="og:image" content="https://petsunplugged.com/assets/images/dogpianosample.png">
   <meta property="og:url" content="https://petsunplugged.com/">
   <meta property="og:type" content="website">
 
-  <!-- You can add more if needed, like Twitter cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ page.title }}">
   <meta name="twitter:description" content="{{ page.description }}">
@@ -70,21 +68,23 @@ description: Interactive pet coloring books that come to life! Kids color adorab
     </div>
 </section>
 
-<section class="py-20 bg-gray-50">
-    <div class="max-w-5xl mx-auto px-4 text-center">
+<section id="magic" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 text-center">
         <h2 class="text-4xl font-black text-pets-dark mb-12">Experience the Magic</h2>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="text-center">
-                <img src="/assets/images/dogpianosample.png" alt="Colored sample – Fluffy dog dreaming on piano keys" class="rounded-xl shadow-2xl w-full max-w-md mx-auto" loading="lazy">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+            <div class="flex flex-col h-full">
+                <img src="/assets/images/dogpianosample.png" alt="Colored sample" class="rounded-xl shadow-2xl w-full h-full object-cover" loading="lazy">
                 <a href="/downloads/#free-samples" class="mt-8 inline-block bg-pets-dark text-white font-bold py-4 px-10 rounded-full shadow-xl hover:bg-indigo-900 cta-button text-xl">
                     <i class="fas fa-download mr-2"></i> Download Free Sample Page
                 </a>
             </div>
-            <div>
-                <div class="video-container">
-                    <iframe src="https://player.vimeo.com/video/1137780238?h=21de130f58&autoplay=0&loop=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <div class="flex flex-col h-full">
+                <div class="video-container h-full min-h-[350px] relative">
+                    <iframe src="https://player.vimeo.com/video/1137780238?h=21de130f58&autoplay=0&loop=1&title=0&byline=0&portrait=0" 
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                            class="absolute top-0 left-0 w-full h-full rounded-xl"></iframe>
                 </div>
-                <p class="mt-6 text-lg text-gray-700 font-italic">Color it your way → Scan the QR → Watch the illustration animate in seconds!</p>
+                <p class="mt-6 text-lg text-gray-700 italic">Color it your way → Scan the QR → Watch the illustration animate in seconds!</p>
             </div>
         </div>
     </div>

@@ -86,6 +86,9 @@
                 <div id="countdown-timer" class="font-mono font-bold text-xl countdown-box">
                     00:00:00:00
                 </div>
+                <a href="/#magic" class="text-[10px] text-pets-primary hover:underline mt-1 font-bold">
+                    <i class="fas fa-play-circle mr-1"></i> Hear a sample of the audio
+                </a>
             </div>
 
             <div class="hidden lg:flex items-center space-x-6">
@@ -105,6 +108,7 @@
             <div id="mobile-countdown-container" class="my-4 p-3 bg-pets-dark text-white rounded-lg text-center border border-pets-secondary">
                 <p class="text-[10px] uppercase font-bold tracking-widest text-pets-secondary">Sound Features In:</p>
                 <div id="mobile-countdown-timer" class="font-mono text-lg font-bold">00:00:00:00</div>
+                <a href="/#magic" class="text-xs text-pets-primary hover:underline block mt-2">Hear a sample of the audio</a>
             </div>
             <a href="/books/" class="block py-2 text-gray-700 font-medium">Books</a>
             <a href="/merchandise/" class="block py-2 text-gray-700 font-medium">Merch</a>
@@ -139,7 +143,6 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle
         document.getElementById('menu-button').addEventListener('click', function () {
             document.getElementById('mobile-menu').classList.toggle('hidden');
             const icon = document.getElementById('menu-icon');
@@ -147,9 +150,7 @@
             icon.classList.toggle('fa-times');
         });
 
-        // Countdown Logic for Sound to Videos
         function updateCountdown() {
-            // Target: 14 days from December 20, 2025 -> January 3, 2026
             const targetDate = new Date("January 3, 2026 00:00:00").getTime();
             const now = new Date().getTime();
             const difference = targetDate - now;
