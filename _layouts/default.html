@@ -53,17 +53,6 @@
         .nav-active {
             @apply bg-pets-primary text-pets-dark font-bold rounded-full px-6 py-2 shadow-md;
         }
-        .countdown-box {
-            font-variant-numeric: tabular-nums;
-            letter-spacing: 0.05em;
-        }
-        .pulse {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: .7; }
-        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -81,16 +70,6 @@
                 </a>
             </div>
 
-            <div id="countdown-container" class="hidden md:flex flex-col items-center bg-pets-dark text-white px-6 py-2 rounded-2xl shadow-lg border-2 border-pets-secondary">
-                <span class="text-[10px] uppercase font-black tracking-[0.2em] text-pets-secondary mb-1">Sound for Videos Drops In:</span>
-                <div id="countdown-timer" class="font-mono font-bold text-xl countdown-box">
-                    00:00:00:00
-                </div>
-                <a href="/#magic" class="text-[10px] text-pets-primary hover:underline mt-1 font-bold">
-                    <i class="fas fa-play-circle mr-1"></i> Hear a sample of the audio
-                </a>
-            </div>
-
             <div class="hidden lg:flex items-center space-x-6">
                 <a href="/books/" {% if page.url contains "/books/" or page.url == "/books" %}class="nav-active"{% else %}class="text-gray-700 font-medium hover:text-pets-secondary"{% endif %}>Books</a>
                 <a href="/merchandise/" {% if page.url contains "/merchandise/" or page.url == "/merchandise" %}class="nav-active"{% else %}class="text-gray-700 font-medium hover:text-pets-secondary"{% endif %}>Merch</a>
@@ -105,11 +84,6 @@
         </nav>
 
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 pb-4">
-            <div id="mobile-countdown-container" class="my-4 p-3 bg-pets-dark text-white rounded-lg text-center border border-pets-secondary">
-                <p class="text-[10px] uppercase font-bold tracking-widest text-pets-secondary">Sound Features In:</p>
-                <div id="mobile-countdown-timer" class="font-mono text-lg font-bold">00:00:00:00</div>
-                <a href="/#magic" class="text-xs text-pets-primary hover:underline block mt-2">Hear a sample of the audio</a>
-            </div>
             <a href="/books/" class="block py-2 text-gray-700 font-medium">Books</a>
             <a href="/merchandise/" class="block py-2 text-gray-700 font-medium">Merch</a>
             <a href="/contest.html" class="block py-2 text-gray-700 font-medium">Contest</a>
@@ -150,35 +124,6 @@
             icon.classList.toggle('fa-bars');
             icon.classList.toggle('fa-times');
         });
-
-        function updateCountdown() {
-            const targetDate = new Date("January 3, 2026 00:00:00").getTime();
-            const now = new Date().getTime();
-            const difference = targetDate - now;
-
-            const desktopTimer = document.getElementById("countdown-timer");
-            const mobileTimer = document.getElementById("mobile-countdown-timer");
-
-            if (difference < 0) {
-                const liveHtml = "<span class='text-pets-secondary font-black pulse'>SOUND IS LIVE!</span>";
-                desktopTimer.innerHTML = liveHtml;
-                mobileTimer.innerHTML = liveHtml;
-                return;
-            }
-
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-            const timeString = `${days.toString().padStart(2, '0')}d : ${hours.toString().padStart(2, '0')}h : ${minutes.toString().padStart(2, '0')}m : ${seconds.toString().padStart(2, '0')}s`;
-            
-            desktopTimer.innerText = timeString;
-            mobileTimer.innerText = timeString;
-        }
-
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
     </script>
 </body>
 </html>
