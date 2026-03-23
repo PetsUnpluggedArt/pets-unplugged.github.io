@@ -1,5 +1,5 @@
 ---
-layout: video
+layout: etsy-videos
 title: Beethoven’s Fluffiest Fan
 subtitle: “Dreaming in four-paw harmony”
 vimeo_video_id: 1141714032

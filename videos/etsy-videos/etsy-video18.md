@@ -1,5 +1,5 @@
 ---
-layout: video
+layout: etsy-videos
 title: Hot Cocoa Sidekick
 subtitle: “Extra marshmallows, please”
 vimeo_video_id: 1141736479

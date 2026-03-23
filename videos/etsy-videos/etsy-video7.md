@@ -1,5 +1,5 @@
 ---
-layout: video
+layout: etsy-videos
 title: Roll Raider
 subtitle: “One pup, zero regrets”
 vimeo_video_id: 1141715420

@@ -1,5 +1,5 @@
 ---
-layout: video
+layout: etsy-videos
 title: Tiny Rain Captain
 subtitle: “Steering straight into your heart”
 vimeo_video_id: 1141745150

@@ -1,5 +1,5 @@
 ---
-layout: video
+layout: etsy-videos
 title: Chic & Petite
 subtitle: “Bag included, cuteness extra”
 vimeo_video_id: 1141735234

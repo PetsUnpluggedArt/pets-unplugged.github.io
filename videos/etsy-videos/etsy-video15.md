@@ -1,5 +1,5 @@
 ---
-layout: video
+layout: etsy-videos
 title: Puppy Earmuff
 subtitle: “Built-in cozy”
 vimeo_video_id: 1141734178

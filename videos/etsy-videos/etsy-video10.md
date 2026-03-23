@@ -1,5 +1,5 @@
 ---
-layout: video
+layout: etsy-videos
 title: Pug Loaf Mode
 subtitle: “Now baking at 100% cute”
 vimeo_video_id: 1141720874

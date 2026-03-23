@@ -1,5 +1,5 @@
 ---
-layout: video
+layout: etsy-videos
 title: Little Woolly Wonder
 subtitle: “100% Pure Heart-Melter”
 vimeo_video_id: 1141742240
