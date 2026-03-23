@@ -1,5 +1,5 @@
 ---
-layout: etsy_video
+layout: etsy_videos
 title: Scout
 subtitle: “I can do this all day”
 vimeo_video_id: 1141576988
