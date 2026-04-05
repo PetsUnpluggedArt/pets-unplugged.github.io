@@ -1,8 +1,28 @@
 ---
 layout: default
 permalink: /blog/index.html
-title: Pets Unplugged Blog - Tips, Stories & More
+title: Pets Unplugged Blog — Interactive Coloring Tips, Pet Stories & More
+description: Explore the Pets Unplugged blog for coloring tips, pet stories, mindfulness ideas, and behind-the-scenes looks at our interactive coloring books with QR animations.
 ---
+<link rel="canonical" href="https://petsunplugged.com/blog/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Pets Unplugged Blog — Coloring Tips, Pet Stories & More">
+<meta property="og:description" content="Coloring tips, pet stories, mindfulness ideas, and behind-the-scenes from the makers of PAWS interactive coloring books.">
+<meta property="og:image" content="https://petsunplugged.com/assets/images/paws_cover.jpg">
+<meta property="og:url" content="https://petsunplugged.com/blog/">
+<meta property="og:type" content="website">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://petsunplugged.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://petsunplugged.com/blog/" }
+  ]
+}
+</script>
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -23,30 +43,46 @@ title: Pets Unplugged Blog - Tips, Stories & More
   .cta-button:hover, .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
 </style>
 
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-4 pt-6 text-sm text-gray-500">
+  <ol class="flex items-center space-x-2">
+    <li><a href="/" class="hover:text-pets-dark">Home</a></li>
+    <li><i class="fas fa-chevron-right text-xs mx-1"></i></li>
+    <li class="text-pets-dark font-semibold" aria-current="page">Blog</li>
+  </ol>
+</nav>
+
+<!-- HERO -->
 <section class="bg-pets-secondary bg-opacity-10 py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
   <div class="max-w-7xl mx-auto text-center">
     <h1 class="text-5xl sm:text-7xl font-black text-pets-dark leading-tight mb-6">
       Pets Unplugged Blog
     </h1>
     <p class="text-xl sm:text-2xl text-gray-700 max-w-4xl mx-auto">
-      Coloring tips, pet stories, mindfulness, and behind-the-scenes.
+      Coloring tips, pet stories, mindfulness ideas, and behind-the-scenes from the creators of the PAWS interactive coloring book series.
     </p>
   </div>
 </section>
 
+<!-- BLOG POSTS -->
 <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
   <div class="max-w-7xl mx-auto">
     {% if site.posts.size == 0 %}
       <div class="text-center py-20">
-        <p class="text-2xl text-gray-600">No articles yet — check back soon!</p>
+        <i class="fas fa-paw text-6xl text-gray-300 mb-6 block"></i>
+        <p class="text-2xl text-gray-600 mb-4">No articles yet — check back soon!</p>
+        <p class="text-gray-500 mb-8">In the meantime, try a free sample page from our interactive coloring book.</p>
+        <a href="/downloads/#free-samples" class="inline-block bg-pets-dark text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-900 cta-button">
+          <i class="fas fa-download mr-2"></i> Free Sample Page
+        </a>
       </div>
     {% else %}
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {% for post in site.posts %}
-          <article class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col card-hover">
+          <article class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col card-hover" itemscope itemtype="https://schema.org/BlogPosting">
             {% if post.thumbnail %}
               <a href="{{ post.url }}" class="block overflow-hidden">
-                <img src="{{ post.thumbnail }}" alt="{{ post.title }}" class="w-full h-64 object-cover hover:scale-110 transition duration-500" loading="lazy">
+                <img src="{{ post.thumbnail }}" alt="{{ post.title }}" class="w-full h-64 object-cover hover:scale-110 transition duration-500" loading="lazy" itemprop="image">
               </a>
             {% else %}
               <a href="{{ post.url }}" class="bg-gray-200 h-64 flex items-center justify-center">
@@ -54,17 +90,17 @@ title: Pets Unplugged Blog - Tips, Stories & More
               </a>
             {% endif %}
             <div class="p-8 flex flex-col flex-grow">
-              <h2 class="text-2xl font-black text-pets-dark mb-3">
+              <h2 class="text-2xl font-black text-pets-dark mb-3" itemprop="headline">
                 <a href="{{ post.url }}" class="hover:text-pets-secondary transition">{{ post.title }}</a>
               </h2>
               <div class="text-sm text-gray-600 mb-4">
                 <i class="fas fa-calendar-alt mr-1 text-pets-secondary"></i>
-                {{ post.date | date: "%B %-d, %Y" }}
+                <time datetime="{{ post.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ post.date | date: "%B %-d, %Y" }}</time>
               </div>
               {% if post.excerpt %}
-                <p class="text-gray-700 mb-6 line-clamp-3">{{ post.excerpt | strip_html }}</p>
+                <p class="text-gray-700 mb-6 line-clamp-3" itemprop="description">{{ post.excerpt | strip_html }}</p>
               {% endif %}
-              <a href="{{ post.url }}" class="mt-auto text-pets-secondary font-bold hover:underline">
+              <a href="{{ post.url }}" class="mt-auto text-pets-secondary font-bold hover:underline" aria-label="Read more about {{ post.title }}">
                 Read More <i class="fas fa-arrow-right ml-2"></i>
               </a>
             </div>

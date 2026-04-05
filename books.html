@@ -1,9 +1,69 @@
 ---
 layout: default
 permalink: /books/
-title: PAWS Interactive Dog Coloring Book | Physical & Digital Editions
+title: PAWS Interactive Dog Coloring Book | Physical & Digital Editions | Pets Unplugged
+description: PAWS is an interactive dog coloring book with 30 hand-drawn illustrations. Each page has a QR code that animates your finished artwork. Available as a printed book ($9.99) or instant PDF download ($4.99).
 ---
-<meta name="description" content="PAWS features 30 hand-drawn dog illustrations with unique QR code animations. Available as a premium printed book or instant digital PDF.">
+<meta name="description" content="PAWS features 30 hand-drawn dog illustrations with unique QR code animations. Available as a premium printed book ($9.99) or instant digital PDF ($4.99). The best interactive coloring book for dog lovers.">
+<link rel="canonical" href="https://petsunplugged.com/books/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="PAWS Interactive Dog Coloring Book | Pets Unplugged">
+<meta property="og:description" content="30 hand-drawn dog illustrations, each with a QR code that animates your finished page. Physical book $9.99 or digital PDF $4.99.">
+<meta property="og:image" content="https://petsunplugged.com/assets/images/paws_cover.jpg">
+<meta property="og:url" content="https://petsunplugged.com/books/">
+<meta property="og:type" content="product">
+
+<!-- Product Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "PAWS Interactive Dog Coloring Book — Physical Edition",
+      "description": "30 original hand-drawn dog illustrations, each paired with a unique QR code that animates your finished artwork. Premium printed edition on bright white paper.",
+      "image": "https://petsunplugged.com/assets/images/paws_cover.jpg",
+      "brand": { "@type": "Brand", "name": "Pets Unplugged" },
+      "isbn": "979-8278141884",
+      "author": [
+        { "@type": "Person", "name": "Tony W Jackson" },
+        { "@type": "Person", "name": "Anna Nesterkaya" }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://a.co/d/7uVHHhw",
+        "priceCurrency": "USD",
+        "price": "9.99",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@type": "Organization", "name": "Amazon" }
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "PAWS Interactive Dog Coloring Book — Digital PDF",
+      "description": "Instant PDF download of PAWS interactive dog coloring book. Print unlimited copies at home. All 30 QR code animations fully functional.",
+      "image": "https://petsunplugged.com/assets/images/book_cover_digital.png",
+      "brand": { "@type": "Brand", "name": "Pets Unplugged" },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://petsunplugged.com/downloads/",
+        "priceCurrency": "USD",
+        "price": "4.99",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@type": "Organization", "name": "Pets Unplugged" }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://petsunplugged.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Books", "item": "https://petsunplugged.com/books/" }
+      ]
+    }
+  ]
+}
+</script>
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -22,17 +82,26 @@ title: PAWS Interactive Dog Coloring Book | Physical & Digital Editions
   .bg-pets-dark { background-color: var(--pets-dark); }
   .cta-button { transition: all 0.3s ease; }
   .cta-button:hover { transform: translateY(-3px); }
-  /* Styling for selected thumbnail (optional) */
   .thumbnail-active { border: 3px solid var(--pets-secondary); box-shadow: 0 0 10px rgba(129, 143, 248, 0.5); }
 </style>
 
+<!-- Breadcrumb nav -->
+<nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-4 pt-6 text-sm text-gray-500">
+  <ol class="flex items-center space-x-2">
+    <li><a href="/" class="hover:text-pets-dark">Home</a></li>
+    <li><i class="fas fa-chevron-right text-xs mx-1"></i></li>
+    <li class="text-pets-dark font-semibold" aria-current="page">Books</li>
+  </ol>
+</nav>
+
+<!-- HERO -->
 <section class="bg-pets-secondary bg-opacity-10 py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
   <div class="max-w-7xl mx-auto text-center">
     <h1 class="text-5xl sm:text-7xl font-black text-pets-dark leading-tight mb-6">
       PAWS: Interactive Dog Coloring&nbsp;Book
     </h1>
     <p class="text-xl sm:text-2xl text-gray-700 max-w-4xl mx-auto mb-8">
-      A 30-page journey through whimsical dog adventures — each illustration hand-drawn by Anna Nesterkaya and paired with a unique QR code that brings your colored artwork to life in a charming 6-second animation.
+      A 30-page interactive coloring book featuring hand-drawn dog adventures by artist Anna Nesterkaya — each paired with a unique QR code that brings your colored artwork to life in a charming 6-second animation.
     </p>
     <div class="flex flex-col sm:flex-row gap-6 justify-center">
       <a href="#paws" class="inline-block bg-pets-dark text-white font-bold py-4 px-10 rounded-full shadow-xl hover:bg-indigo-900 cta-button text-xl">
@@ -45,99 +114,111 @@ title: PAWS Interactive Dog Coloring Book | Physical & Digital Editions
   </div>
 </section>
 
+<!-- ABOUT -->
 <section class="py-20 bg-white">
   <div class="max-w-4xl mx-auto px-4 text-center">
-    <h2 class="text-4xl font-black text-pets-dark mb-8">The Only Coloring Book Where Your Art Truly&nbsp;Moves</h2>
+    <h2 class="text-4xl font-black text-pets-dark mb-8">The Interactive Coloring Book Where Your Art Truly&nbsp;Moves</h2>
     <p class="text-lg text-gray-700 leading-relaxed mb-8">
-      PAWS isn't just coloring — it's an experience. Each page tells a playful story: a fluffy pup dreaming on piano keys, a corgi herding toys, a shy rescue finding courage. When you're done coloring, scan the built-in QR code with any phone, and watch the illustration you colored spring into a full-color, looping animation. No apps, no sign-up — pure magic.
+      PAWS isn't just a coloring book — it's a fully interactive experience. Each page tells a playful story: a fluffy pup dreaming on piano keys, a corgi herding toys, a shy rescue finding courage. When you're done coloring, scan the built-in QR code with any phone, and watch the illustration you colored spring into a full-color, looping animation.
     </p>
-    <p class="text-lg text-gray-700 leading-relaxed">
-      Perfect for dog lovers, families looking for meaningful screen-free activities, or anyone seeking a relaxing creative outlet with a delightful tech twist.
+    <p class="text-lg text-gray-700 leading-relaxed mb-8">
+      No apps to download, no sign-up required — pure magic. PAWS is the perfect interactive coloring book for dog lovers, families seeking meaningful screen-free activities, teachers looking for engaging classroom projects, and anyone who wants a relaxing creative outlet with a delightful tech twist.
     </p>
+    <div class="flex flex-wrap justify-center gap-4 mt-8">
+      <span class="bg-pets-primary bg-opacity-20 text-pets-dark px-4 py-2 rounded-full text-sm font-bold">🐶 Dog Lovers</span>
+      <span class="bg-pets-secondary bg-opacity-20 text-pets-dark px-4 py-2 rounded-full text-sm font-bold">👨‍👩‍👧 Families</span>
+      <span class="bg-pets-primary bg-opacity-20 text-pets-dark px-4 py-2 rounded-full text-sm font-bold">🏫 Classrooms</span>
+      <span class="bg-pets-secondary bg-opacity-20 text-pets-dark px-4 py-2 rounded-full text-sm font-bold">🎁 Gift Idea</span>
+      <span class="bg-pets-primary bg-opacity-20 text-pets-dark px-4 py-2 rounded-full text-sm font-bold">✏️ All Ages</span>
+    </div>
   </div>
 </section>
 
+<!-- PRODUCT LISTING -->
 <section id="books-grid" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
   <div class="max-w-7xl mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
       <div id="paws" class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:col-span-2 lg:col-span-3">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
           
+          <!-- Image gallery -->
           <div class="flex flex-col items-center">
-            <img id="main-product-image" src="/assets/images/paws_cover.jpg" alt="PAWS Front Cover" class="rounded-xl shadow-lg w-full max-w-sm mx-auto mb-4" loading="lazy">
-            
+            <img id="main-product-image" src="/assets/images/paws_cover.jpg" alt="PAWS interactive dog coloring book front cover" class="rounded-xl shadow-lg w-full max-w-sm mx-auto mb-4" loading="lazy" width="400" height="520">
             <div class="flex space-x-3 w-full max-w-sm mx-auto">
-              
-              <img onclick="document.getElementById('main-product-image').src='/assets/images/paws_cover.jpg'; this.parentElement.querySelectorAll('img').forEach(el => el.classList.remove('thumbnail-active')); this.classList.add('thumbnail-active');"
+              <img onclick="document.getElementById('main-product-image').src='/assets/images/paws_cover.jpg'; document.getElementById('main-product-image').alt='PAWS interactive dog coloring book front cover'; this.parentElement.querySelectorAll('img').forEach(el => el.classList.remove('thumbnail-active')); this.classList.add('thumbnail-active');"
                    src="/assets/images/paws_cover.jpg" 
-                   alt="Front Cover Thumbnail" 
+                   alt="PAWS coloring book front cover thumbnail" 
                    class="w-1/4 rounded-md border-2 border-gray-300 hover:border-pets-secondary cursor-pointer thumbnail-active">
-              
-              <img onclick="document.getElementById('main-product-image').src='/assets/images/back_cover.png'; this.parentElement.querySelectorAll('img').forEach(el => el.classList.remove('thumbnail-active')); this.classList.add('thumbnail-active');"
+              <img onclick="document.getElementById('main-product-image').src='/assets/images/back_cover.png'; document.getElementById('main-product-image').alt='PAWS interactive coloring book back cover'; this.parentElement.querySelectorAll('img').forEach(el => el.classList.remove('thumbnail-active')); this.classList.add('thumbnail-active');"
                    src="/assets/images/back_cover.png" 
-                   alt="Back Cover Benefits Thumbnail" 
+                   alt="PAWS coloring book back cover thumbnail" 
                    class="w-1/4 rounded-md border-2 border-gray-300 hover:border-pets-secondary cursor-pointer">
-
-              <img onclick="document.getElementById('main-product-image').src='/assets/images/PAWS _Coloring Book-images-5.jpg'; this.parentElement.querySelectorAll('img').forEach(el => el.classList.remove('thumbnail-active')); this.classList.add('thumbnail-active');"
+              <img onclick="document.getElementById('main-product-image').src='/assets/images/PAWS _Coloring Book-images-5.jpg'; document.getElementById('main-product-image').alt='QR code animation feature in PAWS coloring book'; this.parentElement.querySelectorAll('img').forEach(el => el.classList.remove('thumbnail-active')); this.classList.add('thumbnail-active');"
                    src="/assets/images/PAWS _Coloring Book-images-5.jpg" 
-                   alt="QR Code Scan Thumbnail" 
+                   alt="QR code scan feature in PAWS interactive coloring book" 
                    class="w-1/4 rounded-md border-2 border-gray-300 hover:border-pets-secondary cursor-pointer">
-              
-              <img onclick="document.getElementById('main-product-image').src='/assets/images/PAWS _Coloring Book-images-6.jpg'; this.parentElement.querySelectorAll('img').forEach(el => el.classList.remove('thumbnail-active')); this.classList.add('thumbnail-active');"
+              <img onclick="document.getElementById('main-product-image').src='/assets/images/PAWS _Coloring Book-images-6.jpg'; document.getElementById('main-product-image').alt='Corgi illustration from PAWS interactive dog coloring book'; this.parentElement.querySelectorAll('img').forEach(el => el.classList.remove('thumbnail-active')); this.classList.add('thumbnail-active');"
                    src="/assets/images/PAWS _Coloring Book-images-6.jpg" 
-                   alt="Corgi Illustration Thumbnail" 
+                   alt="Corgi illustration sample from PAWS coloring book" 
                    class="w-1/4 rounded-md border-2 border-gray-300 hover:border-pets-secondary cursor-pointer">
-              
             </div>
           </div>
+
+          <!-- Product details -->
           <div class="flex flex-col justify-center">
-            <h3 class="text-4xl font-black text-pets-dark mb-6">PAWS Interactive Dog Coloring&nbsp;Book</h3>
-            <p class="text-lg text-gray-600 mb-8">
-              30 original illustrations featuring lovable dogs in heartwarming, funny scenarios. Every page includes a scannable QR code that unlocks a short animation of the illustration.
+            <h2 class="text-4xl font-black text-pets-dark mb-4">PAWS Interactive Dog Coloring&nbsp;Book</h2>
+            <p class="text-lg text-gray-600 mb-6">
+              30 original illustrations featuring lovable dogs in heartwarming, funny scenarios. Every page includes a scannable QR code that unlocks a short animation — the only interactive coloring book of its kind.
             </p>
+            <ul class="text-gray-600 space-y-2 mb-6 text-sm">
+              <li><i class="fas fa-check text-pets-secondary mr-2"></i>30 hand-drawn dog illustrations</li>
+              <li><i class="fas fa-check text-pets-secondary mr-2"></i>Unique QR code animation on every page</li>
+              <li><i class="fas fa-check text-pets-secondary mr-2"></i>No app download needed</li>
+              <li><i class="fas fa-check text-pets-secondary mr-2"></i>Artwork by Anna Nesterkaya</li>
+            </ul>
             <p class="text-sm text-gray-500 mb-8">
-              Artwork by Anna Nesterkaya<br>
-              Created by Tony W Jackson<br>
-              ISBN: 979-8278141884
+              Created by Tony W Jackson &nbsp;|&nbsp; ISBN: 979-8278141884
             </p>
-            <div class="space-y-6">
-              <div class="bg-gray-50 rounded-xl p-6 flex items-center space-x-6">
-                <img src="/assets/images/paws_cover.jpg" alt="Physical Book Cover" class="w-20 h-auto rounded-md shadow-md flex-shrink-0">
-                <div class="flex-grow">
-                  <div class="flex flex-wrap items-center justify-between mb-2">
-                    <span class="text-xl sm:text-2xl font-bold text-gray-700">Physical Edition</span>
-                    <span class="text-3xl sm:text-4xl font-black text-pets-primary">$9.99</span>
-                  </div>
-                  <p class="text-gray-600 mb-4 text-sm">Premium printing • Bright white paper • Perfect bound</p>
-                  <a href="https://a.co/d/7uVHHhw" class="block w-full bg-pets-secondary text-white font-bold py-3 rounded-lg text-center shadow-lg hover:bg-indigo-500 cta-button text-base">
-                    <i class="fas fa-shopping-cart mr-2"></i> Buy on Amazon
-                  </a>
+
+            <!-- Physical edition -->
+            <div class="bg-gray-50 rounded-xl p-6 flex items-center space-x-6 mb-4">
+              <img src="/assets/images/paws_cover.jpg" alt="PAWS physical interactive coloring book" class="w-20 h-auto rounded-md shadow-md flex-shrink-0" width="80" height="104">
+              <div class="flex-grow">
+                <div class="flex flex-wrap items-center justify-between mb-2">
+                  <span class="text-xl sm:text-2xl font-bold text-gray-700">Physical Edition</span>
+                  <span class="text-3xl sm:text-4xl font-black text-pets-primary">$9.99</span>
                 </div>
+                <p class="text-gray-600 mb-4 text-sm">Premium printing • Bright white paper • Perfect bound</p>
+                <a href="https://a.co/d/7uVHHhw" class="block w-full bg-pets-secondary text-white font-bold py-3 rounded-lg text-center shadow-lg hover:bg-indigo-500 cta-button text-base" rel="noopener">
+                  <i class="fas fa-shopping-cart mr-2"></i> Buy on Amazon
+                </a>
               </div>
-              
-              <div class="bg-gray-50 rounded-xl p-6 flex items-center space-x-6">
-                <img src="/assets/images/book_cover_digital.png" alt="Digital Book Cover" class="w-20 h-auto rounded-md shadow-md flex-shrink-0">
-                <div class="flex-grow">
-                  <div class="flex flex-wrap items-center justify-between mb-2">
-                    <span class="text-xl sm:text-2xl font-bold text-gray-700">Digital PDF</span>
-                    <span class="text-3xl sm:text-4xl font-black text-pets-primary">$4.99</span>
-                  </div>
-                  <p class="text-gray-600 mb-4 text-sm">Instant access • Unlimited home printing • Full animations</p>
-                  <a href="/downloads/#coloring-books" class="block w-full bg-pets-primary text-pets-dark font-black py-3 rounded-lg text-center shadow-lg hover:bg-red-300 cta-button text-base">
-                    <i class="fas fa-download mr-2"></i> Instant Download
-                  </a>
+            </div>
+            
+            <!-- Digital edition -->
+            <div class="bg-gray-50 rounded-xl p-6 flex items-center space-x-6">
+              <img src="/assets/images/book_cover_digital.png" alt="PAWS interactive coloring book digital PDF download" class="w-20 h-auto rounded-md shadow-md flex-shrink-0" width="80" height="104">
+              <div class="flex-grow">
+                <div class="flex flex-wrap items-center justify-between mb-2">
+                  <span class="text-xl sm:text-2xl font-bold text-gray-700">Digital PDF</span>
+                  <span class="text-3xl sm:text-4xl font-black text-pets-primary">$4.99</span>
                 </div>
+                <p class="text-gray-600 mb-4 text-sm">Instant access • Unlimited home printing • Full animations</p>
+                <a href="/downloads/#coloring-books" class="block w-full bg-pets-primary text-pets-dark font-black py-3 rounded-lg text-center shadow-lg hover:bg-red-300 cta-button text-base">
+                  <i class="fas fa-download mr-2"></i> Instant Download
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- Coming soon -->
       <div class="bg-white rounded-2xl shadow-xl p-12 text-center md:col-span-2 lg:col-span-3">
         <i class="fas fa-paw text-8xl text-pets-secondary opacity-30 mb-8"></i>
-        <h3 class="text-3xl font-black text-pets-dark mb-4">More Books Coming Soon!</h3>
+        <h3 class="text-3xl font-black text-pets-dark mb-4">More Interactive Coloring Books Coming Soon!</h3>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-          Cats, dragons, exotic pets — all with the same magical QR animation feature. Join our newsletter to be notified first.
+          Cats, dragons, exotic pets — all with the same magical QR animation feature. Join our newsletter to be the first to know about new releases.
         </p>
         <a href="/#contact" class="mt-8 inline-block bg-pets-dark text-white font-bold py-4 px-10 rounded-full shadow-xl hover:bg-indigo-900 cta-button text-xl">
           <i class="fas fa-bell mr-2"></i> Notify Me

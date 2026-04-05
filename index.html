@@ -1,34 +1,67 @@
 ---
 layout: default
-title: Pets Unplugged - Interactive Pet Coloring Books with QR Animations
-description: Interactive pet coloring books that come to life! Kids color adorable pet illustrations, read the short story, scan the QR code, and watch fun AR animations. Perfect calming activity for pet lovers of all ages.
+title: Pets Unplugged - Interactive Coloring Books with QR Animations for Kids & Adults
+description: Pets Unplugged makes interactive coloring books that come to life! Color adorable pet illustrations, scan the QR code, and watch a fun 6-second animation. Perfect screen-free activity for dog lovers, kids, parents, and classrooms.
 ---
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="https://petsunplugged.com/">
 
+  <!-- Open Graph -->
   <meta property="og:title" content="{{ page.title }}">
   <meta property="og:description" content="{{ page.description }}">
   <meta property="og:image" content="https://petsunplugged.com/assets/images/dogpianosample.png">
   <meta property="og:url" content="https://petsunplugged.com/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pets Unplugged">
 
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ page.title }}">
   <meta name="twitter:description" content="{{ page.description }}">
   <meta name="twitter:image" content="https://petsunplugged.com/assets/images/dogpianosample.png">
+
+  <!-- Schema.org Organization + WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Pets Unplugged",
+        "url": "https://petsunplugged.com",
+        "logo": "https://petsunplugged.com/assets/images/paws_cover.jpg",
+        "description": "Interactive coloring books for pet lovers of all ages, featuring QR codes that animate your finished artwork.",
+        "sameAs": []
+      },
+      {
+        "@type": "WebSite",
+        "url": "https://petsunplugged.com",
+        "name": "Pets Unplugged",
+        "description": "Interactive pet coloring books with QR animations. Unplug, color, and animate!",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://petsunplugged.com/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
+<!-- HERO -->
 <section class="relative bg-gradient-to-b from-orange-50 to-white py-20 sm:py-32 px-6 lg:px-8 border-b border-orange-100">
     <div class="max-w-7xl mx-auto text-center">
        <h1 class="text-6xl sm:text-8xl font-black text-pets-dark leading-tight tracking-tight">
             Unplug. <span class="text-pets-primary">Color.</span> <span class="text-pets-dark">Animate.</span>
         </h1>
         <p class="mt-8 text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-    Every finished page comes alive — color the illustration, read the short story, scan the unique QR code, and watch a delightful <span class="whitespace-nowrap">6&#8209;second</span> animation!
-</p>
+            The only <strong>interactive coloring books</strong> where every finished page comes alive — color the pet illustration, read the short story, scan the unique QR code, and watch a delightful <span class="whitespace-nowrap">6&#8209;second</span> animation!
+        </p>
         <div class="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
             <a href="/books/" class="inline-block bg-pets-dark text-white font-bold py-5 px-12 rounded-full shadow-2xl hover:bg-indigo-900 transition-all transform hover:-translate-y-1 text-xl">
                 Explore Books
@@ -40,9 +73,11 @@ description: Interactive pet coloring books that come to life! Kids color adorab
     </div>
 </section>
 
+<!-- WHY FAMILIES LOVE IT -->
 <section class="py-24 bg-pets-secondary bg-opacity-10 border-y border-pets-secondary border-opacity-10">
     <div class="max-w-7xl mx-auto px-4 text-center">
-        <h2 class="text-4xl sm:text-5xl font-black text-pets-dark mb-16">Why Families Love Pets Unplugged</h2>
+        <h2 class="text-4xl sm:text-5xl font-black text-pets-dark mb-6">Why Families Love Pets Unplugged Interactive Coloring Books</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-16">Screen-free, creative, and magical — our interactive coloring books for kids and adults blend art with technology in a totally unique way.</p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div class="bg-white p-8 rounded-3xl shadow-xl border border-white transition-all hover:-translate-y-2">
                 <div class="w-16 h-16 bg-pets-secondary bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -70,29 +105,30 @@ description: Interactive pet coloring books that come to life! Kids color adorab
                     <i class="fas fa-magic text-3xl text-pets-primary"></i>
                 </div>
                 <h3 class="text-xl font-bold text-pets-dark mb-3">Magical QR Tech</h3>
-                <p class="text-gray-600">The only coloring book where the illustration comes to life!</p>
+                <p class="text-gray-600">The only interactive coloring book where your illustration comes to life!</p>
             </div>
         </div>
     </div>
 </section>
 
+<!-- HOW IT WORKS -->
 <section id="magic" class="py-24 bg-white overflow-hidden">
     <div class="max-w-6xl mx-auto px-4">
         <div class="text-center mb-20">
             <span class="bg-pets-primary bg-opacity-20 text-pets-dark px-4 py-2 rounded-full text-sm font-bold uppercase tracking-widest">How it works</span>
-            <h2 class="text-4xl sm:text-6xl font-black text-pets-dark mt-4 mb-4">See the Magic in Action</h2>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">From paper to screen in two simple steps.</p>
+            <h2 class="text-4xl sm:text-6xl font-black text-pets-dark mt-4 mb-4">See the Magic of Our Interactive Coloring Books</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">From paper to screen in two simple steps — no app needed.</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-5 relative group">
                 <div class="absolute -top-6 -left-6 bg-pets-primary text-pets-dark font-black w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-xl z-10 border-4 border-white">1</div>
                 <div class="overflow-hidden rounded-3xl shadow-2xl transition-all duration-500 group-hover:rotate-1 border-8 border-gray-50">
-                    <img src="/assets/images/dogpianosample.png" alt="Colored sample" class="w-full h-auto object-cover" loading="lazy">
+                    <img src="/assets/images/dogpianosample.png" alt="Dog coloring book page from PAWS interactive coloring book" class="w-full h-auto object-cover" loading="lazy" width="600" height="600">
                 </div>
                 <div class="mt-8 text-center lg:text-left">
                     <h3 class="text-3xl font-bold text-pets-dark mb-2">Color Your Masterpiece</h3>
-                    <p class="text-lg text-gray-600">Use your favorite coloring pencils to bring the illustration to life on paper.</p>
+                    <p class="text-lg text-gray-600">Use your favorite colored pencils to bring each pet illustration to life on paper.</p>
                 </div>
             </div>
 
@@ -107,14 +143,15 @@ description: Interactive pet coloring books that come to life! Kids color adorab
                 <div class="relative rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-50 aspect-video bg-black">
                     <iframe src="https://player.vimeo.com/video/1137780238?h=21de130f58&autoplay=0&loop=1&title=0&byline=0&portrait=0" 
                             frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                            title="Pets Unplugged QR code animation demo — interactive coloring book in action"
                             class="absolute top-0 left-0 w-full h-full"></iframe>
                 </div>
-                <<div class="mt-8 text-center lg:text-left">
-    <h3 class="text-3xl font-bold text-pets-dark mb-2">Scan & Watch</h3>
-    <p class="text-lg text-gray-600">
-        Scan the QR code to watch a <span class="whitespace-nowrap">6&#8209;second</span> animation of the illustration!
-    </p>
-</div>
+                <div class="mt-8 text-center lg:text-left">
+                    <h3 class="text-3xl font-bold text-pets-dark mb-2">Scan & Watch It Animate</h3>
+                    <p class="text-lg text-gray-600">
+                        Scan the QR code on your finished page to watch a <span class="whitespace-nowrap">6&#8209;second</span> animation of your colored pet illustration — no app download required!
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -122,20 +159,101 @@ description: Interactive pet coloring books that come to life! Kids color adorab
             <a href="/downloads/#free-samples" class="inline-flex items-center bg-pets-dark text-white font-bold py-6 px-16 rounded-full shadow-2xl hover:bg-indigo-900 transition-all transform hover:-translate-y-1 text-2xl">
                 <i class="fas fa-magic mr-3"></i> Try a Free Sample Page
             </a>
-            <p class="mt-6 text-sm text-gray-400 font-bold uppercase tracking-widest italic">Start coloring in seconds</p>
+            <p class="mt-6 text-sm text-gray-400 font-bold uppercase tracking-widest italic">No email required — start coloring in seconds</p>
         </div>
     </div>
 </section>
 
+<!-- FAQ — helps SEO with long-tail questions -->
+<section class="py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-black text-pets-dark text-center mb-12">Frequently Asked Questions</h2>
+        <div class="space-y-6">
+            <details class="bg-white rounded-2xl shadow p-6 group">
+                <summary class="text-lg font-bold text-pets-dark cursor-pointer list-none flex justify-between items-center">
+                    What makes Pets Unplugged an interactive coloring book?
+                    <i class="fas fa-chevron-down text-pets-secondary group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-gray-600">Each page contains a hand-drawn pet illustration and a unique QR code. After you color the page, scan the QR code with any smartphone camera — no app needed — and watch a 6-second animation of your pet illustration play on screen.</p>
+            </details>
+            <details class="bg-white rounded-2xl shadow p-6 group">
+                <summary class="text-lg font-bold text-pets-dark cursor-pointer list-none flex justify-between items-center">
+                    What age group are these interactive coloring books for?
+                    <i class="fas fa-chevron-down text-pets-secondary group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-gray-600">Our interactive coloring books are designed for all ages — the illustrations are simple enough for young children but detailed enough for teens and adults to enjoy. They make great gifts for dog lovers, families, and classrooms.</p>
+            </details>
+            <details class="bg-white rounded-2xl shadow p-6 group">
+                <summary class="text-lg font-bold text-pets-dark cursor-pointer list-none flex justify-between items-center">
+                    Do I need to download an app to see the animations?
+                    <i class="fas fa-chevron-down text-pets-secondary group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-gray-600">No app required! Simply open your phone's camera, point it at the QR code on any completed page, and the animation will open in your browser instantly.</p>
+            </details>
+            <details class="bg-white rounded-2xl shadow p-6 group">
+                <summary class="text-lg font-bold text-pets-dark cursor-pointer list-none flex justify-between items-center">
+                    Is there a digital version available?
+                    <i class="fas fa-chevron-down text-pets-secondary group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-gray-600">Yes! The PAWS interactive dog coloring book is available as a digital PDF download for $4.99. Print as many copies as you want at home and all QR code animations work perfectly. <a href="/downloads/" class="text-pets-dark font-bold hover:underline">Download it here.</a></p>
+            </details>
+        </div>
+    </div>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What makes Pets Unplugged an interactive coloring book?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each page contains a hand-drawn pet illustration and a unique QR code. After you color the page, scan the QR code with any smartphone camera — no app needed — and watch a 6-second animation of your pet illustration play on screen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What age group are these interactive coloring books for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our interactive coloring books are designed for all ages — simple enough for young children but detailed enough for teens and adults. Great for dog lovers, families, and classrooms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to download an app to see the animations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No app required. Simply open your phone's camera, point it at the QR code on any completed page, and the animation will open in your browser instantly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a digital version available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! The PAWS interactive dog coloring book is available as a digital PDF download for $4.99. Print as many copies as you want at home and all QR code animations work perfectly."
+          }
+        }
+      ]
+    }
+    </script>
+</section>
+
+<!-- EMAIL SIGNUP / CONTACT -->
 <section id="contact" class="py-24 bg-pets-primary px-4 sm:px-6 lg:px-8">
     <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-4xl sm:text-6xl font-black text-pets-dark mb-6">Join the Pack!</h2>
-        <p class="text-xl text-gray-800 mb-12 font-medium">Get free sample pages, exclusive discounts, and be the first to know about new books.</p>
+        <p class="text-xl text-gray-800 mb-12 font-medium">Get free sample pages, exclusive discounts, and be the first to know about new interactive coloring books.</p>
         
         <div class="bg-white p-4 rounded-3xl shadow-2xl">
             <iframe width="100%" height="420"
                     src="https://d594eb7c.sibforms.com/serve/MUIFANGdb0jKFrBXiNX2Hq2bKn4r-c14bcEGV-BiOMN221c5jrdcUYXPD0vEnTvxzE4V8O09i-6btQMjoiSofRFKpfyGHTx1E9xYtefgb9FKTCfxHZ88bhmN7A1bOOiU91kLmqhXMPYBlKMaAGuaIwKPFMyWlV7Gngzp8U3g6sCz4wz4oCSOCREFJY0xdvSA35yRDpnu_2nEFyF7wA=="
                     frameborder="0" scrolling="auto" allowfullscreen
+                    title="Sign up for Pets Unplugged newsletter"
                     class="rounded-2xl">
             </iframe>
         </div>
