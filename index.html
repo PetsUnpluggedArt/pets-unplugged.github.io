@@ -8,12 +8,7 @@ description: Pets Unplugged makes interactive coloring books that come to life! 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ page.description }}">
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#fca5a5">
+  <link rel="canonical" href="https://petsunplugged.com/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="{{ page.title }}">
@@ -117,7 +112,7 @@ description: Pets Unplugged makes interactive coloring books that come to life! 
 </section>
 
 <!-- HOW IT WORKS -->
-<section id="magic" class="py-24 bg-white overflow-hidden">
+<section id="magic" class="py-24 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4">
         <div class="text-center mb-20">
             <span class="bg-pets-primary bg-opacity-20 text-pets-dark px-4 py-2 rounded-full text-sm font-bold uppercase tracking-widest">How it works</span>
@@ -145,18 +140,27 @@ description: Pets Unplugged makes interactive coloring books that come to life! 
 
             <div class="lg:col-span-5 relative group">
                 <div class="absolute -top-6 -left-6 bg-pets-secondary text-white font-black w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-xl z-10 border-4 border-white">2</div>
-                <div class="relative rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-50 aspect-video bg-black">
-                    <iframe src="https://player.vimeo.com/video/1137780238?h=21de130f58&autoplay=0&loop=1&title=0&byline=0&portrait=0" 
+                <!-- Video wrapper with loading placeholder so it never appears blank -->
+                <div class="relative rounded-3xl shadow-2xl overflow-hidden border-8 border-pets-secondary border-opacity-20 aspect-video"
+                     style="background: linear-gradient(135deg, #4c1d95 0%, #818cf8 100%);">
+                    <!-- Placeholder shown while Vimeo loads -->
+                    <div id="video-placeholder" class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 pointer-events-none">
+                        <i class="fas fa-play-circle text-6xl mb-3 opacity-80"></i>
+                        <p class="text-sm font-bold uppercase tracking-widest opacity-70">Watch the animation</p>
+                    </div>
+                    <iframe id="vimeo-embed"
+                            src="https://player.vimeo.com/video/1137780238?h=21de130f58&autoplay=0&loop=1&title=0&byline=0&portrait=0" 
                             frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
                             title="Pets Unplugged QR code animation demo — interactive coloring book in action"
-                            class="absolute top-0 left-0 w-full h-full"></iframe>
+                            class="absolute top-0 left-0 w-full h-full"
+                            onload="document.getElementById('video-placeholder').style.display='none'"></iframe>
                 </div>
                 <div class="mt-8 text-center lg:text-left">
-    <h3 class="text-3xl font-bold text-pets-dark mb-2">Scan & Watch</h3>
-    <p class="text-lg text-gray-600">
-        Scan the QR code to watch a <span class="whitespace-nowrap">6&#8209;second</span> animation of the illustration!
-    </p>
-</div>
+                    <h3 class="text-3xl font-bold text-pets-dark mb-2">Scan & Watch It Animate</h3>
+                    <p class="text-lg text-gray-600">
+                        Scan the QR code on your finished page to watch a <span class="whitespace-nowrap">6&#8209;second</span> animation of your colored pet illustration — no app download required!
+                    </p>
+                </div>
             </div>
         </div>
 
