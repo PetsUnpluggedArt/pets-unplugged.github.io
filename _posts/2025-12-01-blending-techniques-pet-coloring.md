@@ -5,8 +5,8 @@ author: The Pets Unplugged Team
 date: 2025-12-01 03:47:00 -0500
 categories: [art techniques, coloring tips, how-to]
 tags: [colored pencils, blending, shading, fur texture, pets unplugged]
-thumbnail: /assets/images/paws_cover.jpg
-image: /assets/images/paws_cover.jpg
+thumbnail: /assets/images/pressure-layering.png
+image: /assets/images/pressure-layering.png
 description: "Learn 3 easy colored pencil blending techniques — pressure layering, directional shading, and burnishing — to make your pet coloring pages look amazing before scanning the QR animation."
 excerpt: "A few easy techniques can transform a flat coloring page into a vibrant illustration. Here are 3 simple blending and shading methods to elevate your Pets Unplugged artwork."
 ---
