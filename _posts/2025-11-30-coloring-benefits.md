@@ -11,7 +11,7 @@ description: "Discover 3 surprising benefits of coloring for kids and adults —
 excerpt: "Coloring is making a massive comeback as an essential activity for well-being. Discover 3 surprising benefits — and how Pets Unplugged adds an animation reward to every finished page."
 ---
 
-![Coloring provides therapeutic calm on the left and a rewarding animation on the right.](/assets/images/coloring-dog.png)
+![Coloring provides therapeutic calm on the left and a rewarding animation on the right.](/assets/images/coloring-dog.webp)
 
 Coloring. It's what we did as kids, but it's making a massive comeback as an essential activity for well-being. At **Pets Unplugged**, we love combining the fun of coloring with our unique animation rewards, but the real power lies in the simple act of putting color to paper.
 

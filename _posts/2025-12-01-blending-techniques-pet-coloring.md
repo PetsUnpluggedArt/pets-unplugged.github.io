@@ -25,7 +25,7 @@ The secret to rich, deeply saturated color isn't just pressing hard — it's **b
 
 By layering three colors gently, the pigments mix optically on the paper, resulting in a deeper, more realistic color that looks incredible when your QR animation plays.
 
-![Three stages of pressure layering on a dog coloring page — light base, mid-tone, and shadow layers](/assets/images/pressure-layering.png)
+![Three stages of pressure layering on a dog coloring page — light base, mid-tone, and shadow layers](/assets/images/pressure-layering.webp)
 
 ## 2. Directional Shading: Mastering Fur and Feathers
 
@@ -37,7 +37,7 @@ When coloring animals, avoid coloring straight across the page. Instead, let you
 
 This is especially effective on the dog illustrations in our **PAWS interactive coloring book**, where each breed has its own distinct coat direction.
 
-![Directional shading technique showing fur flow on a dog illustration and feather texture on a parrot coloring page](/assets/images/directional-shading.png)
+![Directional shading technique showing fur flow on a dog illustration and feather texture on a parrot coloring page](/assets/images/directional-shading.webp)
 
 ## 3. Burnishing: The Final Pop and Polish
 
@@ -47,7 +47,7 @@ Burnishing is the process of using **extreme pressure to fully blend** the pigme
 * **The Action:** Once your color layers are complete, press down firmly with your chosen tool and move it over the layered area.
 * **The Result:** The layers compact and blend into a smooth, vibrant, and slightly glossy finish. This high-saturation look shines beautifully when you scan the QR code to see your finished art animated!
 
-![Comparison of a layered colored dog illustration before and after burnishing with a colorless blender pencil](/assets/images/burnishing.png)
+![Comparison of a layered colored dog illustration before and after burnishing with a colorless blender pencil](/assets/images/burnishing.webp)
 
 Mastering these three techniques will significantly elevate your finished **Pets Unplugged** pages, making the experience even more rewarding. Now go grab your pencils and start creating some magic!
 
