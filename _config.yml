@@ -5,14 +5,12 @@ title: Pets Unplugged
 description: Interactive pet coloring books with QR animations. Color adorable pet illustrations, scan the QR code, and watch a fun 6-second animation. Perfect for dog lovers, kids, families, and classrooms.
 email: hello@petsunplugged.com
 
-# IMPORTANT: Set your site URL (required for sitemap, SEO, and canonical tags)
 url: "https://petsunplugged.com"
 baseurl: ""
 
-# Clean URLs for blog posts: /blog/post-title/ instead of /2025/12/01/post-title.html
+# Clean URLs for blog posts only — videos keep .html extension via defaults below
 permalink: /blog/:slug/
 
-# Social / Author metadata (used by jekyll-seo-tag)
 twitter:
   username: PetsUnplugged
   card: summary_large_image
@@ -21,34 +19,36 @@ author:
   name: Pets Unplugged
   email: hello@petsunplugged.com
 
-# Open Graph / Social image default (used by jekyll-seo-tag)
 logo: /assets/images/paws_cover.jpg
 
-# Collections
 collections:
   collections:
     output: true
   videos:
     output: true
     sitemap: false
+    permalink: /videos/:name.html
   merchandise:
     output: true
 
-# Default front matter values
 defaults:
   - scope:
       path: ""
       type: "pages"
     values:
       sitemap: true
+      permalink: /:path/:basename.html
   - scope:
       path: ""
       type: "posts"
     values:
       sitemap: true
       layout: post
+  - scope:
+      path: "videos"
+    values:
+      permalink: /videos/:basename.html
 
-# Exclude from processing
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -61,7 +61,6 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 
-# Plugins
 plugins:
   - jekyll-sitemap
   - jekyll-feed
