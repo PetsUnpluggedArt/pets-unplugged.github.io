@@ -9,6 +9,9 @@ email: hello@petsunplugged.com
 url: "https://petsunplugged.com"
 baseurl: ""
 
+# Clean URLs for blog posts: /blog/post-title/ instead of /2025/12/01/post-title.html
+permalink: /blog/:slug/
+
 # Social / Author metadata (used by jekyll-seo-tag)
 twitter:
   username: PetsUnplugged
@@ -21,9 +24,6 @@ author:
 # Open Graph / Social image default (used by jekyll-seo-tag)
 logo: /assets/images/paws_cover.jpg
 
-# Google Search Console / Analytics
-# google_analytics: UA-XXXXXXXX-X
-
 # Collections
 collections:
   collections:
@@ -34,13 +34,19 @@ collections:
   merchandise:
     output: true
 
-# Exclude from sitemap by default (add more as needed)
+# Default front matter values
 defaults:
   - scope:
       path: ""
       type: "pages"
     values:
       sitemap: true
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      sitemap: true
+      layout: post
 
 # Exclude from processing
 exclude:
