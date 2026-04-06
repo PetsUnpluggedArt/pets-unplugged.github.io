@@ -90,7 +90,7 @@
             <div class="hidden lg:flex items-center space-x-6">
                 <a href="/books/" {% if page.url contains "/books/" or page.url == "/books" %}class="nav-active"{% else %}class="text-gray-700 font-medium hover:text-pets-secondary"{% endif %}>Books</a>
                 <a href="/merchandise/" {% if page.url contains "/merchandise/" or page.url == "/merchandise" %}class="nav-active"{% else %}class="text-gray-700 font-medium hover:text-pets-secondary"{% endif %}>Merch</a>
-                <a href="/contest.html" {% if page.url == "/contest.html" %}class="nav-active"{% else %}class="text-gray-700 font-medium hover:text-pets-secondary"{% endif %}>Contest</a>
+                <a href="/contest/" {% if page.url contains "/contest/" %}class="nav-active"{% else %}class="text-gray-700 font-medium hover:text-pets-secondary"{% endif %}>Contest</a>
                 <a href="/blog/index.html" {% if page.url contains "/blog/" or page.url == "/blog" %}class="nav-active"{% else %}class="text-gray-700 font-medium hover:text-pets-secondary"{% endif %}>Blog</a>
                 <a href="/downloads/" {% if page.url contains "/downloads/" or page.url == "/downloads" %}class="nav-active"{% else %}class="text-gray-700 font-bold hover:text-pets-secondary"{% endif %}>Get Digital</a>
             </div>
@@ -103,7 +103,7 @@
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 pb-4" aria-hidden="true">
             <a href="/books/" class="block py-2 text-gray-700 font-medium">Books</a>
             <a href="/merchandise/" class="block py-2 text-gray-700 font-medium">Merch</a>
-            <a href="/contest.html" class="block py-2 text-gray-700 font-medium">Contest</a>
+            <a href="/contest/" class="block py-2 text-gray-700 font-medium">Contest</a>
             <a href="/blog/index.html" class="block py-2 text-gray-700 font-medium">Blog</a>
             <a href="/downloads/" class="block py-2 text-pets-dark font-bold">Get Digital</a>
         </div>
@@ -127,8 +127,8 @@
                 </div>
             </div>
             <div class="flex justify-center space-x-6 text-sm">
-                <a href="#" class="hover:text-pets-primary">Privacy</a>
-                <a href="#" class="hover:text-pets-primary">Terms</a>
+                <a href="/privacy/" class="hover:text-pets-primary">Privacy</a>
+                <a href="/terms/" class="hover:text-pets-primary">Terms</a>
                 <a href="https://github.com/petsunplugged/site" target="_blank" rel="noopener" class="hover:text-pets-primary"><i class="fab fa-github mr-1"></i>GitHub</a>
             </div>
         </div>
