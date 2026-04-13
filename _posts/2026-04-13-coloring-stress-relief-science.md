@@ -14,6 +14,8 @@ Enter adult coloring books—a surprisingly powerful tool that's capturing the a
 
 In this guide, we'll explore the science behind why coloring works, how it reduces anxiety, and how you can use this simple practice to transform your daily stress management routine.
 
+![Coloring for stress relief hero image](/assets/images/coloring-stress-relief-hero.jpg)
+
 ## The Science Behind Coloring and Stress Relief
 
 ### How Coloring Affects Your Brain
@@ -38,6 +40,8 @@ The repetitive, rhythmic motions of coloring are inherently meditative. Unlike s
 **4. Provides a Sense of Control**
 Life often feels chaotic and unpredictable. But when you're coloring, you're in control. You choose the colors, the pace, and the approach. This sense of agency is psychologically grounding and empowering.
 
+![Brain science illustration showing prefrontal cortex and amygdala](/assets/images/coloring-brain-science.jpg)
+
 ## Why Adult Coloring Books Work Better Than Other Stress-Relief Methods
 
 You might be wondering: why coloring instead of meditation, exercise, or other stress-relief techniques?
@@ -50,6 +54,8 @@ The answer is simple: **accessibility and instant gratification.**
 - **Coloring** works immediately and requires minimal setup
 
 A 2017 study published in Art Therapy found that adult coloring was equally effective as a guided meditation session for reducing anxiety—but participants found it more enjoyable and were more likely to continue doing it long-term.
+
+![Interactive coloring with QR codes](/assets/images/coloring-interactive-qr.jpg)
 
 ## The Specific Benefits of Coloring for Stress and Anxiety
 
@@ -78,6 +84,8 @@ Stress causes us to unconsciously clench our muscles. The meditative state of co
 **Boosts Immune Function**
 Chronic stress suppresses immune function. By reducing stress through coloring, you're actually strengthening your body's ability to fight off illness.
 
+![Hands coloring intricate mandala pattern](/assets/images/coloring-mandala-hands.jpg)
+
 ## How to Use Coloring for Maximum Stress-Relief Benefits
 
 ### Creating the Ideal Environment
@@ -89,6 +97,8 @@ To get the most out of your coloring practice, set the stage:
 3. **Gather quality supplies** – Good coloring pencils or markers make the experience more enjoyable
 4. **Set a timer** – Aim for 20-30 minutes, the sweet spot for stress reduction
 5. **Put your phone away** – This is crucial. Notifications will break your flow state
+
+![Stressed vs calm comparison](/assets/images/coloring-stressed-vs-calm.jpg)
 
 ### Choosing the Right Coloring Book
 
@@ -143,6 +153,8 @@ Share your work on social media or with friends. The creative expression and com
 
 The beauty of coloring is that it combines accessibility, speed, and sustainability better than most other methods.
 
+![Multi-generational family coloring together](/assets/images/coloring-family-bonding.jpg)
+
 ## Real Stories: How Coloring Changed Lives
 
 ### Sarah's Journey (Age 34, Marketing Executive)
@@ -153,6 +165,8 @@ The beauty of coloring is that it combines accessibility, speed, and sustainabil
 
 ### The Martinez Family (Parents with Young Children)
 "We use family coloring time as our wind-down before bed. It's quiet, calming, and something we all enjoy together. Our kids are less anxious at bedtime, and honestly, we adults needed the stress relief too."
+
+![Person coloring in bed before sleep](/assets/images/coloring-bedtime-wind-down.jpg)
 
 ## Getting Started With Your Coloring Practice
 
