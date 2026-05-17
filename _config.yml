@@ -48,6 +48,10 @@ defaults:
       path: "videos"
     values:
       permalink: /videos/:basename.html
+  - scope:
+      path: "videos/etsy-videos"
+    values:
+      permalink: /videos/etsy-videos/:basename.html
 
 exclude:
   - .sass-cache/
