@@ -17,7 +17,8 @@ tags: ["Seasons"]
 season: "Winter"
 vimeo: "1141576988"
 vimeo_hash: null
-payhip: ""
+payhip: "https://payhip.com/b/QVWgv"
+etsy_url: "https://www.etsy.com/listing/4507149265"
 image: "/assets/img/og/paws-01.jpg"
 description: "Shih Tzu coloring page: Scout, page 1 of the PAWS book. Scout, a fluffy Shih Tzu mix, sat ready for the walk! Free video preview; printable page with its QR video $1.99."
 episodes:

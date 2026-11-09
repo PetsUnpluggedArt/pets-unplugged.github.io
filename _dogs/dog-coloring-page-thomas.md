@@ -17,7 +17,8 @@ tags: []
 season: null
 vimeo: "1141720874"
 vimeo_hash: null
-payhip: ""
+payhip: "https://payhip.com/b/LvuIq"
+etsy_url: "https://www.etsy.com/listing/4510457576"
 image: "/assets/img/og/paws-10.jpg"
 description: "Dog coloring page: Thomas, page 10 of the PAWS book. Thomas curled up in his bed preparing for a grand performance — and he delivered. Free video preview; printable page with its QR video $1.99."
 episodes:

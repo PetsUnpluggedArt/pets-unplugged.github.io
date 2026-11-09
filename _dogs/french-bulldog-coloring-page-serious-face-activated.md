@@ -17,7 +17,8 @@ tags: []
 season: null
 vimeo: "1141746036"
 vimeo_hash: null
-payhip: ""
+payhip: "https://payhip.com/b/GDHbQ"
+etsy_url: ""
 image: "/assets/img/og/paws-29.jpg"
 description: "French Bulldog coloring page: Serious Face Activated, page 29 of the PAWS book. I’ve contacted my legal team. Free video preview; printable page with its QR video $1.99."
 episodes:

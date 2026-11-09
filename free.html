@@ -2,30 +2,28 @@
 layout: default
 permalink: /free/
 title: Free coloring pages for kids
-image: /assets/img/og/free.jpg
-description: Free dog and cat coloring pages for kids. A grown-up enters their email and we send this month's printable set. New free pages with every drop.
+image: /assets/img/og/paws-01.jpg
+description: "Free dog coloring page for kids: Pompom, page 1 of the PAWS book, with its QR animation. A grown-up enters their email and the page arrives straight away. More free pages coming soon."
 ---
 <section class="wrap sec-end split" style="padding-top: 48px; align-items: flex-start; gap: 40px">
   <div style="flex: 3 1 520px; min-width: 0">
     <h1>Free pages to color</h1>
-    <p class="lead">This month's free set. New free pages arrive with every drop, and some of them have a video too.</p>
+    <p class="lead">Start with Pompom: Scout in his pompom hat, page 1 of the PAWS book. Color him in, scan the QR code, and watch him come to life.</p>
     <div class="grid grid-small">
-      <div class="page"><div class="card-img"><img src="/assets/img/pages/paws-02-line.jpg" alt="Free page: Paws &amp; Dream, black-and-white line art from the PAWS book" width="450" height="600" loading="lazy"></div><div class="card-body card-title">Paws &amp; Dream</div></div>
-      <div class="page"><div class="card-img"><img src="/assets/img/pages/whiskers-08-line.jpg" alt="Free page: Delicious, black-and-white line art of a cat from the Whiskers book" width="480" height="640" loading="lazy"></div><div class="card-body card-title">Sneak peek: a Whiskers cat</div></div>
-      <div class="page bg-lilac" style="display: flex; align-items: center; justify-content: center; min-height: 280px"><div style="text-align: center; padding: 20px"><div class="h3" style="color: var(--purple)">One more page</div><div class="small muted">From the next drop</div></div></div>
+      <a class="page card" href="{{ site.free_gift_url }}"><div class="card-img"><img src="/assets/img/pages/paws-01-line.jpg" alt="Free page: Pompom, Scout in his pompom hat and knitted coat, black-and-white line art" width="450" height="600" loading="lazy"><span class="chip chip-gold">Free</span></div><div class="card-body"><div class="card-title">Pompom</div><div class="card-sub">The page and its animation</div></div></a>
+      <div class="page bg-lilac" style="display: flex; align-items: center; justify-content: center; min-height: 280px"><div style="text-align: center; padding: 20px"><div class="h3" style="color: var(--purple)">More free pages</div><div class="small muted">Coming soon</div></div></div>
+      <div class="page bg-lilac" style="display: flex; align-items: center; justify-content: center; min-height: 280px"><div style="text-align: center; padding: 20px"><div class="h3" style="color: var(--purple)">And more</div><div class="small muted">Coming soon</div></div></div>
     </div>
     <p class="small muted" style="margin-top: 18px">Prefer to try one right now? <a href="/downloads/sample.pdf">Download a free sample page (PDF)</a>, no email needed.</p>
   </div>
 
   <div class="page pad" style="flex: 2 1 340px">
-    <h2 class="h3" style="font-size: 30px">For grown-ups</h2>
-    <p style="margin: 8px 0 0; color: var(--text2)">Enter your email and we'll send this month's free pages as a printable PDF.</p>
-    {% include form-start.html kind="free-pages" label="Get the free pages" class="stack" fclass="stack" %}
-      <div class="lbl" style="margin-top: 14px"><label for="free-email">Your email</label><input id="free-email" name="email" class="field" type="email" autocomplete="email" placeholder="you@example.com" required></div>
-      <label class="check"><input type="checkbox" name="adult" value="yes" required><span>I'm 18 or older and the parent or guardian of the child who'll color these.</span></label>
-      <label class="check"><input type="checkbox" name="newsletter" value="yes"><span>Also email me when new books and free pages drop (optional).</span></label>
-      <button type="submit" class="btn">Send me the free pages</button>
-      <p class="tiny muted" style="margin: 0">We only ask grown-ups, never kids. Your email is used to send the pages and nothing else, unless you tick the second box. <a href="/privacy/">Privacy</a></p>
-    {% include form-end.html kind="free-pages" soon="The free-pages email isn't switched on yet, so nothing typed here is sent. The sample page above works today." %}
+    <h2 class="h3" style="font-size: 30px">Free: the Pompom page, with its animation</h2>
+    <p style="margin: 8px 0 0; color: var(--text2)">For grown-ups. Our shop at Payhip asks for your email, then sends the printable page with its QR code straight away.</p>
+    <a class="btn" href="{{ site.free_gift_url }}" style="margin-top: 18px">Get Pompom free</a>
+    <p class="tiny muted" style="margin: 14px 0 0">We only ask grown-ups, never kids. <a href="/privacy/">Privacy</a></p>
+    <hr style="border: 0; border-top: 2px dashed #d8d2df; margin: 22px 0">
+    <div class="b">More free pages are coming soon.</div>
+    <p class="small" style="margin: 4px 0 0; color: var(--text2)">Want to hear when they land? <a href="/#contact">Join the email list</a>.</p>
   </div>
 </section>

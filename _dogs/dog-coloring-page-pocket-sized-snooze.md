@@ -17,7 +17,8 @@ tags: []
 season: null
 vimeo: "1141733550"
 vimeo_hash: null
-payhip: ""
+payhip: "https://payhip.com/b/YVvl7"
+etsy_url: ""
 image: "/assets/img/og/paws-14.jpg"
 description: "Dog coloring page: Pocket-Sized Snooze, page 14 of the PAWS book. The two puppies huddled so close to each other that their snoring sounded like a duet. Free video preview; printable page with its QR video $1.99."
 ---

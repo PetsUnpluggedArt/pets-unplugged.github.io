@@ -2,6 +2,8 @@
 layout: default
 ---
 {% assign d = page %}{% assign nn = d.n | prepend: '0' | slice: -2, 2 %}
+{% assign bundle = nil %}{% for b in site.data.paws.bundles %}{% if b.pages contains d.n %}{% assign bundle = b %}{% endif %}{% endfor %}
+{% assign has_buy = false %}{% if d.payhip and d.payhip != "" %}{% assign has_buy = true %}{% endif %}
 {% assign share_url = site.url | append: page.url | uri_escape %}
 {% assign pin_media = site.url | append: '/assets/img/pages/paws-' | append: nn | append: '-color.jpg' | uri_escape %}
 {% assign pin_desc = page.title | append: '. Free video preview at Pets Unplugged.' | uri_escape %}
@@ -15,7 +17,7 @@ layout: default
       "description": {{ page.description | jsonify }},
       "image": "{{ site.url }}/assets/img/pages/paws-{{ nn }}-line.jpg",
       "brand": { "@type": "Brand", "name": "Pets Unplugged" },
-      "offers": { "@type": "Offer", "priceCurrency": "USD", "price": "1.99", "availability": "https://schema.org/PreOrder", "url": "{{ site.url }}{{ page.url }}" }
+      "offers": { "@type": "Offer", "priceCurrency": "USD", "price": "1.99", "availability": "https://schema.org/{% if has_buy %}InStock{% else %}PreOrder{% endif %}", "url": "{% if has_buy %}{{ d.payhip }}{% else %}{{ site.url }}{{ page.url }}{% endif %}" }
     },
     {
       "@type": "BreadcrumbList",
@@ -56,10 +58,13 @@ layout: default
     {% if d.fun_fact %}<div class="page fact"><div class="b">Did you know?</div><div style="margin-top: 4px">{{ d.fun_fact }}</div></div>{% endif %}
     <div class="b">You get: the printable page, its QR video and {{ d.possessive }} story.</div>
     <div class="row">
-      {% if d.payhip and d.payhip != "" %}<a class="btn" href="{{ d.payhip }}">Get this page: {{ site.prices.single_page }}</a>{% else %}<button type="button" class="btn" disabled aria-describedby="single-soon">Get this page: {{ site.prices.single_page }}</button>{% endif %}
+      {% if has_buy %}<a class="btn" href="{{ d.payhip }}">Get this page: {{ site.prices.single_page }}</a>{% else %}<button type="button" class="btn" disabled aria-describedby="single-soon">Get this page: {{ site.prices.single_page }}</button>{% endif %}
       {% if d.n == 1 %}<a class="btn2" href="/story/scout/">Scout's story</a>{% else %}<a class="btn2" href="/videos/video{{ d.n }}.html">Watch the full video</a>{% endif %}
     </div>
-    {% unless d.payhip and d.payhip != "" %}<p class="small muted" id="single-soon" style="margin: 0">Single-page downloads open soon. Until then, this page is in the PAWS book.</p>{% endunless %}
+    {% unless has_buy %}<p class="small muted" id="single-soon" style="margin: 0">Single-page downloads open soon. Until then, this page is in the PAWS book.</p>{% endunless %}
+    {% if d.etsy_url and d.etsy_url != "" %}<a class="etsy-link" href="{{ d.etsy_url }}" style="margin-top: -6px">Also on Etsy</a>{% endif %}
+    {% if d.n == site.data.paws.free_gift.page %}<p class="small" style="margin: 0"><b>This page is our free gift.</b> <a href="{{ site.free_gift_url }}">Get it free</a> with your email.</p>{% endif %}
+    {% if bundle %}<p class="bundle-line">Also in the <a href="/books/#bundle-{{ bundle.slug }}">{{ bundle.name }} bundle</a>: 3 pages for {{ site.prices.bundle }}</p>{% endif %}
     <div class="small muted">Or get all 30 dogs: <a href="{{ site.links.payhip_book }}">PDF {{ site.prices.pdf_book }}</a> or <a href="{{ site.links.amazon }}">the paperback on Amazon</a>.</div>
   </div>
 </section>

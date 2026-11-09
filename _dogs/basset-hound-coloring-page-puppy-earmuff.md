@@ -17,7 +17,8 @@ tags: []
 season: null
 vimeo: "1141734178"
 vimeo_hash: null
-payhip: ""
+payhip: "https://payhip.com/b/4SgIY"
+etsy_url: "https://www.etsy.com/listing/4510611415"
 image: "/assets/img/og/paws-15.jpg"
 description: "Basset Hound coloring page: Puppy Earmuff, page 15 of the PAWS book. Yes, he has the hat. Free video preview; printable page with its QR video $1.99."
 episodes:

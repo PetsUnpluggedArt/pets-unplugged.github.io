@@ -17,7 +17,8 @@ tags: []
 season: null
 vimeo: "1141730754"
 vimeo_hash: null
-payhip: ""
+payhip: "https://payhip.com/b/0DZQl"
+etsy_url: "https://www.etsy.com/listing/4510459350"
 image: "/assets/img/og/paws-11.jpg"
 description: "Shih Tzu coloring page: Matching Fluff Squad, page 11 of the PAWS book. They looked so alike sitting on the couch that it felt like someone had hit “copy–paste” on cuteness. Free video preview; printable page with its QR video $1.99."
 episodes:

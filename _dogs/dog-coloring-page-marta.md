@@ -17,7 +17,8 @@ tags: []
 season: null
 vimeo: "1141729364"
 vimeo_hash: null
-payhip: ""
+payhip: "https://payhip.com/b/1QsLy"
+etsy_url: "https://www.etsy.com/listing/4510460310"
 image: "/assets/img/og/paws-12.jpg"
 description: "Dog coloring page: Marta, page 12 of the PAWS book. The best flower in this garden was Marta — and she knew it. Free video preview; printable page with its QR video $1.99."
 episodes:

@@ -6,7 +6,6 @@ image: /assets/img/og/scout.jpg
 description: Follow Scout, the fluffy Shih Tzu mix in the pompom hat. Each coloring page is an episode, and each new video starts where the last one ended. Episode 1 is out; 2 and 3 are coming soon.
 ---
 {% assign scout = nil %}{% for o in site.dogs %}{% if o.n == 1 %}{% assign scout = o %}{% endif %}{% endfor %}
-{% assign three_pack = "[PRICE]" %}
 <section class="band-sky" style="border-top: 0">
   <div class="wrap split" style="padding-top: 48px; padding-bottom: 48px; gap: 40px">
     <img src="/assets/img/pages/paws-01-color.jpg" alt="Scout the Shih Tzu mix in his pompom hat and knitted coat, colored in" width="300" height="400" style="width: 300px; max-width: 100%; border: 2px solid var(--ink); border-radius: 18px">
@@ -14,8 +13,8 @@ description: Follow Scout, the fluffy Shih Tzu mix in the pompom hat. Each color
       <a class="link-b" href="/books/#pages">All pets</a>
       <h1 style="margin-top: 6px">Scout's story</h1>
       <p class="lead" style="color: #2f2b36">A fluffy Shih Tzu mix in a pompom hat, always ready for his walk. Each page is an episode, and each new video starts right where the last one ended.</p>
-      <div class="row" style="margin-top: 24px"><button type="button" class="btn" disabled aria-describedby="pack-price">All Scout pages: 3-pack</button><a class="btn2" href="/merchandise/scout-mug/">Scout merch</a></div>
-      <p class="small" id="pack-price" style="margin: 10px 0 0">3-pack: {% include price.html p=three_pack %}.</p>
+      <div class="row" style="margin-top: 24px"><a class="btn" href="{{ site.free_gift_url }}">Get episode 1 free</a><a class="btn2" href="/merchandise/scout-mug/">Scout merch</a></div>
+      <p class="small" style="margin: 10px 0 0">Free: the Pompom page, with its animation. A grown-up enters their email at our Payhip shop.</p>
     </div>
   </div>
 </section>
@@ -46,7 +45,7 @@ description: Follow Scout, the fluffy Shih Tzu mix in the pompom hat. Each color
           {% if scout.payhip != '' %}<a class="btn" href="{{ scout.payhip }}">Get this page: {{ site.prices.single_page }}</a>{% else %}<button type="button" class="btn" disabled>Get this page: {{ site.prices.single_page }}</button>{% endif %}
           <a class="btn2" href="{{ scout.url }}">Scout's page</a>
         </div>
-        {% if scout.payhip == '' %}<p class="tiny muted" style="margin: 0">Single-page downloads open soon. Scout is page 1 of the <a href="/books/#paws">PAWS book</a>.</p>{% endif %}
+        {% if scout.payhip == '' %}<p class="tiny muted" style="margin: 0">Single-page downloads open soon. Scout is page 1 of the <a href="/books/#paws">PAWS book</a>.</p>{% else %}<p class="tiny muted" style="margin: 0">Or <a href="{{ site.free_gift_url }}">get this page free</a> with your email.</p>{% endif %}
       </div>
     </div>
     {% for e in scout.episodes %}

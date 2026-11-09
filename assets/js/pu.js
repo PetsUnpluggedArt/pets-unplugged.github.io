@@ -90,4 +90,79 @@
       f.focus();
     });
   });
+
+  // Sign-up forms (Brevo). Same steps as Brevo's own embed: a reCAPTCHA v3 token in
+  // "g-recaptcha-response", then the form is posted to its action with ?isAjax=1 and Brevo answers in JSON.
+  // Google's script loads only once someone starts filling in a form.
+  var brevo = document.querySelectorAll('form[data-brevo]');
+  var capLoading = false;
+  var loadCaptcha = function (key) {
+    if (capLoading || !key) return;
+    capLoading = true;
+    var s = document.createElement('script');
+    s.src = 'https://www.google.com/recaptcha/api.js?render=' + encodeURIComponent(key) + '&hl=en';
+    s.async = true;
+    document.head.appendChild(s);
+  };
+  brevo.forEach(function (form) {
+    var key = form.getAttribute('data-sitekey');
+    var msg = form.querySelector('.form-msg');
+    var btn = form.querySelector('[type=submit]');
+    var say = function (text, ok) {
+      if (!msg) return;
+      msg.textContent = text;
+      msg.className = 'form-msg ' + (ok ? 'ok' : 'bad');
+      msg.hidden = false;
+    };
+    form.addEventListener('focusin', function () { loadCaptcha(key); });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+      if (btn) btn.disabled = true;
+      var send = function () {
+        var x = new XMLHttpRequest();
+        x.open('POST', form.getAttribute('action') + '?isAjax=1');
+        x.onload = function () {
+          var r = {};
+          try { r = JSON.parse(x.responseText); } catch (err) { r = {}; }
+          if (x.status >= 200 && x.status < 300 && r.success !== false) {
+            say("You're on the list. Thank you! Check your inbox in case we ask you to confirm.", true);
+            form.reset();
+          } else {
+            say((r.message || "That didn't go through.") + ' Please try again, or email hello@petsunplugged.com.', false);
+          }
+          if (btn) btn.disabled = false;
+        };
+        x.onerror = function () {
+          say("We couldn't reach the sign-up service. Please try again in a minute.", false);
+          if (btn) btn.disabled = false;
+        };
+        x.send(new FormData(form));
+      };
+      if (!key) { send(); return; }
+      loadCaptcha(key);
+      var tries = 0;
+      var withToken = function () {
+        if (!(window.grecaptcha && window.grecaptcha.ready)) {
+          if (++tries > 50) { send(); return; } // 5 s: send anyway and let Brevo answer
+          setTimeout(withToken, 100);
+          return;
+        }
+        window.grecaptcha.ready(function () {
+          window.grecaptcha.execute(key, { action: 'submit' }).then(function (token) {
+            var t = form.querySelector('input[name="g-recaptcha-response"]');
+            if (!t) {
+              t = document.createElement('input');
+              t.type = 'hidden';
+              t.name = 'g-recaptcha-response';
+              form.appendChild(t);
+            }
+            t.value = token;
+            send();
+          }, send);
+        });
+      };
+      withToken();
+    });
+  });
 })();

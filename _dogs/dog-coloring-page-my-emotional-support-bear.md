@@ -17,7 +17,8 @@ tags: []
 season: null
 vimeo: "1141718344"
 vimeo_hash: null
-payhip: ""
+payhip: "https://payhip.com/b/fQ7tD"
+etsy_url: "https://www.etsy.com/listing/4510452925"
 image: "/assets/img/og/paws-08.jpg"
 description: "Dog coloring page: My Emotional Support Bear, page 8 of the PAWS book. Peace feels closer when you have your own safe place and someone to cuddle. Free video preview; printable page with its QR video $1.99."
 episodes:

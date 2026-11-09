@@ -17,7 +17,8 @@ tags: []
 season: null
 vimeo: "1141714631"
 vimeo_hash: null
-payhip: ""
+payhip: "https://payhip.com/b/rIM9N"
+etsy_url: "https://www.etsy.com/listing/4507171260"
 image: "/assets/img/og/paws-06.jpg"
 description: "Dog coloring page: Rosco, page 6 of the PAWS book. Rosco stuck his head out the car window, convinced he was the captain of the entire highway. Free video preview; printable page with its QR video $1.99."
 episodes:

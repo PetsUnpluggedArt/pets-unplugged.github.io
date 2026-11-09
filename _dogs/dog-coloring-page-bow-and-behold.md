@@ -17,7 +17,8 @@ tags: []
 season: null
 vimeo: "1141745493"
 vimeo_hash: null
-payhip: ""
+payhip: "https://payhip.com/b/RL2Qg"
+etsy_url: ""
 image: "/assets/img/og/paws-28.jpg"
 description: "Dog coloring page: Bow & Behold, page 28 of the PAWS book. Someone ordered a basket full of sweetness? Free video preview; printable page with its QR video $1.99."
 episodes:

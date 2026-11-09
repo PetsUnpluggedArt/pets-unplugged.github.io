@@ -163,6 +163,25 @@ fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
 fieldset[disabled] .field, fieldset[disabled] .check { opacity: .75; }
 .soon-note { margin: 12px 0 0; background: var(--peach); border: 2px dashed var(--ink); border-radius: 14px; padding: 10px 14px; font-size: 14px; line-height: 1.45; color: var(--ink); }
 .bg-purple .soon-note { color: var(--ink); }
+.trap { position: absolute !important; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+form[data-brevo] { position: relative; }
+.form-msg { margin: 12px 0 0; border: 2px solid var(--ink); border-radius: 14px; padding: 10px 14px; font-size: 15px; font-weight: 700; }
+.form-msg.ok { background: #E9F5EC; }
+.form-msg.bad { background: var(--peach); }
+.form-fine { margin: 10px 0 0; line-height: 1.45; }
+.grecaptcha-badge { visibility: hidden; }
+
+/* bundles, free gift, Etsy */
+.bundle { display: flex; flex-direction: column; }
+.bundle > img { width: 100%; aspect-ratio: 600 / 779; object-fit: cover; display: block; border-bottom: 2px solid var(--ink); }
+.bundle .card-body { display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.bundle ul { list-style: none; margin: 0; padding: 0; font-size: 15px; }
+.bundle li { padding: 2px 0; }
+.bundle .btn { margin-top: auto; align-self: flex-start; }
+.bundle-line { margin: 0; font-size: 15px; background: var(--lilac2); border: 2px solid var(--ink); border-radius: 14px; padding: 10px 14px; }
+.etsy-link { font-size: 14px; color: var(--muted); }
+.gift { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
+.gift img { width: 120px; border: 2px solid var(--ink); border-radius: 12px; background: #fff; }
 .form-card legend { font-family: var(--display); font-weight: 800; font-size: 24px; padding: 0 8px; }
 .form-card { padding: 22px; margin: 0; display: flex; flex-direction: column; gap: 14px; border: 2px solid var(--ink); border-radius: 18px; background: #fff; }
 .opt-card { display: flex; gap: 14px; align-items: flex-start; border: 2px solid var(--ink); border-radius: 16px; padding: 14px 16px; cursor: pointer; }

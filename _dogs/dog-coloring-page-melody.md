@@ -17,7 +17,8 @@ tags: []
 season: null
 vimeo: "1141714032"
 vimeo_hash: null
-payhip: ""
+payhip: "https://payhip.com/b/JcGzj"
+etsy_url: "https://www.etsy.com/listing/4507165014"
 image: "/assets/img/og/paws-05.jpg"
 description: "Dog coloring page: Melody, page 5 of the PAWS book. The puppy fell asleep right on the piano keys, exhausted after “helping” with the music practice. Free video preview; printable page with its QR video $1.99."
 episodes:

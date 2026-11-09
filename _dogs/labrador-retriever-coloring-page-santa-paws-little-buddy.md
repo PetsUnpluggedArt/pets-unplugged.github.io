@@ -17,7 +17,8 @@ tags: ["Holidays"]
 season: "Christmas"
 vimeo: "1141731999"
 vimeo_hash: null
-payhip: ""
+payhip: "https://payhip.com/b/OzEu7"
+etsy_url: "https://www.etsy.com/listing/4510611532"
 image: "/assets/img/og/paws-13.jpg"
 description: "Labrador Retriever coloring page: Santa Paws’ Little Buddy, page 13 of the PAWS book. Other gifts? Free video preview; printable page with its QR video $1.99."
 episodes:

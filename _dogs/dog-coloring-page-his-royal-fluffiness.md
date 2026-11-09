@@ -17,7 +17,8 @@ tags: []
 season: null
 vimeo: "1141741664"
 vimeo_hash: null
-payhip: ""
+payhip: "https://payhip.com/b/z6Hi7"
+etsy_url: ""
 image: "/assets/img/og/paws-21.jpg"
 description: "Dog coloring page: His Royal Fluffiness, page 21 of the PAWS book. I’m not spoiled — I’m selectively adored. Free video preview; printable page with its QR video $1.99."
 episodes:

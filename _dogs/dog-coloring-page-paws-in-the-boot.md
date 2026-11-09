@@ -17,7 +17,8 @@ tags: []
 season: null
 vimeo: "1141718992"
 vimeo_hash: null
-payhip: ""
+payhip: "https://payhip.com/b/AXyfb"
+etsy_url: "https://www.etsy.com/listing/4510606965"
 image: "/assets/img/og/paws-09.jpg"
 description: "Dog coloring page: Paws in the Boot, page 9 of the PAWS book. “Maybe now they’ll see me… Free video preview; printable page with its QR video $1.99."
 episodes:

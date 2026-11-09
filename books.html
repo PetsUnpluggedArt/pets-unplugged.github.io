@@ -3,9 +3,9 @@ layout: default
 permalink: /books/
 title: Coloring books and single pages
 image: /assets/img/og/site.jpg
-description: The PAWS interactive dog coloring book (PDF $6.99 or paperback on Amazon), 30 dog coloring pages with QR videos, and the Whiskers cat book, coming soon.
+description: The PAWS interactive dog coloring book (PDF $6.99 or paperback on Amazon), 30 dog coloring pages with QR videos at $1.99, 3-page bundles at $3.99, and the Whiskers cat book, coming soon.
 ---
-{% assign three_pack = "[PRICE]" %}
+{% assign paws = site.data.paws %}{% assign dogs = site.dogs | sort: "n" %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -46,6 +46,7 @@ description: The PAWS interactive dog coloring book (PDF $6.99 or paperback on A
         <h3 class="card-title" style="margin: 0; font-size: 19px">PAWS Interactive Dog Coloring Book</h3>
         <div class="small muted">30 dogs, each with a QR video</div>
         <div class="row" style="gap: 8px; margin-top: auto"><a class="btn" href="{{ site.links.payhip_book }}">PDF {{ site.prices.pdf_book }}</a><a class="btn2" href="{{ site.links.amazon }}">Paperback on Amazon</a></div>
+        {% if paws.full_book.etsy_url != "" %}<a class="etsy-link" href="{{ paws.full_book.etsy_url }}">Also on Etsy</a>{% endif %}
       </div>
     </div>
     <div class="page card-row" id="next">
@@ -69,11 +70,31 @@ description: The PAWS interactive dog coloring book (PDF $6.99 or paperback on A
   </div>
 </section>
 
+<section class="wrap sec" id="bundles">
+  <h2 class="h2">3-page bundles, {{ site.prices.bundle }}</h2>
+  <p style="margin: 8px 0 0; color: var(--text2)">Three PAWS pages that go together, each with its QR video. Less than buying them one by one.</p>
+  <div class="grid">
+    {% for b in paws.bundles %}
+    <article class="page bundle" id="bundle-{{ b.slug }}" aria-labelledby="bundle-{{ b.slug }}-h">
+      <img src="{{ b.img }}" alt="The {{ b.name }} bundle cover: three PAWS coloring pages side by side" width="{{ b.img_w }}" height="{{ b.img_h }}" loading="lazy">
+      <div class="card-body">
+        <h3 class="card-title" id="bundle-{{ b.slug }}-h" style="margin: 0">{{ b.name }}</h3>
+        <p class="small" style="margin: 0; color: var(--text2)">{{ b.blurb }}</p>
+        <ul aria-label="Pages in {{ b.name }}">
+          {% for pn in b.pages %}{% for d in dogs %}{% if d.n == pn %}<li><a href="{{ d.url }}">{{ d.card_title }}</a> <span class="muted small">· page {{ d.n }}</span></li>{% endif %}{% endfor %}{% endfor %}
+        </ul>
+        <a class="btn" href="{{ b.payhip_url }}">Buy the bundle: {{ site.prices.bundle }}<span class="sr-only"> ({{ b.name }})</span></a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
 <section class="wrap sec" id="pages">
   <div class="head-row">
     <div>
       <h2 class="h2">Single pages</h2>
-      <p style="margin: 8px 0 0; color: var(--text2)">{{ site.prices.single_page }} each: the page, its video and the story. 3-packs of one pet: {% include price.html p=three_pack %}.</p>
+      <p style="margin: 8px 0 0; color: var(--text2)">{{ site.prices.single_page }} each: the page, its video and the story. Or <a href="#bundles">3 pages for {{ site.prices.bundle }}</a> in a bundle.</p>
     </div>
     <div role="group" aria-label="Filter pages" class="row" style="gap: 8px" data-filters="page-list" data-status="page-count">
       <button type="button" class="filter" data-f="All" aria-pressed="true">All</button>
@@ -85,7 +106,6 @@ description: The PAWS interactive dog coloring book (PDF $6.99 or paperback on A
   </div>
   <p id="page-count" class="sr-only" aria-live="polite"></p>
   <div class="grid" id="page-list">
-    {% assign dogs = site.dogs | sort: "n" %}
     {% for d in dogs %}{% include dog-card.html dog=d tags=true %}{% endfor %}
     {% for c in site.data.whiskers %}
     <div class="page card" data-tags="{{ c.tags | join: ' ' }}">
@@ -100,20 +120,15 @@ description: The PAWS interactive dog coloring book (PDF $6.99 or paperback on A
 <section class="wrap sec split" id="notify" style="align-items: flex-start">
   <div class="page pad" style="flex: 1 1 380px">
     <h2 class="h3">Tell me when it drops</h2>
-    <p style="margin: 6px 0 0; color: var(--text2)">One email the day a new book is out. For grown-ups.</p>
+    <p style="margin: 6px 0 0; color: var(--text2)">One email the day a new book is out: Puppy Love, the Whiskers cat book and more. For grown-ups.</p>
     {% include form-start.html kind="notify" label="Tell me when a new book drops" class="stack" fclass="stack" %}
-      <div class="lbl" style="margin-top: 14px"><label for="nt-email">Your email</label><input id="nt-email" name="email" class="field" type="email" autocomplete="email" placeholder="you@example.com" required></div>
-      <fieldset class="row" style="gap: 14px">
-        <legend class="b small" style="margin-bottom: 8px">Which book?</legend>
-        <label class="check" style="align-items: center"><input type="checkbox" name="book" value="puppy-love" checked>Puppy Love</label>
-        <label class="check" style="align-items: center"><input type="checkbox" name="book" value="whiskers" checked>Whiskers, the cat book</label>
-      </fieldset>
+      <div class="lbl" style="margin-top: 14px"><label for="nt-email">Your email</label><input id="nt-email" name="EMAIL" class="field" type="email" autocomplete="email" placeholder="you@example.com" required></div>
       <button type="submit" class="btn" style="align-self: flex-start">Tell me</button>
     {% include form-end.html kind="notify" %}
   </div>
   <div class="page pad bg-sky split" style="flex: 1 1 380px; gap: 20px">
-    <div class="grow"><div class="h3">Not sure yet? Start free.</div><div style="color: #2f2b36">Free pages for kids, new ones with every drop.</div></div>
-    <a class="btn" href="/free/">Get free pages</a>
+    <div class="grow"><div class="h3">Not sure yet? Start free.</div><div style="color: #2f2b36">Free: the Pompom page, with its animation.</div></div>
+    <a class="btn" href="{{ site.free_gift_url }}">Get Pompom free</a>
   </div>
 </section>
 <div class="sec-end"></div>

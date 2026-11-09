@@ -23,16 +23,21 @@ logo: /assets/img/logo.png
 image: /assets/img/og/site.jpg
 
 # ---------------------------------------------------------------------------
-# Forms: free pages, newsletter, "Your pet" waitlist and the "Tell me" notes.
-# Empty = no form service yet: every form shows a "coming soon" note and sends nothing.
-# When a service is chosen, put its form POST address here (one address for all forms;
-# each form adds a hidden field "form" = free-pages / newsletter / waitlist / notify).
-form_endpoint: ""
+# Forms: newsletter, "Your pet" waitlist and the "Tell me" notes all post to this Brevo form,
+# so every sign-up lands in the same Brevo list. The email field is named EMAIL, as Brevo needs.
+# The address and the reCAPTCHA key are the ones from the Brevo form on the old home page.
+# Empty form_endpoint = forms show a "coming soon" note and send nothing.
+form_endpoint: "https://d594eb7c.sibforms.com/serve/MUIFANGdb0jKFrBXiNX2Hq2bKn4r-c14bcEGV-BiOMN221c5jrdcUYXPD0vEnTvxzE4V8O09i-6btQMjoiSofRFKpfyGHTx1E9xYtefgb9FKTCfxHZ88bhmN7A1bOOiU91kLmqhXMPYBlKMaAGuaIwKPFMyWlV7Gngzp8U3g6sCz4wz4oCSOCREFJY0xdvSA35yRDpnu_2nEFyF7wA=="
+form_recaptcha_key: "6LcBYSssAAAAAHyybuB7qBL--CJ-z1vhyNU13cFl"
+
+# Free gift: Pompom (PAWS page 1) with its animation, a free Payhip product that asks for an email.
+free_gift_url: "https://payhip.com/b/WMkrK"
 # ---------------------------------------------------------------------------
 
 prices:
   pdf_book: "$6.99"
   single_page: "$1.99"
+  bundle: "$3.99"
 
 links:
   payhip_book: "https://payhip.com/b/zhxGf"

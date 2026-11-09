@@ -19,7 +19,7 @@ image: /assets/img/og/site.jpg
   <div class="hero-text">
     <h1><span class="w1">Unplug.</span> <span class="w2">Color.</span> <span class="w3">Animate.</span></h1>
     <p class="lead" style="font-size: 20px; max-width: 520px">Coloring pages with a story. Color the page, scan its QR code, and watch the pet you just colored come to life.</p>
-    <div class="row" style="margin-top: 30px"><a class="btn" href="/free/">Get free pages</a><a class="btn2" href="/books/">Browse books</a></div>
+    <div class="row" style="margin-top: 30px"><a class="btn" href="/free/">Get a free page</a><a class="btn2" href="/books/">Browse books</a></div>
     <p class="muted" style="margin: 18px 0 0; font-size: 15px">No app needed: any phone camera reads the code.</p>
   </div>
   <figure class="slider" data-slider>
@@ -68,13 +68,13 @@ image: /assets/img/og/site.jpg
 <section class="wrap sec">
   <div class="page pad bg-purple split" style="gap: 36px">
     <div style="flex: 1 1 380px">
-      <h2 class="h2" style="color: #fff">Free pages for kids</h2>
-      <p style="margin: 12px 0 0; font-size: 18px; color: #f1e6f7">New free pages with every drop. A grown-up enters their email, and we send the pages straight over.</p>
-      <a href="/free/" class="btn2" style="margin-top: 22px">Get the free pages</a>
+      <h2 class="h2" style="color: #fff">Free: the Pompom page, with its animation</h2>
+      <p style="margin: 12px 0 0; font-size: 18px; color: #f1e6f7">Scout in his pompom hat, page 1 of the PAWS book. Print it, color it, then scan its QR code to watch him move. A grown-up enters their email and the page arrives straight away. More free pages are coming soon.</p>
+      <div class="row" style="margin-top: 22px"><a href="{{ site.free_gift_url }}" class="btn2">Get Pompom free</a><a href="/free/" style="color: #fff; font-weight: 800">About the free pages</a></div>
     </div>
     <div class="row" style="gap: 14px; flex-wrap: nowrap">
-      <img src="/assets/img/pages/paws-02-line.jpg" alt="Free page: Paws &amp; Dream, line art" width="150" height="200" loading="lazy" style="width: 140px; border: 2px solid var(--ink); border-radius: 12px; background: #fff; transform: rotate(-4deg)">
-      <img src="/assets/img/pages/whiskers-08-line.jpg" alt="Free page: Delicious, a Whiskers cat, line art" width="150" height="200" loading="lazy" style="width: 140px; border: 2px solid var(--ink); border-radius: 12px; background: #fff; transform: rotate(3deg)">
+      <img src="/assets/img/pages/paws-01-line.jpg" alt="Free page: Pompom, Scout in his pompom hat, black-and-white line art" width="150" height="200" loading="lazy" style="width: 140px; border: 2px solid var(--ink); border-radius: 12px; background: #fff; transform: rotate(-4deg)">
+      <img src="/assets/img/pages/paws-01-color.jpg" alt="The same Pompom page, colored in" width="150" height="200" loading="lazy" style="width: 140px; border: 2px solid var(--ink); border-radius: 12px; background: #fff; transform: rotate(3deg)">
     </div>
   </div>
 </section>
@@ -113,11 +113,15 @@ image: /assets/img/og/site.jpg
     <div style="flex: 1 1 340px">
       <h2 class="h2" style="font-size: 34px">For grown-ups: hear about new drops</h2>
       <p style="margin: 8px 0 0; font-size: 17px; color: var(--text2)">One email when a new book, page or free page lands. Unsubscribe any time.</p>
+      <div class="gift" style="margin-top: 18px">
+        <img src="/assets/img/pages/paws-01-line.jpg" alt="The free Pompom coloring page, line art" width="120" height="160" loading="lazy">
+        <div style="flex: 1 1 180px"><div class="b" style="font-size: 18px">Free: the Pompom page, with its animation</div><a class="link-b" href="{{ site.free_gift_url }}">Get Pompom free</a></div>
+      </div>
     </div>
     <div style="flex: 1 1 340px">
       {% include form-start.html kind="newsletter" label="Newsletter sign-up" class="" fclass="inline-form" %}
         <label for="nl-email" class="sr-only">Your email</label>
-        <input id="nl-email" name="email" class="field" type="email" autocomplete="email" placeholder="you@example.com" required>
+        <input id="nl-email" name="EMAIL" class="field" type="email" autocomplete="email" placeholder="you@example.com" required>
         <button type="submit" class="btn">Sign me up</button>
       {% include form-end.html kind="newsletter" %}
     </div>

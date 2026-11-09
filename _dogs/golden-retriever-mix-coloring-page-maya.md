@@ -17,7 +17,8 @@ tags: []
 season: null
 vimeo: "1141704096"
 vimeo_hash: null
-payhip: ""
+payhip: "https://payhip.com/b/UCi60"
+etsy_url: "https://www.etsy.com/listing/4507155367"
 image: "/assets/img/og/paws-03.jpg"
 description: "Golden Retriever mix coloring page: Maya, page 3 of the PAWS book. I heard a wrapper crinkle from three rooms away, so of course I came to investigate. Free video preview; printable page with its QR video $1.99."
 episodes:

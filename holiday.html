@@ -18,7 +18,7 @@ description: Christmas and seasonal dog coloring pages from the PAWS book, each 
   <div class="grid grid-wide">
     {% for d in dogs %}{% if d.season == "Christmas" %}
       {% include dog-card.html dog=d sub="Page, video and story. $1.99" %}
-      <a href="/free/" class="page card"><div class="card-img"><img src="/assets/img/pages/paws-{{ d.n | prepend: '0' | slice: -2, 2 }}-line.jpg" alt="{{ d.alt }}" width="450" height="600" loading="lazy"></div><div class="card-body"><div class="card-title">Free: a holiday page to color</div><div class="card-sub">For a grown-up's email</div></div></a>
+      <a href="{{ site.free_gift_url }}" class="page card"><div class="card-img"><img src="/assets/img/pages/paws-01-line.jpg" alt="Free page: Pompom, Scout in his pompom hat and knitted coat, black-and-white line art" width="450" height="600" loading="lazy"><span class="chip chip-gold">Free</span></div><div class="card-body"><div class="card-title">Free: the Pompom page, with its animation</div><div class="card-sub">A cozy winter page, for a grown-up's email</div></div></a>
     {% endif %}{% endfor %}
     <div class="page pad stack bg-peach" style="gap: 10px">
       <span class="chip chip-orange" style="align-self: flex-start">Gift idea</span>

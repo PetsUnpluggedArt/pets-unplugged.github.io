@@ -17,7 +17,8 @@ tags: []
 season: null
 vimeo: "1141715420"
 vimeo_hash: null
-payhip: ""
+payhip: "https://payhip.com/b/9peBf"
+etsy_url: "https://www.etsy.com/listing/4510451716"
 image: "/assets/img/og/paws-07.jpg"
 description: "Dog coloring page: Lucky, page 7 of the PAWS book. Lucky sat proudly in the middle of the bathroom, convinced he had created a masterpiece out of toilet paper. Free video preview; printable page with its QR video $1.99."
 episodes:
