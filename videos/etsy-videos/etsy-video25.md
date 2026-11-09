@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-25.jpg
 layout: etsy-videos
 title: Fluff with Attitude
 subtitle: “100% Spice, 0% Chill”

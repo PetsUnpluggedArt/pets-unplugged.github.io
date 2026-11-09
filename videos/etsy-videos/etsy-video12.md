@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-12.jpg
 layout: etsy-videos
 title: Sunshine Supervisor
 subtitle: “Officially on flower patrol”

@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-08.jpg
 layout: etsy-videos
 title: My Emotional Support Bear
 subtitle: “He understands me”

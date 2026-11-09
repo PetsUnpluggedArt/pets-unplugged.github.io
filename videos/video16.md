@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-16.jpg
 layout: video
 title: Chic & Petite
 subtitle: “Bag included, cuteness extra”

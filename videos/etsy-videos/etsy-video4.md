@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-04.jpg
 layout: etsy-videos
 title: Fluff² Activated
 subtitle: “Cuteness overload imminent”

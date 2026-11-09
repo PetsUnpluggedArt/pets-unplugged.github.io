@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-03.jpg
 layout: etsy-videos
 title: The Curious Cloud
 subtitle: 100% cotton, 0% stealth

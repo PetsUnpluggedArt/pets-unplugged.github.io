@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-28.jpg
 layout: video
 title: Bow & Behold
 subtitle: “Cuteness delivered daily”

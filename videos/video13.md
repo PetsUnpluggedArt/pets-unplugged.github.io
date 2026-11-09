@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-13.jpg
 layout: video
 title: Santa Paws’ Little Buddy
 subtitle: “Delivering cuteness worldwide”

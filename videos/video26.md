@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-26.jpg
 layout: video
 title: Professional Cuteness
 subtitle: “It’s a full-time job”

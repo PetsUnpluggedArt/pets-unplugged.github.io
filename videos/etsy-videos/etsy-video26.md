@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-26.jpg
 layout: etsy-videos
 title: Professional Cuteness
 subtitle: “It’s a full-time job”

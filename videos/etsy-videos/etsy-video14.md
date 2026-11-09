@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-14.jpg
 layout: etsy-videos
 title: Pocket-Sized Snooze
 subtitle: “Officially too cute to wake”

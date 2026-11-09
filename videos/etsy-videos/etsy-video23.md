@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-23.jpg
 layout: etsy-videos
 title: Paws & Reflect
 subtitle: “Life Is Pretty Great”

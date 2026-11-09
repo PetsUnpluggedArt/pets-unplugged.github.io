@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-29.jpg
 layout: etsy-videos
 title: Serious Face Activated
 subtitle: “Secretly plotting cuddles”

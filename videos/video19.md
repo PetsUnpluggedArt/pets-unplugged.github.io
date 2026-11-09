@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-19.jpg
 layout: video
 title: Handful of Fluff x2
 subtitle: “Cuteness overload in progress”

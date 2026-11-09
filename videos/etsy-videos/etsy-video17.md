@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-17.jpg
 layout: etsy-videos
 title: The Living Masterpup
 subtitle: “Framed by love”

@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-05.jpg
 layout: etsy-videos
 title: Beethoven’s Fluffiest Fan
 subtitle: “Dreaming in four-paw harmony”

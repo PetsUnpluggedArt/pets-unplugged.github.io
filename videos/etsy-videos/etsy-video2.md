@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-02.jpg
 layout: etsy-videos
 title: Paws & Dream
 subtitle: Currently recharging at    100% fluff

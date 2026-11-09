@@ -1,0 +1,41 @@
+---
+layout: default
+permalink: /real-pets/
+title: Meet the real pets
+image: /assets/img/og/your-pet.jpg
+description: Real dogs and cats who guest-star in Pets Unplugged coloring books. The first guest stars arrive with Puppy Love.
+---
+<section class="band-peach">
+  <div class="wrap split" style="padding-top: 48px; padding-bottom: 48px">
+    <div style="flex: 1 1 460px">
+      <h1>Meet the real pets</h1>
+      <p class="lead">Every pet on this wall is a real dog or cat who guest-stars in a Pets Unplugged book. Their families sent us a photo, and now kids everywhere color them in.</p>
+      <div class="row" style="margin-top: 22px"><a class="btn" href="/your-pet/">Put your pet in the next book</a><a class="btn2" href="/books/">See the books</a></div>
+    </div>
+    <div class="page row" style="flex: 0 1 360px; padding: 18px; gap: 14px">
+      <span class="chip chip-gold" style="min-height: 34px; font-size: 14px">Real pet</span>
+      <span style="font-size: 15px; line-height: 1.45; flex: 1 1 180px">This badge sits on every guest star's page in the book, too.</span>
+    </div>
+  </div>
+</section>
+
+<section class="wrap sec-end" style="padding-top: 44px">
+  <h2 class="h2">Guest stars in Puppy Love</h2>
+  {% assign stars = site.data.real_pets %}
+  {% if stars and stars.size > 0 %}
+  <div class="grid">
+    {% for s in stars %}
+    <div class="page"><div class="card-img"><img src="{{ s.image }}" alt="{{ s.alt }}" loading="lazy"><span class="chip chip-gold">Real pet</span></div><div class="card-body"><div class="card-title">{{ s.name }}</div><div class="card-sub">A real {{ s.breed }} from {{ s.state }}</div>{% if s.url %}<a class="link-b small" href="{{ s.url }}">See the page</a>{% endif %}</div></div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="page pad bg-lilac split" style="margin-top: 22px; gap: 24px">
+    <div style="flex: 1 1 380px">
+      <div class="h3">No guest stars yet</div>
+      <p style="margin: 8px 0 0; color: var(--text2)">The first real pets join with Puppy Love, our Valentine's book. Spots open in December and the book closes January 10. Yours could be the first face on this wall.</p>
+    </div>
+    <div class="row"><a class="btn" href="/your-pet/#waitlist">Join the waitlist</a></div>
+  </div>
+  {% endif %}
+  <p class="small muted" style="margin: 18px 0 0">We only show the pet's name, breed and state, and only when the family says yes. Never last names or towns.</p>
+</section>

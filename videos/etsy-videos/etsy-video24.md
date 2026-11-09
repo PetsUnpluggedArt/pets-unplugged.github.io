@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-24.jpg
 layout: etsy-videos
 title: Golden Ripple Maker
 subtitle: “Spreading Love One Paw at a Time”

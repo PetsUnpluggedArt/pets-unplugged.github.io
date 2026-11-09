@@ -1,0 +1,8 @@
+{% comment %}
+  Opens a form. Until site.form_endpoint is set in _config.yml the form is shown but disabled,
+  with a "coming soon" note (form-end.html), and it sends nothing.
+  Params: kind (free-pages / newsletter / waitlist / notify), label, class, fclass
+{% endcomment %}{% if site.form_endpoint and site.form_endpoint != "" %}<form class="{{ include.class }}" action="{{ site.form_endpoint }}" method="post" aria-label="{{ include.label }}">
+<input type="hidden" name="form" value="{{ include.kind }}">
+<fieldset class="{{ include.fclass }}">{% else %}<form class="{{ include.class }}" action="#" method="post" aria-label="{{ include.label }}" aria-describedby="soon-{{ include.kind }}{{ include.n }}" onsubmit="return false">
+<fieldset class="{{ include.fclass }}" disabled>{% endif %}

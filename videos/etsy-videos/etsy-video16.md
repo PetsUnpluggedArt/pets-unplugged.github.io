@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-16.jpg
 layout: etsy-videos
 title: Chic & Petite
 subtitle: “Bag included, cuteness extra”

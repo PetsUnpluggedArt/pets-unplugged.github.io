@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-27.jpg
 layout: video
 title: Tiny Rain Captain
 subtitle: “Steering straight into your heart”

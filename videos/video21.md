@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-21.jpg
 layout: video
 title: His Royal Fluffiness
 subtitle: “By Appointment Only”

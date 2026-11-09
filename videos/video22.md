@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-22.jpg
 layout: video
 title: Little Woolly Wonder
 subtitle: “100% Pure Heart-Melter”

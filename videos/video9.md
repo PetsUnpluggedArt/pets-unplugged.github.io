@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-09.jpg
 layout: video
 title: Paws in the Boot
 subtitle: “Too cute to walk yet”

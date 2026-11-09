@@ -1,0 +1,48 @@
+---
+layout: default
+permalink: /holiday/
+title: Holiday coloring pages
+image: /assets/img/og/holiday.jpg
+description: Christmas and seasonal dog coloring pages from the PAWS book, each with a QR video. Plus the PAWS paperback, a stocking stuffer that comes alive.
+---
+{% assign dogs = site.dogs | sort: "n" %}
+<section class="band-green">
+  <div class="wrap" style="padding-top: 48px; padding-bottom: 48px">
+    <h1>Holiday corner</h1>
+    <p class="lead" style="color: #2f2b36">Coloring pages for the season. Pages tagged for a holiday show up here by themselves.</p>
+  </div>
+</section>
+
+<section class="wrap" style="padding-top: 48px">
+  <h2 class="h2">Christmas</h2>
+  <div class="grid grid-wide">
+    {% for d in dogs %}{% if d.season == "Christmas" %}
+      {% include dog-card.html dog=d sub="Page, video and story. $1.99" %}
+      <a href="/free/" class="page card"><div class="card-img"><img src="/assets/img/pages/paws-{{ d.n | prepend: '0' | slice: -2, 2 }}-line.jpg" alt="{{ d.alt }}" width="450" height="600" loading="lazy"></div><div class="card-body"><div class="card-title">Free: a holiday page to color</div><div class="card-sub">For a grown-up's email</div></div></a>
+    {% endif %}{% endfor %}
+    <div class="page pad stack bg-peach" style="gap: 10px">
+      <span class="chip chip-orange" style="align-self: flex-start">Gift idea</span>
+      <h3 class="h3">The PAWS paperback</h3>
+      <div style="color: var(--text2)">30 dogs to color, each with a QR video. A stocking stuffer that comes alive.</div>
+      <a class="btn" href="{{ site.links.amazon }}" style="align-self: flex-start; margin-top: auto">Paperback on Amazon</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap sec" style="padding-top: 48px">
+  <h2 class="h2">More seasons</h2>
+  <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr))">
+    <div class="page pad bg-lilac"><div class="b" style="font-size: 18px">Halloween</div><div class="small muted">Coming with the next drop</div></div>
+    <div class="page pad bg-lilac"><div class="b" style="font-size: 18px">Valentine's Day</div><div class="small muted">Puppy Love, coming with the next drop</div></div>
+    {% for d in dogs %}{% if d.season and d.season != "Christmas" %}
+    <a href="{{ d.url }}" class="page pad card row" style="gap: 14px; flex-wrap: nowrap"><img src="/assets/img/pages/paws-{{ d.n | prepend: '0' | slice: -2, 2 }}-color.jpg" alt="" width="64" height="85" style="width: 64px; height: 80px; object-fit: cover; object-position: top; border-radius: 10px; border: 2px solid var(--ink)"><span><span class="card-title" style="display: block">{{ d.season }}</span><span class="card-sub" style="display: block">{{ d.card_title }}</span></span></a>
+    {% endif %}{% endfor %}
+  </div>
+</section>
+
+<section class="wrap sec sec-end" style="padding-top: 56px">
+  <div class="page pad bg-purple split" style="gap: 24px">
+    <div style="flex: 1 1 380px"><div class="h3">Bonus: free printable bookmarks</div><div style="color: #f1e6f7; margin-top: 4px">Color-your-own bookmarks with the PAWS pups, coming with the free pages.</div></div>
+    <a class="btn2" href="/free/">Get the free pages</a>
+  </div>
+</section>

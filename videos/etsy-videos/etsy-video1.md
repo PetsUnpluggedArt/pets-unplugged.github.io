@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-01.jpg
 layout: etsy-videos
 title: Scout
 subtitle: “I can do this all day”

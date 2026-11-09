@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-17.jpg
 layout: video
 title: The Living Masterpup
 subtitle: “Framed by love”

@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-11.jpg
 layout: video
 title: Matching Fluff Squad
 subtitle: “Cuteness level, synchronized”

@@ -1,0 +1,76 @@
+---
+layout: default
+---
+{% assign d = page %}{% assign nn = d.n | prepend: '0' | slice: -2, 2 %}
+{% assign share_url = site.url | append: page.url | uri_escape %}
+{% assign pin_media = site.url | append: '/assets/img/pages/paws-' | append: nn | append: '-color.jpg' | uri_escape %}
+{% assign pin_desc = page.title | append: '. Free video preview at Pets Unplugged.' | uri_escape %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": {{ page.title | jsonify }},
+      "description": {{ page.description | jsonify }},
+      "image": "{{ site.url }}/assets/img/pages/paws-{{ nn }}-line.jpg",
+      "brand": { "@type": "Brand", "name": "Pets Unplugged" },
+      "offers": { "@type": "Offer", "priceCurrency": "USD", "price": "1.99", "availability": "https://schema.org/PreOrder", "url": "{{ site.url }}{{ page.url }}" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" },
+        { "@type": "ListItem", "position": 2, "name": "Books", "item": "{{ site.url }}/books/" },
+        { "@type": "ListItem", "position": 3, "name": {{ d.card_title | jsonify }}, "item": "{{ site.url }}{{ page.url }}" }
+      ]
+    }
+  ]
+}
+</script>
+
+<nav class="wrap crumbs" aria-label="Breadcrumb">
+  <ol><li><a href="/books/">Books</a></li><li>PAWS</li><li aria-current="page">{% if d.breed %}{{ d.breed }}{% else %}{{ d.card_title }}{% endif %}</li></ol>
+</nav>
+
+<section class="wrap dog">
+  <div class="dog-media">
+    <div class="page">
+      <div class="player" id="player-{{ nn }}">
+        <img src="/assets/img/pages/paws-{{ nn }}-line.jpg" alt="{{ d.alt }}" width="450" height="600">
+        <button type="button" class="play-btn" data-vimeo="{{ d.vimeo }}"{% if d.vimeo_hash %} data-hash="{{ d.vimeo_hash }}"{% endif %} data-title="{{ d.video_title | escape }}: the coloring page comes to life" aria-controls="player-{{ nn }}">
+          <span class="play-dot"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4l13 8-13 8z"/></svg></span>Watch {{ d.short_name }} come alive
+        </button>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 12px">
+      <a class="pin" href="https://www.pinterest.com/pin/create/button/?url={{ share_url }}&amp;media={{ pin_media }}&amp;description={{ pin_desc }}" rel="noopener" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.3-5.4s-.3-.7-.3-1.6c0-1.5.9-2.6 2-2.6.9 0 1.4.7 1.4 1.6 0 1-.6 2.4-.9 3.7-.3 1.1.6 2 1.7 2 2 0 3.6-2.1 3.6-5.2 0-2.7-2-4.6-4.8-4.6-3.3 0-5.2 2.5-5.2 5 0 1 .4 2.1.9 2.7l.1.4-.3 1.3c0 .2-.2.3-.4.2-1.5-.7-2.4-2.9-2.4-4.6 0-3.8 2.7-7.2 7.9-7.2 4.1 0 7.3 2.9 7.3 6.9 0 4.1-2.6 7.4-6.2 7.4-1.2 0-2.4-.6-2.8-1.4l-.8 2.9c-.3 1.1-1 2.4-1.5 3.2A10 10 0 1 0 12 2z"/></svg>Save to Pinterest<span class="sr-only"> (opens Pinterest)</span></a>
+      <span class="small muted">Free preview. The full page and QR video come with the download.</span>
+    </div>
+  </div>
+
+  <div class="dog-info">
+    <span class="chip chip-sky" style="align-self: flex-start">PAWS page {{ d.n }}</span>
+    <h1>{{ d.h1 }}</h1>
+    {% if d.story %}<p class="lead" style="margin: 0">{{ d.story }}</p>{% endif %}
+    {% if d.fun_fact %}<div class="page fact"><div class="b">Did you know?</div><div style="margin-top: 4px">{{ d.fun_fact }}</div></div>{% endif %}
+    <div class="b">You get: the printable page, its QR video and {{ d.possessive }} story.</div>
+    <div class="row">
+      {% if d.payhip and d.payhip != "" %}<a class="btn" href="{{ d.payhip }}">Get this page: {{ site.prices.single_page }}</a>{% else %}<button type="button" class="btn" disabled aria-describedby="single-soon">Get this page: {{ site.prices.single_page }}</button>{% endif %}
+      {% if d.n == 1 %}<a class="btn2" href="/story/scout/">Scout's story</a>{% else %}<a class="btn2" href="/videos/video{{ d.n }}.html">Watch the full video</a>{% endif %}
+    </div>
+    {% unless d.payhip and d.payhip != "" %}<p class="small muted" id="single-soon" style="margin: 0">Single-page downloads open soon. Until then, this page is in the PAWS book.</p>{% endunless %}
+    <div class="small muted">Or get all 30 dogs: <a href="{{ site.links.payhip_book }}">PDF {{ site.prices.pdf_book }}</a> or <a href="{{ site.links.amazon }}">the paperback on Amazon</a>.</div>
+  </div>
+</section>
+
+<section class="wrap sec-end">
+  <h2 class="h2">More dogs to color</h2>
+  <div class="grid">
+    {% assign dogs = site.dogs | sort: "n" %}
+    {% assign shown = 0 %}
+    {% for o in dogs %}{% if o.n > d.n and shown < 4 %}{% include dog-card.html dog=o %}{% assign shown = shown | plus: 1 %}{% endif %}{% endfor %}
+    {% for o in dogs %}{% if o.n < d.n and shown < 4 %}{% include dog-card.html dog=o %}{% assign shown = shown | plus: 1 %}{% endif %}{% endfor %}
+  </div>
+  <p class="sec" style="padding-top: 24px; margin: 0"><a class="link-b" href="/books/#pages">See all 30 dogs</a></p>
+</section>

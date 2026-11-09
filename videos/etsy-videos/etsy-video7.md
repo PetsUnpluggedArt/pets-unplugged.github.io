@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-07.jpg
 layout: etsy-videos
 title: Roll Raider
 subtitle: “One pup, zero regrets”

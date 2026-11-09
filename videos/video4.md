@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-04.jpg
 layout: video
 title: Fluff² Activated
 subtitle: “Cuteness overload imminent”

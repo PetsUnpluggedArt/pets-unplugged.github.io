@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-10.jpg
 layout: video
 title: Pug Loaf Mode
 subtitle: “Now baking at 100% cute”

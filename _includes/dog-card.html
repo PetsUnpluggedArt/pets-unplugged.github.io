@@ -1,0 +1,4 @@
+{% assign d = include.dog %}{% assign nn = d.n | prepend: '0' | slice: -2, 2 %}<a href="{{ d.url }}" class="page card"{% if include.tags %} data-tags="Dogs {{ d.tags | join: ' ' }}"{% endif %}>
+  <div class="card-img"><img src="/assets/img/pages/paws-{{ nn }}-{% if include.line %}line{% else %}color{% endif %}.jpg" alt="{{ d.alt }}{% unless include.line %}, colored in{% endunless %}" width="450" height="600" loading="lazy"><span class="chip">Page {{ d.n }}</span></div>
+  <div class="card-body"><div class="card-title">{{ d.card_title }}</div><div class="card-sub">{% if include.sub %}{{ include.sub }}{% elsif d.breed %}{{ d.breed }} coloring page · {{ site.prices.single_page }}{% else %}Dog coloring page · {{ site.prices.single_page }}{% endif %}</div></div>
+</a>

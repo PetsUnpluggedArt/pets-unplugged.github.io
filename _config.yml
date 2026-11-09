@@ -1,8 +1,8 @@
-# Welcome to Jekyll!
 # Site settings for Pets Unplugged
 
 title: Pets Unplugged
-description: Interactive pet coloring books with QR animations. Color adorable pet illustrations, scan the QR code, and watch a fun 6-second animation. Perfect for dog lovers, kids, families, and classrooms.
+tagline: "Unplug. Color. Animate."
+description: Coloring pages with a story. Color the page, scan its QR code, and watch the pet you just colored come to life. Dog and cat coloring pages, the PAWS book, free pages and merch.
 email: hello@petsunplugged.com
 
 url: "https://petsunplugged.com"
@@ -19,7 +19,25 @@ author:
   name: Pets Unplugged
   email: hello@petsunplugged.com
 
-logo: /assets/images/paws_cover.jpg
+logo: /assets/img/logo.png
+image: /assets/img/og/site.jpg
+
+# ---------------------------------------------------------------------------
+# Forms: free pages, newsletter, "Your pet" waitlist and the "Tell me" notes.
+# Empty = no form service yet: every form shows a "coming soon" note and sends nothing.
+# When a service is chosen, put its form POST address here (one address for all forms;
+# each form adds a hidden field "form" = free-pages / newsletter / waitlist / notify).
+form_endpoint: ""
+# ---------------------------------------------------------------------------
+
+prices:
+  pdf_book: "$6.99"
+  single_page: "$1.99"
+
+links:
+  payhip_book: "https://payhip.com/b/zhxGf"
+  amazon: "https://a.co/d/7uVHHhw"
+  etsy: "https://www.etsy.com/shop/PetsUnpluggedStudio"
 
 collections:
   collections:
@@ -30,8 +48,18 @@ collections:
     permalink: /videos/:name.html
   merchandise:
     output: true
+  dogs:
+    output: true
+    permalink: /coloring-pages/:name/
+  products:
+    output: true
+    permalink: /merchandise/:name/
 
 defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/og/site.jpg
   - scope:
       path: ""
       type: "pages"
@@ -45,13 +73,29 @@ defaults:
       sitemap: true
       layout: post
   - scope:
+      path: ""
+      type: "dogs"
+    values:
+      layout: dog
+  - scope:
+      path: ""
+      type: "products"
+    values:
+      layout: product
+  - scope:
       path: "videos"
     values:
       permalink: /videos/:basename.html
+      sitemap: false
   - scope:
       path: "videos/etsy-videos"
     values:
       permalink: /videos/etsy-videos/:basename.html
+      sitemap: false
+  - scope:
+      path: "whiskers-videos"
+    values:
+      sitemap: false
 
 exclude:
   - .sass-cache/
@@ -59,11 +103,15 @@ exclude:
   - gemfiles/
   - Gemfile
   - Gemfile.lock
+  - gemfile
+  - gemfile.lock
   - node_modules/
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - optimize_images.py.py
+  - README.md
 
 plugins:
   - jekyll-sitemap

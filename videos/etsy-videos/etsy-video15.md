@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-15.jpg
 layout: etsy-videos
 title: Puppy Earmuff
 subtitle: “Built-in cozy”

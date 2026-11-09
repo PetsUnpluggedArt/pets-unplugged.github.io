@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-18.jpg
 layout: etsy-videos
 title: Hot Cocoa Sidekick
 subtitle: “Extra marshmallows, please”

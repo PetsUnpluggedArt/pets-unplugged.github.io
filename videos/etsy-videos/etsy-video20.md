@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-20.jpg
 layout: etsy-videos
 title: Sun-Kissed Corgi Cutie
 subtitle: “Now with extra sparkle”

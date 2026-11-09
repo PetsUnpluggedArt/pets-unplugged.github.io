@@ -1,0 +1,3 @@
+</fieldset>
+{% unless site.form_endpoint and site.form_endpoint != "" %}<p class="soon-note" id="soon-{{ include.kind }}{{ include.n }}"><b>Coming soon.</b> {{ include.soon | default: "This sign-up isn't open yet, so nothing typed here is sent." }}</p>{% endunless %}
+</form>

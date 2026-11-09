@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-06.jpg
 layout: etsy-videos
 title: Road Trip Rockstar
 subtitle: “Hair metal level, legendary"

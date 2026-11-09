@@ -1,4 +1,5 @@
 ---
+image: /assets/img/og/paws-30.jpg
 layout: etsy-videos
 title: Two-Minute Boss Mode
 subtitle: “Bird patrol”
