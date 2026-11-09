@@ -13,7 +13,7 @@ layout: default
       <div>
         <span class="chip">{{ p.kind }}</span>
         <h1 style="margin-top: 10px">{{ p.title }}</h1>
-        <div class="b" style="font-size: 22px; margin-top: 10px">{% include price.html p=p.price %}</div>
+        {% include merch-price.html p=p.price class="b product-price" %}
       </div>
       <p style="margin: 0; font-size: 17px; color: var(--text2)">{{ p.description }}</p>
       {% if p.sizes and p.sizes.size > 0 %}<div><span class="b">Sizes:</span> {{ p.sizes | join: ", " }}</div>{% endif %}

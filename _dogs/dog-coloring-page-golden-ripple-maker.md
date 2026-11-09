@@ -18,7 +18,7 @@ season: null
 vimeo: "1141743587"
 vimeo_hash: null
 payhip: "https://payhip.com/b/7byQF"
-etsy_url: ""
+etsy_url: "https://www.etsy.com/listing/4510624986"
 image: "/assets/img/og/paws-24.jpg"
 description: "Dog coloring page: Golden Ripple Maker, page 24 of the PAWS book. He thought he found a new friend, but turns out it was just… Free video preview; printable page with its QR video $1.99."
 episodes:

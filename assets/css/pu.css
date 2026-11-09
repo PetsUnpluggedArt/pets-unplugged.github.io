@@ -142,6 +142,9 @@ h1, .h1 { font-family: var(--display); font-weight: 800; font-size: 44px; line-h
 .card-body { padding: 14px 16px; }
 .card-title { font-weight: 800; font-size: 18px; line-height: 1.3; }
 .card-sub { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.card-btn { min-height: 40px; padding: 0 16px; font-size: 15px; margin-top: 12px; }
+.card:hover .card-btn { background: var(--lilac2); }
+.product-price { font-size: 22px; margin-top: 10px; }
 .card-row { display: flex; }
 .card-row > img, .card-row > .ph { width: 38%; max-width: 200px; flex-shrink: 0; object-fit: cover; object-position: top; border-right: 2px solid var(--ink); }
 .card-row .card-body { padding: 18px; }
@@ -229,6 +232,36 @@ form[data-brevo] { position: relative; }
 .share { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 12px; }
 .share a { min-height: 44px; display: inline-flex; align-items: center; padding: 0 16px; border-radius: 22px; border: 2px solid var(--ink); background: #fff; color: var(--ink); font-weight: 800; font-size: 14px; text-decoration: none; }
 .share a:hover { background: var(--lilac2); }
+/* PAWS QR pages 1-30 (design/qr-page): logo-only header on the Etsy ones, round share buttons, "{Name}'s pals" */
+.qr-hdr { display: flex; justify-content: center; padding: 14px 0 6px; }
+.qr-hdr img { width: 190px; height: auto; display: block; }
+.qr-legal { text-align: center; font-size: 13px; color: var(--muted); padding: 0 16px 28px; }
+.qr-thanks { margin: 10px auto 0; }
+.qr-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 18px; }
+.qr-share { display: flex; gap: 10px; justify-content: center; margin-top: 10px; }
+.qr-share a { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--ink); display: grid; place-items: center; background: #fff; color: var(--ink); font-weight: 800; text-decoration: none; font-size: 14px; }
+.qr-share a:hover { background: var(--lilac2); }
+.qr-more { border-top: 2px solid var(--ink); background: var(--lilac); padding: 22px; text-align: left; }
+.qr-more h2 { font-family: var(--display); font-weight: 800; font-size: 26px; line-height: 1.1; margin: 0 0 4px; }
+.qr-more .sub { color: var(--muted); margin: 0 0 16px; font-size: 15px; }
+.qr-bundle { display: flex; gap: 14px; align-items: center; background: #fff; border: 2px solid var(--ink); border-radius: 16px; padding: 12px; text-decoration: none; color: var(--ink); }
+.qr-bundle:hover { color: var(--ink); background: var(--lilac2); }
+.qr-bundle img { width: 96px; height: auto; border-radius: 10px; border: 2px solid var(--ink); flex-shrink: 0; }
+.qr-bundle .t, .qr-book .t { font-weight: 800; font-size: 17px; line-height: 1.25; }
+.qr-bundle .s, .qr-book .s { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.qr-bundle .go { margin-top: 8px; font-weight: 800; color: var(--purple); font-size: 15px; }
+.qr-pals { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 14px; }
+.qr-pal { background: #fff; border: 2px solid var(--ink); border-radius: 14px; overflow: hidden; text-decoration: none; color: var(--ink); min-width: 0; }
+a.qr-pal:hover { color: var(--purple); }
+.qr-pal img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-bottom: 2px solid var(--ink); }
+.qr-pal span { display: block; padding: 7px 8px; font-weight: 800; font-size: 13px; line-height: 1.25; overflow-wrap: anywhere; }
+.qr-pal.you { outline: 3px solid var(--orange); outline-offset: -3px; }
+.qr-pal .you-chip { display: inline-block; background: var(--orange); color: #fff; border-radius: 10px; padding: 0 7px; font-size: 11px; margin-bottom: 3px; }
+.qr-book { margin-top: 14px; display: flex; justify-content: space-between; align-items: center; gap: 12px; background: #fff; border: 2px dashed var(--ink); border-radius: 16px; padding: 14px 16px; text-decoration: none; color: var(--ink); }
+.qr-book:hover { color: var(--ink); background: var(--lilac2); }
+.qr-book .btn { margin: 0; min-height: 42px; font-size: 15px; flex-shrink: 0; }
+.qr-bye { text-align: center; margin: 18px 0 0; }
+@media (min-width: 760px) { .qr-more { padding: 28px 34px; } .qr-pals { gap: 14px; } }
 
 /* prose (blog, privacy, terms, about) */
 .prose { max-width: 760px; font-size: 17px; line-height: 1.7; color: var(--text2); }

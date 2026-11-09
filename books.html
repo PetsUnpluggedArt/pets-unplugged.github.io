@@ -64,10 +64,24 @@ description: The PAWS interactive dog coloring book (PDF $6.99 or paperback on A
         <span class="chip chip-sky" style="align-self: flex-start">Coming soon</span>
         <h3 class="card-title" style="margin: 0; font-size: 19px">Whiskers: the cat book</h3>
         <div class="small muted">Cats to color, each with a QR video.</div>
-        <a class="btn2" href="#notify" style="margin-top: auto; align-self: flex-start">Tell me<span class="sr-only"> when Whiskers is out</span></a>
+        <div class="row" style="gap: 8px; margin-top: auto"><a class="btn2" href="#whiskers-cats">Sneak peek</a><a class="btn2" href="#notify">Tell me<span class="sr-only"> when Whiskers is out</span></a></div>
       </div>
     </div>
   </div>
+</section>
+
+<section class="wrap sec" id="whiskers-cats">
+  <h2 class="h2">The Whiskers cats: a sneak peek</h2>
+  <p style="margin: 8px 0 0; color: var(--text2)">The cat book is coming soon. Meet {{ site.data.whiskers.size }} of the cats and watch their videos now.</p>
+  <div class="grid">
+    {% for c in site.data.whiskers %}
+    <a class="page card" href="{{ c.video }}">
+      <div class="card-img"><img src="{{ c.img }}" alt="{{ c.alt }}" width="480" height="640" loading="lazy"><span class="chip">Whiskers</span></div>
+      <div class="card-body"><div class="card-title">{{ c.title }}</div><div class="card-sub">Watch the video</div></div>
+    </a>
+    {% endfor %}
+  </div>
+  <div class="row" style="margin-top: 20px"><a class="btn" href="#notify">Tell me when Whiskers is out</a></div>
 </section>
 
 <section class="wrap sec" id="bundles">
@@ -84,6 +98,7 @@ description: The PAWS interactive dog coloring book (PDF $6.99 or paperback on A
           {% for pn in b.pages %}{% for d in dogs %}{% if d.n == pn %}<li><a href="{{ d.url }}">{{ d.card_title }}</a> <span class="muted small">· page {{ d.n }}</span></li>{% endif %}{% endfor %}{% endfor %}
         </ul>
         <a class="btn" href="{{ b.payhip_url }}">Buy the bundle: {{ site.prices.bundle }}<span class="sr-only"> ({{ b.name }})</span></a>
+        {% if b.etsy_url and b.etsy_url != "" %}<a class="etsy-link" href="{{ b.etsy_url }}">Also on Etsy<span class="sr-only"> ({{ b.name }} bundle)</span></a>{% endif %}
       </div>
     </article>
     {% endfor %}

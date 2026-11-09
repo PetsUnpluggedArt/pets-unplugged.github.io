@@ -24,11 +24,11 @@ image: /assets/img/og/site.jpg
   </div>
   <figure class="slider" data-slider>
     <div class="page slider-box">
-      <img src="/assets/img/pages/paws-21-line.jpg" srcset="/assets/img/pages/paws-21-line.jpg 480w, /assets/img/pages/paws-21-line-2x.jpg 960w" sizes="(max-width: 480px) 100vw, 440px" alt="His Royal Fluffiness, page 21: a small fluffy dog on an ornate chair among roses, black-and-white line art" width="450" height="600" fetchpriority="high">
-      <div class="clip"><img src="/assets/img/pages/paws-21-color-slider.jpg" srcset="/assets/img/pages/paws-21-color-slider.jpg 480w, /assets/img/pages/paws-21-color-slider-2x.jpg 960w" sizes="(max-width: 480px) 100vw, 440px" alt="The same page, colored in" width="450" height="600"></div>
+      <img src="/assets/img/pages/paws-11-line-slider.jpg" srcset="/assets/img/pages/paws-11-line-slider.jpg 450w, /assets/img/pages/paws-11-line-slider-2x.jpg 900w" sizes="(max-width: 480px) 100vw, 440px" alt="Matching Fluff Squad, page 11: two fluffy puppies in matching hoodies sitting on a sofa, black-and-white line art" width="450" height="600" fetchpriority="high">
+      <div class="clip"><img src="/assets/img/pages/paws-11-color-slider.jpg" srcset="/assets/img/pages/paws-11-color-slider.jpg 450w, /assets/img/pages/paws-11-color-slider-2x.jpg 900w" sizes="(max-width: 480px) 100vw, 440px" alt="The same page, colored in: the puppies in pink, blue and orange hoodies" width="450" height="600"></div>
       <div class="slider-line" aria-hidden="true"></div>
     </div>
-    <label><span>Color him in</span><input type="range" min="0" max="100" value="55" aria-label="How much of the page is colored in"></label>
+    <label><span>Color them in</span><input type="range" min="0" max="100" value="55" aria-label="How much of the page is colored in"></label>
   </figure>
 </section>
 
@@ -40,6 +40,7 @@ image: /assets/img/og/site.jpg
       <div class="page"><div class="step-n">2</div><div class="b" style="font-size: 20px; margin-top: 8px">Color it in</div><div style="color: var(--text2); margin-top: 4px">Crayons, markers, pencils, anything.</div></div>
       <div class="page"><div class="step-n">3</div><div class="b" style="font-size: 20px; margin-top: 8px">Scan the code</div><div style="color: var(--text2); margin-top: 4px">Watch the pet move, and the story keep going.</div></div>
     </div>
+    {% include premade-note.html style="margin: 18px 0 0; color: #2f2b36" %}
   </div>
 </section>
 
@@ -87,7 +88,7 @@ image: /assets/img/og/site.jpg
       <img src="/assets/img/pages/paws-01-color.jpg" alt="Scout the Shih Tzu mix in his pompom hat" width="200" height="267" loading="lazy">
       <div class="card-body"><div class="h3" style="font-size: 28px">Scout</div><div class="small muted">The Shih Tzu mix in the pompom hat</div><div style="margin-top: 10px">Always ready for his walk. Page 1 of the PAWS book, and his story keeps going.</div><div class="b" style="color: var(--purple); margin-top: 12px">Follow Scout's story</div></div>
     </a>
-    <a href="/books/#whiskers" class="page card card-row">
+    <a href="/books/#whiskers-cats" class="page card card-row">
       <img src="/assets/img/pages/whiskers-01-color.jpg" alt="Shelf Life, a Whiskers cat, colored in" width="200" height="266" loading="lazy">
       <div class="card-body"><div class="h3" style="font-size: 28px">The Whiskers cats</div><div class="small muted">Shelves, storms and snacks</div><div style="margin-top: 10px">The Whiskers cat book is coming soon.</div><div class="b" style="color: var(--purple); margin-top: 12px">Get a sneak peek</div></div>
     </a>
@@ -103,7 +104,7 @@ image: /assets/img/og/site.jpg
   <div class="grid">
     {% assign items = site.products | sort: "order" %}
     {% for it in items limit: 4 %}
-    <a href="{{ it.url }}" class="page card"><div class="card-img"><img src="{{ it.img }}" alt="{{ it.img_alt }}" width="480" height="600" loading="lazy"></div><div class="card-body"><div class="card-title">{{ it.title }}</div><div class="card-sub">{% include price.html p=it.price %}</div></div></a>
+    <a href="{{ it.url }}" class="page card"><div class="card-img"><img src="{{ it.img }}" alt="{{ it.img_alt }}" width="480" height="600" loading="lazy"></div><div class="card-body"><div class="card-title">{{ it.title }}</div>{% include merch-price.html p=it.price %}<span class="btn2 card-btn">See options</span></div></a>
     {% endfor %}
   </div>
 </section>

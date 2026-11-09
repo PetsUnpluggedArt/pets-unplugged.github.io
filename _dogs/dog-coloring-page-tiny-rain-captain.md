@@ -18,7 +18,7 @@ season: "Rainy days"
 vimeo: "1141745150"
 vimeo_hash: null
 payhip: "https://payhip.com/b/jsCxz"
-etsy_url: ""
+etsy_url: "https://www.etsy.com/listing/4510628999"
 image: "/assets/img/og/paws-27.jpg"
 description: "Dog coloring page: Tiny Rain Captain, page 27 of the PAWS book. He may look cute, but he takes rain-check duty very seriously. Free video preview; printable page with its QR video $1.99."
 episodes:

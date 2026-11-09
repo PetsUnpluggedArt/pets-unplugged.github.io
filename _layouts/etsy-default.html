@@ -18,10 +18,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Mulish:wght@400;600;700;800&display=swap">
-    <link rel="stylesheet" href="/assets/css/pu.css?v=2">
+    <link rel="stylesheet" href="/assets/css/pu.css?v=3">
 </head>
 <body>
     <!-- Etsy buyers land here from the QR codes in their Etsy prints: logo only, no shop navigation. -->
+    {% assign vnum = page.name | remove: 'etsy-' | remove: 'video' | remove: '.md' | plus: 0 %}
+    {% if vnum >= 1 and vnum <= 30 %}
+    <header class="qr-hdr"><img src="/assets/img/logo.png" alt="Pets Unplugged: unplug, color, animate" width="400" height="151"></header>
+    <main id="main">
+        {{ content }}
+    </main>
+    <footer class="qr-legal">&copy; {{ 'now' | date: "%Y" }} Pets Unplugged&trade;</footer>
+    {% else %}
     <header class="site-header">
         <div class="wrap hdr" style="justify-content: center">
             <span class="logo-link"><img src="/assets/img/logo.png" alt="Pets Unplugged: unplug, color, animate" width="400" height="151"></span>
@@ -33,5 +41,6 @@
     <footer class="site-footer">
         <div class="wrap legal" style="text-align: center">&copy; {{ 'now' | date: "%Y" }} Pets Unplugged&trade;. Unplug. Color. Animate.</div>
     </footer>
+    {% endif %}
 </body>
 </html>

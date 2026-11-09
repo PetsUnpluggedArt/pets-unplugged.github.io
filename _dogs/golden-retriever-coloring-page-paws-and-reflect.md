@@ -18,7 +18,7 @@ season: null
 vimeo: "1141743119"
 vimeo_hash: null
 payhip: "https://payhip.com/b/5gi9b"
-etsy_url: ""
+etsy_url: "https://www.etsy.com/listing/4510622376"
 image: "/assets/img/og/paws-23.jpg"
 description: "Golden Retriever coloring page: Paws & Reflect, page 23 of the PAWS book. Why does regret come after the crime and not five seconds earlier when the idea still felt “brilliant”? Free video preview; printable page with its QR video $1.99."
 episodes:

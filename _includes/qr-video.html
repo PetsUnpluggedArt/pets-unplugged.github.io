@@ -1,8 +1,10 @@
 {% comment %}
   The page a printed QR code opens: the Vimeo video first, then the title and caption.
   Params: ar (aspect ratio of the video, "4 / 5" PAWS, "3 / 4" Whiskers), etsy (true on the Etsy pages)
+  PAWS pages 1-30 use the newer qr-paws.html (bundle, pals and book); the rest keep this markup.
 {% endcomment %}{% assign vn = page.name | remove: 'etsy-' | remove: 'video' | remove: '.md' %}{% assign vnum = vn | plus: 0 %}
 {% assign dog = nil %}{% if include.book == 'paws' %}{% for o in site.dogs %}{% if o.n == vnum %}{% assign dog = o %}{% endif %}{% endfor %}{% endif %}
+{% if dog %}{% include qr-paws.html dog=dog etsy=include.etsy %}{% else %}
 <div class="wrap qr-wrap">
   <article class="page qr-card">
     <div class="qr-video" style="--ar: {{ include.ar }}">
@@ -35,4 +37,4 @@
       <p class="muted" style="margin: 26px 0 0">Thanks for scanning and watching!</p>
     </div>
   </article>
-</div>
+</div>{% endif %}

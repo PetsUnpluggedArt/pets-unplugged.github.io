@@ -18,7 +18,7 @@ season: null
 vimeo: "1141737156"
 vimeo_hash: null
 payhip: "https://payhip.com/b/xphzf"
-etsy_url: ""
+etsy_url: "https://www.etsy.com/listing/4510615275"
 image: "/assets/img/og/paws-19.jpg"
 description: "Dog coloring page: Handful of Fluff x2, page 19 of the PAWS book. We came as a set — returning one is not an option. Free video preview; printable page with its QR video $1.99."
 episodes:

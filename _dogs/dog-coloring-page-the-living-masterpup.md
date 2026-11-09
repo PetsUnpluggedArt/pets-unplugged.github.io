@@ -18,7 +18,7 @@ season: null
 vimeo: "1141735926"
 vimeo_hash: null
 payhip: "https://payhip.com/b/tXgFQ"
-etsy_url: ""
+etsy_url: "https://www.etsy.com/listing/4511517422"
 image: "/assets/img/og/paws-17.jpg"
 description: "Dog coloring page: The Living Masterpup, page 17 of the PAWS book. Scientifically proven: your eyes increase treat-giving by 200%. Free video preview; printable page with its QR video $1.99."
 ---

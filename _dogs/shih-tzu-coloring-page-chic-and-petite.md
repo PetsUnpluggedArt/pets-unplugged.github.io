@@ -18,7 +18,7 @@ season: null
 vimeo: "1141735234"
 vimeo_hash: null
 payhip: "https://payhip.com/b/UnGjd"
-etsy_url: ""
+etsy_url: "https://www.etsy.com/listing/4510615536"
 image: "/assets/img/og/paws-16.jpg"
 description: "Shih Tzu coloring page: Chic & Petite, page 16 of the PAWS book. “I’m a lady just like my human… Free video preview; printable page with its QR video $1.99."
 episodes:

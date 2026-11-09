@@ -18,7 +18,7 @@ season: null
 vimeo: "1141742240"
 vimeo_hash: null
 payhip: "https://payhip.com/b/1ihJP"
-etsy_url: ""
+etsy_url: "https://www.etsy.com/listing/4510619006"
 image: "/assets/img/og/paws-22.jpg"
 description: "Dog coloring page: Little Woolly Wonder, page 22 of the PAWS book. Some days you don’t need words — just soft fur, soft sleeves, and someone who holds you close. Free video preview; printable page with its QR video $1.99."
 episodes:

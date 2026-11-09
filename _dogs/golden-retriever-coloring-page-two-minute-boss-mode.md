@@ -18,7 +18,7 @@ season: null
 vimeo: "1141746397"
 vimeo_hash: null
 payhip: "https://payhip.com/b/kso5g"
-etsy_url: ""
+etsy_url: "https://www.etsy.com/listing/4510631637"
 image: "/assets/img/og/paws-30.jpg"
 description: "Golden Retriever coloring page: Two-Minute Boss Mode, page 30 of the PAWS book. I stand tall, fierce, unstoppable — king of all I survey. Free video preview; printable page with its QR video $1.99."
 episodes:

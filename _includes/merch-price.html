@@ -1,0 +1,1 @@
+{% comment %}Merch price line. Fill a product's "price:" (e.g. "$14.99") and it shows "From $14.99"; while it's "[PRICE]" or empty, nothing shows (the price is on the shop page).{% endcomment %}{% if include.p and include.p != "" and include.p != "[PRICE]" %}<div class="{{ include.class | default: 'card-sub' }}">From {{ include.p }}</div>{% endif %}

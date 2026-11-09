@@ -28,7 +28,7 @@ description: Mugs, tees, totes, stickers and posters with the Pets Unplugged dog
     {% for it in items %}
     <a href="{{ it.url }}" class="page card" data-tags="{{ it.kind }}">
       <div class="card-img bg-lilac" style="padding: 16px"><img src="{{ it.img }}" alt="{{ it.img_alt }}" width="480" height="600" loading="lazy" style="border-radius: 10px; border: 2px solid var(--ink)"><span class="chip" style="top: 26px; left: 26px">{{ it.kind }}</span></div>
-      <div class="card-body"><div class="card-title">{{ it.title }}</div><div class="card-sub">{{ it.pet }} · {% include price.html p=it.price %}</div></div>
+      <div class="card-body"><div class="card-title">{{ it.title }}</div><div class="card-sub">{{ it.pet }}</div>{% include merch-price.html p=it.price %}<span class="btn2 card-btn">See options</span></div>
     </a>
     {% endfor %}
   </div>

@@ -18,7 +18,7 @@ season: "Summer"
 vimeo: "1141737734"
 vimeo_hash: null
 payhip: "https://payhip.com/b/6Egcu"
-etsy_url: ""
+etsy_url: "https://www.etsy.com/listing/4510617056"
 image: "/assets/img/og/paws-20.jpg"
 description: "Corgi coloring page: Sun-Kissed Corgi Cutie, page 20 of the PAWS book. If happiness had a sound, it would be the splashing behind me. Free video preview; printable page with its QR video $1.99."
 episodes:
