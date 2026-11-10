@@ -2,9 +2,9 @@
 n: 6
 title: "Dog coloring page: Rosco"
 h1: "Dog coloring page: Rosco"
-card_title: "Road Trip Rockstar"
+card_title: "Paws in the Wind"
 book_title: "Paws in the Wind"
-video_title: "Road Trip Rockstar"
+video_title: "Paws in the Wind"
 name: "Rosco"
 short_name: "Rosco"
 possessive: "Rosco's"

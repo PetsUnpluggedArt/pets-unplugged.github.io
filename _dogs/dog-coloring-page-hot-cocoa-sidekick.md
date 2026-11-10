@@ -1,10 +1,10 @@
 ---
 n: 18
-title: "Dog coloring page: Hot Cocoa Sidekick"
-h1: "Dog coloring page: Hot Cocoa Sidekick"
-card_title: "Hot Cocoa Sidekick"
+title: "Dog coloring page: Sweater"
+h1: "Dog coloring page: Sweater"
+card_title: "Sweater"
 book_title: "Sweater"
-video_title: "Hot Cocoa Sidekick"
+video_title: "Sweater"
 name: null
 short_name: "the page"
 possessive: "the"
@@ -20,5 +20,5 @@ vimeo_hash: null
 payhip: "https://payhip.com/b/0cWRu"
 etsy_url: "https://www.etsy.com/listing/4613323108"
 image: "/assets/img/og/paws-18.jpg"
-description: "Dog coloring page: Hot Cocoa Sidekick, page 18 of the PAWS book. On cold days, I don’t just wear a sweater — I become the sweater. Free video preview; printable page with its QR video $1.99."
+description: "Dog coloring page: Sweater, page 18 of the PAWS book. On cold days, I don’t just wear a sweater — I become the sweater. Free video preview; printable page with its QR video $1.99."
 ---

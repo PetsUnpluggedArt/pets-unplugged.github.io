@@ -2,9 +2,9 @@
 n: 3
 title: "Golden Retriever mix coloring page: Maya"
 h1: "Golden Retriever mix coloring page: Maya"
-card_title: "The Curious Cloud"
+card_title: "The Secret Agent"
 book_title: "The Secret Agent"
-video_title: "The Curious Cloud"
+video_title: "The Secret Agent"
 name: "Maya"
 short_name: "Maya"
 possessive: "Maya's"

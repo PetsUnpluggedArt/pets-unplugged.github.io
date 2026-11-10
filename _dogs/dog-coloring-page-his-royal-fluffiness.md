@@ -1,10 +1,10 @@
 ---
 n: 21
-title: "Dog coloring page: His Royal Fluffiness"
-h1: "Dog coloring page: His Royal Fluffiness"
-card_title: "His Royal Fluffiness"
+title: "Dog coloring page: Royal Fluffiness"
+h1: "Dog coloring page: Royal Fluffiness"
+card_title: "Royal Fluffiness"
 book_title: "Royal Fluffiness"
-video_title: "His Royal Fluffiness"
+video_title: "Royal Fluffiness"
 name: null
 short_name: "the page"
 possessive: "the"
@@ -20,7 +20,7 @@ vimeo_hash: null
 payhip: "https://payhip.com/b/z6Hi7"
 etsy_url: "https://www.etsy.com/listing/4510618092"
 image: "/assets/img/og/paws-21.jpg"
-description: "Dog coloring page: His Royal Fluffiness, page 21 of the PAWS book. I’m not spoiled — I’m selectively adored. Free video preview; printable page with its QR video $1.99."
+description: "Dog coloring page: Royal Fluffiness, page 21 of the PAWS book. I’m not spoiled — I’m selectively adored. Free video preview; printable page with its QR video $1.99."
 episodes:
   - n: 2
     name: "The Discovery of Standards"

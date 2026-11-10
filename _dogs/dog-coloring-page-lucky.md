@@ -2,9 +2,9 @@
 n: 7
 title: "Dog coloring page: Lucky"
 h1: "Dog coloring page: Lucky"
-card_title: "Roll Raider"
+card_title: "Rolls of Chaos"
 book_title: "Rolls of Chaos"
-video_title: "Roll Raider"
+video_title: "Rolls of Chaos"
 name: "Lucky"
 short_name: "Lucky"
 possessive: "Lucky's"

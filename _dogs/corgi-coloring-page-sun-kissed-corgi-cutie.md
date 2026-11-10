@@ -1,10 +1,10 @@
 ---
 n: 20
-title: "Corgi coloring page: Sun-Kissed Corgi Cutie"
-h1: "Corgi coloring page: Sun-Kissed Corgi Cutie"
-card_title: "Sun-Kissed Corgi Cutie"
+title: "Corgi coloring page: Splash Life"
+h1: "Corgi coloring page: Splash Life"
+card_title: "Splash Life"
 book_title: "Splash Life"
-video_title: "Sun-Kissed Corgi Cutie"
+video_title: "Splash Life"
 name: null
 short_name: "the page"
 possessive: "the"
@@ -20,7 +20,7 @@ vimeo_hash: null
 payhip: "https://payhip.com/b/6Egcu"
 etsy_url: "https://www.etsy.com/listing/4510617056"
 image: "/assets/img/og/paws-20.jpg"
-description: "Corgi coloring page: Sun-Kissed Corgi Cutie, page 20 of the PAWS book. If happiness had a sound, it would be the splashing behind me. Free video preview; printable page with its QR video $1.99."
+description: "Corgi coloring page: Splash Life, page 20 of the PAWS book. If happiness had a sound, it would be the splashing behind me. Free video preview; printable page with its QR video $1.99."
 episodes:
   - n: 2
     name: "The Discovery of Splash"

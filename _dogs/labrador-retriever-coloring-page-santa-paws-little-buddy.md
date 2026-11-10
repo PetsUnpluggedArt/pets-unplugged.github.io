@@ -1,10 +1,10 @@
 ---
 n: 13
-title: "Labrador Retriever coloring page: Santa Paws’ Little Buddy"
-h1: "Labrador Retriever coloring page: Santa Paws’ Little Buddy"
-card_title: "Santa Paws’ Little Buddy"
+title: "Labrador Retriever coloring page: Sorry, Santa"
+h1: "Labrador Retriever coloring page: Sorry, Santa"
+card_title: "Sorry, Santa"
 book_title: "Sorry, Santa"
-video_title: "Santa Paws’ Little Buddy"
+video_title: "Sorry, Santa"
 name: null
 short_name: "the page"
 possessive: "the"
@@ -20,7 +20,7 @@ vimeo_hash: null
 payhip: "https://payhip.com/b/OzEu7"
 etsy_url: "https://www.etsy.com/listing/4510611532"
 image: "/assets/img/og/paws-13.jpg"
-description: "Labrador Retriever coloring page: Santa Paws’ Little Buddy, page 13 of the PAWS book. Other gifts? Free video preview; printable page with its QR video $1.99."
+description: "Labrador Retriever coloring page: Sorry, Santa, page 13 of the PAWS book. Other gifts? Free video preview; printable page with its QR video $1.99."
 episodes:
   - n: 2
     name: "The Gift Suggestion"

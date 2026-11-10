@@ -2,9 +2,9 @@
 n: 1
 title: "Shih Tzu coloring page: Scout"
 h1: "Shih Tzu coloring page: Scout"
-card_title: "Scout: Pompom"
+card_title: "Pompom"
 book_title: "Pompom"
-video_title: "Scout"
+video_title: "Pompom"
 name: "Scout"
 short_name: "Scout"
 possessive: "Scout's"

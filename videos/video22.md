@@ -1,7 +1,7 @@
 ---
 image: /assets/img/og/paws-22.jpg
 layout: video
-title: Little Woolly Wonder
+title: "Cozy Season Forever"
 subtitle: “100% Pure Heart-Melter”
 vimeo_video_id: 1141742240
 video_download_link: https://vimeo.com/1141742240?share=copy&fl=sv&fe=ci

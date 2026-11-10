@@ -1,10 +1,10 @@
 ---
 n: 17
-title: "Dog coloring page: The Living Masterpup"
-h1: "Dog coloring page: The Living Masterpup"
-card_title: "The Living Masterpup"
+title: "Dog coloring page: Stop Looking at Me"
+h1: "Dog coloring page: Stop Looking at Me"
+card_title: "Stop Looking at Me"
 book_title: "Stop Looking at Me"
-video_title: "The Living Masterpup"
+video_title: "Stop Looking at Me"
 name: null
 short_name: "the page"
 possessive: "the"
@@ -20,5 +20,5 @@ vimeo_hash: null
 payhip: "https://payhip.com/b/tXgFQ"
 etsy_url: "https://www.etsy.com/listing/4511517422"
 image: "/assets/img/og/paws-17.jpg"
-description: "Dog coloring page: The Living Masterpup, page 17 of the PAWS book. Scientifically proven: your eyes increase treat-giving by 200%. Free video preview; printable page with its QR video $1.99."
+description: "Dog coloring page: Stop Looking at Me, page 17 of the PAWS book. Scientifically proven: your eyes increase treat-giving by 200%. Free video preview; printable page with its QR video $1.99."
 ---

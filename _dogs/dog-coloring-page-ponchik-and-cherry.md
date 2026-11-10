@@ -2,9 +2,9 @@
 n: 4
 title: "Dog coloring page: Ponchik and Cherry"
 h1: "Dog coloring page: Ponchik and Cherry"
-card_title: "Fluff² Activated"
+card_title: "A Sweet Dilemma"
 book_title: "A Sweet Dilemma"
-video_title: "Fluff² Activated"
+video_title: "A Sweet Dilemma"
 name: "Ponchik and Cherry"
 short_name: "Ponchik and Cherry"
 possessive: "the"

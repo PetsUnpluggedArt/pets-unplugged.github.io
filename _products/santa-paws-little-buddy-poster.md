@@ -1,11 +1,11 @@
 ---
-title: "Santa Paws' Little Buddy poster"
+title: "Sorry, Santa poster"
 kind: "Poster"
 order: 5
 page_n: 13
-pet: "Santa Paws' Little Buddy"
+pet: "Sorry, Santa"
 img: "/assets/img/pages/paws-13-color.jpg"
-img_alt: "The Santa Paws' Little Buddy poster design: Santa Paws' Little Buddy"
+img_alt: "The Sorry, Santa poster design"
 price: "[PRICE]"
 etsy_url: ""
 sizes: []

@@ -1,10 +1,10 @@
 ---
 n: 23
-title: "Golden Retriever coloring page: Paws & Reflect"
-h1: "Golden Retriever coloring page: Paws & Reflect"
-card_title: "Paws & Reflect"
+title: "Golden Retriever coloring page: Timing Fail"
+h1: "Golden Retriever coloring page: Timing Fail"
+card_title: "Timing Fail"
 book_title: "Timing Fail"
-video_title: "Paws & Reflect"
+video_title: "Timing Fail"
 name: null
 short_name: "the page"
 possessive: "the"
@@ -20,7 +20,7 @@ vimeo_hash: null
 payhip: "https://payhip.com/b/5gi9b"
 etsy_url: "https://www.etsy.com/listing/4510622376"
 image: "/assets/img/og/paws-23.jpg"
-description: "Golden Retriever coloring page: Paws & Reflect, page 23 of the PAWS book. Why does regret come after the crime and not five seconds earlier when the idea still felt “brilliant”? Free video preview; printable page with its QR video $1.99."
+description: "Golden Retriever coloring page: Timing Fail, page 23 of the PAWS book. Why does regret come after the crime and not five seconds earlier when the idea still felt “brilliant”? Free video preview; printable page with its QR video $1.99."
 episodes:
   - n: 2
     name: "The First Brilliant Disaster"

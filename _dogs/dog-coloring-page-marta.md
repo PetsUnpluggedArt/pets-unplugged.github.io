@@ -2,9 +2,9 @@
 n: 12
 title: "Dog coloring page: Marta"
 h1: "Dog coloring page: Marta"
-card_title: "Sunshine Supervisor"
+card_title: "Best Flower"
 book_title: "Best Flower"
-video_title: "Sunshine Supervisor"
+video_title: "Best Flower"
 name: "Marta"
 short_name: "Marta"
 possessive: "Marta's"

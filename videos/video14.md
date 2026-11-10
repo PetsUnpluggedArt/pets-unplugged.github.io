@@ -1,7 +1,7 @@
 ---
 image: /assets/img/og/paws-14.jpg
 layout: video
-title: Pocket-Sized Snooze
+title: "A Duet"
 subtitle: “Officially too cute to wake”
 vimeo_video_id: 1141733550
 video_download_link: https://vimeo.com/1141733550?share=copy&fl=sv&fe=ci

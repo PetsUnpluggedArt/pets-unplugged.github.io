@@ -1,10 +1,10 @@
 ---
 n: 16
-title: "Shih Tzu coloring page: Chic & Petite"
-h1: "Shih Tzu coloring page: Chic & Petite"
-card_title: "Chic & Petite"
+title: "Shih Tzu coloring page: I’m a Lady"
+h1: "Shih Tzu coloring page: I’m a Lady"
+card_title: "I’m a Lady"
 book_title: "I’m a Lady"
-video_title: "Chic & Petite"
+video_title: "I’m a Lady"
 name: null
 short_name: "the page"
 possessive: "the"
@@ -20,7 +20,7 @@ vimeo_hash: null
 payhip: "https://payhip.com/b/UnGjd"
 etsy_url: "https://www.etsy.com/listing/4510615536"
 image: "/assets/img/og/paws-16.jpg"
-description: "Shih Tzu coloring page: Chic & Petite, page 16 of the PAWS book. “I’m a lady just like my human… Free video preview; printable page with its QR video $1.99."
+description: "Shih Tzu coloring page: I’m a Lady, page 16 of the PAWS book. “I’m a lady just like my human… Free video preview; printable page with its QR video $1.99."
 episodes:
   - n: 2
     name: "The Mirror Moment"

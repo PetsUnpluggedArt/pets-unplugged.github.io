@@ -1,10 +1,10 @@
 ---
 n: 15
-title: "Basset Hound coloring page: Puppy Earmuff"
-h1: "Basset Hound coloring page: Puppy Earmuff"
-card_title: "Puppy Earmuff"
+title: "Basset Hound coloring page: A Gentleman"
+h1: "Basset Hound coloring page: A Gentleman"
+card_title: "A Gentleman"
 book_title: "A Gentleman"
-video_title: "Puppy Earmuff"
+video_title: "A Gentleman"
 name: null
 short_name: "the page"
 possessive: "the"
@@ -20,7 +20,7 @@ vimeo_hash: null
 payhip: "https://payhip.com/b/4SgIY"
 etsy_url: "https://www.etsy.com/listing/4510611415"
 image: "/assets/img/og/paws-15.jpg"
-description: "Basset Hound coloring page: Puppy Earmuff, page 15 of the PAWS book. Yes, he has the hat. Free video preview; printable page with its QR video $1.99."
+description: "Basset Hound coloring page: A Gentleman, page 15 of the PAWS book. Yes, he has the hat. Free video preview; printable page with its QR video $1.99."
 episodes:
   - n: 2
     name: "The Hat Acquisition"

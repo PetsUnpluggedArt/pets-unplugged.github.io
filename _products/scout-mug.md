@@ -1,11 +1,11 @@
 ---
-title: "Scout mug"
+title: "Pompom mug"
 kind: "Mug"
 order: 1
 page_n: 1
 pet: "Scout"
 img: "/assets/img/pages/paws-01-color.jpg"
-img_alt: "The Scout mug design: Scout"
+img_alt: "The Pompom mug design: Scout"
 price: "[PRICE]"
 etsy_url: ""
 sizes: ["11 oz", "15 oz"]

@@ -2,9 +2,9 @@
 n: 10
 title: "Dog coloring page: Thomas"
 h1: "Dog coloring page: Thomas"
-card_title: "Pug Loaf Mode"
+card_title: "Nap Master Supreme"
 book_title: "Nap Master Supreme"
-video_title: "Pug Loaf Mode"
+video_title: "Nap Master Supreme"
 name: "Thomas"
 short_name: "Thomas"
 possessive: "Thomas's"

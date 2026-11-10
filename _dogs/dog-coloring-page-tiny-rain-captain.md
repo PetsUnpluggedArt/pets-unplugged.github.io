@@ -1,10 +1,10 @@
 ---
 n: 27
-title: "Dog coloring page: Tiny Rain Captain"
-h1: "Dog coloring page: Tiny Rain Captain"
-card_title: "Tiny Rain Captain"
+title: "Dog coloring page: Puddles"
+h1: "Dog coloring page: Puddles"
+card_title: "Puddles"
 book_title: "Puddles"
-video_title: "Tiny Rain Captain"
+video_title: "Puddles"
 name: null
 short_name: "the page"
 possessive: "the"
@@ -20,7 +20,7 @@ vimeo_hash: null
 payhip: "https://payhip.com/b/jsCxz"
 etsy_url: "https://www.etsy.com/listing/4510628999"
 image: "/assets/img/og/paws-27.jpg"
-description: "Dog coloring page: Tiny Rain Captain, page 27 of the PAWS book. He may look cute, but he takes rain-check duty very seriously. Free video preview; printable page with its QR video $1.99."
+description: "Dog coloring page: Puddles, page 27 of the PAWS book. He may look cute, but he takes rain-check duty very seriously. Free video preview; printable page with its QR video $1.99."
 episodes:
   - n: 2
     name: "The Discovery"

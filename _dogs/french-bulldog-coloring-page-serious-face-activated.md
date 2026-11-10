@@ -1,10 +1,10 @@
 ---
 n: 29
-title: "French Bulldog coloring page: Serious Face Activated"
-h1: "French Bulldog coloring page: Serious Face Activated"
-card_title: "Serious Face Activated"
+title: "French Bulldog coloring page: Send Help. And a Lawyer"
+h1: "French Bulldog coloring page: Send Help. And a Lawyer"
+card_title: "Send Help. And a Lawyer"
 book_title: "Send Help. And a Lawyer"
-video_title: "Serious Face Activated"
+video_title: "Send Help. And a Lawyer"
 name: null
 short_name: "the page"
 possessive: "the"
@@ -20,7 +20,7 @@ vimeo_hash: null
 payhip: "https://payhip.com/b/GDHbQ"
 etsy_url: "https://www.etsy.com/listing/4510631592"
 image: "/assets/img/og/paws-29.jpg"
-description: "French Bulldog coloring page: Serious Face Activated, page 29 of the PAWS book. I’ve contacted my legal team. Free video preview; printable page with its QR video $1.99."
+description: "French Bulldog coloring page: Send Help. And a Lawyer, page 29 of the PAWS book. I’ve contacted my legal team. Free video preview; printable page with its QR video $1.99."
 episodes:
   - n: 2
     name: "The Violation"

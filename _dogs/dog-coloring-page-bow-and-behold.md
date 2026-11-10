@@ -1,10 +1,10 @@
 ---
 n: 28
-title: "Dog coloring page: Bow & Behold"
-h1: "Dog coloring page: Bow & Behold"
-card_title: "Bow & Behold"
+title: "Dog coloring page: Sweetness Delivery"
+h1: "Dog coloring page: Sweetness Delivery"
+card_title: "Sweetness Delivery"
 book_title: "Sweetness Delivery"
-video_title: "Bow & Behold"
+video_title: "Sweetness Delivery"
 name: null
 short_name: "the page"
 possessive: "the"
@@ -20,7 +20,7 @@ vimeo_hash: null
 payhip: "https://payhip.com/b/RL2Qg"
 etsy_url: "https://www.etsy.com/listing/4510629779"
 image: "/assets/img/og/paws-28.jpg"
-description: "Dog coloring page: Bow & Behold, page 28 of the PAWS book. Someone ordered a basket full of sweetness? Free video preview; printable page with its QR video $1.99."
+description: "Dog coloring page: Sweetness Delivery, page 28 of the PAWS book. Someone ordered a basket full of sweetness? Free video preview; printable page with its QR video $1.99."
 episodes:
   - n: 2
     name: "The Discovery"

@@ -1,10 +1,10 @@
 ---
 n: 11
-title: "Shih Tzu coloring page: Matching Fluff Squad"
-h1: "Shih Tzu coloring page: Matching Fluff Squad"
-card_title: "Matching Fluff Squad"
+title: "Shih Tzu coloring page: Which One Is Which?"
+h1: "Shih Tzu coloring page: Which One Is Which?"
+card_title: "Which One Is Which?"
 book_title: "Which One Is Which?"
-video_title: "Matching Fluff Squad"
+video_title: "Which One Is Which?"
 name: null
 short_name: "the page"
 possessive: "the"
@@ -20,7 +20,7 @@ vimeo_hash: null
 payhip: "https://payhip.com/b/0DZQl"
 etsy_url: "https://www.etsy.com/listing/4510459350"
 image: "/assets/img/og/paws-11.jpg"
-description: "Shih Tzu coloring page: Matching Fluff Squad, page 11 of the PAWS book. They looked so alike sitting on the couch that it felt like someone had hit “copy–paste” on cuteness. Free video preview; printable page with its QR video $1.99."
+description: "Shih Tzu coloring page: Which One Is Which?, page 11 of the PAWS book. They looked so alike sitting on the couch that it felt like someone had hit “copy–paste” on cuteness. Free video preview; printable page with its QR video $1.99."
 episodes:
   - n: 2
     name: "The Mirror Moment"

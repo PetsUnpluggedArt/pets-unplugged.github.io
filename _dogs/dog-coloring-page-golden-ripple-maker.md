@@ -1,10 +1,10 @@
 ---
 n: 24
-title: "Dog coloring page: Golden Ripple Maker"
-h1: "Dog coloring page: Golden Ripple Maker"
-card_title: "Golden Ripple Maker"
+title: "Dog coloring page: Reflection Error"
+h1: "Dog coloring page: Reflection Error"
+card_title: "Reflection Error"
 book_title: "Reflection Error"
-video_title: "Golden Ripple Maker"
+video_title: "Reflection Error"
 name: null
 short_name: "the page"
 possessive: "the"
@@ -20,7 +20,7 @@ vimeo_hash: null
 payhip: "https://payhip.com/b/7byQF"
 etsy_url: "https://www.etsy.com/listing/4510624986"
 image: "/assets/img/og/paws-24.jpg"
-description: "Dog coloring page: Golden Ripple Maker, page 24 of the PAWS book. He thought he found a new friend, but turns out it was just… Free video preview; printable page with its QR video $1.99."
+description: "Dog coloring page: Reflection Error, page 24 of the PAWS book. He thought he found a new friend, but turns out it was just… Free video preview; printable page with its QR video $1.99."
 episodes:
   - n: 2
     name: "The First Mirror Encounter"

@@ -1,10 +1,10 @@
 ---
 n: 19
-title: "Dog coloring page: Handful of Fluff x2"
-h1: "Dog coloring page: Handful of Fluff x2"
-card_title: "Handful of Fluff x2"
+title: "Dog coloring page: Double Cuteness"
+h1: "Dog coloring page: Double Cuteness"
+card_title: "Double Cuteness"
 book_title: "Double Cuteness"
-video_title: "Handful of Fluff x2"
+video_title: "Double Cuteness"
 name: null
 short_name: "the page"
 possessive: "the"
@@ -20,7 +20,7 @@ vimeo_hash: null
 payhip: "https://payhip.com/b/xphzf"
 etsy_url: "https://www.etsy.com/listing/4510615275"
 image: "/assets/img/og/paws-19.jpg"
-description: "Dog coloring page: Handful of Fluff x2, page 19 of the PAWS book. We came as a set — returning one is not an option. Free video preview; printable page with its QR video $1.99."
+description: "Dog coloring page: Double Cuteness, page 19 of the PAWS book. We came as a set — returning one is not an option. Free video preview; printable page with its QR video $1.99."
 episodes:
   - n: 2
     name: "The First Meeting"

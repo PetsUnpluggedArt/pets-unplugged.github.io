@@ -2,9 +2,9 @@
 n: 5
 title: "Dog coloring page: Melody"
 h1: "Dog coloring page: Melody"
-card_title: "Beethoven’s Fluffiest Fan"
+card_title: "Music of Dreams"
 book_title: "Music of Dreams"
-video_title: "Beethoven’s Fluffiest Fan"
+video_title: "Music of Dreams"
 name: "Melody"
 short_name: "Melody"
 possessive: "Melody's"

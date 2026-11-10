@@ -1,10 +1,10 @@
 ---
 n: 26
-title: "Corgi coloring page: Professional Cuteness"
-h1: "Corgi coloring page: Professional Cuteness"
-card_title: "Professional Cuteness"
+title: "Corgi coloring page: Ear Radar Activated"
+h1: "Corgi coloring page: Ear Radar Activated"
+card_title: "Ear Radar Activated"
 book_title: "Ear Radar Activated"
-video_title: "Professional Cuteness"
+video_title: "Ear Radar Activated"
 name: null
 short_name: "the page"
 possessive: "the"
@@ -20,7 +20,7 @@ vimeo_hash: null
 payhip: "https://payhip.com/b/2M4dg"
 etsy_url: "https://www.etsy.com/listing/4510627510"
 image: "/assets/img/og/paws-26.jpg"
-description: "Corgi coloring page: Professional Cuteness, page 26 of the PAWS book. One familiar sound, and his ears went from “relaxed mode” to “military satellite dish.” Free video preview; printable page with its QR video $1.99."
+description: "Corgi coloring page: Ear Radar Activated, page 26 of the PAWS book. One familiar sound, and his ears went from “relaxed mode” to “military satellite dish.” Free video preview; printable page with its QR video $1.99."
 episodes:
   - n: 2
     name: "The Discovery of Attention"

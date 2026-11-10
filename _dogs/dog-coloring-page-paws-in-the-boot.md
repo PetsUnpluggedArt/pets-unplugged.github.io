@@ -1,10 +1,10 @@
 ---
 n: 9
-title: "Dog coloring page: Paws in the Boot"
-h1: "Dog coloring page: Paws in the Boot"
-card_title: "Paws in the Boot"
+title: "Dog coloring page: Small Hope in Big Boots"
+h1: "Dog coloring page: Small Hope in Big Boots"
+card_title: "Small Hope in Big Boots"
 book_title: "Small Hope in Big Boots"
-video_title: "Paws in the Boot"
+video_title: "Small Hope in Big Boots"
 name: null
 short_name: "the page"
 possessive: "the"
@@ -20,7 +20,7 @@ vimeo_hash: null
 payhip: "https://payhip.com/b/AXyfb"
 etsy_url: "https://www.etsy.com/listing/4510606965"
 image: "/assets/img/og/paws-09.jpg"
-description: "Dog coloring page: Paws in the Boot, page 9 of the PAWS book. “Maybe now they’ll see me… Free video preview; printable page with its QR video $1.99."
+description: "Dog coloring page: Small Hope in Big Boots, page 9 of the PAWS book. “Maybe now they’ll see me… Free video preview; printable page with its QR video $1.99."
 episodes:
   - n: 2
     name: "The Longing"

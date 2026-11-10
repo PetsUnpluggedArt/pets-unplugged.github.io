@@ -1,10 +1,10 @@
 ---
 n: 8
-title: "Dog coloring page: My Emotional Support Bear"
-h1: "Dog coloring page: My Emotional Support Bear"
-card_title: "My Emotional Support Bear"
+title: "Dog coloring page: Comfort Zone"
+h1: "Dog coloring page: Comfort Zone"
+card_title: "Comfort Zone"
 book_title: "Comfort Zone"
-video_title: "My Emotional Support Bear"
+video_title: "Comfort Zone"
 name: null
 short_name: "the page"
 possessive: "the"
@@ -20,7 +20,7 @@ vimeo_hash: null
 payhip: "https://payhip.com/b/fQ7tD"
 etsy_url: "https://www.etsy.com/listing/4510452925"
 image: "/assets/img/og/paws-08.jpg"
-description: "Dog coloring page: My Emotional Support Bear, page 8 of the PAWS book. Peace feels closer when you have your own safe place and someone to cuddle. Free video preview; printable page with its QR video $1.99."
+description: "Dog coloring page: Comfort Zone, page 8 of the PAWS book. Peace feels closer when you have your own safe place and someone to cuddle. Free video preview; printable page with its QR video $1.99."
 episodes:
   - n: 2
     name: "Seeking the Space"

@@ -1,10 +1,10 @@
 ---
 n: 25
-title: "Dog coloring page: Fluff with Attitude"
-h1: "Dog coloring page: Fluff with Attitude"
-card_title: "Fluff with Attitude"
+title: "Dog coloring page: Small Dog, Big Duty"
+h1: "Dog coloring page: Small Dog, Big Duty"
+card_title: "Small Dog, Big Duty"
 book_title: "Small Dog, Big Duty"
-video_title: "Fluff with Attitude"
+video_title: "Small Dog, Big Duty"
 name: null
 short_name: "the page"
 possessive: "the"
@@ -20,7 +20,7 @@ vimeo_hash: null
 payhip: "https://payhip.com/b/5OI3B"
 etsy_url: "https://www.etsy.com/listing/4510625972"
 image: "/assets/img/og/paws-25.jpg"
-description: "Dog coloring page: Fluff with Attitude, page 25 of the PAWS book. He’s the main security officer here. Free video preview; printable page with its QR video $1.99."
+description: "Dog coloring page: Small Dog, Big Duty, page 25 of the PAWS book. He’s the main security officer here. Free video preview; printable page with its QR video $1.99."
 episodes:
   - n: 2
     name: "The Assignment"

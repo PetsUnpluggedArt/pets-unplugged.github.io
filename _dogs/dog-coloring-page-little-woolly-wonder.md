@@ -1,10 +1,10 @@
 ---
 n: 22
-title: "Dog coloring page: Little Woolly Wonder"
-h1: "Dog coloring page: Little Woolly Wonder"
-card_title: "Little Woolly Wonder"
+title: "Dog coloring page: Cozy Season Forever"
+h1: "Dog coloring page: Cozy Season Forever"
+card_title: "Cozy Season Forever"
 book_title: "Cozy Season Forever"
-video_title: "Little Woolly Wonder"
+video_title: "Cozy Season Forever"
 name: null
 short_name: "the page"
 possessive: "the"
@@ -20,7 +20,7 @@ vimeo_hash: null
 payhip: "https://payhip.com/b/1ihJP"
 etsy_url: "https://www.etsy.com/listing/4510619006"
 image: "/assets/img/og/paws-22.jpg"
-description: "Dog coloring page: Little Woolly Wonder, page 22 of the PAWS book. Some days you don’t need words — just soft fur, soft sleeves, and someone who holds you close. Free video preview; printable page with its QR video $1.99."
+description: "Dog coloring page: Cozy Season Forever, page 22 of the PAWS book. Some days you don’t need words — just soft fur, soft sleeves, and someone who holds you close. Free video preview; printable page with its QR video $1.99."
 episodes:
   - n: 2
     name: "The Discovery of Safe Harbor"

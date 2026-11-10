@@ -2,9 +2,9 @@
 n: 2
 title: "Corgi coloring page: Barnaby"
 h1: "Corgi coloring page: Barnaby"
-card_title: "Paws & Dream"
+card_title: "Toy-Herding Practice"
 book_title: "Toy-Herding Practice"
-video_title: "Paws & Dream"
+video_title: "Toy-Herding Practice"
 name: "Barnaby"
 short_name: "Barnaby"
 possessive: "Barnaby's"
