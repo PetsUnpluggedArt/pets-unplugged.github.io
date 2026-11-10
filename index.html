@@ -100,11 +100,11 @@ image: /assets/img/og/site.jpg
 </section>
 
 <section class="wrap sec">
-  <div class="head-row"><h2 class="h2">Wear the art</h2><a class="link-b" href="/merchandise/">Shop all merch</a></div>
+  <div class="head-row"><h2 class="h2">{% if site.merch_live %}Wear the art{% else %}Merch is coming soon{% endif %}</h2><a class="link-b" href="/merchandise/">{% if site.merch_live %}Shop all merch{% else %}See the designs{% endif %}</a></div>
   <div class="grid">
     {% assign items = site.products | sort: "order" %}
     {% for it in items limit: 4 %}
-    <a href="{{ it.url }}" class="page card"><div class="card-img"><img src="{{ it.img }}" alt="{{ it.img_alt }}" width="480" height="600" loading="lazy"></div><div class="card-body"><div class="card-title">{{ it.title }}</div>{% include merch-price.html p=it.price %}<span class="btn2 card-btn">See options</span></div></a>
+    <a href="{{ it.url }}" class="page card"><div class="card-img"><img src="{{ it.img }}" alt="{{ it.img_alt }}" width="480" height="600" loading="lazy"></div><div class="card-body"><div class="card-title">{{ it.title }}</div>{% if it.etsy_url != '' %}{% include merch-price.html p=it.price %}<span class="btn2 card-btn">See options</span>{% else %}<span class="btn2 card-btn">Coming soon</span>{% endif %}</div></a>
     {% endfor %}
   </div>
 </section>

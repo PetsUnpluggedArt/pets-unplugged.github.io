@@ -32,6 +32,8 @@ form_recaptcha_key: "6LcBYSssAAAAAHyybuB7qBL--CJ-z1vhyNU13cFl"
 
 # Free gift: Pompom (PAWS page 1) with its animation, a free Payhip product that asks for an email.
 free_gift_url: "https://payhip.com/b/WMkrK"
+# Merch: false shows the designs as "coming soon". A product with an etsy_url is treated as live on its own.
+merch_live: false
 # ---------------------------------------------------------------------------
 
 prices:
