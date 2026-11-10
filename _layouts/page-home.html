@@ -1,0 +1,128 @@
+---
+layout: default
+---
+{% include i18n.html %}{% assign dogs = site.dogs | sort: "n" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Organization", "name": "Pets Unplugged", "url": "{{ site.url }}", "logo": "{{ site.url }}/assets/img/logo.png", "slogan": "Unplug. Color. Animate." },
+    { "@type": "WebSite", "url": "{{ site.url }}", "name": "Pets Unplugged"{% if lang != "en" %}, "inLanguage": "{{ lang }}"{% endif %} }
+  ]
+}
+</script>
+
+<section class="wrap hero">
+  <div class="hero-text">
+    <h1><span class="w1">{{ t.w1 }}</span> <span class="w2">{{ t.w2 }}</span> <span class="w3">{{ t.w3 }}</span></h1>
+    <p class="lead" style="font-size: 20px; max-width: 520px">{{ t.home_lead }}</p>
+    <div class="row" style="margin-top: 30px"><a class="btn" href="{{ lp }}/free/">{{ t.home_cta_free }}</a><a class="btn2" href="{{ lp }}/books/">{{ t.home_cta_books }}</a></div>
+    <p class="muted" style="margin: 18px 0 0; font-size: 15px">{{ t.home_noapp }}</p>
+  </div>
+  <figure class="slider" data-slider>
+    <div class="page slider-box">
+      <img src="/assets/img/pages/paws-11-line-slider.jpg" srcset="/assets/img/pages/paws-11-line-slider.jpg 450w, /assets/img/pages/paws-11-line-slider-2x.jpg 900w" sizes="(max-width: 480px) 100vw, 440px" alt="{{ t.home_slider_alt1 }}" width="450" height="600" fetchpriority="high">
+      <div class="clip"><img src="/assets/img/pages/paws-11-color-slider.jpg" srcset="/assets/img/pages/paws-11-color-slider.jpg 450w, /assets/img/pages/paws-11-color-slider-2x.jpg 900w" sizes="(max-width: 480px) 100vw, 440px" alt="{{ t.home_slider_alt2 }}" width="450" height="600"></div>
+      <div class="slider-line" aria-hidden="true"></div>
+    </div>
+    <label><span>{{ t.home_slider_label }}</span><input type="range" min="0" max="100" value="55" aria-label="{{ t.home_slider_aria }}"></label>
+  </figure>
+</section>
+
+<section class="band-sky">
+  <div class="wrap" style="padding-top: 56px; padding-bottom: 56px">
+    <h2 class="h2">{{ t.how_h }}</h2>
+    <div class="grid steps" style="margin-top: 28px">
+      <div class="page"><div class="step-n">1</div><div class="b" style="font-size: 20px; margin-top: 8px">{{ t.how1 }}</div><div style="color: var(--text2); margin-top: 4px">{{ t.how1_s }}</div></div>
+      <div class="page"><div class="step-n">2</div><div class="b" style="font-size: 20px; margin-top: 8px">{{ t.how2 }}</div><div style="color: var(--text2); margin-top: 4px">{{ t.how2_s }}</div></div>
+      <div class="page"><div class="step-n">3</div><div class="b" style="font-size: 20px; margin-top: 8px">{{ t.how3 }}</div><div style="color: var(--text2); margin-top: 4px">{{ t.how3_s }}</div></div>
+    </div>
+    {% include premade-note.html style="margin: 18px 0 0; color: #2f2b36" %}
+  </div>
+</section>
+
+<section class="wrap sec">
+  <div class="page pad split" style="gap: 32px">
+    <img src="/assets/images/paws_cover.webp" alt="{{ t.cover_alt }}" width="190" height="248" style="width: 190px; border: 2px solid var(--ink); border-radius: 12px">
+    <div style="flex: 1 1 340px">
+      <h2 class="h2" style="font-size: 36px">{{ t.home_book_h }}</h2>
+      <p style="margin: 10px 0 0; font-size: 18px; color: var(--text2); max-width: 560px">{{ t.home_book_p }}</p>
+      <div class="row" style="margin-top: 20px"><a class="btn" href="{{ site.links.amazon }}">{{ t.paperback_amazon }}</a><a class="btn2" href="{{ site.links.payhip_book }}">{{ t.pdf }} {{ T.prices.pdf_book }}</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap sec">
+  <div class="head-row"><h2 class="h2">{{ t.fav_h }}</h2><a class="link-b" href="{{ lp }}/books/">{{ t.fav_all }}</a></div>
+  <div class="grid grid-wide">
+    {% assign favsub = t.fav_card_sub | replace: "%single%", T.prices.single_page %}
+    {% for d in dogs %}{% if d.n == 1 or d.n == 27 %}{% include dog-card.html dog=d sub=favsub %}{% endif %}{% endfor %}
+    <a href="{{ lp }}/books/#paws" class="page card">
+      <div class="card-img"><img src="/assets/images/paws_cover.webp" alt="{{ t.cover_alt }}" width="400" height="520" loading="lazy" style="aspect-ratio: 4 / 5"></div>
+      <div class="card-body"><div class="card-title">{{ t.book_name }}</div><div class="card-sub">{{ t.fav_book_sub | replace: "%pdf%", T.prices.pdf_book }}</div></div>
+    </a>
+  </div>
+</section>
+
+<section class="wrap sec">
+  <div class="page pad bg-purple split" style="gap: 36px">
+    <div style="flex: 1 1 380px">
+      <h2 class="h2" style="color: #fff">{{ t.free_gift_h }}</h2>
+      <p style="margin: 12px 0 0; font-size: 18px; color: #f1e6f7">{{ t.home_free_p }}</p>
+      <div class="row" style="margin-top: 22px"><a href="{{ site.free_gift_url }}" class="btn2">{{ t.get_pompom }}</a><a href="{{ lp }}/free/" style="color: #fff; font-weight: 800">{{ t.home_free_about }}</a></div>
+    </div>
+    <div class="row" style="gap: 14px; flex-wrap: nowrap">
+      <img src="/assets/img/pages/paws-01-line.jpg" alt="{{ t.home_free_alt1 }}" width="150" height="200" loading="lazy" style="width: 140px; border: 2px solid var(--ink); border-radius: 12px; background: #fff; transform: rotate(-4deg)">
+      <img src="/assets/img/pages/paws-01-color.jpg" alt="{{ t.home_free_alt2 }}" width="150" height="200" loading="lazy" style="width: 140px; border: 2px solid var(--ink); border-radius: 12px; background: #fff; transform: rotate(3deg)">
+    </div>
+  </div>
+</section>
+
+<section class="wrap sec">
+  <h2 class="h2">{{ t.pets_h }}</h2>
+  <p style="margin: 10px 0 0; font-size: 18px; color: var(--text2)">{{ t.pets_p }}</p>
+  <div class="grid grid-wide">
+    <a href="/story/scout/" class="page card card-row">
+      <img src="/assets/img/pages/paws-01-color.jpg" alt="{{ t.scout_alt }}" width="200" height="267" loading="lazy">
+      <div class="card-body"><div class="h3" style="font-size: 28px">Scout</div><div class="small muted">{{ t.scout_sub }}</div><div style="margin-top: 10px">{{ t.scout_p }}</div><div class="b" style="color: var(--purple); margin-top: 12px">{{ t.scout_cta }}</div></div>
+    </a>
+    <a href="{{ lp }}/books/#whiskers-cats" class="page card card-row">
+      <img src="/assets/img/pages/whiskers-01-color.jpg" alt="{{ t.whiskers_card_alt }}" width="200" height="266" loading="lazy">
+      <div class="card-body"><div class="h3" style="font-size: 28px">{{ t.whiskers_card_h }}</div><div class="small muted">{{ t.whiskers_card_sub }}</div><div style="margin-top: 10px">{{ t.whiskers_card_p }}</div><div class="b" style="color: var(--purple); margin-top: 12px">{{ t.sneak_peek_cta }}</div></div>
+    </a>
+    <a href="{{ lp }}/your-pet/" class="page card card-row bg-peach">
+      <div class="ph ph-dash" style="background: transparent">{{ t.your_pet_here }}</div>
+      <div class="card-body"><div class="h3" style="font-size: 28px">{{ t.pet_card_h }}</div><div class="small muted">{{ t.coming_soon }}</div><div style="margin-top: 10px">{{ t.pet_card_p }}</div><div class="b" style="color: var(--purple); margin-top: 12px">{{ t.join_waitlist }}</div></div>
+    </a>
+  </div>
+</section>
+
+<section class="wrap sec">
+  <div class="head-row"><h2 class="h2">{% if site.merch_live %}{{ t.merch_live_h }}{% else %}{{ t.merch_soon_h }}{% endif %}</h2><a class="link-b" href="{{ lp }}/merchandise/">{% if site.merch_live %}{{ t.merch_shop_all }}{% else %}{{ t.merch_see_designs }}{% endif %}</a></div>
+  <div class="grid">
+    {% assign items = site.products | sort: "order" %}
+    {% for it in items limit: 4 %}{% assign pslug = it.url | split: "/" | last %}{% assign ptr = T.products[pslug] %}
+    <a href="{{ it.url }}" class="page card"><div class="card-img"><img src="{{ it.img }}" alt="{% if ptr %}{{ ptr.img_alt }}{% else %}{{ it.img_alt }}{% endif %}" width="480" height="600" loading="lazy"></div><div class="card-body"><div class="card-title">{% if ptr %}{{ ptr.title }}{% else %}{{ it.title }}{% endif %}</div>{% if it.etsy_url != '' %}{% include merch-price.html p=it.price %}<span class="btn2 card-btn">{{ t.see_options }}</span>{% else %}<span class="btn2 card-btn">{{ t.coming_soon }}</span>{% endif %}</div></a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="wrap sec sec-end" id="contact">
+  <div class="page pad split" style="gap: 28px">
+    <div style="flex: 1 1 340px">
+      <h2 class="h2" style="font-size: 34px">{{ t.nl_h }}</h2>
+      <p style="margin: 8px 0 0; font-size: 17px; color: var(--text2)">{{ t.nl_p }}</p>
+      <div class="gift" style="margin-top: 18px">
+        <img src="/assets/img/pages/paws-01-line.jpg" alt="{{ t.nl_gift_alt }}" width="120" height="160" loading="lazy">
+        <div style="flex: 1 1 180px"><div class="b" style="font-size: 18px">{{ t.free_gift_h }}</div><a class="link-b" href="{{ site.free_gift_url }}">{{ t.get_pompom }}</a></div>
+      </div>
+    </div>
+    <div style="flex: 1 1 340px">
+      {% include form-start.html kind="newsletter" label=t.nl_form_label class="" fclass="inline-form" %}
+        <label for="nl-email" class="sr-only">{{ t.your_email }}</label>
+        <input id="nl-email" name="EMAIL" class="field" type="email" autocomplete="email" placeholder="{{ t.email_ph }}" required>
+        <button type="submit" class="btn">{{ t.nl_btn }}</button>
+      {% include form-end.html kind="newsletter" %}
+    </div>
+  </div>
+</section>

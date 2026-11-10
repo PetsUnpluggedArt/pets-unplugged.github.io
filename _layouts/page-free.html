@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{% include i18n.html %}
+<section class="wrap sec-end split" style="padding-top: 48px; align-items: flex-start; gap: 40px">
+  <div style="flex: 3 1 520px; min-width: 0">
+    <h1>{{ t.free_h1 }}</h1>
+    <p class="lead">{{ t.free_lead }}</p>
+    {% include premade-note.html style="margin: 10px 0 0" %}
+    <div class="grid grid-small">
+      <a class="page card" href="{{ site.free_gift_url }}"><div class="card-img"><img src="/assets/img/pages/paws-01-line.jpg" alt="{{ t.free_card_alt }}" width="450" height="600" loading="lazy"><span class="chip chip-gold">{{ t.free_chip }}</span></div><div class="card-body"><div class="card-title">Pompom</div><div class="card-sub">{{ t.free_card_sub }}</div></div></a>
+      <div class="page bg-lilac" style="display: flex; align-items: center; justify-content: center; min-height: 280px"><div style="text-align: center; padding: 20px"><div class="h3" style="color: var(--purple)">{{ t.free_more }}</div><div class="small muted">{{ t.coming_soon }}</div></div></div>
+      <div class="page bg-lilac" style="display: flex; align-items: center; justify-content: center; min-height: 280px"><div style="text-align: center; padding: 20px"><div class="h3" style="color: var(--purple)">{{ t.free_and_more }}</div><div class="small muted">{{ t.coming_soon }}</div></div></div>
+    </div>
+    <p class="small muted" style="margin-top: 18px">{{ t.free_sample1 }} <a href="/downloads/sample.pdf">{{ t.free_sample2 }}</a>{{ t.free_sample3 }}</p>
+  </div>
+
+  <div class="page pad" style="flex: 2 1 340px">
+    <h2 class="h3" style="font-size: 30px">{{ t.free_gift_h }}</h2>
+    <p style="margin: 8px 0 0; color: var(--text2)">{{ t.free_side_p }}</p>
+    <a class="btn" href="{{ site.free_gift_url }}" style="margin-top: 18px">{{ t.get_pompom }}</a>
+    <p class="tiny muted" style="margin: 14px 0 0">{{ t.free_grownups }} <a href="/privacy/">{{ t.ftr_privacy }}</a></p>
+    <hr style="border: 0; border-top: 2px dashed #d8d2df; margin: 22px 0">
+    <div class="b">{{ t.free_more_soon }}</div>
+    <p class="small" style="margin: 4px 0 0; color: var(--text2)">{{ t.free_hear }} <a href="{{ lp }}/#contact">{{ t.join_list }}</a>.</p>
+  </div>
+</section>

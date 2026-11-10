@@ -1,1 +1,1 @@
-{% comment %}Shows a price. "[PRICE]" (or empty) is a blank Tony still has to fill: it shows "Price coming soon".{% endcomment %}{% if include.p == nil or include.p == "" or include.p == "[PRICE]" %}Price coming soon{% else %}{{ include.p }}{% endif %}
+{% unless t %}{% include i18n.html %}{% endunless %}{% comment %}Shows a price. "[PRICE]" (or empty) is a blank Tony still has to fill: it shows "Price coming soon".{% endcomment %}{% if include.p == nil or include.p == "" or include.p == "[PRICE]" %}{{ t.price_soon }}{% else %}{{ include.p }}{% endif %}

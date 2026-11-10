@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+{% include i18n.html %}<html lang="{{ lang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +9,7 @@
     <meta name="p:domain_verify" content="b37e67d5e8ab408a073b71a75a203fd8"/>
 
     {% seo %}
-    {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
+    {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}{% include lang-head.html %}
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -28,42 +28,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Mulish:wght@400;600;700;800&display=swap">
-    <link rel="stylesheet" href="/assets/css/pu.css?v=3">
-    <script src="/assets/js/pu.js?v=2" defer></script>
+    <link rel="stylesheet" href="/assets/css/pu.css?v=4">
+    <script src="/assets/js/pu.js?v=3" defer></script>
+    <script src="/assets/js/lang.js?v=1" defer></script>
 </head>
-<body>
-    <a class="skip" href="#main">Skip to the page</a>
+<body{% if page.layout == "video" %} data-qr{% endif %} data-form-msgs="{{ t.form_ok | escape }}|{{ t.form_bad | escape }}|{{ t.form_retry | escape }}|{{ t.filter_one | escape }}|{{ t.filter_many | escape }}|{{ t.form_err | escape }}">
+    <a class="skip" href="#main">{{ t.skip }}</a>
 
-    <div class="topbar">Free: the Pompom page, with its animation. <a href="{{ site.free_gift_url }}">Get it free</a></div>
+    <div class="topbar">{{ t.topbar }} <a href="{{ site.free_gift_url }}">{{ t.get_it_free }}</a></div>
 
     {% assign u = page.url %}
     <header class="site-header">
         <div class="wrap hdr">
-            <a class="logo-link" href="/" aria-label="Pets Unplugged home. Unplug, color, animate.">
-                <img src="/assets/img/logo.png" alt="Pets Unplugged: unplug, color, animate" width="400" height="151">
+            <a class="logo-link" href="{{ lp }}/" aria-label="{{ t.logo_home }}">
+                <img src="/assets/img/logo.png" alt="{{ t.logo_alt }}" width="400" height="151">
             </a>
-            <nav class="nav" aria-label="Main">
-                <a href="/books/"{% if u contains '/books/' or u contains '/coloring-pages/' or u contains '/downloads/' %} aria-current="page"{% endif %}>Books</a>
-                <a href="/free/"{% if u contains '/free/' %} aria-current="page"{% endif %}>Free pages</a>
-                <a href="/story/scout/"{% if u contains '/story/' or u contains '/real-pets/' %} aria-current="page"{% endif %}>Meet the pets</a>
-                <a href="/merchandise/"{% if u contains '/merchandise/' %} aria-current="page"{% endif %}>Merch</a>
-                <a class="nav-pet" href="/your-pet/"{% if u contains '/your-pet/' %} aria-current="page"{% endif %}>Your pet</a>
+            <nav class="nav" aria-label="{{ t.nav_main }}">
+                <a href="{{ lp }}/books/"{% if u contains '/books/' or u contains '/coloring-pages/' or u contains '/downloads/' %} aria-current="page"{% endif %}>{{ t.nav_books }}</a>
+                <a href="{{ lp }}/free/"{% if u contains '/free/' %} aria-current="page"{% endif %}>{{ t.nav_free }}</a>
+                <a href="/story/scout/"{% if u contains '/story/' or u contains '/real-pets/' %} aria-current="page"{% endif %}>{{ t.nav_pets }}</a>
+                <a href="{{ lp }}/merchandise/"{% if u contains '/merchandise/' %} aria-current="page"{% endif %}>{{ t.nav_merch }}</a>
+                <a class="nav-pet" href="{{ lp }}/your-pet/"{% if u contains '/your-pet/' %} aria-current="page"{% endif %}>{{ t.nav_pet }}</a>
             </nav>
             <div class="hdr-right">
-                <span class="chip app-chip">App coming soon</span>
+                <span class="chip app-chip">{{ t.app_soon }}</span>
+                {% include lang-switch.html where="header" %}
                 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav" data-menu>
-                    <span class="sr-only">Menu</span>
+                    <span class="sr-only">{{ t.menu }}</span>
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
                 </button>
             </div>
         </div>
-        <nav class="mnav" id="mnav" aria-label="Main (mobile)" hidden>
+        <nav class="mnav" id="mnav" aria-label="{{ t.nav_mobile }}" hidden>
             <ul>
-                <li><a href="/books/">Books</a></li>
-                <li><a href="/free/">Free pages</a></li>
-                <li><a href="/story/scout/">Meet the pets</a></li>
-                <li><a href="/merchandise/">Merch</a></li>
-                <li><a class="nav-pet" href="/your-pet/">Your pet</a></li>
+                <li><a href="{{ lp }}/books/">{{ t.nav_books }}</a></li>
+                <li><a href="{{ lp }}/free/">{{ t.nav_free }}</a></li>
+                <li><a href="/story/scout/">{{ t.nav_pets }}</a></li>
+                <li><a href="{{ lp }}/merchandise/">{{ t.nav_merch }}</a></li>
+                <li><a class="nav-pet" href="{{ lp }}/your-pet/">{{ t.nav_pet }}</a></li>
             </ul>
         </nav>
     </header>
@@ -76,29 +78,30 @@
         <div class="wrap ftr">
             <div>
                 <span class="brand">Pets Unplugged</span>
-                <span class="line"><span class="w1">Unplug.</span> <span class="w2">Color.</span> <span class="w3">Animate.</span></span>
-                <span>A Kubbord Labs LLC brand. App coming soon.</span>
+                <span class="line"><span class="w1">{{ t.w1 }}</span> <span class="w2">{{ t.w2 }}</span> <span class="w3">{{ t.w3 }}</span></span>
+                <span>{{ t.ftr_brand }}</span>
+                {% include lang-switch.html where="footer" %}
             </div>
             <div>
-                <a href="/books/">Books</a>
-                <a href="/free/">Free pages</a>
-                <a href="/merchandise/">Merch</a>
-                <a href="/holiday/">Holiday corner</a>
-                <a href="/parents/">For parents</a>
-                <a href="/your-pet/">Your pet as a page</a>
-                <a href="/real-pets/">Meet the real pets</a>
+                <a href="{{ lp }}/books/">{{ t.nav_books }}</a>
+                <a href="{{ lp }}/free/">{{ t.nav_free }}</a>
+                <a href="{{ lp }}/merchandise/">{{ t.nav_merch }}</a>
+                <a href="/holiday/">{{ t.ftr_holiday }}</a>
+                <a href="{{ lp }}/parents/">{{ t.ftr_parents }}</a>
+                <a href="{{ lp }}/your-pet/">{{ t.ftr_pet }}</a>
+                <a href="/real-pets/">{{ t.ftr_real }}</a>
             </div>
             <div>
-                <a href="{{ site.links.etsy }}">Our Etsy shop</a>
-                <a href="{{ site.links.amazon }}">Paperback on Amazon</a>
-                <a href="/downloads/">PDF downloads</a>
-                <a href="/blog/">Blog</a>
-                <a href="/about.html">About</a>
-                <a href="/privacy/">Privacy</a>
-                <a href="/terms/">Terms</a>
+                <a href="{{ site.links.etsy }}">{{ t.ftr_etsy }}</a>
+                <a href="{{ site.links.amazon }}">{{ t.ftr_amazon }}</a>
+                <a href="/downloads/">{{ t.ftr_pdfs }}</a>
+                <a href="/blog/">{{ t.ftr_blog }}</a>
+                <a href="{{ lp }}/about.html">{{ t.ftr_about }}</a>
+                <a href="/privacy/">{{ t.ftr_privacy }}</a>
+                <a href="/terms/">{{ t.ftr_terms }}</a>
             </div>
         </div>
-        <div class="wrap legal">&copy; {{ 'now' | date: "%Y" }} Pets Unplugged&trade;. All rights reserved.</div>
+        <div class="wrap legal">&copy; {{ 'now' | date: "%Y" }} Pets Unplugged&trade;. {{ t.rights }}</div>
     </footer>
 </body>
 </html>

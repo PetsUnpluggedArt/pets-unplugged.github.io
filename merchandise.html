@@ -1,52 +1,9 @@
 ---
-layout: default
+layout: page-merch
 permalink: /merchandise/
 title: Merch with the pets from the pages
 image: /assets/img/og/merch.jpg
 description: Mugs, tees, totes, stickers and posters with the Pets Unplugged dogs and cats. Each one is printed when you order it.
+i18n: true
+ref: merch
 ---
-<section class="wrap head-row" style="padding-top: 48px; gap: 20px">
-  <div>
-    {% if site.merch_live %}
-    <h1>Wear the art</h1>
-    <p class="lead">Mugs, tees, totes and more with the pets from the pages. Each one is printed when you order it.</p>
-    {% else %}
-    <h1>Merch is coming soon</h1>
-    <p class="lead">Mugs, tees, totes and more with the pets from the pages. Here's a first look at the designs.</p>
-    {% endif %}
-  </div>
-  {% if site.merch_live %}<a class="link-b" href="{{ site.links.etsy }}">Shop the same merch in our Etsy shop</a>{% else %}<a class="link-b" href="#merch-notify">Tell me when it's ready</a>{% endif %}
-</section>
-
-<section class="wrap" style="padding-top: 28px">
-  <div role="group" aria-label="Filter merch" class="row" style="gap: 8px" data-filters="merch-list" data-status="merch-count">
-    <button type="button" class="filter" data-f="All" aria-pressed="true">All</button>
-    <button type="button" class="filter" data-f="Mug" aria-pressed="false">Mugs</button>
-    <button type="button" class="filter" data-f="Tee" aria-pressed="false">Tees</button>
-    <button type="button" class="filter" data-f="Tote" aria-pressed="false">Totes</button>
-    <button type="button" class="filter" data-f="Sticker" aria-pressed="false">Stickers</button>
-    <button type="button" class="filter" data-f="Poster" aria-pressed="false">Posters</button>
-  </div>
-  <p id="merch-count" class="sr-only" aria-live="polite"></p>
-  <div class="grid" id="merch-list">
-    {% assign items = site.products | sort: "order" %}
-    {% for it in items %}
-    <a href="{{ it.url }}" class="page card" data-tags="{{ it.kind }}">
-      <div class="card-img bg-lilac" style="padding: 16px"><img src="{{ it.img }}" alt="{{ it.img_alt }}" width="480" height="600" loading="lazy" style="border-radius: 10px; border: 2px solid var(--ink)"><span class="chip" style="top: 26px; left: 26px">{{ it.kind }}</span></div>
-      <div class="card-body"><div class="card-title">{{ it.title }}</div><div class="card-sub">{{ it.pet }}</div>{% if it.etsy_url != '' %}{% include merch-price.html p=it.price %}<span class="btn2 card-btn">See options</span>{% else %}<span class="btn2 card-btn">Coming soon</span>{% endif %}</div>
-    </a>
-    {% endfor %}
-  </div>
-</section>
-
-<section class="wrap sec sec-end" style="padding-top: 56px" id="merch-notify">
-  <div class="grid grid-wide" style="margin-top: 0">
-    <div class="page pad"><div class="b" style="font-size: 18px">Printed when you order</div><div style="color: var(--text2); margin-top: 4px">Made by our print partner and shipped straight to you. No warehouse full of leftovers.</div></div>
-    <div class="page pad"><div class="b" style="font-size: 18px">New art, new merch</div><div style="color: var(--text2); margin-top: 4px">When a new page drops, its pet shows up here too.</div></div>
-    {% if site.merch_live %}
-    <div class="page pad"><div class="b" style="font-size: 18px">Secure checkout</div><div style="color: var(--text2); margin-top: 4px">For now, merch checkout happens on Etsy. Card details never touch our site.</div></div>
-    {% else %}
-    <div class="page pad"><div class="b" style="font-size: 18px">Hear when it's ready</div><div style="color: var(--text2); margin-top: 4px">The first designs go up in <a href="{{ site.links.etsy }}">our Etsy shop</a>. <a href="/#contact">Join the email list</a> and we'll tell you the day they land.</div></div>
-    {% endif %}
-  </div>
-</section>

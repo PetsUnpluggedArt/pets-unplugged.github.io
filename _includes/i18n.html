@@ -1,0 +1,10 @@
+{% comment %}
+  Language helpers for the current page. Sets (in the caller's scope):
+    lang  "en" / "de" / "fr" / "es" (page.lang, English when unset)
+    T     site.data.i18n[lang]   (ui strings, prices, dogs, bundles, ...)
+    t     T.ui                   (the UI strings)
+    lp    "" for English, "/de" etc. for the others: prefix for links to translated pages
+    i18n_base  the English URL of this page (used for the switcher and hreflang)
+    has_i18n   true when this page exists in every language (page.lang set, or an English page with i18n: true)
+  English pages that have translations set i18n: true (dogs and QR video pages get it from _config.yml defaults).
+{% endcomment %}{% assign lang = page.lang | default: "en" %}{% assign T = site.data.i18n[lang] %}{% assign t = T.ui %}{% assign lp = "" %}{% if lang != "en" %}{% assign lp = "/" | append: lang %}{% endif %}{% assign i18n_base = page.url %}{% if lang != "en" %}{% assign i18n_base = page.url | remove_first: lp %}{% endif %}{% if i18n_base == "/index.html" %}{% assign i18n_base = "/" %}{% endif %}{% assign has_i18n = false %}{% if page.lang or page.i18n %}{% assign has_i18n = true %}{% endif %}

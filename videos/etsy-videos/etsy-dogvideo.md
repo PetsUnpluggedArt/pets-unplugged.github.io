@@ -1,4 +1,5 @@
 ---
+i18n: false
 image: /assets/img/og/paws-05.jpg
 layout: etsy-videos
 title: Music of Dreams

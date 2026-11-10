@@ -1,5 +1,5 @@
-</fieldset>
+{% unless t %}{% include i18n.html %}{% endunless %}</fieldset>
 {% if site.form_endpoint and site.form_endpoint != "" %}<p class="form-msg" role="status" aria-live="polite" hidden></p>
-<p class="tiny muted form-fine">Sign-ups are kept by Brevo, our email service. Protected by reCAPTCHA: Google's <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms</a> apply. <a href="/privacy/">Our privacy policy</a></p>
-{% else %}<p class="soon-note" id="soon-{{ include.kind }}{{ include.n }}"><b>Coming soon.</b> {{ include.soon | default: "This sign-up isn't open yet, so nothing typed here is sent." }}</p>{% endif %}
+<p class="tiny muted form-fine">{{ t.form_fine1 }} <a href="https://policies.google.com/privacy">{{ t.form_fine_pp }}</a> {{ t.form_fine_and }} <a href="https://policies.google.com/terms">{{ t.form_fine_terms }}</a> {{ t.form_fine_apply }} <a href="/privacy/">{{ t.form_fine_ours }}</a></p>
+{% else %}<p class="soon-note" id="soon-{{ include.kind }}{{ include.n }}"><b>{{ t.coming_soon }}.</b> {{ include.soon | default: t.form_soon }}</p>{% endif %}
 </form>

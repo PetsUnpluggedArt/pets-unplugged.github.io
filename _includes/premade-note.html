@@ -1,1 +1,1 @@
-<p class="premade-note small muted"{% if include.style %} style="{{ include.style }}"{% endif %}>Each animation is made ahead of time and is the same for everyone. It doesn't show your own coloring.</p>
+{% unless t %}{% include i18n.html %}{% endunless %}<p class="premade-note small muted"{% if include.style %} style="{{ include.style }}"{% endif %}>{{ t.premade }}</p>

@@ -2,7 +2,8 @@
   The page a PAWS QR code opens (pages 1-30), as in design/qr-page: the video, the title, a thank-you,
   download + share, then "{Name}'s pals": this page's bundle, its 3 pages and the whole book.
   Params: dog (the _dogs entry), etsy (true on /videos/etsy-videos/: every product link goes to Etsy, no prices)
-{% endcomment %}{% assign dog = include.dog %}{% assign nn = dog.n | prepend: '0' | slice: -2, 2 %}
+  Other languages: words from site.data.i18n[lang] (t = ui strings, T.dogs[n].name = the name with "und"/"et"/"y"); links to /de/... pages.
+{% endcomment %}{% unless t %}{% include i18n.html %}{% endunless %}{% assign dog = include.dog %}{% assign nn = dog.n | prepend: '0' | slice: -2, 2 %}{% assign dk = dog.n | append: "" %}{% assign dtr = T.dogs[dk] %}{% assign dname = dog.name %}{% if dtr and dtr.name %}{% assign dname = dtr.name %}{% endif %}
 {% assign bundle = nil %}{% for b in site.data.paws.bundles %}{% if b.pages contains dog.n %}{% assign bundle = b %}{% endif %}{% endfor %}
 {% assign named = false %}{% if dog.name and dog.name != "" %}{% assign named = true %}{% endif %}
 {% assign pair = false %}{% if named and dog.name contains " and " %}{% assign pair = true %}{% endif %}
@@ -11,38 +12,38 @@
 <div class="wrap qr-wrap">
   <article class="page qr-card">
     <div class="qr-video" style="--ar: 4 / 5">
-      <iframe src="https://player.vimeo.com/video/{{ page.vimeo_video_id }}?{% if page.vimeo_hash %}h={{ page.vimeo_hash }}&amp;{% endif %}autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;controls=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="{{ page.title | escape }}: the video"></iframe>
+      <iframe src="https://player.vimeo.com/video/{{ page.vimeo_video_id }}?{% if page.vimeo_hash %}h={{ page.vimeo_hash }}&amp;{% endif %}autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;controls=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="{{ page.title | escape }}{{ t.the_video }}"></iframe>
     </div>
     <div class="qr-body">
       <h1>{{ page.title | default: dog.video_title }}</h1>
       {% if page.subtitle %}<p class="qr-sub">{{ page.subtitle }}</p>{% endif %}
-      <p class="lead qr-thanks">{% if pair %}Thanks for coloring {{ dog.name }}! Here are {{ dog.name }}, coming to life.{% elsif named %}Thanks for coloring {{ dog.name }}! Here's {{ dog.name }}, coming to life.{% else %}Thanks for coloring! Here's your page, coming to life.{% endif %}</p>
-      <div class="qr-actions">{% if page.video_download_link %}<a class="btn2" href="{{ page.video_download_link }}">Download this video</a>{% endif %}</div>
-      <div class="qr-share" role="group" aria-label="Share this video">
-        <a href="https://www.pinterest.com/pin/create/button/?url={{ su }}&amp;media={{ pin_media }}&amp;description={{ st }}" target="_blank" rel="noopener" title="Share on Pinterest" aria-label="Share on Pinterest">P</a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u={{ su }}" target="_blank" rel="noopener" title="Share on Facebook" aria-label="Share on Facebook">f</a>
-        <a href="sms:?&amp;body={{ st }}%20{{ su }}" title="Send by text message" aria-label="Send by text message">&#9993;</a>
+      <p class="lead qr-thanks">{% if pair %}{{ t.thanks_pair | replace: "%name%", dname }}{% elsif named %}{{ t.thanks_named | replace: "%name%", dname }}{% else %}{{ t.thanks_page }}{% endif %}</p>
+      <div class="qr-actions">{% if page.video_download_link %}<a class="btn2" href="{{ page.video_download_link }}">{{ t.download_video }}</a>{% endif %}</div>
+      <div class="qr-share" role="group" aria-label="{{ t.share_video }}">
+        <a href="https://www.pinterest.com/pin/create/button/?url={{ su }}&amp;media={{ pin_media }}&amp;description={{ st }}" target="_blank" rel="noopener" title="{{ t.share_pin }}" aria-label="{{ t.share_pin }}">P</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ su }}" target="_blank" rel="noopener" title="{{ t.share_fb }}" aria-label="{{ t.share_fb }}">f</a>
+        <a href="sms:?&amp;body={{ st }}%20{{ su }}" title="{{ t.share_sms }}" aria-label="{{ t.share_sms }}">&#9993;</a>
       </div>
     </div>
     {% if bundle %}
     <section class="qr-more" aria-labelledby="pals-h">
-      <h2 id="pals-h">{% if named %}{{ dog.name }}'s pals{% else %}Pals from the {{ bundle.name }} bundle{% endif %}</h2>
-      <p class="sub">{% if pair %}{{ dog.name }} are one of 3 pages in the {{ bundle.name }} bundle.{% elsif named %}{{ dog.name }} is one of 3 pups in the {{ bundle.name }} bundle.{% else %}This page is one of 3 in the {{ bundle.name }} bundle.{% endif %} Each page has its own video.</p>
+      <h2 id="pals-h">{% if named %}{% if lang == "en" %}{{ dog.name }}'s pals{% else %}{{ t.pals_named | replace: "%name%", dname }}{% endif %}{% else %}{{ t.pals_bundle | replace: "%bundle%", bundle.name }}{% endif %}</h2>
+      <p class="sub">{% if pair %}{{ t.in_bundle_pair | replace: "%name%", dname | replace: "%bundle%", bundle.name }}{% elsif named %}{{ t.in_bundle_named | replace: "%name%", dname | replace: "%bundle%", bundle.name }}{% else %}{{ t.in_bundle_page | replace: "%bundle%", bundle.name }}{% endif %} {{ t.each_own_video }}</p>
       <a class="qr-bundle" href="{% if include.etsy %}{{ bundle.etsy_url }}{% else %}{{ bundle.payhip_url }}{% endif %}">
         <img src="{{ bundle.img }}" alt="" width="96" height="125" loading="lazy">
-        <div><div class="t">{{ bundle.name }} bundle</div><div class="s">3 coloring pages · 3 videos</div><div class="go">{% if include.etsy %}See the bundle on Etsy{% else %}Get the bundle: {{ site.prices.bundle }}{% endif %}&nbsp;&rarr;</div></div>
+        <div><div class="t">{{ t.bundle_link | replace: "%name%", bundle.name }}</div><div class="s">{{ t.three_pages_videos }}</div><div class="go">{% if include.etsy %}{{ t.see_bundle_etsy }}{% else %}{{ t.get_bundle }}: {{ T.prices.bundle }}{% endif %}&nbsp;&rarr;</div></div>
       </a>
       <div class="qr-pals">
         {% for pn in bundle.pages %}{% assign o = nil %}{% for x in site.dogs %}{% if x.n == pn %}{% assign o = x %}{% endif %}{% endfor %}{% assign on = pn | prepend: '0' | slice: -2, 2 %}
         {% if pn == dog.n %}
-        <div class="qr-pal you"><img src="/assets/img/pages/paws-{{ on }}-color.jpg" alt="" width="450" height="600" loading="lazy"><span><i class="you-chip">Yours</i><br>{{ o.card_title }}</span></div>
+        <div class="qr-pal you"><img src="/assets/img/pages/paws-{{ on }}-color.jpg" alt="" width="450" height="600" loading="lazy"><span><i class="you-chip">{{ t.yours }}</i><br>{{ o.card_title }}</span></div>
         {% else %}
-        <a class="qr-pal" href="{% if include.etsy %}{{ o.etsy_url }}{% else %}{{ o.payhip }}{% endif %}"><img src="/assets/img/pages/paws-{{ on }}-color.jpg" alt="" width="450" height="600" loading="lazy"><span>{{ o.card_title }}<br><small class="muted">{% if include.etsy %}On Etsy{% else %}{{ site.prices.single_page }}{% endif %}</small></span></a>
+        <a class="qr-pal" href="{% if include.etsy %}{{ o.etsy_url }}{% else %}{{ o.payhip }}{% endif %}"><img src="/assets/img/pages/paws-{{ on }}-color.jpg" alt="" width="450" height="600" loading="lazy"><span>{{ o.card_title }}<br><small class="muted">{% if include.etsy %}{{ t.on_etsy }}{% else %}{{ T.prices.single_page }}{% endif %}</small></span></a>
         {% endif %}{% endfor %}
       </div>
-      <a class="qr-book" href="{% if include.etsy %}{{ site.data.paws.full_book.etsy_url }}{% else %}{{ site.links.payhip_book }}{% endif %}"><div><div class="t">The whole PAWS book</div><div class="s">30 pups, each with its own video</div></div><span class="btn">{% if include.etsy %}See it on Etsy{% else %}{{ site.prices.pdf_book }} PDF{% endif %}</span></a>
+      <a class="qr-book" href="{% if include.etsy %}{{ site.data.paws.full_book.etsy_url }}{% else %}{{ site.links.payhip_book }}{% endif %}"><div><div class="t">{{ t.whole_book }}</div><div class="s">{{ t.thirty_pups }}</div></div><span class="btn">{% if include.etsy %}{{ t.see_it_etsy }}{% else %}{{ t.pdf_after | replace: "%pdf%", T.prices.pdf_book }}{% endif %}</span></a>
     </section>
     {% endif %}
   </article>
-  <p class="muted small qr-bye">Thanks for scanning and watching!</p>
+  <p class="muted small qr-bye">{{ t.thanks_scanning }}</p>
 </div>

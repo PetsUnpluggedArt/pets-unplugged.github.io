@@ -1,0 +1,25 @@
+---
+layout: default
+---
+{% include i18n.html %}
+<section class="wrap split" style="padding-top: 48px; gap: 40px">
+  <div style="flex: 1 1 460px">
+    <h1>{{ t.parents_h1 }}</h1>
+    <p class="lead">{{ t.parents_lead }}</p>
+  </div>
+  <img src="/assets/img/pages/paws-12-line.jpg" alt="{{ t.parents_img_alt }}" width="300" height="400" style="width: 300px; max-width: 100%; border: 2px solid var(--ink); border-radius: 18px">
+</section>
+<section class="wrap" style="padding-top: 48px">
+  <div class="grid grid-wide" style="margin-top: 0">
+    <div class="page pad"><h2 class="b" style="font-size: 20px; margin: 0">{{ t.parents_1h }}</h2><div style="color: var(--text2); margin-top: 6px">{{ t.parents_1p }}</div></div>
+    <div class="page pad"><h2 class="b" style="font-size: 20px; margin: 0">{{ t.parents_2h }}</h2><div style="color: var(--text2); margin-top: 6px">{{ t.parents_2p }}</div></div>
+    <div class="page pad"><h2 class="b" style="font-size: 20px; margin: 0">{{ t.parents_3h }}</h2><div style="color: var(--text2); margin-top: 6px">{{ t.parents_3p }}</div></div>
+  </div>
+</section>
+<section class="wrap sec sec-end" style="padding-top: 48px">
+  <div class="page pad bg-sky split" style="gap: 20px">
+    <div style="flex: 1 1 400px"><div class="h3">{{ t.parents_pack_h }}</div><div style="color: #2f2b36; margin-top: 4px">{{ t.parents_pack_p }}</div></div>
+    <div class="row"><a class="btn" href="{{ lp }}/books/">{{ t.parents_see_book }}</a><a class="btn2" href="{{ lp }}/free/">{{ t.parents_try_free }}</a></div>
+  </div>
+  <p class="small muted" style="margin: 18px 0 0">{{ t.parents_forms }} <a href="/privacy/">{{ t.ftr_privacy }}</a> · <a href="/blog/">{{ t.parents_blog }}</a></p>
+</section>

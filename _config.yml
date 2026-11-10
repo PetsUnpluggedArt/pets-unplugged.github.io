@@ -41,6 +41,10 @@ prices:
   single_page: "$1.99"
   bundle: "$3.99"
 
+# Languages: English plus German, French and Spanish pages under /de/, /fr/, /es/ (words in _data/i18n/<lang>.yml).
+# Prices stay in USD; Payhip shows its own checkout.
+languages: ["en", "de", "fr", "es"]
+
 links:
   payhip_book: "https://payhip.com/b/zhxGf"
   amazon: "https://a.co/d/7uVHHhw"
@@ -84,6 +88,7 @@ defaults:
       type: "dogs"
     values:
       layout: dog
+      i18n: true
   - scope:
       path: ""
       type: "products"
@@ -94,6 +99,7 @@ defaults:
     values:
       permalink: /videos/:basename.html
       sitemap: false
+      i18n: true
   - scope:
       path: "videos/etsy-videos"
     values:
@@ -101,6 +107,18 @@ defaults:
       sitemap: false
   - scope:
       path: "whiskers-videos"
+    values:
+      sitemap: false
+  - scope:
+      path: "de/videos"
+    values:
+      sitemap: false
+  - scope:
+      path: "fr/videos"
+    values:
+      sitemap: false
+  - scope:
+      path: "es/videos"
     values:
       sitemap: false
 

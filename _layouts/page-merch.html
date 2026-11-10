@@ -1,0 +1,49 @@
+---
+layout: default
+---
+{% include i18n.html %}
+<section class="wrap head-row" style="padding-top: 48px; gap: 20px">
+  <div>
+    {% if site.merch_live %}
+    <h1>{{ t.merch_live_h }}</h1>
+    <p class="lead">{{ t.merch_live_lead }}</p>
+    {% else %}
+    <h1>{{ t.merch_soon_h }}</h1>
+    <p class="lead">{{ t.merch_soon_lead }}</p>
+    {% endif %}
+  </div>
+  {% if site.merch_live %}<a class="link-b" href="{{ site.links.etsy }}">{{ t.merch_etsy }}</a>{% else %}<a class="link-b" href="#merch-notify">{{ t.merch_tell }}</a>{% endif %}
+</section>
+
+<section class="wrap" style="padding-top: 28px">
+  <div role="group" aria-label="{{ t.filter_merch }}" class="row" style="gap: 8px" data-filters="merch-list" data-status="merch-count">
+    <button type="button" class="filter" data-f="All" aria-pressed="true">{{ t.f_all }}</button>
+    <button type="button" class="filter" data-f="Mug" aria-pressed="false">{{ t.f_mugs }}</button>
+    <button type="button" class="filter" data-f="Tee" aria-pressed="false">{{ t.f_tees }}</button>
+    <button type="button" class="filter" data-f="Tote" aria-pressed="false">{{ t.f_totes }}</button>
+    <button type="button" class="filter" data-f="Sticker" aria-pressed="false">{{ t.f_stickers }}</button>
+    <button type="button" class="filter" data-f="Poster" aria-pressed="false">{{ t.f_posters }}</button>
+  </div>
+  <p id="merch-count" class="sr-only" aria-live="polite"></p>
+  <div class="grid" id="merch-list">
+    {% assign items = site.products | sort: "order" %}
+    {% for it in items %}{% assign pslug = it.url | split: "/" | last %}{% assign ptr = T.products[pslug] %}{% assign kind_key = "kind_" | append: it.kind %}
+    <a href="{{ it.url }}" class="page card" data-tags="{{ it.kind }}">
+      <div class="card-img bg-lilac" style="padding: 16px"><img src="{{ it.img }}" alt="{% if ptr %}{{ ptr.img_alt }}{% else %}{{ it.img_alt }}{% endif %}" width="480" height="600" loading="lazy" style="border-radius: 10px; border: 2px solid var(--ink)"><span class="chip" style="top: 26px; left: 26px">{{ t[kind_key] | default: it.kind }}</span></div>
+      <div class="card-body"><div class="card-title">{% if ptr %}{{ ptr.title }}{% else %}{{ it.title }}{% endif %}</div><div class="card-sub">{% if ptr %}{{ ptr.pet }}{% else %}{{ it.pet }}{% endif %}</div>{% if it.etsy_url != '' %}{% include merch-price.html p=it.price %}<span class="btn2 card-btn">{{ t.see_options }}</span>{% else %}<span class="btn2 card-btn">{{ t.coming_soon }}</span>{% endif %}</div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="wrap sec sec-end" style="padding-top: 56px" id="merch-notify">
+  <div class="grid grid-wide" style="margin-top: 0">
+    <div class="page pad"><div class="b" style="font-size: 18px">{{ t.merch_pod_h }}</div><div style="color: var(--text2); margin-top: 4px">{{ t.merch_pod_p }}</div></div>
+    <div class="page pad"><div class="b" style="font-size: 18px">{{ t.merch_new_h }}</div><div style="color: var(--text2); margin-top: 4px">{{ t.merch_new_p }}</div></div>
+    {% if site.merch_live %}
+    <div class="page pad"><div class="b" style="font-size: 18px">{{ t.merch_secure_h }}</div><div style="color: var(--text2); margin-top: 4px">{{ t.merch_secure_p }}</div></div>
+    {% else %}
+    <div class="page pad"><div class="b" style="font-size: 18px">{{ t.merch_hear_h }}</div><div style="color: var(--text2); margin-top: 4px">{{ t.merch_hear_p1 }} <a href="{{ site.links.etsy }}">{{ t.merch_hear_etsy }}</a>. <a href="{{ lp }}/#contact">{{ t.join_list }}</a> {{ t.merch_hear_p2 }}</div></div>
+    {% endif %}
+  </div>
+</section>

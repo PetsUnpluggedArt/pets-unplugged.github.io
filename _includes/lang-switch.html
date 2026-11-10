@@ -1,0 +1,6 @@
+{% comment %}
+  Language switcher: links to this same page in each language. On pages that only exist in English
+  it links to each language's home page instead. Clicking stores the choice (assets/js/lang.js).
+  Params: where ("header" / "footer" / "qr")
+{% endcomment %}<nav class="lang-switch lang-{{ include.where }}" aria-label="{{ t.lang_label }}"><ul>{% for l in site.languages %}{% if has_i18n %}{% if l == "en" %}{% assign href = i18n_base %}{% else %}{% assign href = "/" | append: l | append: i18n_base %}{% endif %}{% else %}{% if l == "en" %}{% assign href = "/" %}{% else %}{% assign href = "/" | append: l | append: "/" %}{% endif %}{% endif %}{% assign ln = site.data.i18n[l].ui.lang_name %}
+<li><a href="{{ href }}" hreflang="{{ l }}" lang="{{ l }}" data-setlang="{{ l }}"{% if l == lang %} aria-current="true"{% endif %}><span aria-hidden="true">{{ l | upcase }}</span><span class="sr-only">{{ ln }}</span></a></li>{% endfor %}</ul></nav>

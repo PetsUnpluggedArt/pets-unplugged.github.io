@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+{% include i18n.html %}<html lang="{{ lang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#7A2E9E">
-    {% seo %}
+    {% seo %}{% include lang-head.html %}
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-81TJS1GV21"></script>
@@ -18,28 +18,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Mulish:wght@400;600;700;800&display=swap">
-    <link rel="stylesheet" href="/assets/css/pu.css?v=3">
+    <link rel="stylesheet" href="/assets/css/pu.css?v=4">
+    <script src="/assets/js/lang.js?v=1" defer></script>
 </head>
-<body>
+<body data-qr>
     <!-- Etsy buyers land here from the QR codes in their Etsy prints: logo only, no shop navigation. -->
-    {% assign vnum = page.name | remove: 'etsy-' | remove: 'video' | remove: '.md' | plus: 0 %}
+    {% assign vnum = page.name | remove: 'etsy-' | remove: 'video' | remove: '.md' | plus: 0 %}{% if page.vn %}{% assign vnum = page.vn %}{% endif %}
     {% if vnum >= 1 and vnum <= 30 %}
-    <header class="qr-hdr"><img src="/assets/img/logo.png" alt="Pets Unplugged: unplug, color, animate" width="400" height="151"></header>
+    <header class="qr-hdr"><img src="/assets/img/logo.png" alt="{{ t.logo_alt }}" width="400" height="151"></header>
+    {% include lang-switch.html where="qr" %}
     <main id="main">
         {{ content }}
     </main>
-    <footer class="qr-legal">&copy; {{ 'now' | date: "%Y" }} Pets Unplugged&trade;</footer>
+    <footer class="qr-legal">&copy; {{ 'now' | date: "%Y" }} Pets Unplugged&trade;{% include lang-switch.html where="qr-foot" %}</footer>
     {% else %}
     <header class="site-header">
         <div class="wrap hdr" style="justify-content: center">
-            <span class="logo-link"><img src="/assets/img/logo.png" alt="Pets Unplugged: unplug, color, animate" width="400" height="151"></span>
+            <span class="logo-link"><img src="/assets/img/logo.png" alt="{{ t.logo_alt }}" width="400" height="151"></span>
         </div>
     </header>
     <main id="main">
         {{ content }}
     </main>
     <footer class="site-footer">
-        <div class="wrap legal" style="text-align: center">&copy; {{ 'now' | date: "%Y" }} Pets Unplugged&trade;. Unplug. Color. Animate.</div>
+        <div class="wrap legal" style="text-align: center">&copy; {{ 'now' | date: "%Y" }} Pets Unplugged&trade;. {{ t.w1 }} {{ t.w2 }} {{ t.w3 }}</div>
     </footer>
     {% endif %}
 </body>

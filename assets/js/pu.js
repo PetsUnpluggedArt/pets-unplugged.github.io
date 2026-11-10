@@ -2,6 +2,10 @@
 (function () {
   'use strict';
 
+  // Words in the page's language (default layout: data-form-msgs = ok|bad|error|"page shown"|"pages shown")
+  var M = (document.body.getAttribute('data-form-msgs') || '').split('|');
+  var msg = function (i, fallback) { return M[i] || fallback; };
+
   // Mobile menu
   var btn = document.querySelector('[data-menu]');
   var nav = document.getElementById('mnav');
@@ -38,7 +42,7 @@
           item.hidden = !on;
           if (on) shown++;
         });
-        if (status) status.textContent = shown + (shown === 1 ? ' page' : ' pages') + ' shown';
+        if (status) status.textContent = (shown === 1 ? msg(3, '%n page shown') : msg(4, '%n pages shown')).replace('%n', shown);
       });
     });
   });
@@ -100,7 +104,7 @@
     if (capLoading || !key) return;
     capLoading = true;
     var s = document.createElement('script');
-    s.src = 'https://www.google.com/recaptcha/api.js?render=' + encodeURIComponent(key) + '&hl=en';
+    s.src = 'https://www.google.com/recaptcha/api.js?render=' + encodeURIComponent(key) + '&hl=' + (document.documentElement.lang || 'en');
     s.async = true;
     document.head.appendChild(s);
   };
@@ -126,15 +130,15 @@
           var r = {};
           try { r = JSON.parse(x.responseText); } catch (err) { r = {}; }
           if (x.status >= 200 && x.status < 300 && r.success !== false) {
-            say("You're on the list. Thank you! Check your inbox in case we ask you to confirm.", true);
+            say(msg(0, "You're on the list. Thank you! Check your inbox in case we ask you to confirm."), true);
             form.reset();
           } else {
-            say((r.message || "That didn't go through.") + ' Please try again, or email hello@petsunplugged.com.', false);
+            say((r.message || msg(1, "That didn't go through.")) + ' ' + msg(2, 'Please try again, or email hello@petsunplugged.com.'), false);
           }
           if (btn) btn.disabled = false;
         };
         x.onerror = function () {
-          say("We couldn't reach the sign-up service. Please try again in a minute.", false);
+          say(msg(5, "We couldn't reach the sign-up service. Please try again in a minute."), false);
           if (btn) btn.disabled = false;
         };
         x.send(new FormData(form));
