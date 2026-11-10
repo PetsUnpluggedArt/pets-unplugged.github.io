@@ -1,0 +1,40 @@
+{% comment %}
+  The page a printed QR code opens: the Vimeo video first, then the title and caption.
+  Params: ar (aspect ratio of the video, "4 / 5" PAWS, "3 / 4" Whiskers), etsy (true on the Etsy pages)
+  PAWS pages 1-30 use the newer qr-paws.html (bundle, pals and book); the rest keep this markup.
+{% endcomment %}{% assign vn = page.name | remove: 'etsy-' | remove: 'video' | remove: '.md' %}{% assign vnum = vn | plus: 0 %}
+{% assign dog = nil %}{% if include.book == 'paws' %}{% for o in site.dogs %}{% if o.n == vnum %}{% assign dog = o %}{% endif %}{% endfor %}{% endif %}
+{% if dog %}{% include qr-paws.html dog=dog etsy=include.etsy %}{% else %}
+<div class="wrap qr-wrap">
+  <article class="page qr-card">
+    <div class="qr-video" style="--ar: {{ include.ar }}">
+      <iframe src="https://player.vimeo.com/video/{{ page.vimeo_video_id }}?{% if page.vimeo_hash %}h={{ page.vimeo_hash }}&amp;{% endif %}autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;controls=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="{{ page.title | escape }}: the video"></iframe>
+    </div>
+    <div class="qr-body">
+      <h1>{{ page.title | default: "Your colored page comes to life!" }}</h1>
+      {% if page.subtitle %}<p class="qr-sub">{{ page.subtitle }}</p>{% endif %}
+      {% if content and content != "" %}<div class="lead" style="margin: 12px auto 0">{{ content }}</div>{% endif %}
+      {% if include.etsy %}
+        <p class="lead" style="margin: 12px auto 0">Thanks for coloring! Enjoy the animation. More fun awaits on Etsy.</p>
+        <div class="row" style="justify-content: center; margin-top: 22px"><a class="btn" href="{{ site.links.etsy }}">More puppy prints on Etsy</a></div>
+      {% else %}
+        <div class="row" style="justify-content: center; margin-top: 22px">
+          {% if dog %}<a class="btn" href="{{ dog.url }}">This page and its story</a>{% endif %}
+          {% if include.book == 'whiskers' %}<a class="btn" href="/books/#whiskers">The Whiskers cat book</a>{% else %}<a class="btn2" href="/books/">Get the PAWS book</a>{% endif %}
+          <a class="btn2" href="/free/">Free pages</a>
+        </div>
+      {% endif %}
+      <p class="b" style="margin: 26px 0 0">Love this? Share it!</p>
+      {% assign su = site.url | append: page.url | uri_escape %}{% assign st = page.title | uri_escape %}
+      <div class="share">
+        <a href="https://www.pinterest.com/pin/create/button/?url={{ su }}&amp;description={{ st }}" target="_blank" rel="noopener">Pinterest</a>
+        {% unless include.etsy %}
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ su }}" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://wa.me/?text={{ st }}%20{{ su }}" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="sms:?&amp;body={{ st }}%20{{ su }}">Text message</a>
+        {% endunless %}
+      </div>
+      <p class="muted" style="margin: 26px 0 0">Thanks for scanning and watching!</p>
+    </div>
+  </article>
+</div>{% endif %}

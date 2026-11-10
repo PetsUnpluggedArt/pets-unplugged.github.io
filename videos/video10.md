@@ -1,6 +1,7 @@
 ---
+image: /assets/img/og/paws-10.jpg
 layout: video
-title: Pug Loaf Mode
+title: "Nap Master Supreme"
 subtitle: “Now baking at 100% cute”
 vimeo_video_id: 1141720874
 video_download_link: https://vimeo.com/1141720874?share=copy&fl=sv&fe=ci

@@ -1,0 +1,96 @@
+---
+layout: default
+permalink: /your-pet/order/
+title: Put your pet in the next book (order form)
+image: /assets/img/og/your-pet.jpg
+description: The order form for Your pet as a coloring page. It opens with the Puppy Love book in December.
+---
+{% assign pr = "[PRICE]" %}
+<section class="wrap" style="padding-top: 40px">
+  <a class="link-b" href="/your-pet/">Your pet as a page</a>
+  <h1 style="margin-top: 8px">Put your pet in the next book</h1>
+  <p class="lead">Takes about 3 minutes. You'll pay on the next screen.</p>
+  <div class="soon-note" role="note" style="max-width: 720px; font-size: 16px"><b>Opens with Puppy Love in December.</b> This is a preview of the form: it doesn't take photos, orders or payments yet. <a href="/your-pet/#waitlist">Join the waitlist</a> to hear the day it opens.</div>
+</section>
+
+<section class="wrap sec-end split" style="padding-top: 28px; align-items: flex-start">
+  <form style="flex: 3 1 560px; min-width: 0" class="stack" action="#" method="post" aria-label="Order form preview, not open yet" onsubmit="return false">
+    <fieldset class="form-card" disabled>
+      <legend>1. Your pet's photo</legend>
+      <div class="split" style="gap: 20px; align-items: flex-start">
+        <div style="width: 200px; aspect-ratio: 4 / 5; border: 2px dashed var(--ink); border-radius: 16px; background: var(--lilac); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center; padding: 14px">
+          <label for="o-photo" class="b">Choose a photo</label>
+          <input id="o-photo" name="photo" type="file" accept="image/*" style="max-width: 100%; font-size: 13px">
+        </div>
+        <div class="stack" style="flex: 1 1 240px; gap: 10px">
+          <div class="b">Photo check</div>
+          <div>One pet in the photo</div>
+          <div>No people</div>
+          <div>Sharp, with good light</div>
+          <div>The whole pet is in view</div>
+          <p class="tiny muted" style="margin: 0">Checked as soon as you upload. If something's off, we tell you here before you pay.</p>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-card" disabled>
+      <legend>2. About your pet</legend>
+      <div class="grid" style="margin-top: 0; gap: 14px">
+        <div class="lbl"><label for="o-name">Pet's name</label><input id="o-name" name="pet_name" class="field" type="text" placeholder="Biscuit"></div>
+        <div class="lbl"><label for="o-kind">Dog or cat</label><select id="o-kind" name="kind" class="field"><option>Dog</option><option>Cat</option></select></div>
+        <div class="lbl"><label for="o-breed">Breed (if you know it)</label><input id="o-breed" name="breed" class="field" type="text" placeholder="Corgi mix"></div>
+      </div>
+      <div class="lbl"><label for="o-special">What makes your pet funny or special?</label><textarea id="o-special" name="special" class="field" rows="3" placeholder="Steals socks. Scared of the vacuum. Loves car rides."></textarea></div>
+      <p class="tiny muted" style="margin: 0">We use this for your pet's short story on the page.</p>
+    </fieldset>
+
+    <fieldset class="form-card" disabled>
+      <legend>3. Pick your option</legend>
+      <label class="opt-card"><input type="radio" name="option" value="just-my-pet"><span style="flex: 1"><span class="b" style="display: block; font-size: 18px">Just my pet (premium, one of one)</span><span style="display: block; color: var(--text2)">Your pet's page and its QR video, by email within 3 days. One free redo.</span></span><span class="b">{% include price.html p=pr %}</span></label>
+      <label class="opt-card"><input type="radio" name="option" value="star-in-the-book"><span style="flex: 1"><span class="b" style="display: block; font-size: 18px">Star in the next book</span><span style="display: block; color: var(--text2)">The same page and video within 3 days, a guest-star spot, and the PDF book.</span></span><span class="b">{% include price.html p=pr %}</span></label>
+      <label class="opt-card bg-lilac"><input type="radio" name="option" value="full-package" checked><span style="flex: 1"><span class="b" style="display: block; font-size: 18px">Full package (best value)</span><span style="display: block; color: var(--text2)">Everything in Star in the next book, plus the paperback shipped to you.</span></span><span class="b">{% include price.html p=pr %}</span></label>
+      <p class="small muted" style="margin: 0"><b>Early price</b> for the first 10 spots in each book. Everyone whose pet stars gets a discount in the merch shop.</p>
+    </fieldset>
+
+    <fieldset class="form-card" disabled>
+      <legend>4. Add-ons</legend>
+      <div class="lbl"><label for="o-extra">Extra paperbacks for family (printed by Amazon, shipped to each address you give us; {% include price.html p=pr %} each)</label><input id="o-extra" name="extra_paperbacks" class="field" type="number" min="0" max="20" value="0" style="max-width: 140px"></div>
+      <label class="check"><input type="checkbox" name="mug" value="yes"><span><b>Your pet on a mug</b>, made from your pet's page. {% include price.html p=pr %}</span></label>
+      <label class="check"><input type="checkbox" name="tee" value="yes"><span><b>Your pet on a tee</b>, kids' and adult sizes. {% include price.html p=pr %}</span></label>
+    </fieldset>
+
+    <fieldset class="form-card" disabled>
+      <legend>5. Permission</legend>
+      <label class="check"><input type="checkbox" name="permission" value="yes" required><span><b>Required.</b> I took this photo or have the right to use it. Kubbord Labs LLC (Pets Unplugged) may use my pet's photo and page in its coloring books, on its website and in its posts. Printed books stay in print even if I change my mind later.</span></label>
+      <label class="check"><input type="checkbox" name="share_free" value="yes"><span><b>Optional.</b> Share my pet as a free page for other kids to color.</span></label>
+      <label class="check"><input type="checkbox" name="merch" value="yes"><span><b>Optional.</b> My pet can appear on Pets Unplugged merch.</span></label>
+      <p class="tiny muted" style="margin: 0">Final permission wording is still being checked. <a href="/terms/">Terms</a></p>
+    </fieldset>
+
+    <fieldset class="form-card" disabled>
+      <legend class="sr-only">Your details</legend>
+      <div class="lbl"><label for="o-email">Your email</label><input id="o-email" name="email" class="field" type="email" autocomplete="email" placeholder="you@example.com"></div>
+      <label class="check"><input type="checkbox" name="adult" value="yes"><span>I'm 18 or older.</span></label>
+      <button type="submit" class="btn" style="align-self: flex-start">Continue to secure checkout</button>
+      <p class="tiny muted" style="margin: 0">Checkout opens with Puppy Love in December. Nothing is sent or charged from this preview.</p>
+    </fieldset>
+  </form>
+
+  <aside class="page pad bg-peach stack" style="flex: 2 1 320px" aria-labelledby="next-h">
+    <h2 class="h3" id="next-h">What happens next</h2>
+    <ol style="margin: 0; padding-left: 20px; line-height: 1.7; color: var(--text2)">
+      <li>We draw your pet as a coloring page and check it by hand.</li>
+      <li>You get the page and its video by email within 3 days, usually the next day. A redo adds up to 2 days.</li>
+      <li>Your pet takes a guest-star spot in Puppy Love, which closes January 10. The book always goes out on that date; our own pets fill the rest.</li>
+      <li>The PDF book arrives within 7 days of the closing date.</li>
+      <li>Paperbacks are printed on demand by Amazon (Kindle Direct Publishing) and arrive within 4 weeks of the closing date.</li>
+      <li>Late on any of these? We make it up to you, for example with a free extra page.</li>
+    </ol>
+    <div class="row">
+      <img src="/assets/img/pages/paws-02-line.jpg" alt="Example page, line art" width="90" height="120" style="width: 90px; border: 2px solid var(--ink); border-radius: 10px">
+      <img src="/assets/img/pages/paws-02-color.jpg" alt="Example video frame, colored in" width="90" height="120" style="width: 90px; border: 2px solid var(--ink); border-radius: 10px">
+      <span class="tiny muted">Example with a PAWS pup</span>
+    </div>
+    <div class="small b">Doesn't look like your pet? We redo it free.</div>
+  </aside>
+</section>

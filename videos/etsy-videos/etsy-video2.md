@@ -1,6 +1,7 @@
 ---
+image: /assets/img/og/paws-02.jpg
 layout: etsy-videos
-title: Paws & Dream
+title: "Toy-Herding Practice"
 subtitle: Currently recharging at    100% fluff
 vimeo_video_id: 1141702070
 video_download_link: https://vimeo.com/1141702070?share=copy&fl=sv&fe=ci

@@ -1,6 +1,7 @@
 ---
+image: /assets/img/og/paws-05.jpg
 layout: etsy-videos
-title: Beethoven’s Fluffiest Fan
+title: Music of Dreams
 subtitle: “Dreaming in four-paw harmony"
 vimeo_video_id: 1137780238
 vimeo_hash: 21de130f58

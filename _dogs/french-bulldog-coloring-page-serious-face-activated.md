@@ -1,0 +1,31 @@
+---
+n: 29
+title: "French Bulldog coloring page: Send Help. And a Lawyer"
+h1: "French Bulldog coloring page: Send Help. And a Lawyer"
+card_title: "Send Help. And a Lawyer"
+book_title: "Send Help. And a Lawyer"
+video_title: "Send Help. And a Lawyer"
+name: null
+short_name: "the page"
+possessive: "the"
+breed: "French Bulldog"
+breed_short: "French Bulldog"
+story: "I’ve contacted my legal team. There was no consent form, no warning, and definitely no emotional support snacks. I will be seeking <strong>compensation</strong> for stress, wet paws, and damaged dignity."
+fun_fact: null
+alt: "Mischievous dog coloring illustration - naughty dog in trouble situation with guilty expression"
+tags: []
+season: null
+vimeo: "1141746036"
+vimeo_hash: null
+payhip: "https://payhip.com/b/GDHbQ"
+etsy_url: "https://www.etsy.com/listing/4510631592"
+image: "/assets/img/og/paws-29.jpg"
+description: "French Bulldog coloring page: Send Help. And a Lawyer, page 29 of the PAWS book. I’ve contacted my legal team. Free video preview; printable page with its QR video $1.99."
+episodes:
+  - n: 2
+    name: "The Violation"
+    beat: "It happened without warning. No consent. No preparation. Just sudden, wet, cold, WRONG."
+  - n: 3
+    name: "Articulation"
+    beat: "So I started documenting. Every violation. Every 'harmless' boundary breach. Every time someone laughed at something that wasn't funny."
+---

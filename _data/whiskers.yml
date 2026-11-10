@@ -1,0 +1,33 @@
+# Whiskers cat book: coming soon. Sneak-peek pages (from the four cat videos on Vimeo).
+- nn: "01"
+  title: "Shelf Life"
+  subtitle: "I love this flower!"
+  img: "/assets/img/pages/whiskers-01-color.jpg"
+  line: "/assets/img/pages/whiskers-01-line.jpg"
+  alt: "Shelf Life, a cat from the Whiskers coloring book, colored in"
+  tags: ["Cats"]
+  video: "/whiskers-videos/01.html"
+- nn: "03"
+  title: "Stormy Weather"
+  subtitle: "I'm not scared!"
+  img: "/assets/img/pages/whiskers-03-color.jpg"
+  line: "/assets/img/pages/whiskers-03-line.jpg"
+  alt: "Stormy Weather, a cat from the Whiskers coloring book, colored in"
+  tags: ["Cats", "Seasons"]
+  video: "/whiskers-videos/03.html"
+- nn: "08"
+  title: "Delicious"
+  subtitle: "My favorite spot to sleep"
+  img: "/assets/img/pages/whiskers-08-color.jpg"
+  line: "/assets/img/pages/whiskers-08-line.jpg"
+  alt: "Delicious, a cat from the Whiskers coloring book, colored in"
+  tags: ["Cats"]
+  video: "/whiskers-videos/08.html"
+- nn: "09"
+  title: "I'm thirsty"
+  subtitle: "I love milk"
+  img: "/assets/img/pages/whiskers-09-color.jpg"
+  line: "/assets/img/pages/whiskers-09-line.jpg"
+  alt: "I'm thirsty, a cat from the Whiskers coloring book, colored in"
+  tags: ["Cats"]
+  video: "/whiskers-videos/09.html"

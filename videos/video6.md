@@ -1,6 +1,7 @@
 ---
+image: /assets/img/og/paws-06.jpg
 layout: video
-title: Road Trip Rockstar
+title: "Paws in the Wind"
 subtitle: “Hair metal level, legendary"
 vimeo_video_id: 1141714631
 video_download_link: https://vimeo.com/1141714631?share=copy&fl=sv&fe=ci

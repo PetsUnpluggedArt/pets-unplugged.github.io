@@ -1,79 +1,16 @@
 ---
 layout: default
 ---
-
-<main class="flex-grow container mx-auto px-4 sm:px-8 py-12">
-  <article class="max-w-4xl mx-auto">
-    <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
-
-      {% if page.thumbnail %}
-      <div class="w-full h-96 md:h-[500px] overflow-hidden">
-        <img src="{{ page.thumbnail }}" alt="{{ page.title }}" class="w-full h-full object-cover" loading="lazy">
-      </div>
-      {% endif %}
-
-      <div class="p-8 sm:p-12 lg:p-16">
-        <header class="text-center mb-12">
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-pets-dark leading-tight mb-6">
-            {{ page.title }}
-          </h1>
-
-          <div class="flex flex-wrap justify-center gap-4 text-lg text-gray-600 mb-6">
-            <div class="flex items-center">
-              <i class="fas fa-calendar-alt mr-2 text-pets-secondary"></i>
-              {{ page.date | date: "%B %-d, %Y" }}
-            </div>
-            {% if page.author %}
-            <span class="hidden sm:inline">•</span>
-            <div class="flex items-center">
-              <i class="fas fa-user-circle mr-2 text-pets-secondary"></i>
-              {{ page.author }}
-            </div>
-            {% endif %}
-          </div>
-
-          {% if page.tags %}
-          <div class="flex flex-wrap justify-center gap-3">
-            {% for tag in page.tags %}
-            <span class="bg-pets-secondary/10 text-pets-secondary px-4 py-2 rounded-full text-sm font-bold">#{{ tag }}</span>
-            {% endfor %}
-          </div>
-          {% endif %}
-        </header>
-
-        <!-- Main Content with Enhanced Styling -->
-        <div class="prose prose-lg max-w-none mx-auto
-                    prose-headings:font-black prose-headings:text-pets-dark
-                    prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b-4 prose-h2:border-pets-primary/50
-                    prose-h3:text-2xl prose-h3:text-pets-secondary
-                    prose-p:text-gray-700 prose-p:leading-relaxed
-                    prose-li:text-gray-700 prose-li:my-2
-                    prose-strong:text-pets-dark prose-strong:font-bold
-                    prose-a:text-pets-secondary prose-a:font-bold hover:prose-a:text-pets-dark hover:prose-a:underline
-                    prose-blockquote:border-l-8 prose-blockquote:border-pets-primary prose-blockquote:bg-pets-primary/10 prose-blockquote:italic prose-blockquote:px-6 prose-blockquote:py-4
-                    prose-img:rounded-2xl prose-img:shadow-xl prose-img:my-12 prose-img:mx-auto
-                    prose-table:w-full prose-table:border-collapse prose-table:my-10
-                    prose-th:bg-pets-secondary/20 prose-th:text-pets-dark prose-th:font-black prose-th:py-4 prose-th:px-6 prose-th:text-left
-                    prose-td:py-4 prose-td:px-6 prose-td:border-b prose-td:border-gray-300 prose-td:text-gray-700">
-          {{ content }}
-        </div>
-
-        <!-- Back Button -->
-        <div class="mt-16 text-center">
-          <a href="{{ site.baseurl }}/blog/" class="inline-flex items-center bg-pets-dark text-white font-bold py-4 px-10 rounded-full shadow-xl hover:bg-indigo-900 cta-button text-xl">
-            <i class="fas fa-arrow-left mr-3"></i> Back to All Articles
-          </a>
-        </div>
-      </div>
-    </div>
-  </article>
-</main>
-
-<style>
-  .cta-button {
-    transition: all 0.3s ease;
-  }
-  .cta-button:hover {
-    transform: translateY(-4px);
-  }
-</style>
+<article class="wrap sec-end" style="padding-top: 40px">
+  <nav class="crumbs" aria-label="Breadcrumb" style="padding-top: 0; margin-bottom: 16px"><ol><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">Article</li></ol></nav>
+  <div class="prose">
+    <h1>{{ page.title }}</h1>
+    <p class="muted small" style="margin-top: 0">{{ page.date | date: "%B %-d, %Y" }}{% if page.author %} · {{ page.author }}{% endif %}</p>
+    {% if page.thumbnail %}<img src="{{ page.thumbnail }}" alt="" loading="lazy">{% endif %}
+    {{ content }}
+  </div>
+  <div class="page pad bg-sky split" style="margin-top: 48px; gap: 20px">
+    <div class="grow"><div class="h3">Color a page tonight</div><div>Free pages for kids, new ones with every drop.</div></div>
+    <div class="row"><a class="btn" href="/free/">Get free pages</a><a class="btn2" href="/blog/">All articles</a></div>
+  </div>
+</article>

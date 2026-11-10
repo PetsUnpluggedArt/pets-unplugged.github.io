@@ -1,0 +1,31 @@
+---
+layout: default
+---
+{% assign p = page %}{% assign dog = nil %}{% for o in site.dogs %}{% if o.n == p.page_n %}{% assign dog = o %}{% endif %}{% endfor %}
+<section class="wrap sec-end" style="padding-top: 28px">
+  <a class="link-b" href="/merchandise/">All merch</a>
+  <div class="split" style="margin-top: 18px; gap: 40px; align-items: flex-start">
+    <div class="page bg-lilac" style="flex: 1 1 420px; padding: 24px">
+      <img src="{{ p.img }}" alt="{{ p.img_alt }}" width="480" height="600" style="width: 100%; border: 2px solid var(--ink); border-radius: 14px; display: block">
+      <p class="tiny muted" style="margin: 12px 0 0">The design. The shop shows the product photos from our print partner.</p>
+    </div>
+    <div class="stack" style="flex: 1 1 380px; gap: 18px">
+      <div>
+        <span class="chip">{{ p.kind }}</span>
+        <h1 style="margin-top: 10px">{{ p.title }}</h1>
+        {% include merch-price.html p=p.price class="b product-price" %}
+      </div>
+      <p style="margin: 0; font-size: 17px; color: var(--text2)">{{ p.description }}</p>
+      {% if p.sizes and p.sizes.size > 0 %}<div><span class="b">Sizes:</span> {{ p.sizes | join: ", " }}</div>{% endif %}
+      <div class="row">
+        <a class="btn" href="{% if p.etsy_url != '' %}{{ p.etsy_url }}{% else %}{{ site.links.etsy }}{% endif %}">Shop it on Etsy</a>
+        {% if dog %}<a class="btn2" href="{{ dog.url }}">The coloring page</a>{% endif %}
+      </div>
+      <div class="page pad stack small" style="gap: 6px; padding: 18px 20px">
+        <div><b>Printed when you order.</b> Shipping time is shown at checkout.</div>
+        {% if p.story == 'scout' %}<div><b>The story behind it:</b> <a href="/story/scout/">Scout, episode 1</a>. The coloring page is {{ site.prices.single_page }}.</div>{% elsif dog %}<div><b>The page behind it:</b> <a href="{{ dog.url }}">{{ dog.card_title }}</a>, PAWS page {{ dog.n }}.</div>{% endif %}
+        <div class="muted">Checkout on this site is coming soon. For now, merch is sold through our Etsy shop.</div>
+      </div>
+    </div>
+  </div>
+</section>

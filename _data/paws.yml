@@ -1,0 +1,112 @@
+# PAWS products, generated from shop-files/PAWS/payhip-products.json by _sim/pu-site-2/tools/apply_products.py.
+# Payhip links for the single pages live in each dog file (_dogs/*.md, "payhip:").
+# etsy_url: the Etsy listing (singles, bundles, book). "" = not on Etsy; the "Also on Etsy" link then hides.
+full_book:
+  name: "PAWS: Unplug, Color & Animate"
+  payhip_url: "https://payhip.com/b/zhxGf"
+  etsy_url: "https://www.etsy.com/listing/4507267945"
+bundles:
+  - n: 1
+    name: "Cozy Dreams"
+    slug: cozy-dreams
+    pages: [5, 8, 10]
+    blurb: "Three sleepy pups: a piano nap, a teddy bear cuddle and a champion snorer."
+    payhip_url: "https://payhip.com/b/YXk20"
+    etsy_url: "https://www.etsy.com/listing/4613324118"
+    img: /assets/img/bundles/cozy-dreams.jpg
+    img_w: 600
+    img_h: 779
+  - n: 2
+    name: "Playful Chaos"
+    slug: playful-chaos
+    pages: [6, 7, 20]
+    blurb: "Wind in the fur, a toilet-paper masterpiece and one very big splash."
+    payhip_url: "https://payhip.com/b/5qw4L"
+    etsy_url: "https://www.etsy.com/listing/4613324904"
+    img: /assets/img/bundles/playful-chaos.jpg
+    img_w: 600
+    img_h: 779
+  - n: 3
+    name: "Big Personalities"
+    slug: big-personalities
+    pages: [15, 16, 19]
+    blurb: "A dapper gentleman, a lady with her purse and a double dose of cute."
+    payhip_url: "https://payhip.com/b/NTKC0"
+    etsy_url: "https://www.etsy.com/listing/4613309541"
+    img: /assets/img/bundles/big-personalities.jpg
+    img_w: 600
+    img_h: 779
+  - n: 4
+    name: "Quirky and Adorable"
+    slug: quirky-and-adorable
+    pages: [9, 11, 12]
+    blurb: "A pup in a big boot, look-alike twins and the best flower in the garden."
+    payhip_url: "https://payhip.com/b/Wiq7T"
+    etsy_url: "https://www.etsy.com/listing/4613310719"
+    img: /assets/img/bundles/quirky-and-adorable.jpg
+    img_w: 600
+    img_h: 779
+  - n: 5
+    name: "Sweater Weather"
+    slug: sweater-weather
+    pages: [1, 18, 22]
+    blurb: "A pom-pom hat, a cozy sweater and a pup tucked into warm sleeves."
+    payhip_url: "https://payhip.com/b/UqmkK"
+    etsy_url: "https://www.etsy.com/listing/4613327644"
+    img: /assets/img/bundles/sweater-weather.jpg
+    img_w: 600
+    img_h: 779
+  - n: 6
+    name: "Snuggle Buddies"
+    slug: snuggle-buddies
+    pages: [2, 4, 14]
+    blurb: "A sleepy corgi, two pups nobody could choose between and a snoring duet."
+    payhip_url: "https://payhip.com/b/572hz"
+    etsy_url: "https://www.etsy.com/listing/4613312049"
+    img: /assets/img/bundles/snuggle-buddies.jpg
+    img_w: 600
+    img_h: 779
+  - n: 7
+    name: "Mischief Makers"
+    slug: mischief-makers
+    pages: [23, 24, 29]
+    blurb: "A chewed shoe, a confusing reflection and a pup who wants a lawyer."
+    payhip_url: "https://payhip.com/b/2CHoT"
+    etsy_url: "https://www.etsy.com/listing/4613329160"
+    img: /assets/img/bundles/mischief-makers.jpg
+    img_w: 600
+    img_h: 779
+  - n: 8
+    name: "On Duty"
+    slug: on-duty
+    pages: [3, 25, 26]
+    blurb: "A treat-tracking secret agent, a tiny security officer and ears on full alert."
+    payhip_url: "https://payhip.com/b/Nk5Ll"
+    etsy_url: "https://www.etsy.com/listing/4613313463"
+    img: /assets/img/bundles/on-duty.jpg
+    img_w: 600
+    img_h: 779
+  - n: 9
+    name: "Fancy and Sweet"
+    slug: fancy-and-sweet
+    pages: [17, 21, 28]
+    blurb: "A pup who knows it's cute, royal fluffiness and a basket of sweetness."
+    payhip_url: "https://payhip.com/b/Mecyh"
+    etsy_url: "https://www.etsy.com/listing/4613330502"
+    img: /assets/img/bundles/fancy-and-sweet.jpg
+    img_w: 600
+    img_h: 779
+  - n: 10
+    name: "Rain, Snow and Sky"
+    slug: rain-snow-and-sky
+    pages: [13, 27, 30]
+    blurb: "Christmas morning, puddle patrol and a boss the pigeons won't take seriously."
+    payhip_url: "https://payhip.com/b/XxVP7"
+    etsy_url: "https://www.etsy.com/listing/4613314831"
+    img: /assets/img/bundles/rain-snow-and-sky.jpg
+    img_w: 600
+    img_h: 779
+free_gift:
+  name: "FREE: Pompom - PAWS Animated Dog Coloring Page"
+  payhip_url: "https://payhip.com/b/WMkrK"
+  page: 1

@@ -1,0 +1,11 @@
+{% comment %}
+  Opens a sign-up form. With site.form_endpoint set, it posts to the Brevo form like Brevo's own embed:
+  EMAIL, the empty email_address_check trap, locale, and (added by pu.js) a reCAPTCHA token.
+  Until form_endpoint is set the form is shown but disabled, with a "coming soon" note (form-end.html).
+  The email input inside must be named EMAIL.
+  Params: kind (newsletter / waitlist / notify), label, class, fclass
+{% endcomment %}{% if site.form_endpoint and site.form_endpoint != "" %}<form class="{{ include.class }}" action="{{ site.form_endpoint }}" method="post" aria-label="{{ include.label }}" data-brevo{% if site.form_recaptcha_key %} data-sitekey="{{ site.form_recaptcha_key }}"{% endif %}>
+<input type="hidden" name="locale" value="en">
+<div class="trap" aria-hidden="true"><label>Leave this empty<input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off"></label></div>
+<fieldset class="{{ include.fclass }}">{% else %}<form class="{{ include.class }}" action="#" method="post" aria-label="{{ include.label }}" aria-describedby="soon-{{ include.kind }}{{ include.n }}" onsubmit="return false">
+<fieldset class="{{ include.fclass }}" disabled>{% endif %}

@@ -1,6 +1,7 @@
 ---
+image: /assets/img/og/paws-01.jpg
 layout: etsy-videos
-title: Scout
+title: "Pompom"
 subtitle: “I can do this all day”
 vimeo_video_id: 1141576988
 video_download_link: https://vimeo.com/1141576988?share=copy&fl=sv&fe=ci

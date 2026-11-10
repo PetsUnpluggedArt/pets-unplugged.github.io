@@ -1,0 +1,64 @@
+---
+layout: default
+permalink: /story/scout/
+title: "Scout's story: a Shih Tzu mix in a pompom hat"
+image: /assets/img/og/scout.jpg
+description: Follow Scout, the fluffy Shih Tzu mix in the pompom hat. Each coloring page is an episode, and each new video starts where the last one ended. Episode 1 is out; 2 and 3 are coming soon.
+---
+{% assign scout = nil %}{% for o in site.dogs %}{% if o.n == 1 %}{% assign scout = o %}{% endif %}{% endfor %}
+<section class="band-sky" style="border-top: 0">
+  <div class="wrap split" style="padding-top: 48px; padding-bottom: 48px; gap: 40px">
+    <img src="/assets/img/pages/paws-01-color.jpg" alt="Scout the Shih Tzu mix in his pompom hat and knitted coat, colored in" width="300" height="400" style="width: 300px; max-width: 100%; border: 2px solid var(--ink); border-radius: 18px">
+    <div style="flex: 1 1 380px">
+      <a class="link-b" href="/books/#pages">All pets</a>
+      <h1 style="margin-top: 6px">Scout's story</h1>
+      <p class="lead" style="color: #2f2b36">A fluffy Shih Tzu mix in a pompom hat, always ready for his walk. Each page is an episode, and each new video starts right where the last one ended.</p>
+      <div class="row" style="margin-top: 24px"><a class="btn" href="{{ site.free_gift_url }}">Get episode 1 free</a><a class="btn2" href="/merchandise/scout-mug/">Scout merch</a></div>
+      <p class="small" style="margin: 10px 0 0">Free: the Pompom page, with its animation. A grown-up enters their email at our Payhip shop.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap sec-end split" id="episodes" style="padding-top: 56px; align-items: flex-start; gap: 36px">
+  <div style="flex: 1 1 320px; max-width: 460px">
+    <h2 class="h2" id="eps-h">Episodes</h2>
+    <div role="tablist" aria-labelledby="eps-h" aria-orientation="vertical" data-eps class="stack" style="margin-top: 20px; gap: 12px">
+      <button type="button" class="ep" role="tab" id="tab-1" aria-selected="true" aria-controls="ep-1"><span class="ep-n">1</span><span style="flex: 1"><span class="b" style="display: block; font-size: 18px">Pompom</span><span class="small muted" style="display: block">Scout 1.0 · page, video and story</span></span></button>
+      {% for e in scout.episodes %}
+      <button type="button" class="ep" role="tab" id="tab-{{ e.n }}" aria-selected="false" aria-controls="ep-{{ e.n }}" tabindex="-1"><span class="ep-n">{{ e.n }}</span><span style="flex: 1"><span class="b" style="display: block; font-size: 18px">{{ e.name }}</span><span class="small muted" style="display: block">Scout {{ e.n }}.0 · coming soon</span></span></button>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="page" style="flex: 2 1 480px; min-width: 0">
+    <div class="ep-panel" role="tabpanel" id="ep-1" aria-labelledby="tab-1" tabindex="0">
+      <div class="ep-img">
+        <img src="/assets/img/pages/paws-01-color.jpg" alt="{{ scout.alt }}, colored in" width="450" height="600">
+        <a href="/videos/video1.html" class="chip" style="position: absolute; left: 16px; bottom: 16px; min-height: 44px; padding: 0 16px; font-size: 15px; text-decoration: none; color: var(--ink)">Watch the video</a>
+      </div>
+      <div class="ep-text">
+        <span class="chip" style="background: var(--lilac2); align-self: flex-start">Episode 1 · Scout 1.0</span>
+        <h3 class="h3" style="font-size: 30px">Pompom</h3>
+        <p style="margin: 0; color: var(--text2)">{{ scout.story }}{% if scout.fun_fact %} Did you know? {{ scout.fun_fact }}{% endif %}</p>
+        <div class="small b">You get: the coloring page, its QR video and the story.</div>
+        <div class="row" style="margin-top: auto">
+          {% if scout.payhip != '' %}<a class="btn" href="{{ scout.payhip }}">Get this page: {{ site.prices.single_page }}</a>{% else %}<button type="button" class="btn" disabled>Get this page: {{ site.prices.single_page }}</button>{% endif %}
+          <a class="btn2" href="{{ scout.url }}">Scout's page</a>
+        </div>
+        {% if scout.payhip == '' %}<p class="tiny muted" style="margin: 0">Single-page downloads open soon. Scout is page 1 of the <a href="/books/#paws">PAWS book</a>.</p>{% else %}<p class="tiny muted" style="margin: 0">Or <a href="{{ site.free_gift_url }}">get this page free</a> with your email.</p>{% endif %}
+      </div>
+    </div>
+    {% for e in scout.episodes %}
+    <div class="ep-panel" role="tabpanel" id="ep-{{ e.n }}" aria-labelledby="tab-{{ e.n }}" tabindex="0" hidden>
+      <div class="ep-img"><img class="soon-img" src="/assets/img/pages/paws-01-line.jpg" alt="Scout's first page, shown faded: episode {{ e.n }} is not drawn yet" width="450" height="600" loading="lazy"></div>
+      <div class="ep-text">
+        <span class="chip" style="background: var(--lilac2); align-self: flex-start">Episode {{ e.n }} · coming soon</span>
+        <h3 class="h3" style="font-size: 30px">{{ e.name }}</h3>
+        <p style="margin: 0; color: var(--text2)">{% if e.n == 2 %}Scout steps out into a bright, sunny day and takes his first excited steps down the walkway. The video starts right where Pompom ends.{% else %}Something unexpected shows up on Scout's walk. Get a note the day it drops.{% endif %}</p>
+        <div class="small b">Coming with a future drop: the page, its QR video and the story.</div>
+        <a class="btn2" href="/books/#notify" style="margin-top: auto; align-self: flex-start">Tell me when it drops</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

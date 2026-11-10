@@ -14,7 +14,7 @@ Enter adult coloring books—a surprisingly powerful tool that's capturing the a
 
 In this guide, we'll explore the science behind why coloring works, how it reduces anxiety, and how you can use this simple practice to transform your daily stress management routine.
 
-![Coloring for stress relief hero image](/assets/images/coloring-stress-relief-hero.jpg)
+![Coloring for stress relief hero image](/assets/images/coloring-stress-relief-hero.webp)
 
 ## The Science Behind Coloring and Stress Relief
 
@@ -55,7 +55,7 @@ The answer is simple: **accessibility and instant gratification.**
 
 A 2017 study published in Art Therapy found that adult coloring was equally effective as a guided meditation session for reducing anxiety—but participants found it more enjoyable and were more likely to continue doing it long-term.
 
-![Interactive coloring with QR codes](/assets/images/coloring-interactive-qr.jpg)
+![Interactive coloring with QR codes](/assets/images/coloring-interactive-qr.webp)
 
 ## The Specific Benefits of Coloring for Stress and Anxiety
 
@@ -84,7 +84,7 @@ Stress causes us to unconsciously clench our muscles. The meditative state of co
 **Boosts Immune Function**
 Chronic stress suppresses immune function. By reducing stress through coloring, you're actually strengthening your body's ability to fight off illness.
 
-![Hands coloring intricate mandala pattern](/assets/images/coloring-mandala-hands.jpg)
+![Hands coloring intricate mandala pattern](/assets/images/coloring-mandala-hands.webp)
 
 ## How to Use Coloring for Maximum Stress-Relief Benefits
 
@@ -98,7 +98,7 @@ To get the most out of your coloring practice, set the stage:
 4. **Set a timer** – Aim for 20-30 minutes, the sweet spot for stress reduction
 5. **Put your phone away** – This is crucial. Notifications will break your flow state
 
-![Stressed vs calm comparison](/assets/images/coloring-stressed-vs-calm.jpg)
+![Stressed vs calm comparison](/assets/images/coloring-stressed-vs-calm.webp)
 
 ### Choosing the Right Coloring Book
 
@@ -153,7 +153,7 @@ Share your work on social media or with friends. The creative expression and com
 
 The beauty of coloring is that it combines accessibility, speed, and sustainability better than most other methods.
 
-![Multi-generational family coloring together](/assets/images/coloring-family-bonding.jpg)
+![Multi-generational family coloring together](/assets/images/coloring-family-bonding.webp)
 
 ## Real Stories: How Coloring Changed Lives
 
@@ -166,7 +166,7 @@ The beauty of coloring is that it combines accessibility, speed, and sustainabil
 ### The Martinez Family (Parents with Young Children)
 "We use family coloring time as our wind-down before bed. It's quiet, calming, and something we all enjoy together. Our kids are less anxious at bedtime, and honestly, we adults needed the stress relief too."
 
-![Person coloring in bed before sleep](/assets/images/coloring-bedtime-wind-down.jpg)
+![Person coloring in bed before sleep](/assets/images/coloring-bedtime-wind-down.webp)
 
 ## Getting Started With Your Coloring Practice
 
@@ -193,7 +193,7 @@ If you're ready to experience the stress-relief benefits of coloring, we've crea
 
 **Get Started With a Free Sample**
 
-[Download a free sample page from our Piano Dog collection](https://petsunplugged.com/get-digital) and experience the magic of interactive coloring. No email required—just start coloring and feel the stress melt away.
+[Download a free sample page from our Piano Dog collection](https://petsunplugged.com/downloads/) and experience the magic of interactive coloring. No email required—just start coloring and feel the stress melt away.
 
 ---
 
