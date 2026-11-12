@@ -76,7 +76,6 @@ layout: default
 <section class="wrap sec" id="seasons">
   <h2 class="h2">{{ t.xmas_more_h }}</h2>
   <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr))">
-    <div class="page pad bg-lilac"><div class="b" style="font-size: 18px">{{ t.xmas_halloween }}</div><div class="small muted">{{ t.xmas_halloween_sub }}</div></div>
     <div class="page pad bg-lilac"><div class="b" style="font-size: 18px">{{ t.xmas_valentine }}</div><div class="small muted">{{ t.xmas_valentine_sub }}</div></div>
     {% for d in dogs %}{% if d.season and d.season != "Christmas" and d.season != "Winter" %}{% assign sname = d.season %}{% if d.season == "Summer" %}{% assign sname = t.season_summer %}{% elsif d.season == "Rainy days" %}{% assign sname = t.season_rainy %}{% endif %}
     <a href="{{ lp }}{{ d.url }}" class="page pad card row" style="gap: 14px; flex-wrap: nowrap"><img src="/assets/img/pages/paws-{{ d.n | prepend: '0' | slice: -2, 2 }}-color.jpg" alt="" width="64" height="85" style="width: 64px; height: 80px; object-fit: cover; object-position: top; border-radius: 10px; border: 2px solid var(--ink)"><span><span class="card-title" style="display: block">{{ sname }}</span><span class="card-sub" style="display: block">{{ d.card_title }}</span></span></a>
