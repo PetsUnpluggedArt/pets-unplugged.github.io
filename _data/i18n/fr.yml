@@ -25,7 +25,7 @@ ui:
   w2: Colorier.
   w3: Animer.
   ftr_brand: Une marque de Kubbord Labs LLC. Appli bientôt disponible.
-  ftr_holiday: Coin des fêtes (en anglais)
+  ftr_holiday: Coloriages de Noël
   ftr_parents: Pour les parents
   ftr_pet: Votre animal en coloriage
   ftr_real: Les vrais animaux (en anglais)
@@ -308,6 +308,38 @@ ui:
   see_it_etsy: Voir sur Etsy
   pdf_after: PDF %pdf%
   thanks_scanning: Merci d'avoir scanné et regardé !
+  xmas_h1: Coloriages de chiens de Noël à imprimer
+  xmas_lead: 'Un chiot au pied du sapin, des chiens en pull douillet et un bonnet à pompon : des coloriages de Noël et d''hiver à imprimer pour les enfants. Imprimez à la maison, coloriez sans écran, puis scannez le QR code et regardez le chien colorié prendre vie.'
+  xmas_why1: 'À imprimer chez vous : achetez, téléchargez, imprimez sur n''importe quelle imprimante.'
+  xmas_why2: 'D''abord sans écran : la courte vidéo est la récompense à la fin.'
+  xmas_why3: 'Une petite surprise qui prend vie : le livre broché PAWS, ou un coloriage imprimé roulé avec quelques crayons.'
+  xmas_pages_h: Coloriages de Noël et d'hiver
+  xmas_pages_p: 'Chaque coloriage : la page à imprimer, sa vidéo QR et l''histoire du chien, %single%.'
+  xmas_free_title: 'Gratuit : le coloriage Pompom, avec son animation'
+  xmas_free_sub: Un coloriage d'hiver douillet, contre l'e-mail d'un adulte
+  xmas_free_alt: 'Coloriage gratuit : Pompom, Scout avec son bonnet à pompon et son manteau tricoté, dessin au trait noir et blanc'
+  xmas_free_chip: Gratuit
+  xmas_bundles_h: Lots d'hiver et de Noël, %bundle%
+  xmas_bundles_p: Trois coloriages en un seul téléchargement, chacun avec sa vidéo QR.
+  xmas_chip_winter: Lot d'hiver
+  xmas_chip_xmas: Lot Noël et jours de pluie
+  xmas_gift_h: Un cadeau qui prend vie
+  xmas_gift_chip: Idée cadeau
+  xmas_gift_p: Les 30 chiens de PAWS, Sorry, Santa et les chiens d'hiver compris, chacun avec sa vidéo QR. Imprimez le PDF ce soir à la maison, ou emballez le livre broché pour le mettre sous le sapin.
+  xmas_more_h: Autres saisons
+  xmas_halloween: Halloween
+  xmas_halloween_sub: Arrive avec la prochaine sortie
+  xmas_valentine: Saint-Valentin
+  xmas_valentine_sub: Puppy Love, arrive avec la prochaine sortie
+  season_summer: Été
+  season_rainy: Jours de pluie
+  xmas_bookmarks_h: 'Bonus : des marque-pages gratuits à imprimer'
+  xmas_bookmarks_p: Des marque-pages à colorier avec les chiens de PAWS, bientôt avec les coloriages gratuits.
+  xmas_bookmarks_btn: Voir les coloriages gratuits
+  xmas_home_h: Les coloriages de chiens de Noël sont là
+  xmas_home_p: Sorry, Santa, des chiens en pull douillet et un coloriage d'hiver gratuit, tous avec vidéo QR.
+  xmas_home_btn: Voir les coloriages de Noël
+  xmas_dog_link: Plus de coloriages de chiens de Noël et d'hiver
 dogs:
   '1':
     name: Scout

@@ -1,0 +1,92 @@
+---
+layout: default
+---
+{% include i18n.html %}{% assign paws = site.data.paws %}{% assign dogs = site.dogs | sort: "n" %}{% comment %}
+  The Christmas page (/holiday/ and /de/ /fr/ /es/holiday/): the pages and bundles in site.christmas (_config.yml),
+  the free Pompom page, the PAWS book as a gift, then the other seasons.
+{% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": {{ t.crumb_home | jsonify }}, "item": "{{ site.url }}{{ lp }}/" },
+    { "@type": "ListItem", "position": 2, "name": {{ t.ftr_holiday | jsonify }}, "item": "{{ site.url }}{{ page.url }}" }
+  ]
+}
+</script>
+
+<section class="band-green">
+  <div class="wrap" style="padding-top: 48px; padding-bottom: 48px">
+    <h1>{{ t.xmas_h1 }}</h1>
+    <p class="lead" style="color: #2f2b36">{{ t.xmas_lead }}</p>
+    <ul style="margin: 16px 0 0; padding-left: 20px; color: #2f2b36; font-size: 17px; max-width: 760px">
+      <li>{{ t.xmas_why1 }}</li>
+      <li>{{ t.xmas_why2 }}</li>
+      <li>{{ t.xmas_why3 }}</li>
+    </ul>
+  </div>
+</section>
+
+<section class="wrap" style="padding-top: 48px" id="pages">
+  <h2 class="h2">{{ t.xmas_pages_h }}</h2>
+  <p style="margin: 8px 0 0; color: var(--text2)">{{ t.xmas_pages_p | replace: "%single%", T.prices.single_page }}</p>
+  <div class="grid">
+    {% assign favsub = t.fav_card_sub | replace: "%single%", T.prices.single_page %}
+    {% for pn in site.christmas.pages %}{% for d in dogs %}{% if d.n == pn %}{% include dog-card.html dog=d sub=favsub %}{% endif %}{% endfor %}{% endfor %}
+    <a href="{{ site.free_gift_url }}" class="page card"><div class="card-img"><img src="/assets/img/pages/paws-01-line.jpg" alt="{{ t.xmas_free_alt }}" width="450" height="600" loading="lazy"><span class="chip chip-gold">{{ t.xmas_free_chip }}</span></div><div class="card-body"><div class="card-title">{{ t.xmas_free_title }}</div><div class="card-sub">{{ t.xmas_free_sub }}</div></div></a>
+  </div>
+</section>
+
+<section class="wrap sec" id="bundles">
+  <h2 class="h2">{{ t.xmas_bundles_h | replace: "%bundle%", T.prices.bundle }}</h2>
+  <p style="margin: 8px 0 0; color: var(--text2)">{{ t.xmas_bundles_p }}</p>
+  <div class="grid">
+    {% for bn in site.christmas.bundles %}{% for b in paws.bundles %}{% if b.n == bn %}{% assign bk = b.n | append: "" %}{% assign btr = T.bundles[bk] %}
+    <article class="page bundle" id="bundle-{{ b.slug }}" aria-labelledby="bundle-{{ b.slug }}-h">
+      <img src="{{ b.img }}" alt="{{ t.bundle_img_alt | replace: '%name%', b.name }}" width="{{ b.img_w }}" height="{{ b.img_h }}" loading="lazy">
+      <div class="card-body">
+        <span class="chip chip-orange" style="align-self: flex-start">{% if b.pages contains 13 %}{{ t.xmas_chip_xmas }}{% else %}{{ t.xmas_chip_winter }}{% endif %}</span>
+        <h3 class="card-title" id="bundle-{{ b.slug }}-h" style="margin: 0">{{ b.name }}</h3>
+        <p class="small" style="margin: 0; color: var(--text2)">{% if btr %}{{ btr.blurb }}{% else %}{{ b.blurb }}{% endif %}</p>
+        <ul aria-label="{{ t.pages_in | replace: '%name%', b.name }}">
+          {% for pn in b.pages %}{% for d in dogs %}{% if d.n == pn %}<li><a href="{{ lp }}{{ d.url }}">{{ d.card_title }}</a> <span class="muted small">· {{ t.page_lc }} {{ d.n }}</span></li>{% endif %}{% endfor %}{% endfor %}
+        </ul>
+        <a class="btn" href="{{ b.payhip_url }}">{{ t.buy_bundle }}: {{ T.prices.bundle }}<span class="sr-only"> ({{ b.name }})</span></a>
+        {% if b.etsy_url and b.etsy_url != "" %}<a class="etsy-link" href="{{ b.etsy_url }}">{{ t.also_etsy }}<span class="sr-only"> ({{ t.bundle_sr | replace: '%name%', b.name }})</span></a>{% endif %}
+      </div>
+    </article>
+    {% endif %}{% endfor %}{% endfor %}
+  </div>
+</section>
+
+<section class="wrap sec" id="gift">
+  <h2 class="h2">{{ t.xmas_gift_h }}</h2>
+  <div class="page pad split bg-peach" style="gap: 28px; margin-top: 20px">
+    <img src="/assets/images/paws_cover.webp" alt="{{ t.cover_alt }}" width="150" height="196" loading="lazy" style="width: 150px; border: 2px solid var(--ink); border-radius: 12px">
+    <div class="stack" style="flex: 1 1 340px; gap: 10px">
+      <span class="chip chip-orange" style="align-self: flex-start">{{ t.xmas_gift_chip }}</span>
+      <h3 class="h3" style="margin: 0">{{ t.book_name }}</h3>
+      <p style="margin: 0; color: var(--text2)">{{ t.xmas_gift_p }}</p>
+      <div class="row" style="gap: 8px"><a class="btn" href="{{ site.links.payhip_book }}">{{ t.pdf }} {{ T.prices.pdf_book }}</a><a class="btn2" href="{{ site.links.amazon }}">{{ t.paperback_amazon }}</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap sec" id="seasons">
+  <h2 class="h2">{{ t.xmas_more_h }}</h2>
+  <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr))">
+    <div class="page pad bg-lilac"><div class="b" style="font-size: 18px">{{ t.xmas_halloween }}</div><div class="small muted">{{ t.xmas_halloween_sub }}</div></div>
+    <div class="page pad bg-lilac"><div class="b" style="font-size: 18px">{{ t.xmas_valentine }}</div><div class="small muted">{{ t.xmas_valentine_sub }}</div></div>
+    {% for d in dogs %}{% if d.season and d.season != "Christmas" and d.season != "Winter" %}{% assign sname = d.season %}{% if d.season == "Summer" %}{% assign sname = t.season_summer %}{% elsif d.season == "Rainy days" %}{% assign sname = t.season_rainy %}{% endif %}
+    <a href="{{ lp }}{{ d.url }}" class="page pad card row" style="gap: 14px; flex-wrap: nowrap"><img src="/assets/img/pages/paws-{{ d.n | prepend: '0' | slice: -2, 2 }}-color.jpg" alt="" width="64" height="85" style="width: 64px; height: 80px; object-fit: cover; object-position: top; border-radius: 10px; border: 2px solid var(--ink)"><span><span class="card-title" style="display: block">{{ sname }}</span><span class="card-sub" style="display: block">{{ d.card_title }}</span></span></a>
+    {% endif %}{% endfor %}
+  </div>
+</section>
+
+<section class="wrap sec sec-end" style="padding-top: 56px">
+  <div class="page pad bg-purple split" style="gap: 24px">
+    <div style="flex: 1 1 380px"><div class="h3">{{ t.xmas_bookmarks_h }}</div><div style="color: #f1e6f7; margin-top: 4px">{{ t.xmas_bookmarks_p }}</div></div>
+    <a class="btn2" href="{{ lp }}/free/">{{ t.xmas_bookmarks_btn }}</a>
+  </div>
+</section>

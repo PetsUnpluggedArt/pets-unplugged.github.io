@@ -25,7 +25,7 @@ ui:
   w2: Ausmalen.
   w3: Animieren.
   ftr_brand: Eine Marke der Kubbord Labs LLC. App kommt bald.
-  ftr_holiday: Feiertags-Ecke (Englisch)
+  ftr_holiday: Weihnachts-Ausmalbilder
   ftr_parents: Für Eltern
   ftr_pet: Dein Tier als Ausmalbild
   ftr_real: Die echten Tiere (Englisch)
@@ -308,6 +308,38 @@ ui:
   see_it_etsy: Auf Etsy ansehen
   pdf_after: PDF %pdf%
   thanks_scanning: Danke fürs Scannen und Zuschauen!
+  xmas_h1: 'Ausmalbilder Weihnachten: Hunde zum Ausdrucken'
+  xmas_lead: 'Ein Welpe unterm Weihnachtsbaum, Hunde in warmen Pullovern und eine Bommelmütze: weihnachtliche und winterliche Ausmalbilder für Kinder zum Ausdrucken. Zu Hause drucken, ohne Bildschirm ausmalen, dann den QR-Code scannen und zuschauen, wie der Hund lebendig wird.'
+  xmas_why1: 'Zu Hause drucken: kaufen, herunterladen, mit jedem Drucker ausdrucken.'
+  xmas_why2: 'Erst ohne Bildschirm: Das kurze Video ist die Belohnung am Ende.'
+  xmas_why3: 'Ein kleines Geschenk, das lebendig wird: das PAWS-Taschenbuch oder ein gedrucktes Bild, zusammengerollt mit ein paar Buntstiften.'
+  xmas_pages_h: Ausmalbilder für Weihnachten und Winter
+  xmas_pages_p: 'Jedes Bild: das Ausmalbild zum Ausdrucken, sein QR-Video und die Geschichte des Hundes, %single%.'
+  xmas_free_title: 'Gratis: das Pompom-Bild mit seiner Animation'
+  xmas_free_sub: Ein gemütliches Winterbild, für die E-Mail-Adresse eines Erwachsenen
+  xmas_free_alt: 'Gratis-Ausmalbild: Pompom, Scout mit Bommelmütze und Strickmantel, schwarz-weiße Linienzeichnung'
+  xmas_free_chip: Gratis
+  xmas_bundles_h: Winter- und Weihnachts-Sets, %bundle%
+  xmas_bundles_p: Drei Bilder in einem Download, jedes mit seinem QR-Video.
+  xmas_chip_winter: Winter-Set
+  xmas_chip_xmas: Set für Weihnachten und Regentage
+  xmas_gift_h: Ein Geschenk, das lebendig wird
+  xmas_gift_chip: Geschenkidee
+  xmas_gift_p: Alle 30 PAWS-Hunde, mit Sorry, Santa und den Winterhunden, jeder mit QR-Video. Das PDF noch heute Abend zu Hause drucken oder das Taschenbuch für unter den Baum einpacken.
+  xmas_more_h: Weitere Jahreszeiten
+  xmas_halloween: Halloween
+  xmas_halloween_sub: Kommt mit der nächsten Neuheit
+  xmas_valentine: Valentinstag
+  xmas_valentine_sub: Puppy Love, kommt mit der nächsten Neuheit
+  season_summer: Sommer
+  season_rainy: Regentage
+  xmas_bookmarks_h: 'Bonus: Gratis-Lesezeichen zum Ausdrucken'
+  xmas_bookmarks_p: Lesezeichen mit den PAWS-Hunden zum Selbstausmalen, bald bei den Gratis-Bildern.
+  xmas_bookmarks_btn: Zu den Gratis-Bildern
+  xmas_home_h: Weihnachts-Ausmalbilder mit Hunden sind da
+  xmas_home_p: Sorry, Santa, Hunde in warmen Pullovern und ein Gratis-Winterbild, alle mit QR-Video.
+  xmas_home_btn: Zu den Weihnachtsbildern
+  xmas_dog_link: Mehr Ausmalbilder für Weihnachten und Winter
 dogs:
   '1':
     name: Scout

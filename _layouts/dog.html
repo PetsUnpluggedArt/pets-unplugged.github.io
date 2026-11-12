@@ -73,6 +73,7 @@ layout: default
     {% if d.etsy_url and d.etsy_url != "" %}<a class="etsy-link" href="{{ d.etsy_url }}" style="margin-top: -6px">{{ t.also_etsy }}</a>{% endif %}
     {% if d.n == site.data.paws.free_gift.page %}<p class="small" style="margin: 0"><b>{{ t.free_gift_b }}</b> <a href="{{ site.free_gift_url }}">{{ t.get_it_free }}</a> {{ t.with_email }}</p>{% endif %}
     {% if bundle %}<p class="bundle-line">{{ t.also_in }} <a href="{{ lp }}/books/#bundle-{{ bundle.slug }}">{{ t.bundle_link | replace: "%name%", bundle.name }}</a>: {{ t.three_for | replace: "%bundle%", T.prices.bundle }}</p>{% endif %}
+    {% if site.christmas.pages contains d.n or d.n == site.data.paws.free_gift.page %}<p style="margin: 0"><a class="link-b" href="{{ lp }}/holiday/">{{ t.xmas_dog_link }}</a></p>{% endif %}
     <div class="small muted">{{ t.or_all_30 }} <a href="{{ site.links.payhip_book }}">{{ t.pdf }} {{ T.prices.pdf_book }}</a> {{ t.or_the }} <a href="{{ site.links.amazon }}">{{ t.paperback_on_amazon }}</a>.</div>
   </div>
 </section>

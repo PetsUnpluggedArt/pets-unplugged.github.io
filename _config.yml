@@ -34,6 +34,11 @@ form_recaptcha_key: "6LcBYSssAAAAAHyybuB7qBL--CJ-z1vhyNU13cFl"
 free_gift_url: "https://payhip.com/b/WMkrK"
 # Merch: false shows the designs as "coming soon". A product with an etsy_url is treated as live on its own.
 merch_live: false
+# Christmas page (/holiday/, _layouts/page-holiday.html): the PAWS pages and bundles it shows, in this order.
+# Page 1 (Pompom) is the winter page that's free, so it shows as the free card, not as a $1.99 one.
+christmas:
+  pages: [13, 18, 22]
+  bundles: [10, 5]
 # ---------------------------------------------------------------------------
 
 prices:

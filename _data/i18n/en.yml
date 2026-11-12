@@ -25,7 +25,7 @@ ui:
   w2: Color.
   w3: Animate.
   ftr_brand: A Kubbord Labs LLC brand. App coming soon.
-  ftr_holiday: Holiday corner
+  ftr_holiday: Christmas coloring pages
   ftr_parents: For parents
   ftr_pet: Your pet as a page
   ftr_real: Meet the real pets
@@ -308,3 +308,35 @@ ui:
   see_it_etsy: See it on Etsy
   pdf_after: '%pdf% PDF'
   thanks_scanning: Thanks for scanning and watching!
+  xmas_h1: Christmas dog coloring pages
+  xmas_lead: 'A puppy by the Christmas tree, dogs in cozy sweaters and a pompom hat: printable Christmas and winter coloring pages for kids. Print at home, color with no screen, then scan the QR code and watch the dog you colored come to life.'
+  xmas_why1: 'Print at home: buy, download, print on any printer.'
+  xmas_why2: 'Screen-free first: the short video is the reward at the end.'
+  xmas_why3: 'A stocking stuffer that comes alive: the PAWS paperback, or a printed page rolled up with a few crayons.'
+  xmas_pages_h: Christmas and winter coloring pages
+  xmas_pages_p: 'Each page: the printable page, its QR video and the dog''s story, %single%.'
+  xmas_free_title: 'Free: the Pompom page, with its animation'
+  xmas_free_sub: A cozy winter page, for a grown-up's email
+  xmas_free_alt: 'Free page: Pompom, Scout in his pompom hat and knitted coat, black-and-white line art'
+  xmas_free_chip: Free
+  xmas_bundles_h: Winter and Christmas bundles, %bundle%
+  xmas_bundles_p: Three pages in one download, each with its QR video.
+  xmas_chip_winter: Winter bundle
+  xmas_chip_xmas: Christmas and rainy day bundle
+  xmas_gift_h: A gift that comes alive
+  xmas_gift_chip: Gift idea
+  xmas_gift_p: All 30 PAWS dogs, Sorry, Santa and the winter pups included, each with a QR video. Print the PDF at home tonight, or wrap the paperback for under the tree.
+  xmas_more_h: More seasons
+  xmas_halloween: Halloween
+  xmas_halloween_sub: Coming with the next drop
+  xmas_valentine: Valentine's Day
+  xmas_valentine_sub: Puppy Love, coming with the next drop
+  season_summer: Summer
+  season_rainy: Rainy days
+  xmas_bookmarks_h: 'Bonus: free printable bookmarks'
+  xmas_bookmarks_p: Color-your-own bookmarks with the PAWS pups, coming with the free pages.
+  xmas_bookmarks_btn: Get the free pages
+  xmas_home_h: Christmas dog coloring pages are here
+  xmas_home_p: Sorry, Santa, cozy sweater pups and a free winter page, all with QR videos.
+  xmas_home_btn: See the Christmas pages
+  xmas_dog_link: More Christmas and winter dog coloring pages

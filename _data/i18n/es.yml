@@ -25,7 +25,7 @@ ui:
   w2: Colorea.
   w3: Anima.
   ftr_brand: Una marca de Kubbord Labs LLC. App muy pronto.
-  ftr_holiday: Rincón de fiestas (en inglés)
+  ftr_holiday: Dibujos de Navidad
   ftr_parents: Para madres y padres
   ftr_pet: Tu mascota en un dibujo
   ftr_real: Las mascotas reales (en inglés)
@@ -308,6 +308,38 @@ ui:
   see_it_etsy: Ver en Etsy
   pdf_after: PDF %pdf%
   thanks_scanning: ¡Gracias por escanear y mirar!
+  xmas_h1: Dibujos de perros de Navidad para colorear
+  xmas_lead: 'Un cachorro junto al árbol de Navidad, perros con jerséis calentitos y un gorro de pompón: dibujos de Navidad y de invierno para colorear e imprimir. Imprime en casa, colorea sin pantallas y después escanea el código QR para ver cómo el perro que has coloreado cobra vida.'
+  xmas_why1: 'Para imprimir en casa: compra, descarga e imprime con cualquier impresora.'
+  xmas_why2: 'Primero sin pantallas: el vídeo corto es el premio del final.'
+  xmas_why3: 'Un detalle que cobra vida: el libro impreso de PAWS, o un dibujo impreso enrollado con unas pinturas.'
+  xmas_pages_h: Dibujos de Navidad y de invierno
+  xmas_pages_p: 'Cada dibujo: la página para imprimir, su vídeo QR y la historia del perro, %single%.'
+  xmas_free_title: 'Gratis: el dibujo de Pompom, con su animación'
+  xmas_free_sub: Un dibujo de invierno acogedor, a cambio del correo de una persona adulta
+  xmas_free_alt: 'Dibujo gratis: Pompom, Scout con su gorro de pompón y su abrigo de punto, dibujo de líneas en blanco y negro'
+  xmas_free_chip: Gratis
+  xmas_bundles_h: Packs de invierno y de Navidad, %bundle%
+  xmas_bundles_p: Tres dibujos en una sola descarga, cada uno con su vídeo QR.
+  xmas_chip_winter: Pack de invierno
+  xmas_chip_xmas: Pack de Navidad y días de lluvia
+  xmas_gift_h: Un regalo que cobra vida
+  xmas_gift_chip: Idea de regalo
+  xmas_gift_p: Los 30 perros de PAWS, Sorry, Santa y los perros de invierno incluidos, cada uno con su vídeo QR. Imprime el PDF esta misma noche en casa, o envuelve el libro impreso para dejarlo bajo el árbol.
+  xmas_more_h: Más temporadas
+  xmas_halloween: Halloween
+  xmas_halloween_sub: Llega con el próximo lanzamiento
+  xmas_valentine: San Valentín
+  xmas_valentine_sub: Puppy Love, llega con el próximo lanzamiento
+  season_summer: Verano
+  season_rainy: Días de lluvia
+  xmas_bookmarks_h: 'Extra: marcapáginas gratis para imprimir'
+  xmas_bookmarks_p: Marcapáginas para colorear con los perros de PAWS, muy pronto con los dibujos gratis.
+  xmas_bookmarks_btn: Ver los dibujos gratis
+  xmas_home_h: Ya están aquí los dibujos de perros de Navidad
+  xmas_home_p: Sorry, Santa, perros con jerséis calentitos y un dibujo de invierno gratis, todos con vídeo QR.
+  xmas_home_btn: Ver los dibujos de Navidad
+  xmas_dog_link: Más dibujos de perros de Navidad y de invierno
 dogs:
   '1':
     name: Scout
