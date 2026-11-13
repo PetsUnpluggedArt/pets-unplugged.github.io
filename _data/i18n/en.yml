@@ -36,6 +36,7 @@ ui:
   ftr_about: About
   ftr_privacy: Privacy
   ftr_terms: Terms
+  ftr_copyright: Copyright
   rights: All rights reserved.
   form_ok: You're on the list. Thank you! Check your inbox in case we ask you to confirm.
   form_bad: That didn't go through.
