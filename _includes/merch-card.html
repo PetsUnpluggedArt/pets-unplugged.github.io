@@ -1,0 +1,14 @@
+{% comment %}
+  One live merch product (a _products/*.md written by merch\site_sync.py): its mockup, its name in this language,
+  "From $X" and a Buy on Etsy button to its own listing. The picture and name open the product page.
+  Params: it (the product)
+{% endcomment %}{% assign it = include.it %}{% assign name_key = "merch_name_" | append: it.kind %}{% assign kind_key = "kind_" | append: it.chip %}{% assign mname = t[name_key] | replace: '%p%', it.book_title %}
+    <div class="page card" data-tags="{{ it.filter }}">
+      <a class="card-img card-img-sq" href="{{ it.url }}" tabindex="-1" aria-hidden="true"><img src="{{ it.img }}" alt="" width="600" height="600" loading="lazy"><span class="chip">{{ t[kind_key] | default: it.chip }}</span></a>
+      <div class="card-body">
+        <a class="card-title card-link" href="{{ it.url }}">{{ mname }}</a>
+        <div class="card-sub">{% if it.pet %}{{ it.pet }} · {% endif %}{{ t.merch_paws_page | replace: '%n%', it.page_n }}</div>
+        {% include merch-price.html p=it.price %}
+        <a class="btn card-btn" href="{{ it.etsy_url }}" target="_blank" rel="noopener" aria-label="{{ t.merch_buy_label | replace: '%n%', mname }}">{{ t.merch_buy }}</a>
+      </div>
+    </div>

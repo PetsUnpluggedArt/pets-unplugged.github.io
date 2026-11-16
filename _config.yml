@@ -32,8 +32,8 @@ form_recaptcha_key: "6LcBYSssAAAAAHyybuB7qBL--CJ-z1vhyNU13cFl"
 
 # Free gift: Pompom (PAWS page 1) with its animation, a free Payhip product that asks for an email.
 free_gift_url: "https://payhip.com/b/WMkrK"
-# Merch: false shows the designs as "coming soon". A product with an etsy_url is treated as live on its own.
-merch_live: false
+# Merch: /merchandise/ lists only products that are live in the Etsy shop. merch\site_sync.py (run after each
+# rollout run) writes them as _products/*.md plus _data/merch.yml ("Next up"). No products = the "coming soon" look.
 # Christmas page (/holiday/, _layouts/page-holiday.html): the PAWS pages and bundles it shows, in this order.
 # Page 1 (Pompom) is the winter page that's free, so it shows as the free card, not as a $1.99 one.
 christmas:

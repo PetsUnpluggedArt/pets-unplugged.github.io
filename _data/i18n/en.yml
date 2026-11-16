@@ -341,3 +341,21 @@ ui:
   xmas_home_p: Sorry, Santa, cozy sweater pups and a free winter page, all with QR videos.
   xmas_home_btn: See the Christmas pages
   xmas_dog_link: More Christmas and winter dog coloring pages
+  merch_buy: Buy on Etsy
+  merch_buy_label: Buy the %n% on Etsy (opens in a new tab)
+  merch_checkout_note: Checkout and shipping go through our Etsy shop.
+  merch_soon_lead2: Tees, mugs, totes and posters with the dogs from the PAWS pages. They're arriving in our Etsy shop one dog at a time.
+  merch_see_soon: What's coming
+  merch_next: 'Next up:'
+  merch_next_and: ' and '
+  merch_hear_email: Leave your email and we'll tell you when new merch lands.
+  merch_notify_label: Tell me when new merch lands
+  merch_paws_page: PAWS page %n%
+  merch_name_tee: '%p% tee'
+  merch_name_kids: '%p% kids tee'
+  merch_name_mug: '%p% mug'
+  merch_name_tote: '%p% tote bag'
+  merch_name_poster: '%p% coloring poster'
+  kind_Kids: Kids tee
+  months_short: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
+  date_dm: '%m% %d%'

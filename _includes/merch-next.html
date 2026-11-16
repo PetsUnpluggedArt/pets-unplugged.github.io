@@ -1,0 +1,4 @@
+{% unless t %}{% include i18n.html %}{% endunless %}{% comment %}
+  "Next up: Sorry, Santa (Nov 17) and Sweater (Nov 17)". The next dogs in the Etsy rollout that aren't on the site yet,
+  from _data/merch.yml (merch\site_sync.py writes it from rollout.json). Days before the build day are skipped.
+{% endcomment %}{% assign today = site.time | date: "%Y-%m-%d" %}{% assign months = t.months_short | split: " " %}{% assign shown = 0 %}{% capture nx %}{% for e in site.data.merch.next_up %}{% if e.date >= today and shown < 2 %}{% assign mi = e.date | slice: 5, 2 | plus: 0 | minus: 1 %}{% assign dd = e.date | slice: 8, 2 | plus: 0 %}{% if shown == 1 %}{{ t.merch_next_and }}{% endif %}<b>{{ e.book_title }}</b> ({{ t.date_dm | replace: '%d%', dd | replace: '%m%', months[mi] }}){% assign shown = shown | plus: 1 %}{% endif %}{% endfor %}{% endcapture %}{% if shown > 0 %}<p class="small" style="margin: 10px 0 0">{{ t.merch_next }} {{ nx }}</p>{% endif %}

@@ -13,7 +13,7 @@ description: Follow Scout, the fluffy Shih Tzu mix in the pompom hat. Each color
       <a class="link-b" href="/books/#pages">All pets</a>
       <h1 style="margin-top: 6px">Scout's story</h1>
       <p class="lead" style="color: #2f2b36">A fluffy Shih Tzu mix in a pompom hat, always ready for his walk. Each page is an episode, and each new video starts right where the last one ended.</p>
-      <div class="row" style="margin-top: 24px"><a class="btn" href="{{ site.free_gift_url }}">Get episode 1 free</a><a class="btn2" href="/merchandise/scout-mug/">Scout merch</a></div>
+      <div class="row" style="margin-top: 24px"><a class="btn" href="{{ site.free_gift_url }}">Get episode 1 free</a>{% assign scout_merch = site.products | where: "page_n", 1 | sort: "order" | first %}{% if scout_merch %}<a class="btn2" href="{{ scout_merch.url }}">Scout merch</a>{% endif %}</div>
       <p class="small" style="margin: 10px 0 0">Free: the Pompom page, with its animation. A grown-up enters their email at our Payhip shop.</p>
     </div>
   </div>

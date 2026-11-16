@@ -341,6 +341,24 @@ ui:
   xmas_home_p: Sorry, Santa, des chiens en pull douillet et un coloriage d'hiver gratuit, tous avec vidéo QR.
   xmas_home_btn: Voir les coloriages de Noël
   xmas_dog_link: Plus de coloriages de chiens de Noël et d'hiver
+  merch_buy: Acheter sur Etsy
+  merch_buy_label: 'Acheter : %n%, sur Etsy (nouvel onglet)'
+  merch_checkout_note: Le paiement et la livraison passent par notre boutique Etsy.
+  merch_soon_lead2: T-shirts, mugs, tote bags et affiches avec les chiens du livre PAWS. Ils arrivent dans notre boutique Etsy, un chien après l'autre.
+  merch_see_soon: Ce qui arrive
+  merch_next: 'Bientôt :'
+  merch_next_and: ' et '
+  merch_hear_email: Laissez votre e-mail et nous vous préviendrons quand de nouveaux articles arrivent.
+  merch_notify_label: Me prévenir quand de nouveaux articles arrivent
+  merch_paws_page: Livre PAWS, page %n%
+  merch_name_tee: T-shirt %p%
+  merch_name_kids: T-shirt enfant %p%
+  merch_name_mug: Mug %p%
+  merch_name_tote: Tote bag %p%
+  merch_name_poster: Poster à colorier %p%
+  kind_Kids: T-shirt enfant
+  months_short: janv. févr. mars avr. mai juin juil. août sept. oct. nov. déc.
+  date_dm: '%d% %m%'
 dogs:
   '1':
     name: Scout
@@ -663,28 +681,3 @@ bundles:
     blurb: Un chiot qui sait qu'il est mignon, une douceur royale et un panier plein de tendresse.
   '10':
     blurb: Le matin de Noël, la patrouille des flaques et un chef que les pigeons ne prennent pas au sérieux.
-products:
-  color-me-tote:
-    title: Tote bag à colorier
-    pet: Toy-Herding Practice, à colorier soi-même
-    img_alt: 'Le dessin du tote bag à colorier : Toy-Herding Practice, à colorier soi-même'
-  road-trip-rockstar-kids-tee:
-    title: T-shirt enfant Paws in the Wind
-    pet: Rosco
-    img_alt: 'Le dessin du t-shirt enfant Paws in the Wind : Rosco'
-  santa-paws-little-buddy-poster:
-    title: Affiche Sorry, Santa
-    pet: Sorry, Santa
-    img_alt: Le dessin de l'affiche Sorry, Santa
-  scout-mug:
-    title: Mug Pompom
-    pet: Scout
-    img_alt: 'Le dessin du mug Pompom : Scout'
-  shelf-life-cat-tee:
-    title: T-shirt chat Shelf Life
-    pet: Du livre Whiskers, bientôt disponible
-    img_alt: Le dessin du t-shirt Shelf Life, un chat Whiskers
-  tiny-rain-captain-sticker:
-    title: Sticker Puddles
-    pet: Puddles
-    img_alt: Le dessin du sticker Puddles

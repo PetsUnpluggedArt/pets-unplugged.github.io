@@ -106,13 +106,16 @@ layout: default
 </section>
 
 <section class="wrap sec">
-  <div class="head-row"><h2 class="h2">{% if site.merch_live %}{{ t.merch_live_h }}{% else %}{{ t.merch_soon_h }}{% endif %}</h2><a class="link-b" href="{{ lp }}/merchandise/">{% if site.merch_live %}{{ t.merch_shop_all }}{% else %}{{ t.merch_see_designs }}{% endif %}</a></div>
+  {% assign items = site.products | sort: "order" %}
+  <div class="head-row"><h2 class="h2">{% if items.size > 0 %}{{ t.merch_live_h }}{% else %}{{ t.merch_soon_h }}{% endif %}</h2><a class="link-b" href="{{ lp }}/merchandise/">{% if items.size > 0 %}{{ t.merch_shop_all }}{% else %}{{ t.merch_see_soon }}{% endif %}</a></div>
+  {% if items.size > 0 %}
   <div class="grid">
-    {% assign items = site.products | sort: "order" %}
-    {% for it in items limit: 4 %}{% assign pslug = it.url | split: "/" | last %}{% assign ptr = T.products[pslug] %}
-    <a href="{{ it.url }}" class="page card"><div class="card-img"><img src="{{ it.img }}" alt="{% if ptr %}{{ ptr.img_alt }}{% else %}{{ it.img_alt }}{% endif %}" width="480" height="600" loading="lazy"></div><div class="card-body"><div class="card-title">{% if ptr %}{{ ptr.title }}{% else %}{{ it.title }}{% endif %}</div>{% if it.etsy_url != '' %}{% include merch-price.html p=it.price %}<span class="btn2 card-btn">{{ t.see_options }}</span>{% else %}<span class="btn2 card-btn">{{ t.coming_soon }}</span>{% endif %}</div></a>
-    {% endfor %}
+    {% for it in items limit: 4 %}{% include merch-card.html it=it %}{% endfor %}
   </div>
+  {% else %}
+  <p class="lead">{{ t.merch_soon_lead2 }}</p>
+  {% include merch-next.html %}
+  {% endif %}
 </section>
 
 <section class="wrap sec sec-end" id="contact">
