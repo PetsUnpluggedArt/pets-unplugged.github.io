@@ -1,9 +1,6 @@
 # Written by merch\site_sync.py from rollout.json. Don't edit by hand.
 # next_up: the next dogs whose merch goes into the Etsy shop (shown as "Next up" on /merchandise/).
 next_up:
-- page_n: 8
-  book_title: Comfort Zone
-  date: '2026-11-21'
 - page_n: 25
   book_title: Small Dog, Big Duty
   date: '2026-11-22'
@@ -12,4 +9,7 @@ next_up:
   date: '2026-11-22'
 - page_n: 21
   book_title: Royal Fluffiness
+  date: '2026-11-23'
+- page_n: 9
+  book_title: Small Hope in Big Boots
   date: '2026-11-23'
