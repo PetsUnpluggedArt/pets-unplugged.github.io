@@ -38,7 +38,7 @@
         {% if pn == dog.n %}
         <div class="qr-pal you"><img src="/assets/img/pages/paws-{{ on }}-color.jpg" alt="" width="450" height="600" loading="lazy"><span><i class="you-chip">{{ t.yours }}</i><br>{{ o.card_title }}</span></div>
         {% else %}
-        <a class="qr-pal" href="{% if include.etsy %}{{ o.etsy_url }}{% else %}{{ o.payhip }}{% endif %}"><img src="/assets/img/pages/paws-{{ on }}-color.jpg" alt="" width="450" height="600" loading="lazy"><span>{{ o.card_title }}<br><small class="muted">{% if include.etsy %}{{ t.on_etsy }}{% else %}{{ T.prices.single_page }}{% endif %}</small></span></a>
+        <a class="qr-pal"{% unless include.etsy %} data-rot-pal="{{ pn }}"{% endunless %} href="{% if include.etsy %}{{ o.etsy_url }}{% else %}{{ o.payhip }}{% endif %}"><img src="/assets/img/pages/paws-{{ on }}-color.jpg" alt="" width="450" height="600" loading="lazy"><span>{{ o.card_title }}<br><small class="muted">{% if include.etsy %}{{ t.on_etsy }}{% else %}{{ T.prices.single_page }}{% endif %}</small></span></a>
         {% endif %}{% endfor %}
       </div>
       <a class="qr-book" href="{% if include.etsy %}{{ site.data.paws.full_book.etsy_url }}{% else %}{{ site.links.payhip_book }}{% endif %}"><div><div class="t">{{ t.whole_book }}</div><div class="s">{{ t.thirty_pups }}</div></div><span class="btn">{% if include.etsy %}{{ t.see_it_etsy }}{% else %}{{ t.pdf_after | replace: "%pdf%", T.prices.pdf_book }}{% endif %}</span></a>

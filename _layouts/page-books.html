@@ -137,9 +137,9 @@ layout: default
       <button type="submit" class="btn" style="align-self: flex-start">{{ t.tell_me }}</button>
     {% include form-end.html kind="notify" %}
   </div>
-  <div class="page pad bg-sky split" style="flex: 1 1 380px; gap: 20px">
-    <div class="grow"><div class="h3">{{ t.start_free_h }}</div><div style="color: #2f2b36">{{ t.free_gift_h }}.</div></div>
-    <a class="btn" href="{{ site.free_gift_url }}">{{ t.get_pompom }}</a>
+  <div class="page pad bg-sky split" style="flex: 1 1 380px; gap: 20px" data-rot="books-gift">
+    <div class="grow"><div class="h3">{{ t.start_free_h }}</div><div style="color: #2f2b36" data-rot="p">{{ t.free_gift_h }}.</div></div>
+    <a class="btn" href="{{ site.free_gift_url }}" data-rot="btn">{{ t.get_pompom }}</a>
   </div>
 </section>
 <div class="sec-end"></div>

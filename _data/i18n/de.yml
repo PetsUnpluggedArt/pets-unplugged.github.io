@@ -681,3 +681,28 @@ bundles:
     blurb: Ein Welpe, der weiß, wie süß er ist, königliche Flauschigkeit und ein Korb voller Süße.
   '10':
     blurb: Weihnachtsmorgen, Pfützen-Streife und ein Chef, den die Tauben nicht ernst nehmen.
+rot:
+  chip: 'Diese Woche gratis'
+  next: 'Nächsten Montag'
+  get_page: 'Dieses Bild gratis holen'
+  until: 'Gratis bis %date%'
+  then: 'danach %single%'
+  from: 'Gratis ab %date%'
+  best: 'Bestes Angebot'
+  topbar: 'Diese Woche gratis: %title%, mit seiner Animation.'
+  get_title: '%title% gratis holen'
+  home_h: 'Das Gratis-Bild dieser Woche: %title%'
+  home_p: 'Bild %n% aus dem PAWS-Buch. Ausdrucken, ausmalen und dann den QR-Code scannen: Schon bewegt es sich. Gratis bis %date%; jeden Montag gibt es ein neues Gratis-Bild.'
+  side_h: 'Diese Woche gratis: %title%'
+  side_time: 'Gratis bis %date%, 6 Uhr New Yorker Zeit.'
+  new_every: 'Jeden Montag ein neues Gratis-Bild'
+  free_lead: 'Jeden Montag ein neues Gratis-Bild. Diese Woche: %title%. Ausmalen, QR-Code scannen und zusehen, wie es lebendig wird.'
+  free_alt: 'Gratis-Ausmalbild: %title%, schwarz-weiße Linienzeichnung'
+  this_pup: 'diesen Welpen'
+  bundle_h: 'Du magst %name%? Lern die Freunde kennen.'
+  bundle_p: '%title% ist diese Woche gratis. Das %bundle% hat alle 3 Bilder, jedes mit eigenem Video.'
+  home_bundle: 'Du magst %name%? Hol dir das %bundle%: %price%'
+  book_p: 'Alle 30 Bilder, jedes mit eigenem Video, für %pdf%.'
+  book_go: 'Das Buch holen: %pdf%'
+  book_line: 'Bestes Angebot: das ganze PAWS-Buch, 30 Bilder mit Videos, %pdf%'
+  story_paid: 'Folge 1 holen: %single%'

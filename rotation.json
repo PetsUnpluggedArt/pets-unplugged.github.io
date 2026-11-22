@@ -1,0 +1,278 @@
+{
+ "_how": "Free page of the week. Switches every Monday 06:00 New York time; after the last week it starts again. To switch a week on: paste its Payhip free code into \"free_code\" (e.g. \"free_code\": \"AbC12\"). \"TO MAKE\" (or empty) keeps that dog at $1.99 everywhere, and /free/ and the top bar keep the standing free Pompom (fallback). Script: /assets/js/rotation.js. Tests: node --test _tests/rotation.test.js",
+ "timezone": "America/New_York",
+ "anchor": "2026-11-23T06:00",
+ "fallback_week": 1,
+ "weeks": [
+  {
+   "week": 1,
+   "start": "2026-11-23",
+   "page": 1,
+   "title": "Pompom",
+   "dog": "Scout",
+   "slug": "shih-tzu-coloring-page-scout",
+   "paid_code": "QVWgv",
+   "free_code": "WMkrK",
+   "bundle": {
+    "n": 5,
+    "name": "Sweater Weather",
+    "slug": "sweater-weather",
+    "code": "UqmkK",
+    "pals": [
+     {
+      "page": 18,
+      "title": "Sweater"
+     },
+     {
+      "page": 22,
+      "title": "Cozy Season Forever"
+     }
+    ]
+   },
+   "book_code": "zhxGf"
+  },
+  {
+   "week": 2,
+   "start": "2026-11-30",
+   "page": 13,
+   "title": "Sorry, Santa",
+   "dog": null,
+   "slug": "labrador-retriever-coloring-page-santa-paws-little-buddy",
+   "paid_code": "OzEu7",
+   "free_code": "TO MAKE",
+   "bundle": {
+    "n": 10,
+    "name": "Rain, Snow and Sky",
+    "slug": "rain-snow-and-sky",
+    "code": "XxVP7",
+    "pals": [
+     {
+      "page": 27,
+      "title": "Puddles"
+     },
+     {
+      "page": 30,
+      "title": "Two-Minute Boss Mode"
+     }
+    ]
+   },
+   "book_code": "zhxGf"
+  },
+  {
+   "week": 3,
+   "start": "2026-12-07",
+   "page": 3,
+   "title": "The Secret Agent",
+   "dog": "Maya",
+   "slug": "golden-retriever-mix-coloring-page-maya",
+   "paid_code": "UCi60",
+   "free_code": "TO MAKE",
+   "bundle": {
+    "n": 8,
+    "name": "On Duty",
+    "slug": "on-duty",
+    "code": "Nk5Ll",
+    "pals": [
+     {
+      "page": 25,
+      "title": "Small Dog, Big Duty"
+     },
+     {
+      "page": 26,
+      "title": "Ear Radar Activated"
+     }
+    ]
+   },
+   "book_code": "zhxGf"
+  },
+  {
+   "week": 4,
+   "start": "2026-12-14",
+   "page": 28,
+   "title": "Sweetness Delivery",
+   "dog": null,
+   "slug": "dog-coloring-page-bow-and-behold",
+   "paid_code": "RL2Qg",
+   "free_code": "TO MAKE",
+   "bundle": {
+    "n": 9,
+    "name": "Fancy and Sweet",
+    "slug": "fancy-and-sweet",
+    "code": "Mecyh",
+    "pals": [
+     {
+      "page": 17,
+      "title": "Stop Looking at Me"
+     },
+     {
+      "page": 21,
+      "title": "Royal Fluffiness"
+     }
+    ]
+   },
+   "book_code": "zhxGf"
+  },
+  {
+   "week": 5,
+   "start": "2026-12-21",
+   "page": 10,
+   "title": "Nap Master Supreme",
+   "dog": "Thomas",
+   "slug": "dog-coloring-page-thomas",
+   "paid_code": "LvuIq",
+   "free_code": "TO MAKE",
+   "bundle": {
+    "n": 1,
+    "name": "Cozy Dreams",
+    "slug": "cozy-dreams",
+    "code": "YXk20",
+    "pals": [
+     {
+      "page": 5,
+      "title": "Music of Dreams"
+     },
+     {
+      "page": 8,
+      "title": "Comfort Zone"
+     }
+    ]
+   },
+   "book_code": "zhxGf"
+  },
+  {
+   "week": 6,
+   "start": "2026-12-28",
+   "page": 2,
+   "title": "Toy-Herding Practice",
+   "dog": "Barnaby",
+   "slug": "corgi-coloring-page-barnaby",
+   "paid_code": "cz0TE",
+   "free_code": "TO MAKE",
+   "bundle": {
+    "n": 6,
+    "name": "Snuggle Buddies",
+    "slug": "snuggle-buddies",
+    "code": "572hz",
+    "pals": [
+     {
+      "page": 4,
+      "title": "A Sweet Dilemma"
+     },
+     {
+      "page": 14,
+      "title": "A Duet"
+     }
+    ]
+   },
+   "book_code": "zhxGf"
+  },
+  {
+   "week": 7,
+   "start": "2027-01-04",
+   "page": 9,
+   "title": "Small Hope in Big Boots",
+   "dog": null,
+   "slug": "dog-coloring-page-paws-in-the-boot",
+   "paid_code": "AXyfb",
+   "free_code": "TO MAKE",
+   "bundle": {
+    "n": 4,
+    "name": "Quirky and Adorable",
+    "slug": "quirky-and-adorable",
+    "code": "Wiq7T",
+    "pals": [
+     {
+      "page": 11,
+      "title": "Which One Is Which?"
+     },
+     {
+      "page": 12,
+      "title": "Best Flower"
+     }
+    ]
+   },
+   "book_code": "zhxGf"
+  },
+  {
+   "week": 8,
+   "start": "2027-01-11",
+   "page": 15,
+   "title": "A Gentleman",
+   "dog": null,
+   "slug": "basset-hound-coloring-page-puppy-earmuff",
+   "paid_code": "4SgIY",
+   "free_code": "TO MAKE",
+   "bundle": {
+    "n": 3,
+    "name": "Big Personalities",
+    "slug": "big-personalities",
+    "code": "NTKC0",
+    "pals": [
+     {
+      "page": 16,
+      "title": "I'm a Lady"
+     },
+     {
+      "page": 19,
+      "title": "Double Cuteness"
+     }
+    ]
+   },
+   "book_code": "zhxGf"
+  },
+  {
+   "week": 9,
+   "start": "2027-01-18",
+   "page": 7,
+   "title": "Rolls of Chaos",
+   "dog": "Lucky",
+   "slug": "dog-coloring-page-lucky",
+   "paid_code": "9peBf",
+   "free_code": "TO MAKE",
+   "bundle": {
+    "n": 2,
+    "name": "Playful Chaos",
+    "slug": "playful-chaos",
+    "code": "5qw4L",
+    "pals": [
+     {
+      "page": 6,
+      "title": "Paws in the Wind"
+     },
+     {
+      "page": 20,
+      "title": "Splash Life"
+     }
+    ]
+   },
+   "book_code": "zhxGf"
+  },
+  {
+   "week": 10,
+   "start": "2027-01-25",
+   "page": 29,
+   "title": "Send Help. And a Lawyer",
+   "dog": null,
+   "slug": "french-bulldog-coloring-page-serious-face-activated",
+   "paid_code": "GDHbQ",
+   "free_code": "TO MAKE",
+   "bundle": {
+    "n": 7,
+    "name": "Mischief Makers",
+    "slug": "mischief-makers",
+    "code": "2CHoT",
+    "pals": [
+     {
+      "page": 23,
+      "title": "Timing Fail"
+     },
+     {
+      "page": 24,
+      "title": "Reflection Error"
+     }
+    ]
+   },
+   "book_code": "zhxGf"
+  }
+ ]
+}

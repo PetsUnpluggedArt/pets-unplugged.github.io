@@ -31,11 +31,13 @@
     <link rel="stylesheet" href="/assets/css/pu.css?v=4">
     <script src="/assets/js/pu.js?v=3" defer></script>
     <script src="/assets/js/lang.js?v=1" defer></script>
+    <script src="/assets/js/rotation.js?v=1" defer></script>
 </head>
 <body{% if page.layout == "video" %} data-qr{% endif %} data-form-msgs="{{ t.form_ok | escape }}|{{ t.form_bad | escape }}|{{ t.form_retry | escape }}|{{ t.filter_one | escape }}|{{ t.filter_many | escape }}|{{ t.form_err | escape }}">
     <a class="skip" href="#main">{{ t.skip }}</a>
 
-    <div class="topbar">{{ t.topbar }} <a href="{{ site.free_gift_url }}">{{ t.get_it_free }}</a></div>
+    {% include rot-words.html %}
+    <div class="topbar" data-rot="topbar">{{ t.topbar }} <a href="{{ site.free_gift_url }}">{{ t.get_it_free }}</a></div>
 
     {% assign u = page.url %}
     <header class="site-header">

@@ -34,7 +34,7 @@ layout: default
   <div class="grid">
     {% assign favsub = t.fav_card_sub | replace: "%single%", T.prices.single_page %}
     {% for pn in site.christmas.pages %}{% for d in dogs %}{% if d.n == pn %}{% include dog-card.html dog=d sub=favsub %}{% endif %}{% endfor %}{% endfor %}
-    <a href="{{ site.free_gift_url }}" class="page card"><div class="card-img"><img src="/assets/img/pages/paws-01-line.jpg" alt="{{ t.xmas_free_alt }}" width="450" height="600" loading="lazy"><span class="chip chip-gold">{{ t.xmas_free_chip }}</span></div><div class="card-body"><div class="card-title">{{ t.xmas_free_title }}</div><div class="card-sub">{{ t.xmas_free_sub }}</div></div></a>
+    <a href="{{ site.free_gift_url }}" class="page card" data-rot="holiday-gift"><div class="card-img"><img src="/assets/img/pages/paws-01-line.jpg" alt="{{ t.xmas_free_alt }}" width="450" height="600" loading="lazy"><span class="chip chip-gold">{{ t.xmas_free_chip }}</span></div><div class="card-body"><div class="card-title">{{ t.xmas_free_title }}</div><div class="card-sub">{{ t.xmas_free_sub }}</div></div></a>
   </div>
 </section>
 

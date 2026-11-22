@@ -73,15 +73,15 @@ layout: default
 </section>
 
 <section class="wrap sec">
-  <div class="page pad bg-purple split" style="gap: 36px">
+  <div class="page pad bg-purple split" style="gap: 36px" data-rot="home-free">
     <div style="flex: 1 1 380px">
-      <h2 class="h2" style="color: #fff">{{ t.free_gift_h }}</h2>
-      <p style="margin: 12px 0 0; font-size: 18px; color: #f1e6f7">{{ t.home_free_p }}</p>
-      <div class="row" style="margin-top: 22px"><a href="{{ site.free_gift_url }}" class="btn2">{{ t.get_pompom }}</a><a href="{{ lp }}/free/" style="color: #fff; font-weight: 800">{{ t.home_free_about }}</a></div>
+      <h2 class="h2" style="color: #fff" data-rot="h">{{ t.free_gift_h }}</h2>
+      <p style="margin: 12px 0 0; font-size: 18px; color: #f1e6f7" data-rot="p">{{ t.home_free_p }}</p>
+      <div class="row" style="margin-top: 22px"><a href="{{ site.free_gift_url }}" class="btn2" data-rot="btn">{{ t.get_pompom }}</a><a href="{{ lp }}/free/" style="color: #fff; font-weight: 800">{{ t.home_free_about }}</a></div>
     </div>
     <div class="row" style="gap: 14px; flex-wrap: nowrap">
-      <img src="/assets/img/pages/paws-01-line.jpg" alt="{{ t.home_free_alt1 }}" width="150" height="200" loading="lazy" style="width: 140px; border: 2px solid var(--ink); border-radius: 12px; background: #fff; transform: rotate(-4deg)">
-      <img src="/assets/img/pages/paws-01-color.jpg" alt="{{ t.home_free_alt2 }}" width="150" height="200" loading="lazy" style="width: 140px; border: 2px solid var(--ink); border-radius: 12px; background: #fff; transform: rotate(3deg)">
+      <img src="/assets/img/pages/paws-01-line.jpg" data-rot="img-line" alt="{{ t.home_free_alt1 }}" width="150" height="200" loading="lazy" style="width: 140px; border: 2px solid var(--ink); border-radius: 12px; background: #fff; transform: rotate(-4deg)">
+      <img src="/assets/img/pages/paws-01-color.jpg" data-rot="img-color" alt="{{ t.home_free_alt2 }}" width="150" height="200" loading="lazy" style="width: 140px; border: 2px solid var(--ink); border-radius: 12px; background: #fff; transform: rotate(3deg)">
     </div>
   </div>
 </section>
@@ -123,9 +123,9 @@ layout: default
     <div style="flex: 1 1 340px">
       <h2 class="h2" style="font-size: 34px">{{ t.nl_h }}</h2>
       <p style="margin: 8px 0 0; font-size: 17px; color: var(--text2)">{{ t.nl_p }}</p>
-      <div class="gift" style="margin-top: 18px">
+      <div class="gift" style="margin-top: 18px" data-rot="nl-gift">
         <img src="/assets/img/pages/paws-01-line.jpg" alt="{{ t.nl_gift_alt }}" width="120" height="160" loading="lazy">
-        <div style="flex: 1 1 180px"><div class="b" style="font-size: 18px">{{ t.free_gift_h }}</div><a class="link-b" href="{{ site.free_gift_url }}">{{ t.get_pompom }}</a></div>
+        <div style="flex: 1 1 180px"><div class="b" style="font-size: 18px" data-rot="h">{{ t.free_gift_h }}</div><a class="link-b" href="{{ site.free_gift_url }}">{{ t.get_pompom }}</a></div>
       </div>
     </div>
     <div style="flex: 1 1 340px">

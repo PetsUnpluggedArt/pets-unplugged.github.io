@@ -681,3 +681,28 @@ bundles:
     blurb: Un cachorro que sabe que es mono, una suavidad real y una cesta llena de dulzura.
   '10':
     blurb: Mañana de Navidad, patrulla de charcos y un jefe al que las palomas no se toman en serio.
+rot:
+  chip: 'Gratis esta semana'
+  next: 'El próximo lunes'
+  get_page: 'Consigue este dibujo gratis'
+  until: 'Gratis hasta el %date%'
+  then: 'después %single%'
+  from: 'Gratis desde el %date%'
+  best: 'La mejor oferta'
+  topbar: 'Gratis esta semana: %title%, con su animación.'
+  get_title: 'Consigue %title% gratis'
+  home_h: 'El dibujo gratis de esta semana: %title%'
+  home_p: 'Página %n% del libro PAWS. Imprímelo, coloréalo y escanea su código QR para verlo moverse. Gratis hasta el %date%; cada lunes, un dibujo gratis nuevo.'
+  side_h: 'Gratis esta semana: %title%'
+  side_time: 'Gratis hasta el %date%, a las 6:00 (hora de Nueva York).'
+  new_every: 'Cada lunes, un dibujo gratis nuevo'
+  free_lead: 'Cada lunes, un dibujo gratis nuevo. Esta semana: %title%. Coloréalo, escanea el código QR y míralo cobrar vida.'
+  free_alt: 'Dibujo gratis: %title%, dibujo de líneas en blanco y negro'
+  this_pup: 'este perrito'
+  bundle_h: '¿Te encanta %name%? Conoce a sus amigos.'
+  bundle_p: '%title% es gratis esta semana. El %bundle% trae los 3 dibujos, cada uno con su propio vídeo.'
+  home_bundle: '¿Te encanta %name%? Consigue el %bundle%: %price%'
+  book_p: 'Los 30 dibujos, cada uno con su propio vídeo, por %pdf%.'
+  book_go: 'Consigue el libro: %pdf%'
+  book_line: 'La mejor oferta: el libro PAWS completo, 30 dibujos con sus vídeos, %pdf%'
+  story_paid: 'Consigue el episodio 1: %single%'

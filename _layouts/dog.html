@@ -42,7 +42,7 @@ layout: default
   <ol><li><a href="{{ lp }}/books/">{{ t.nav_books }}</a></li><li>PAWS</li><li aria-current="page">{% if d_breed %}{{ d_breed }}{% else %}{{ d.card_title }}{% endif %}</li></ol>
 </nav>
 
-<section class="wrap dog">
+<section class="wrap dog" data-rot-dog="{{ d.n }}">
   <div class="dog-media">
     <div class="page">
       <div class="player" id="player-{{ nn }}">
@@ -66,15 +66,15 @@ layout: default
     {% if d_fact %}<div class="page fact"><div class="b">{{ t.did_you_know }}</div><div style="margin-top: 4px">{{ d_fact }}</div></div>{% endif %}
     <div class="b">{% if lang == "en" %}You get: the printable page, its QR video and {{ d.possessive }} story.{% else %}{{ t.you_get }}{% endif %}</div>
     <div class="row">
-      {% if has_buy %}<a class="btn" href="{{ d.payhip }}">{{ t.get_page }}: {{ T.prices.single_page }}</a>{% else %}<button type="button" class="btn" disabled aria-describedby="single-soon">{{ t.get_page }}: {{ T.prices.single_page }}</button>{% endif %}
+      {% if has_buy %}<a class="btn" href="{{ d.payhip }}" data-rot="buy">{{ t.get_page }}: {{ T.prices.single_page }}</a>{% else %}<button type="button" class="btn" disabled aria-describedby="single-soon">{{ t.get_page }}: {{ T.prices.single_page }}</button>{% endif %}
       {% if d.n == 1 %}<a class="btn2" href="/story/scout/">{{ t.scout_story }}</a>{% else %}<a class="btn2" href="{{ lp }}/videos/video{{ d.n }}.html">{{ t.watch_full }}</a>{% endif %}
     </div>
     {% unless has_buy %}<p class="small muted" id="single-soon" style="margin: 0">{{ t.single_soon }}</p>{% endunless %}
     {% if d.etsy_url and d.etsy_url != "" %}<a class="etsy-link" href="{{ d.etsy_url }}" style="margin-top: -6px">{{ t.also_etsy }}</a>{% endif %}
-    {% if d.n == site.data.paws.free_gift.page %}<p class="small" style="margin: 0"><b>{{ t.free_gift_b }}</b> <a href="{{ site.free_gift_url }}">{{ t.get_it_free }}</a> {{ t.with_email }}</p>{% endif %}
-    {% if bundle %}<p class="bundle-line">{{ t.also_in }} <a href="{{ lp }}/books/#bundle-{{ bundle.slug }}">{{ t.bundle_link | replace: "%name%", bundle.name }}</a>: {{ t.three_for | replace: "%bundle%", T.prices.bundle }}</p>{% endif %}
+    {% comment %}The "This page is our free gift" line now comes from /assets/js/rotation.js, only in a week when this page is free.{% endcomment %}
+    {% if bundle %}<p class="bundle-line" data-rot="bundle-line">{{ t.also_in }} <a href="{{ lp }}/books/#bundle-{{ bundle.slug }}">{{ t.bundle_link | replace: "%name%", bundle.name }}</a>: {{ t.three_for | replace: "%bundle%", T.prices.bundle }}</p>{% endif %}
     {% if site.christmas.pages contains d.n or d.n == site.data.paws.free_gift.page %}<p style="margin: 0"><a class="link-b" href="{{ lp }}/holiday/">{{ t.xmas_dog_link }}</a></p>{% endif %}
-    <div class="small muted">{{ t.or_all_30 }} <a href="{{ site.links.payhip_book }}">{{ t.pdf }} {{ T.prices.pdf_book }}</a> {{ t.or_the }} <a href="{{ site.links.amazon }}">{{ t.paperback_on_amazon }}</a>.</div>
+    <div class="small muted" data-rot="book-line">{{ t.or_all_30 }} <a href="{{ site.links.payhip_book }}">{{ t.pdf }} {{ T.prices.pdf_book }}</a> {{ t.or_the }} <a href="{{ site.links.amazon }}">{{ t.paperback_on_amazon }}</a>.</div>
   </div>
 </section>
 

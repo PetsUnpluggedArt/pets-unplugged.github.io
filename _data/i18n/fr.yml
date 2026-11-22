@@ -681,3 +681,28 @@ bundles:
     blurb: Un chiot qui sait qu'il est mignon, une douceur royale et un panier plein de tendresse.
   '10':
     blurb: Le matin de Noël, la patrouille des flaques et un chef que les pigeons ne prennent pas au sérieux.
+rot:
+  chip: 'Gratuit cette semaine'
+  next: 'Lundi prochain'
+  get_page: 'Obtenir ce coloriage gratuitement'
+  until: 'Gratuit jusqu''au %date%'
+  then: 'puis %single%'
+  from: 'Gratuit à partir du %date%'
+  best: 'Meilleure offre'
+  topbar: 'Gratuit cette semaine : %title%, avec son animation.'
+  get_title: 'Obtenir %title% gratuitement'
+  home_h: 'Le coloriage gratuit de la semaine : %title%'
+  home_p: 'Page %n% du livre PAWS. Imprimez-le, coloriez-le, puis scannez son QR code pour le voir bouger. Gratuit jusqu''au %date% ; un nouveau coloriage gratuit chaque lundi.'
+  side_h: 'Gratuit cette semaine : %title%'
+  side_time: 'Gratuit jusqu''au %date%, 6 h (heure de New York).'
+  new_every: 'Un nouveau coloriage gratuit chaque lundi'
+  free_lead: 'Un nouveau coloriage gratuit chaque lundi. Cette semaine : %title%. Coloriez-le, scannez le QR code et regardez-le prendre vie.'
+  free_alt: 'Coloriage gratuit : %title%, dessin au trait noir et blanc'
+  this_pup: 'ce chiot'
+  bundle_h: 'Vous aimez %name% ? Découvrez ses copains.'
+  bundle_p: '%title% est gratuit cette semaine. Le %bundle% réunit les 3 coloriages, chacun avec sa propre vidéo.'
+  home_bundle: 'Vous aimez %name% ? Le %bundle% : %price%'
+  book_p: 'Les 30 coloriages, chacun avec sa propre vidéo, pour %pdf%.'
+  book_go: 'Obtenir le livre : %pdf%'
+  book_line: 'Meilleure offre : le livre PAWS complet, 30 coloriages avec leurs vidéos, %pdf%'
+  story_paid: 'Obtenir l''épisode 1 : %single%'
