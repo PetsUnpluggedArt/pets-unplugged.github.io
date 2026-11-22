@@ -53,7 +53,7 @@ PAWS features 30 different dog illustrations covering a variety of breeds and sc
 
 **Physical book ($11.99)** — a beautifully printed premium coloring book, ready to wrap and gift. Ships via Amazon with fast delivery.
 
-**Digital PDF ($6.99)** — an instant download that prints at home. Perfect for last-minute gifts, long-distance gifting, or grandparents who want to print multiple copies for different grandchildren.
+**Digital PDF ($9.99)** — an instant download that prints at home. Perfect for last-minute gifts, long-distance gifting, or grandparents who want to print multiple copies for different grandchildren.
 
 Both versions include all 30 QR code animations — the experience is identical whether you're coloring a printed page or a home-printed one.
 

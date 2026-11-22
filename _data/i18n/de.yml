@@ -3,7 +3,7 @@ lang: de
 prices:
   single_page: 1,99 US$
   bundle: 3,99 US$
-  pdf_book: 6,99 US$
+  pdf_book: 9,99 US$
 ui:
   lang_name: Deutsch
   lang_label: Sprache

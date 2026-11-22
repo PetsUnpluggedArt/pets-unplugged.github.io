@@ -3,7 +3,7 @@ lang: en
 prices:
   single_page: $1.99
   bundle: $3.99
-  pdf_book: $6.99
+  pdf_book: $9.99
 ui:
   lang_name: English
   lang_label: Language
